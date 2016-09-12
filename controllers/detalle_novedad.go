@@ -132,9 +132,7 @@ func (c *DetalleNovedadController) GetAll() {
 // @Failure 403 :id is not int
 // @router /:id [put]
 func (c *DetalleNovedadController) Put() {
-	idStr := c.Ctx.Input.Param(":id")
-	id, _ := strconv.Atoi(idStr)
-	v := models.DetalleNovedad{Id: id}
+	var v  models.DetalleNovedad
 	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
 		if err := models.UpdateDetalleNovedadById(&v); err == nil {
 			c.Data["json"] = "OK"

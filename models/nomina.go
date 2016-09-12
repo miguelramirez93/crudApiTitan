@@ -125,6 +125,7 @@ func GetAllNomina(query map[string]string, fields []string, sortby []string, ord
 func UpdateNominaById(m *Nomina) (err error) {
 	o := orm.NewOrm()
 	v := Nomina{Id: m.Id}
+	fmt.Println("Id recibido:",m.Id)
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64

@@ -132,9 +132,7 @@ func (c *PreliquidacionController) GetAll() {
 // @Failure 403 :id is not int
 // @router /:id [put]
 func (c *PreliquidacionController) Put() {
-	idStr := c.Ctx.Input.Param(":id")
-	id, _ := strconv.Atoi(idStr)
-	v := models.Preliquidacion{Id: id}
+	var v  models.Preliquidacion
 	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
 		if err := models.UpdatePreliquidacionById(&v); err == nil {
 			c.Data["json"] = "OK"

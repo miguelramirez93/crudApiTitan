@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	models "github.com/miguelramirez93/crudApiTitan/models"
-	
+
 	"strings"
 
 	"github.com/astaxie/beego"
@@ -132,9 +132,7 @@ func (c *ContratoGeneralController) GetAll() {
 // @Failure 403 :id is not int
 // @router /:id [put]
 func (c *ContratoGeneralController) Put() {
-	idStr := c.Ctx.Input.Param(":id")
-
-	v := models.ContratoGeneral{Id: idStr}
+	var v models.ContratoGeneral
 	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
 		if err := models.UpdateContratoGeneralById(&v); err == nil {
 			c.Data["json"] = "OK"

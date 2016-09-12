@@ -6,7 +6,6 @@ import (
 	models "github.com/miguelramirez93/crudApiTitan/models"
 	"strconv"
 	"strings"
-
 	"github.com/astaxie/beego"
 )
 
@@ -132,9 +131,10 @@ func (c *NominaController) GetAll() {
 // @Failure 403 :id is not int
 // @router /:id [put]
 func (c *NominaController) Put() {
-	idStr := c.Ctx.Input.Param(":id")
-	id, _ := strconv.Atoi(idStr)
-	v := models.Nomina{Id: id}
+	//idStr := c.Ctx.Input.Param(":id")
+	//id, _ := strconv.Atoi(idStr)
+	//v := models.Nomina{Id: id}
+	var v models.Nomina
 	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
 		if err := models.UpdateNominaById(&v); err == nil {
 			c.Data["json"] = "OK"

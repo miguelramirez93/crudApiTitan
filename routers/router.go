@@ -14,7 +14,7 @@ import (
 )
 
 func init() {
-	ns := beego.NewNamespace("/crudtitan",
+	ns := beego.NewNamespace("/v1",
 
 
 

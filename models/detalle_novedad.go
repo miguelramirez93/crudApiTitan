@@ -16,6 +16,7 @@ type DetalleNovedad struct {
 	Vigencia float64 `orm:"column(vigencia);null"`
 	Valor    float64 `orm:"column(valor);null"`
 	Cuenta   string  `orm:"column(cuenta);null"`
+	Novedad  *Novedad `orm:"reverse(one)"`
 }
 
 func (t *DetalleNovedad) TableName() string {

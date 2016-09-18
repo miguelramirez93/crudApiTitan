@@ -10,13 +10,13 @@ import (
 )
 
 type DetalleNovedad struct {
-	Id       int     `pk;orm:"column(novedad)"`
+	Id       int     `pk;orm:"column(id);serial"`
 	Persona  int64   `orm:"column(persona)"`
 	Estado   string  `orm:"column(estado)"`
-	Vigencia float64 `orm:"column(vigencia);null"`
+	Vigencia int `orm:"column(vigencia);null"`
 	Valor    float64 `orm:"column(valor);null"`
 	Cuenta   string  `orm:"column(cuenta);null"`
-	Novedad  *Novedad `orm:"reverse(one)"`
+	Novedad  *Novedad `orm:"rel(fk);column(novedad)"`
 }
 
 func (t *DetalleNovedad) TableName() string {
@@ -98,7 +98,7 @@ func GetAllDetalleNovedad(query map[string]string, fields []string, sortby []str
 	}
 
 	var l []DetalleNovedad
-	qs = qs.OrderBy(sortFields...)
+	qs = qs.OrderBy(sortFields...).RelatedSel()
 	if _, err := qs.Limit(limit, offset).All(&l, fields...); err == nil {
 		if len(fields) == 0 {
 			for _, v := range l {

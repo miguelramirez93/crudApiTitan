@@ -5,7 +5,7 @@
 -- Dumped from database version 9.5.3
 -- Dumped by pg_dump version 9.5.4
 
--- Started on 2016-09-18 16:01:46 COT
+-- Started on 2016-09-21 22:24:54 COT
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -309,14 +309,14 @@ INSERT INTO predicado VALUES (35, 1, 'tarifa(ret383,360,999999999999,0.33,69).',
 INSERT INTO predicado VALUES (36, 1, 'base_ret(X,Y,P,rete383):- valor_pago(X,P,V),R is V * 0.25 , Y is V - R.', 'a', 1);
 INSERT INTO predicado VALUES (39, 1, 'valores(X,T,P,L):-findall((X, Y, N, Z, R),((factor(X,T,Y,N,Z,P),Y==porcentaje,valor_pago(X,P,V),R is P * Z)),L).', 'a', 1);
 INSERT INTO predicado VALUES (40, 1, 'valores(X,T,P,L):-findall((X, Y, N, Z, R),((factor(X,T,Y,N,Z,P),Y==fijo,R is Z)),L).', 'a', 1);
-INSERT INTO predicado VALUES (41, 1, 'retenciones(X,T,P,L):-findall((X, T, P ,Z, R),(retencion(X,R,P,T),base_ret(X,Z,P,T)),L).', 'a', 1);
 INSERT INTO predicado VALUES (42, 1, 'unir([], Cs, Cs).', 'a', 1);
 INSERT INTO predicado VALUES (43, 1, 'unir([A|As],Bs,[A|Cs]):-unir(As, Bs, Cs).', 'a', 1);
 INSERT INTO predicado VALUES (44, 1, 'total_descuentos([], 0).', 'a', 1);
 INSERT INTO predicado VALUES (45, 1, 'total_descuentos([(X, _, _, _, R)|Xs], S):-total_descuentos(Xs, S2),S is S2 + R.', 'a', 1);
 INSERT INTO predicado VALUES (46, 1, 'valor_pago_neto(X,Y,P,V,L,L2):-valor_pago(X,P,V),valores(X,descuento,P,L),retenciones(X,T,P,L2),unir(L,L2,LS),total_descuentos(LS,D),Y is V - D.', 'a', 1);
 INSERT INTO predicado VALUES (47, 1, 'factor(prueba, descuento, porcentaje, salud, 0.04, 2016).', 'a', 1);
-INSERT INTO predicado VALUES (38, 1, 'retencion(X,Y,P,rete383):- base_ret(X,V,P,rete383),valor_uvt(U,P),T is V / U ,tarifa(ret383,I,S,C,A),(T@>I),(T@<S),Y is (((T-I)*C)+A)*U.', 'a', 1);
+INSERT INTO predicado VALUES (38, 1, 'retencion(X,Y,P,V,rete383):- base_ret(X,V,P,rete383),valor_uvt(U,P),T is V / U ,tarifa(ret383,I,S,C,A),(T@>I),(T@<S),Y is (((T-I)*C)+A)*U.', 'a', 1);
+INSERT INTO predicado VALUES (41, 1, 'retenciones(X,T,P,L):-findall((X, T, P ,Z, R),(retencion(X,R,P,Z,T)),L).', 'a', 1);
 INSERT INTO predicado VALUES (27, 1, 'valor_pago(X,V,P):-valor_contrato(X,Y), duracion_contrato(X,D,V), P is Y / D.', 'a', 1);
 
 
@@ -405,7 +405,7 @@ GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
--- Completed on 2016-09-18 16:01:46 COT
+-- Completed on 2016-09-21 22:24:54 COT
 
 --
 -- PostgreSQL database dump complete

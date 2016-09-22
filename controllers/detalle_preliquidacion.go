@@ -32,9 +32,9 @@ func (c *DetallePreliquidacionController) URLMapping() {
 func (c *DetallePreliquidacionController) Post() {
 	var v models.DetallePreliquidacion
 	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
-		if _, err := models.AddDetallePreliquidacion(&v); err == nil {
+		if id, err := models.AddDetallePreliquidacion(&v); err == nil {
 			c.Ctx.Output.SetStatus(201)
-			c.Data["json"] = v
+			c.Data["json"] = id
 		} else {
 			c.Data["json"] = err.Error()
 		}
@@ -132,7 +132,9 @@ func (c *DetallePreliquidacionController) GetAll() {
 // @Failure 403 :id is not int
 // @router /:id [put]
 func (c *DetallePreliquidacionController) Put() {
-	var v  models.DetallePreliquidacion
+	idStr := c.Ctx.Input.Param(":id")
+	id, _ := strconv.Atoi(idStr)
+	v := models.DetallePreliquidacion{Id: id}
 	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
 		if err := models.UpdateDetallePreliquidacionById(&v); err == nil {
 			c.Data["json"] = "OK"

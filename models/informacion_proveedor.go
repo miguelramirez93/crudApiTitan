@@ -12,7 +12,7 @@ import (
 type InformacionProveedor struct {
 	Id                      int                `orm:"column(id_proveedor)"`
 	Tipopersona             string             `orm:"column(tipopersona)"`
-	NumDocumento            int           `orm:"column(num_documento);pk"`
+	NumDocumento            int64           `orm:"column(num_documento);pk"`
 	IdCiudadContacto        *Ciudad            `orm:"column(id_ciudad_contacto);rel(fk)"`
 	Direccion               string             `orm:"column(direccion)"`
 	Correo                  string             `orm:"column(correo)"`

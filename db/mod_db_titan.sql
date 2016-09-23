@@ -1,4 +1,4 @@
-ALTER TABLE titan.novedad
+﻿ALTER TABLE titan.novedad
   ADD COLUMN id_proveedor numeric(10,0);
 
 ALTER TABLE titan.detalle_novedad
@@ -28,7 +28,7 @@ ALTER TABLE titan.detalle_preliquidacion
 ALTER TABLE titan.detalle_preliquidacion
   ADD PRIMARY KEY (id);
 
-LTER TABLE titan.detalle_preliquidacion
+ALTER TABLE titan.detalle_preliquidacion
    ALTER COLUMN concepto DROP NOT NULL;
 COMMENT ON COLUMN titan.detalle_preliquidacion.concepto IS 'Identificador del concepto asouciado a un rubro sobre el cual se calcula el valor';
 

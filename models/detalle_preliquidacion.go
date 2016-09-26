@@ -11,7 +11,7 @@ import (
 
 type DetallePreliquidacion struct {
 	Preliquidacion *Preliquidacion `orm:"column(preliquidacion);rel(fk)"`
-	Persona        int64           `orm:"column(persona)"`
+	Persona        *InformacionProveedor           `orm:"column(persona);rel(fk)"`
 	Valor          string         `orm:"column(valor)"`
 	Concepto       *Concepto       `orm:"column(concepto);rel(fk);null"`
 	Id             int             `pk;orm:"column(id)"`
@@ -96,7 +96,7 @@ func GetAllDetallePreliquidacion(query map[string]string, fields []string, sortb
 	}
 
 	var l []DetallePreliquidacion
-	qs = qs.OrderBy(sortFields...)
+	qs = qs.OrderBy(sortFields...).RelatedSel()
 	if _, err := qs.Limit(limit, offset).All(&l, fields...); err == nil {
 		if len(fields) == 0 {
 			for _, v := range l {

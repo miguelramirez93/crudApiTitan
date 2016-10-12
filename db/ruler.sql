@@ -5,7 +5,7 @@
 -- Dumped from database version 9.5.3
 -- Dumped by pg_dump version 9.5.4
 
--- Started on 2016-09-29 21:01:12 COT
+-- Started on 2016-10-11 20:01:19 COT
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- TOC entry 8 (class 2615 OID 19176)
+-- TOC entry 7 (class 2615 OID 27164)
 -- Name: ruler; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
@@ -49,7 +49,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 183 (class 1259 OID 19179)
+-- TOC entry 182 (class 1259 OID 27165)
 -- Name: dominio; Type: TABLE; Schema: ruler; Owner: postgres
 --
 
@@ -64,7 +64,7 @@ ALTER TABLE dominio OWNER TO postgres;
 
 --
 -- TOC entry 2211 (class 0 OID 0)
--- Dependencies: 183
+-- Dependencies: 182
 -- Name: COLUMN dominio.id; Type: COMMENT; Schema: ruler; Owner: postgres
 --
 
@@ -73,7 +73,7 @@ COMMENT ON COLUMN dominio.id IS 'Identificador del dominio';
 
 --
 -- TOC entry 2212 (class 0 OID 0)
--- Dependencies: 183
+-- Dependencies: 182
 -- Name: COLUMN dominio.nombre; Type: COMMENT; Schema: ruler; Owner: postgres
 --
 
@@ -82,7 +82,7 @@ COMMENT ON COLUMN dominio.nombre IS 'Nombre del dominio';
 
 --
 -- TOC entry 2213 (class 0 OID 0)
--- Dependencies: 183
+-- Dependencies: 182
 -- Name: COLUMN dominio.descripcion; Type: COMMENT; Schema: ruler; Owner: postgres
 --
 
@@ -90,7 +90,7 @@ COMMENT ON COLUMN dominio.descripcion IS 'Descripcion del dominio';
 
 
 --
--- TOC entry 182 (class 1259 OID 19177)
+-- TOC entry 183 (class 1259 OID 27168)
 -- Name: dominio_id_seq; Type: SEQUENCE; Schema: ruler; Owner: postgres
 --
 
@@ -106,7 +106,7 @@ ALTER TABLE dominio_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2214 (class 0 OID 0)
--- Dependencies: 182
+-- Dependencies: 183
 -- Name: dominio_id_seq; Type: SEQUENCE OWNED BY; Schema: ruler; Owner: postgres
 --
 
@@ -114,14 +114,14 @@ ALTER SEQUENCE dominio_id_seq OWNED BY dominio.id;
 
 
 --
--- TOC entry 185 (class 1259 OID 19187)
+-- TOC entry 184 (class 1259 OID 27170)
 -- Name: predicado; Type: TABLE; Schema: ruler; Owner: postgres
 --
 
 CREATE TABLE predicado (
     id integer NOT NULL,
     dominio integer NOT NULL,
-    nombre character varying(200) NOT NULL,
+    nombre character varying(300) NOT NULL,
     descripcion character varying(150) NOT NULL,
     tipo_predicado smallint NOT NULL
 );
@@ -131,7 +131,7 @@ ALTER TABLE predicado OWNER TO postgres;
 
 --
 -- TOC entry 2215 (class 0 OID 0)
--- Dependencies: 185
+-- Dependencies: 184
 -- Name: COLUMN predicado.id; Type: COMMENT; Schema: ruler; Owner: postgres
 --
 
@@ -140,7 +140,7 @@ COMMENT ON COLUMN predicado.id IS 'Identificador del predicado';
 
 --
 -- TOC entry 2216 (class 0 OID 0)
--- Dependencies: 185
+-- Dependencies: 184
 -- Name: COLUMN predicado.dominio; Type: COMMENT; Schema: ruler; Owner: postgres
 --
 
@@ -149,7 +149,7 @@ COMMENT ON COLUMN predicado.dominio IS 'Identificador del dominio';
 
 --
 -- TOC entry 2217 (class 0 OID 0)
--- Dependencies: 185
+-- Dependencies: 184
 -- Name: COLUMN predicado.nombre; Type: COMMENT; Schema: ruler; Owner: postgres
 --
 
@@ -158,7 +158,7 @@ COMMENT ON COLUMN predicado.nombre IS 'Texto del predicado';
 
 --
 -- TOC entry 2218 (class 0 OID 0)
--- Dependencies: 185
+-- Dependencies: 184
 -- Name: COLUMN predicado.descripcion; Type: COMMENT; Schema: ruler; Owner: postgres
 --
 
@@ -167,7 +167,7 @@ COMMENT ON COLUMN predicado.descripcion IS 'Descripcion del predicado';
 
 --
 -- TOC entry 2219 (class 0 OID 0)
--- Dependencies: 185
+-- Dependencies: 184
 -- Name: COLUMN predicado.tipo_predicado; Type: COMMENT; Schema: ruler; Owner: postgres
 --
 
@@ -175,7 +175,7 @@ COMMENT ON COLUMN predicado.tipo_predicado IS 'Define si es un hecho o una regla
 
 
 --
--- TOC entry 184 (class 1259 OID 19185)
+-- TOC entry 185 (class 1259 OID 27173)
 -- Name: predicado_id_seq; Type: SEQUENCE; Schema: ruler; Owner: postgres
 --
 
@@ -191,7 +191,7 @@ ALTER TABLE predicado_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2220 (class 0 OID 0)
--- Dependencies: 184
+-- Dependencies: 185
 -- Name: predicado_id_seq; Type: SEQUENCE OWNED BY; Schema: ruler; Owner: postgres
 --
 
@@ -199,7 +199,7 @@ ALTER SEQUENCE predicado_id_seq OWNED BY predicado.id;
 
 
 --
--- TOC entry 187 (class 1259 OID 19195)
+-- TOC entry 186 (class 1259 OID 27175)
 -- Name: tipo_predicado; Type: TABLE; Schema: ruler; Owner: postgres
 --
 
@@ -213,7 +213,7 @@ ALTER TABLE tipo_predicado OWNER TO postgres;
 
 --
 -- TOC entry 2221 (class 0 OID 0)
--- Dependencies: 187
+-- Dependencies: 186
 -- Name: COLUMN tipo_predicado.id; Type: COMMENT; Schema: ruler; Owner: postgres
 --
 
@@ -222,7 +222,7 @@ COMMENT ON COLUMN tipo_predicado.id IS 'Identificador del tipo de predicado';
 
 --
 -- TOC entry 2222 (class 0 OID 0)
--- Dependencies: 187
+-- Dependencies: 186
 -- Name: COLUMN tipo_predicado.nombre; Type: COMMENT; Schema: ruler; Owner: postgres
 --
 
@@ -230,7 +230,7 @@ COMMENT ON COLUMN tipo_predicado.nombre IS 'Nombre del tipo de predicado';
 
 
 --
--- TOC entry 186 (class 1259 OID 19193)
+-- TOC entry 187 (class 1259 OID 27178)
 -- Name: tipo_predicado_id_seq; Type: SEQUENCE; Schema: ruler; Owner: postgres
 --
 
@@ -246,7 +246,7 @@ ALTER TABLE tipo_predicado_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2223 (class 0 OID 0)
--- Dependencies: 186
+-- Dependencies: 187
 -- Name: tipo_predicado_id_seq; Type: SEQUENCE OWNED BY; Schema: ruler; Owner: postgres
 --
 
@@ -254,7 +254,7 @@ ALTER SEQUENCE tipo_predicado_id_seq OWNED BY tipo_predicado.id;
 
 
 --
--- TOC entry 2072 (class 2604 OID 19182)
+-- TOC entry 2072 (class 2604 OID 27180)
 -- Name: id; Type: DEFAULT; Schema: ruler; Owner: postgres
 --
 
@@ -262,7 +262,7 @@ ALTER TABLE ONLY dominio ALTER COLUMN id SET DEFAULT nextval('dominio_id_seq'::r
 
 
 --
--- TOC entry 2073 (class 2604 OID 19190)
+-- TOC entry 2073 (class 2604 OID 27181)
 -- Name: id; Type: DEFAULT; Schema: ruler; Owner: postgres
 --
 
@@ -270,7 +270,7 @@ ALTER TABLE ONLY predicado ALTER COLUMN id SET DEFAULT nextval('predicado_id_seq
 
 
 --
--- TOC entry 2074 (class 2604 OID 19198)
+-- TOC entry 2074 (class 2604 OID 27182)
 -- Name: id; Type: DEFAULT; Schema: ruler; Owner: postgres
 --
 
@@ -278,8 +278,8 @@ ALTER TABLE ONLY tipo_predicado ALTER COLUMN id SET DEFAULT nextval('tipo_predic
 
 
 --
--- TOC entry 2198 (class 0 OID 19179)
--- Dependencies: 183
+-- TOC entry 2197 (class 0 OID 27165)
+-- Dependencies: 182
 -- Data for Name: dominio; Type: TABLE DATA; Schema: ruler; Owner: postgres
 --
 
@@ -288,7 +288,7 @@ INSERT INTO dominio VALUES (1, 'NominaHC', 'Dominio para las liquidaciones de No
 
 --
 -- TOC entry 2224 (class 0 OID 0)
--- Dependencies: 182
+-- Dependencies: 183
 -- Name: dominio_id_seq; Type: SEQUENCE SET; Schema: ruler; Owner: postgres
 --
 
@@ -296,8 +296,8 @@ SELECT pg_catalog.setval('dominio_id_seq', 1, false);
 
 
 --
--- TOC entry 2200 (class 0 OID 19187)
--- Dependencies: 185
+-- TOC entry 2199 (class 0 OID 27170)
+-- Dependencies: 184
 -- Data for Name: predicado; Type: TABLE DATA; Schema: ruler; Owner: postgres
 --
 
@@ -396,10 +396,8 @@ INSERT INTO predicado VALUES (107, 1, 'tarifa(reteIca,9.66,1000,0,0).', 'Tarifa 
 INSERT INTO predicado VALUES (108, 1, 'tarifa(estampillaUD,0.01,0,0,0).', 'Tarifa para estampilla UD *no se usan los 5 campos, el primero representa el porsentaje de descuento que se aplica a la base*', 1);
 INSERT INTO predicado VALUES (110, 1, 'tarifa(proCultura,0.005,0,0,0).', 'Tarifa para procultura *no se usan los 5 campos, el primero representa el porsentaje de descuento que se aplica a la base*', 1);
 INSERT INTO predicado VALUES (111, 1, 'tarifa(adultoMayor,0.005,0,0,0).', 'Tarifa para adilto mayor*no se usan los 5 campos, el primero representa el porsentaje de descuento que se aplica a la base*', 1);
-INSERT INTO predicado VALUES (112, 1, 'base_desc_ley(X,Y,P,rete383):- valor_pago(X,P,V),R is V * 0.25 , Y is V - R.', 'Calculo de la base para cada descuento', 1);
 INSERT INTO predicado VALUES (113, 1, 'base_desc_ley(X,Y,P,rete384):- valor_pago(X,P,Y).', 'Calculo de la base para cada descuento', 1);
 INSERT INTO predicado VALUES (114, 1, 'base_desc_ley(X,Y,P,secrHacienda):- base_desc_ley(X,Y,P,rete383).', 'Calculo de la base para cada descuento', 1);
-INSERT INTO predicado VALUES (119, 1, 'descuento_ley(X,Y,P,V,estampillaUD):- base_desc_ley(X,V,P,secrHacienda),tarifa(estampillaUD,I,S,C,A),Y is V*I.', 'Calculo de los descuentos a aplicar', 1);
 INSERT INTO predicado VALUES (122, 1, 'valores(X,T,P,L):-findall((X, Y, N, Z, R),((factor(X,T,Y,N,Z,P),Y==porcentaje,valor_pago(X,P,V),R is P * Z)),L).', 'Trae una lista de los valores de novedades para un empleado', 1);
 INSERT INTO predicado VALUES (123, 1, 'valores(X,T,P,L):-findall((X, Y, N, Z, R),((factor(X,T,Y,N,Z,P),Y==fijo,R is Z)),L).', 'Trae una lista de los valores fijos de novedades para un empleado', 1);
 INSERT INTO predicado VALUES (124, 1, 'descuentos_ley(X,T,P,L):-findall((X, T, P,Z, R),(descuento_ley(X,R,P,Z,T)),L).', 'Trae una lista de los descuentos de ley para el empleado.', 1);
@@ -408,18 +406,20 @@ INSERT INTO predicado VALUES (127, 1, 'unir([A|As],Bs,[A|Cs]):-unir(As, Bs, Cs).
 INSERT INTO predicado VALUES (130, 1, 'total_descuentos([], 0).', 'Funcion para sumar el total de los descuentos en una lista', 1);
 INSERT INTO predicado VALUES (131, 1, 'total_descuentos([(X, _, _, _, R)|Xs], S):-total_descuentos(Xs, S2),S is S2 + R.', 'Funcion para sumar el total de los descuentos en una lista', 1);
 INSERT INTO predicado VALUES (133, 1, 'valor_pago_neto(X,Y,P,V,L,L2):-valor_pago(X,P,V),valores(X,descuento,P,L),descuentos_ley(X,T,P,L2),unir(L,L2,LS),total_descuentos(LS,D),Y is V - D.', 'Hace el calculo de el total a pagar al empleado tomenado en cuenta novedades y descu8entos de ley', 1);
-INSERT INTO predicado VALUES (120, 1, 'descuento_ley(X,Y,P,V,proCultura):- base_desc_ley(X,V,P,secrHacienda),tarifa(proCultura,I,S,C,A),Y is V*I.', '1', 1);
-INSERT INTO predicado VALUES (121, 1, 'descuento_ley(X,Y,P,V,adultoMayor):-base_desc_ley(X,V,P,secrHacienda),tarifa(adultoMayor,I,S,C,A),Y is V*I.', 'Calculo de los descuentos a aplicar', 1);
-INSERT INTO predicado VALUES (116, 1, 'descuento_ley(X,Y,P,V,rete384):- base_desc_ley(X,V,P,rete384),valor_uvt(U,P),T is V / U ,tarifa(ret384,I,S,C,A), (T@>I,T@<S)->Y is (C * U);Y is (((0.27*T)-135.17) * U).', 'Calculo de los descuentos a aplicar', 1);
-INSERT INTO predicado VALUES (115, 1, 'descuento_ley(X,Y,P,V,rete383):- base_desc_ley(X,V,P,rete383),valor_uvt(U,P),T is V / U ,tarifa(ret383,I,S,C,A),T@>I,T@<S,Y is (((T-I)*C)+A)*U.', 'Calculo de los descuentos a aplicar', 1);
-INSERT INTO predicado VALUES (117, 1, 'descuento_ley(X,Y,P,V,reteIca):- base_desc_ley(X,V,P,secrHacienda),tarifa(reteIca,I,S,C,A),Y is (V*I/S).', 'Calculo de los descuentos a aplicar', 1);
 INSERT INTO predicado VALUES (134, 1, 'valor_pago(X,V,P):-valor_contrato(X,Y), duracion_contrato(X,D,V), P is Y / D.', 'a', 1);
 INSERT INTO predicado VALUES (135, 1, 'factor(prueba, descuento, porcentaje, salud, 0.04, 2016).', 'factor para la funcion findall (ejemplo)', 1);
+INSERT INTO predicado VALUES (112, 1, 'base_desc_ley(X,Y,P,rete383):- valor_pago(X,P,V),R is (V * 0.25) rnd 0 , S is V - R,Y is (S rnd 0).', 'Calculo de la base para cada descuento', 1);
+INSERT INTO predicado VALUES (115, 1, 'descuento_ley(X,Y,P,V,rete383):- base_desc_ley(X,V,P,rete383),valor_uvt(U,P),T is V / U ,tarifa(ret383,I,S,C,A),T@>I,T@=<S,R is (((T-I)*C)+A)*U,Y is (R rnd 0).', 'Calculo de los descuentos a aplicar', 1);
+INSERT INTO predicado VALUES (117, 1, 'descuento_ley(X,Y,P,V,reteIca):- base_desc_ley(X,V,P,''secrHacienda''),tarifa(reteIca,I,S,C,A),R is (V*I/S),Y is (R rnd 0).', 'Calculo de los descuentos a aplicar', 1);
+INSERT INTO predicado VALUES (119, 1, 'descuento_ley(X,Y,P,V,estampillaUD):-base_desc_ley(X,V,P,''secrHacienda''),tarifa(estampillaUD,I,S,C,A),R is (V*I),Y is (R rnd 0).', 'Calculo de los descuentos a aplicar', 1);
+INSERT INTO predicado VALUES (120, 1, 'descuento_ley(X,Y,P,V,proCultura):-base_desc_ley(X,V,P,''secrHacienda''),tarifa(proCultura,I,S,C,A),R is (V*I),Y is (R rnd 0).', '1', 1);
+INSERT INTO predicado VALUES (121, 1, 'descuento_ley(X,Y,P,V,adultoMayor):-base_desc_ley(X,V,P,''secrHacienda''),tarifa(adultoMayor,I,S,C,A),R is (V*I),Y is (R rnd 0).', 'Calculo de los descuentos a aplicar', 1);
+INSERT INTO predicado VALUES (116, 1, 'descuento_ley(X,Y,P,V,rete384):- base_desc_ley(X,V,P,rete384),valor_uvt(U,P),T is V / U ,tarifa(ret384,I,S,C,A), (T@>I,T@=<S)-> (R is (C * U),Y is (R rnd 0)); (R is (((0.27*T)-135.17) * U) ,Y is (R rnd 0)).', 'Calculo de los descuentos a aplicar', 1);
 
 
 --
 -- TOC entry 2225 (class 0 OID 0)
--- Dependencies: 184
+-- Dependencies: 185
 -- Name: predicado_id_seq; Type: SEQUENCE SET; Schema: ruler; Owner: postgres
 --
 
@@ -427,8 +427,8 @@ SELECT pg_catalog.setval('predicado_id_seq', 135, true);
 
 
 --
--- TOC entry 2202 (class 0 OID 19195)
--- Dependencies: 187
+-- TOC entry 2201 (class 0 OID 27175)
+-- Dependencies: 186
 -- Data for Name: tipo_predicado; Type: TABLE DATA; Schema: ruler; Owner: postgres
 --
 
@@ -438,7 +438,7 @@ INSERT INTO tipo_predicado VALUES (2, 'regla');
 
 --
 -- TOC entry 2226 (class 0 OID 0)
--- Dependencies: 186
+-- Dependencies: 187
 -- Name: tipo_predicado_id_seq; Type: SEQUENCE SET; Schema: ruler; Owner: postgres
 --
 
@@ -446,7 +446,7 @@ SELECT pg_catalog.setval('tipo_predicado_id_seq', 1, false);
 
 
 --
--- TOC entry 2078 (class 2606 OID 19192)
+-- TOC entry 2078 (class 2606 OID 27184)
 -- Name: pk_componente; Type: CONSTRAINT; Schema: ruler; Owner: postgres
 --
 
@@ -455,7 +455,7 @@ ALTER TABLE ONLY predicado
 
 
 --
--- TOC entry 2076 (class 2606 OID 19184)
+-- TOC entry 2076 (class 2606 OID 27186)
 -- Name: pk_dominio; Type: CONSTRAINT; Schema: ruler; Owner: postgres
 --
 
@@ -464,7 +464,7 @@ ALTER TABLE ONLY dominio
 
 
 --
--- TOC entry 2080 (class 2606 OID 19200)
+-- TOC entry 2080 (class 2606 OID 27188)
 -- Name: pk_tipo_predicado; Type: CONSTRAINT; Schema: ruler; Owner: postgres
 --
 
@@ -473,7 +473,7 @@ ALTER TABLE ONLY tipo_predicado
 
 
 --
--- TOC entry 2081 (class 2606 OID 19201)
+-- TOC entry 2081 (class 2606 OID 27189)
 -- Name: dominio; Type: FK CONSTRAINT; Schema: ruler; Owner: postgres
 --
 
@@ -482,7 +482,7 @@ ALTER TABLE ONLY predicado
 
 
 --
--- TOC entry 2082 (class 2606 OID 19206)
+-- TOC entry 2082 (class 2606 OID 27194)
 -- Name: fk_predicado_tipo_predicado; Type: FK CONSTRAINT; Schema: ruler; Owner: postgres
 --
 
@@ -492,7 +492,7 @@ ALTER TABLE ONLY predicado
 
 --
 -- TOC entry 2209 (class 0 OID 0)
--- Dependencies: 6
+-- Dependencies: 8
 -- Name: public; Type: ACL; Schema: -; Owner: postgres
 --
 
@@ -502,7 +502,7 @@ GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
--- Completed on 2016-09-29 21:01:12 COT
+-- Completed on 2016-10-11 20:01:19 COT
 
 --
 -- PostgreSQL database dump complete

@@ -75,6 +75,11 @@ func init() {
 				&controllers.NovedadAplicadaController{},
 			),
 		),
+		beego.NSNamespace("/informacion_proveedor",
+			beego.NSInclude(
+				&controllers.InformacionProveedorController{},
+			),
+		),
 	)
 	beego.AddNamespace(ns)
 }

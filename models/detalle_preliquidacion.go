@@ -13,6 +13,7 @@ type DetallePreliquidacion struct {
 	Preliquidacion *Preliquidacion `orm:"column(preliquidacion);rel(fk)"`
 	Persona        *InformacionProveedor           `orm:"column(persona);rel(fk)"`
 	Valor          string         `orm:"column(valor)"`
+	ValorBruto          string         `orm:"column(valor_bruto)"`
 	Concepto       *Concepto       `orm:"column(concepto);rel(fk);null"`
 	Id             int             `pk;orm:"column(id)"`
 }

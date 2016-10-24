@@ -5,7 +5,7 @@
 -- Dumped from database version 9.5.3
 -- Dumped by pg_dump version 9.5.4
 
--- Started on 2016-10-12 20:40:45 COT
+-- Started on 2016-10-24 12:51:30 COT
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -16,7 +16,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- TOC entry 7 (class 2615 OID 27500)
+-- TOC entry 7 (class 2615 OID 28737)
 -- Name: ruler; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
@@ -49,7 +49,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 182 (class 1259 OID 27501)
+-- TOC entry 182 (class 1259 OID 28738)
 -- Name: dominio; Type: TABLE; Schema: ruler; Owner: postgres
 --
 
@@ -90,7 +90,7 @@ COMMENT ON COLUMN dominio.descripcion IS 'Descripcion del dominio';
 
 
 --
--- TOC entry 183 (class 1259 OID 27504)
+-- TOC entry 183 (class 1259 OID 28741)
 -- Name: dominio_id_seq; Type: SEQUENCE; Schema: ruler; Owner: postgres
 --
 
@@ -114,7 +114,7 @@ ALTER SEQUENCE dominio_id_seq OWNED BY dominio.id;
 
 
 --
--- TOC entry 184 (class 1259 OID 27506)
+-- TOC entry 184 (class 1259 OID 28743)
 -- Name: predicado; Type: TABLE; Schema: ruler; Owner: postgres
 --
 
@@ -175,7 +175,7 @@ COMMENT ON COLUMN predicado.tipo_predicado IS 'Define si es un hecho o una regla
 
 
 --
--- TOC entry 185 (class 1259 OID 27509)
+-- TOC entry 185 (class 1259 OID 28746)
 -- Name: predicado_id_seq; Type: SEQUENCE; Schema: ruler; Owner: postgres
 --
 
@@ -199,7 +199,7 @@ ALTER SEQUENCE predicado_id_seq OWNED BY predicado.id;
 
 
 --
--- TOC entry 186 (class 1259 OID 27511)
+-- TOC entry 186 (class 1259 OID 28748)
 -- Name: tipo_predicado; Type: TABLE; Schema: ruler; Owner: postgres
 --
 
@@ -230,7 +230,7 @@ COMMENT ON COLUMN tipo_predicado.nombre IS 'Nombre del tipo de predicado';
 
 
 --
--- TOC entry 187 (class 1259 OID 27514)
+-- TOC entry 187 (class 1259 OID 28751)
 -- Name: tipo_predicado_id_seq; Type: SEQUENCE; Schema: ruler; Owner: postgres
 --
 
@@ -254,7 +254,7 @@ ALTER SEQUENCE tipo_predicado_id_seq OWNED BY tipo_predicado.id;
 
 
 --
--- TOC entry 2072 (class 2604 OID 27516)
+-- TOC entry 2072 (class 2604 OID 28753)
 -- Name: id; Type: DEFAULT; Schema: ruler; Owner: postgres
 --
 
@@ -262,7 +262,7 @@ ALTER TABLE ONLY dominio ALTER COLUMN id SET DEFAULT nextval('dominio_id_seq'::r
 
 
 --
--- TOC entry 2073 (class 2604 OID 27517)
+-- TOC entry 2073 (class 2604 OID 28754)
 -- Name: id; Type: DEFAULT; Schema: ruler; Owner: postgres
 --
 
@@ -270,7 +270,7 @@ ALTER TABLE ONLY predicado ALTER COLUMN id SET DEFAULT nextval('predicado_id_seq
 
 
 --
--- TOC entry 2074 (class 2604 OID 27518)
+-- TOC entry 2074 (class 2604 OID 28755)
 -- Name: id; Type: DEFAULT; Schema: ruler; Owner: postgres
 --
 
@@ -278,7 +278,7 @@ ALTER TABLE ONLY tipo_predicado ALTER COLUMN id SET DEFAULT nextval('tipo_predic
 
 
 --
--- TOC entry 2197 (class 0 OID 27501)
+-- TOC entry 2197 (class 0 OID 28738)
 -- Dependencies: 182
 -- Data for Name: dominio; Type: TABLE DATA; Schema: ruler; Owner: postgres
 --
@@ -296,7 +296,7 @@ SELECT pg_catalog.setval('dominio_id_seq', 1, false);
 
 
 --
--- TOC entry 2199 (class 0 OID 27506)
+-- TOC entry 2199 (class 0 OID 28743)
 -- Dependencies: 184
 -- Data for Name: predicado; Type: TABLE DATA; Schema: ruler; Owner: postgres
 --
@@ -427,7 +427,7 @@ SELECT pg_catalog.setval('predicado_id_seq', 135, true);
 
 
 --
--- TOC entry 2201 (class 0 OID 27511)
+-- TOC entry 2201 (class 0 OID 28748)
 -- Dependencies: 186
 -- Data for Name: tipo_predicado; Type: TABLE DATA; Schema: ruler; Owner: postgres
 --
@@ -446,7 +446,7 @@ SELECT pg_catalog.setval('tipo_predicado_id_seq', 1, false);
 
 
 --
--- TOC entry 2078 (class 2606 OID 27520)
+-- TOC entry 2078 (class 2606 OID 28757)
 -- Name: pk_componente; Type: CONSTRAINT; Schema: ruler; Owner: postgres
 --
 
@@ -455,7 +455,7 @@ ALTER TABLE ONLY predicado
 
 
 --
--- TOC entry 2076 (class 2606 OID 27522)
+-- TOC entry 2076 (class 2606 OID 28759)
 -- Name: pk_dominio; Type: CONSTRAINT; Schema: ruler; Owner: postgres
 --
 
@@ -464,7 +464,7 @@ ALTER TABLE ONLY dominio
 
 
 --
--- TOC entry 2080 (class 2606 OID 27524)
+-- TOC entry 2080 (class 2606 OID 28761)
 -- Name: pk_tipo_predicado; Type: CONSTRAINT; Schema: ruler; Owner: postgres
 --
 
@@ -473,7 +473,7 @@ ALTER TABLE ONLY tipo_predicado
 
 
 --
--- TOC entry 2081 (class 2606 OID 27525)
+-- TOC entry 2081 (class 2606 OID 28762)
 -- Name: dominio; Type: FK CONSTRAINT; Schema: ruler; Owner: postgres
 --
 
@@ -482,7 +482,7 @@ ALTER TABLE ONLY predicado
 
 
 --
--- TOC entry 2082 (class 2606 OID 27530)
+-- TOC entry 2082 (class 2606 OID 28767)
 -- Name: fk_predicado_tipo_predicado; Type: FK CONSTRAINT; Schema: ruler; Owner: postgres
 --
 
@@ -502,7 +502,7 @@ GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
--- Completed on 2016-10-12 20:40:45 COT
+-- Completed on 2016-10-24 12:51:30 COT
 
 --
 -- PostgreSQL database dump complete

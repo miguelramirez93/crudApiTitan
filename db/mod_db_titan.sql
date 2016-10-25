@@ -34,12 +34,12 @@ COMMENT ON COLUMN titan.detalle_preliquidacion.concepto IS 'Identificador del co
 
 CREATE TABLE titan.descuentos
 (
-   id serial, 
-   nombre character varying(20), 
-   base real, 
-   valor real, 
+   id serial,
+   nombre character varying(20),
+   base real,
+   valor real,
    PRIMARY KEY (id)
-); 
+);
 
 ALTER TABLE titan.descuentos
   ADD COLUMN detalle_preliquidacion bigint;
@@ -48,10 +48,18 @@ ALTER TABLE titan.descuentos
 
 CREATE TABLE titan.novedad_aplicada
 (
-   id serial, 
-   detalle_preliquidacion bigint, 
-   detalle_novedad bigint, 
-   PRIMARY KEY (id), 
-   FOREIGN KEY (detalle_preliquidacion) REFERENCES titan.detalle_preliquidacion (id) ON UPDATE NO ACTION ON DELETE NO ACTION, 
+   id serial,
+   detalle_preliquidacion bigint,
+   detalle_novedad bigint,
+   PRIMARY KEY (id),
+   FOREIGN KEY (detalle_preliquidacion) REFERENCES titan.detalle_preliquidacion (id) ON UPDATE NO ACTION ON DELETE NO ACTION,
    FOREIGN KEY (detalle_novedad) REFERENCES titan.detalle_novedad (id) ON UPDATE NO ACTION ON DELETE NO ACTION
-) 
+)
+
+ALTER TABLE titan.novedad
+  DROP CONSTRAINT ckc_naturaleza_novedad;
+ALTER TABLE titan.novedad
+  ADD CONSTRAINT ckc_naturaleza CHECK (naturaleza in ('fijo', 'porcentaje'));
+
+  ALTER TABLE titan.detalle_preliquidacion
+    ADD COLUMN valor_bruto real;

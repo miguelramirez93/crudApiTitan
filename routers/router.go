@@ -80,6 +80,11 @@ func init() {
 				&controllers.InformacionProveedorController{},
 			),
 		),
+		beego.NSNamespace("/acta_inicio",
+			beego.NSInclude(
+				&controllers.ActaInicioController{},
+			),
+		),
 	)
 	beego.AddNamespace(ns)
 }

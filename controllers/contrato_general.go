@@ -3,7 +3,7 @@ package controllers
 import (
 	"encoding/json"
 	"errors"
-	models "github.com/miguelramirez93/crudApiTitan/models"
+	"github.com/miguelramirez93/crudApiTitan/models"
 
 	"strings"
 
@@ -132,7 +132,8 @@ func (c *ContratoGeneralController) GetAll() {
 // @Failure 403 :id is not int
 // @router /:id [put]
 func (c *ContratoGeneralController) Put() {
-	var v models.ContratoGeneral
+	idStr := c.Ctx.Input.Param(":id")
+	v := models.ContratoGeneral{Id: idStr}
 	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
 		if err := models.UpdateContratoGeneralById(&v); err == nil {
 			c.Data["json"] = "OK"
@@ -153,7 +154,6 @@ func (c *ContratoGeneralController) Put() {
 // @router /:id [delete]
 func (c *ContratoGeneralController) Delete() {
 	idStr := c.Ctx.Input.Param(":id")
-
 	if err := models.DeleteContratoGeneral(idStr); err == nil {
 		c.Data["json"] = "OK"
 	} else {

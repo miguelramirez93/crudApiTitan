@@ -6,6 +6,41 @@ import (
 
 func init() {
 
+	beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:ActaInicioController"] = append(beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:ActaInicioController"],
+		beego.ControllerComments{
+			"Post",
+			`/`,
+			[]string{"post"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:ActaInicioController"] = append(beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:ActaInicioController"],
+		beego.ControllerComments{
+			"GetOne",
+			`/:id`,
+			[]string{"get"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:ActaInicioController"] = append(beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:ActaInicioController"],
+		beego.ControllerComments{
+			"GetAll",
+			`/`,
+			[]string{"get"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:ActaInicioController"] = append(beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:ActaInicioController"],
+		beego.ControllerComments{
+			"Put",
+			`/:id`,
+			[]string{"put"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:ActaInicioController"] = append(beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:ActaInicioController"],
+		beego.ControllerComments{
+			"Delete",
+			`/:id`,
+			[]string{"delete"},
+			nil})
+
 	beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:CategoriaNovedadController"] = append(beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:CategoriaNovedadController"],
 		beego.ControllerComments{
 			"Post",
@@ -216,6 +251,41 @@ func init() {
 			[]string{"delete"},
 			nil})
 
+	beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:LugarEjecucionController"] = append(beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:LugarEjecucionController"],
+		beego.ControllerComments{
+			"Post",
+			`/`,
+			[]string{"post"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:LugarEjecucionController"] = append(beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:LugarEjecucionController"],
+		beego.ControllerComments{
+			"GetOne",
+			`/:id`,
+			[]string{"get"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:LugarEjecucionController"] = append(beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:LugarEjecucionController"],
+		beego.ControllerComments{
+			"GetAll",
+			`/`,
+			[]string{"get"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:LugarEjecucionController"] = append(beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:LugarEjecucionController"],
+		beego.ControllerComments{
+			"Put",
+			`/:id`,
+			[]string{"put"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:LugarEjecucionController"] = append(beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:LugarEjecucionController"],
+		beego.ControllerComments{
+			"Delete",
+			`/:id`,
+			[]string{"delete"},
+			nil})
+
 	beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:NominaController"] = append(beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:NominaController"],
 		beego.ControllerComments{
 			"Post",
@@ -350,6 +420,76 @@ func init() {
 			nil})
 
 	beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:PreliquidacionController"] = append(beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:PreliquidacionController"],
+		beego.ControllerComments{
+			"Delete",
+			`/:id`,
+			[]string{"delete"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:SupervisorContratoController"] = append(beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:SupervisorContratoController"],
+		beego.ControllerComments{
+			"Post",
+			`/`,
+			[]string{"post"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:SupervisorContratoController"] = append(beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:SupervisorContratoController"],
+		beego.ControllerComments{
+			"GetOne",
+			`/:id`,
+			[]string{"get"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:SupervisorContratoController"] = append(beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:SupervisorContratoController"],
+		beego.ControllerComments{
+			"GetAll",
+			`/`,
+			[]string{"get"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:SupervisorContratoController"] = append(beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:SupervisorContratoController"],
+		beego.ControllerComments{
+			"Put",
+			`/:id`,
+			[]string{"put"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:SupervisorContratoController"] = append(beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:SupervisorContratoController"],
+		beego.ControllerComments{
+			"Delete",
+			`/:id`,
+			[]string{"delete"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:TipoContratoController"] = append(beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:TipoContratoController"],
+		beego.ControllerComments{
+			"Post",
+			`/`,
+			[]string{"post"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:TipoContratoController"] = append(beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:TipoContratoController"],
+		beego.ControllerComments{
+			"GetOne",
+			`/:id`,
+			[]string{"get"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:TipoContratoController"] = append(beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:TipoContratoController"],
+		beego.ControllerComments{
+			"GetAll",
+			`/`,
+			[]string{"get"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:TipoContratoController"] = append(beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:TipoContratoController"],
+		beego.ControllerComments{
+			"Put",
+			`/:id`,
+			[]string{"put"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:TipoContratoController"] = append(beego.GlobalControllerRouter["github.com/miguelramirez93/crudApiTitan/controllers:TipoContratoController"],
 		beego.ControllerComments{
 			"Delete",
 			`/:id`,

@@ -5,7 +5,7 @@
 -- Dumped from database version 9.5.3
 -- Dumped by pg_dump version 9.5.4
 
--- Started on 2016-10-27 18:24:55 COT
+-- Started on 2016-11-06 11:32:44 COT
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -16,82 +16,96 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- TOC entry 12 (class 2615 OID 35837)
--- Name: agora; Type: SCHEMA; Schema: -; Owner: -
+-- TOC entry 12 (class 2615 OID 40001)
+-- Name: agora; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
 CREATE SCHEMA agora;
 
 
+ALTER SCHEMA agora OWNER TO postgres;
+
 --
--- TOC entry 14 (class 2615 OID 37364)
--- Name: argo; Type: SCHEMA; Schema: -; Owner: -
+-- TOC entry 13 (class 2615 OID 40002)
+-- Name: argo; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
 CREATE SCHEMA argo;
 
 
+ALTER SCHEMA argo OWNER TO postgres;
+
 --
--- TOC entry 7 (class 2615 OID 35839)
--- Name: core; Type: SCHEMA; Schema: -; Owner: -
+-- TOC entry 7 (class 2615 OID 40003)
+-- Name: core; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
 CREATE SCHEMA core;
 
 
+ALTER SCHEMA core OWNER TO postgres;
+
 --
--- TOC entry 8 (class 2615 OID 35840)
--- Name: nix; Type: SCHEMA; Schema: -; Owner: -
+-- TOC entry 8 (class 2615 OID 40004)
+-- Name: nix; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
 CREATE SCHEMA nix;
 
 
+ALTER SCHEMA nix OWNER TO postgres;
+
 --
 -- TOC entry 3749 (class 0 OID 0)
 -- Dependencies: 8
--- Name: SCHEMA nix; Type: COMMENT; Schema: -; Owner: -
+-- Name: SCHEMA nix; Type: COMMENT; Schema: -; Owner: postgres
 --
 
 COMMENT ON SCHEMA nix IS 'esquema sistema financiero';
 
 
 --
--- TOC entry 9 (class 2615 OID 35841)
--- Name: nix_presupuesto; Type: SCHEMA; Schema: -; Owner: -
+-- TOC entry 9 (class 2615 OID 40005)
+-- Name: nix_presupuesto; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
 CREATE SCHEMA nix_presupuesto;
 
 
+ALTER SCHEMA nix_presupuesto OWNER TO postgres;
+
 --
 -- TOC entry 3750 (class 0 OID 0)
 -- Dependencies: 9
--- Name: SCHEMA nix_presupuesto; Type: COMMENT; Schema: -; Owner: -
+-- Name: SCHEMA nix_presupuesto; Type: COMMENT; Schema: -; Owner: postgres
 --
 
 COMMENT ON SCHEMA nix_presupuesto IS 'esquema para el módulo presupuestal del sistema financiero';
 
 
 --
--- TOC entry 10 (class 2615 OID 35842)
--- Name: ruler; Type: SCHEMA; Schema: -; Owner: -
+-- TOC entry 10 (class 2615 OID 40006)
+-- Name: ruler; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
 CREATE SCHEMA ruler;
 
 
+ALTER SCHEMA ruler OWNER TO postgres;
+
 --
--- TOC entry 11 (class 2615 OID 35843)
--- Name: titan; Type: SCHEMA; Schema: -; Owner: -
+-- TOC entry 11 (class 2615 OID 40007)
+-- Name: titan; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
 CREATE SCHEMA titan;
 
 
+ALTER SCHEMA titan OWNER TO postgres;
+
 --
 -- TOC entry 1 (class 3079 OID 12435)
--- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: -
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
 --
 
 CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
@@ -100,7 +114,7 @@ CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 --
 -- TOC entry 3753 (class 0 OID 0)
 -- Dependencies: 1
--- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: -
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
 --
 
 COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
@@ -113,8 +127,8 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 188 (class 1259 OID 35844)
--- Name: ciiu_clase; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 188 (class 1259 OID 40008)
+-- Name: ciiu_clase; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE ciiu_clase (
@@ -124,9 +138,11 @@ CREATE TABLE ciiu_clase (
 );
 
 
+ALTER TABLE ciiu_clase OWNER TO postgres;
+
 --
--- TOC entry 189 (class 1259 OID 35847)
--- Name: ciiu_division; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 189 (class 1259 OID 40011)
+-- Name: ciiu_division; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE ciiu_division (
@@ -136,9 +152,11 @@ CREATE TABLE ciiu_division (
 );
 
 
+ALTER TABLE ciiu_division OWNER TO postgres;
+
 --
--- TOC entry 190 (class 1259 OID 35850)
--- Name: ciiu_subclase; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 190 (class 1259 OID 40014)
+-- Name: ciiu_subclase; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE ciiu_subclase (
@@ -148,9 +166,11 @@ CREATE TABLE ciiu_subclase (
 );
 
 
+ALTER TABLE ciiu_subclase OWNER TO postgres;
+
 --
--- TOC entry 191 (class 1259 OID 35853)
--- Name: ciiu_tipo; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 191 (class 1259 OID 40017)
+-- Name: ciiu_tipo; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE ciiu_tipo (
@@ -159,9 +179,11 @@ CREATE TABLE ciiu_tipo (
 );
 
 
+ALTER TABLE ciiu_tipo OWNER TO postgres;
+
 --
--- TOC entry 192 (class 1259 OID 35859)
--- Name: ciudad_id_ciudad_seq; Type: SEQUENCE; Schema: agora; Owner: -
+-- TOC entry 192 (class 1259 OID 40023)
+-- Name: ciudad_id_ciudad_seq; Type: SEQUENCE; Schema: agora; Owner: postgres
 --
 
 CREATE SEQUENCE ciudad_id_ciudad_seq
@@ -172,9 +194,11 @@ CREATE SEQUENCE ciudad_id_ciudad_seq
     CACHE 1;
 
 
+ALTER TABLE ciudad_id_ciudad_seq OWNER TO postgres;
+
 --
--- TOC entry 193 (class 1259 OID 35861)
--- Name: param_codigo_validacion_id_codigo_validacion_seq; Type: SEQUENCE; Schema: agora; Owner: -
+-- TOC entry 193 (class 1259 OID 40025)
+-- Name: param_codigo_validacion_id_codigo_validacion_seq; Type: SEQUENCE; Schema: agora; Owner: postgres
 --
 
 CREATE SEQUENCE param_codigo_validacion_id_codigo_validacion_seq
@@ -185,9 +209,11 @@ CREATE SEQUENCE param_codigo_validacion_id_codigo_validacion_seq
     CACHE 1;
 
 
+ALTER TABLE param_codigo_validacion_id_codigo_validacion_seq OWNER TO postgres;
+
 --
--- TOC entry 194 (class 1259 OID 35863)
--- Name: codigo_validacion; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 194 (class 1259 OID 40027)
+-- Name: codigo_validacion; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE codigo_validacion (
@@ -198,18 +224,20 @@ CREATE TABLE codigo_validacion (
 );
 
 
+ALTER TABLE codigo_validacion OWNER TO postgres;
+
 --
 -- TOC entry 3758 (class 0 OID 0)
 -- Dependencies: 194
--- Name: COLUMN codigo_validacion.tipo_certificacion; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN codigo_validacion.tipo_certificacion; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN codigo_validacion.tipo_certificacion IS '1: Evaluacion 2: Objeto';
 
 
 --
--- TOC entry 195 (class 1259 OID 35867)
--- Name: prov_contrato_id_contrato_seq; Type: SEQUENCE; Schema: agora; Owner: -
+-- TOC entry 195 (class 1259 OID 40031)
+-- Name: prov_contrato_id_contrato_seq; Type: SEQUENCE; Schema: agora; Owner: postgres
 --
 
 CREATE SEQUENCE prov_contrato_id_contrato_seq
@@ -220,9 +248,11 @@ CREATE SEQUENCE prov_contrato_id_contrato_seq
     CACHE 1;
 
 
+ALTER TABLE prov_contrato_id_contrato_seq OWNER TO postgres;
+
 --
--- TOC entry 196 (class 1259 OID 35869)
--- Name: contrato; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 196 (class 1259 OID 40033)
+-- Name: contrato; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE contrato (
@@ -250,18 +280,20 @@ CREATE TABLE contrato (
 );
 
 
+ALTER TABLE contrato OWNER TO postgres;
+
 --
 -- TOC entry 3759 (class 0 OID 0)
 -- Dependencies: 196
--- Name: COLUMN contrato.vigencia; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN contrato.vigencia; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato.vigencia IS 'Año actual en que se registra el contrato';
 
 
 --
--- TOC entry 197 (class 1259 OID 35878)
--- Name: departamento_id_departamento_seq; Type: SEQUENCE; Schema: agora; Owner: -
+-- TOC entry 197 (class 1259 OID 40042)
+-- Name: departamento_id_departamento_seq; Type: SEQUENCE; Schema: agora; Owner: postgres
 --
 
 CREATE SEQUENCE departamento_id_departamento_seq
@@ -272,9 +304,11 @@ CREATE SEQUENCE departamento_id_departamento_seq
     CACHE 1;
 
 
+ALTER TABLE departamento_id_departamento_seq OWNER TO postgres;
+
 --
--- TOC entry 198 (class 1259 OID 35880)
--- Name: dependencia; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 198 (class 1259 OID 40044)
+-- Name: dependencia; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE dependencia (
@@ -284,9 +318,11 @@ CREATE TABLE dependencia (
 );
 
 
+ALTER TABLE dependencia OWNER TO postgres;
+
 --
--- TOC entry 199 (class 1259 OID 35886)
--- Name: prov_evaluacion_id_evaluacion_seq; Type: SEQUENCE; Schema: agora; Owner: -
+-- TOC entry 199 (class 1259 OID 40050)
+-- Name: prov_evaluacion_id_evaluacion_seq; Type: SEQUENCE; Schema: agora; Owner: postgres
 --
 
 CREATE SEQUENCE prov_evaluacion_id_evaluacion_seq
@@ -297,9 +333,11 @@ CREATE SEQUENCE prov_evaluacion_id_evaluacion_seq
     CACHE 1;
 
 
+ALTER TABLE prov_evaluacion_id_evaluacion_seq OWNER TO postgres;
+
 --
--- TOC entry 200 (class 1259 OID 35888)
--- Name: evaluacion; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 200 (class 1259 OID 40052)
+-- Name: evaluacion; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE evaluacion (
@@ -321,10 +359,12 @@ CREATE TABLE evaluacion (
 );
 
 
+ALTER TABLE evaluacion OWNER TO postgres;
+
 --
 -- TOC entry 3760 (class 0 OID 0)
 -- Dependencies: 200
--- Name: COLUMN evaluacion.id_contrato; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN evaluacion.id_contrato; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN evaluacion.id_contrato IS 'ID del contrato';
@@ -333,7 +373,7 @@ COMMENT ON COLUMN evaluacion.id_contrato IS 'ID del contrato';
 --
 -- TOC entry 3761 (class 0 OID 0)
 -- Dependencies: 200
--- Name: COLUMN evaluacion.fecha_registro; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN evaluacion.fecha_registro; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN evaluacion.fecha_registro IS 'Fecha en que se registro la evaluación';
@@ -342,7 +382,7 @@ COMMENT ON COLUMN evaluacion.fecha_registro IS 'Fecha en que se registro la eval
 --
 -- TOC entry 3762 (class 0 OID 0)
 -- Dependencies: 200
--- Name: COLUMN evaluacion.tiemo_entrega; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN evaluacion.tiemo_entrega; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN evaluacion.tiemo_entrega IS '12: si; 0: no';
@@ -351,7 +391,7 @@ COMMENT ON COLUMN evaluacion.tiemo_entrega IS '12: si; 0: no';
 --
 -- TOC entry 3763 (class 0 OID 0)
 -- Dependencies: 200
--- Name: COLUMN evaluacion.cantidades; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN evaluacion.cantidades; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN evaluacion.cantidades IS '12: si; 0: no';
@@ -360,7 +400,7 @@ COMMENT ON COLUMN evaluacion.cantidades IS '12: si; 0: no';
 --
 -- TOC entry 3764 (class 0 OID 0)
 -- Dependencies: 200
--- Name: COLUMN evaluacion.conformidad; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN evaluacion.conformidad; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN evaluacion.conformidad IS '20: si; 0: no';
@@ -369,7 +409,7 @@ COMMENT ON COLUMN evaluacion.conformidad IS '20: si; 0: no';
 --
 -- TOC entry 3765 (class 0 OID 0)
 -- Dependencies: 200
--- Name: COLUMN evaluacion.funcionalidad_adicional; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN evaluacion.funcionalidad_adicional; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN evaluacion.funcionalidad_adicional IS '10: si; 0: no';
@@ -378,7 +418,7 @@ COMMENT ON COLUMN evaluacion.funcionalidad_adicional IS '10: si; 0: no';
 --
 -- TOC entry 3766 (class 0 OID 0)
 -- Dependencies: 200
--- Name: COLUMN evaluacion.reclamaciones; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN evaluacion.reclamaciones; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN evaluacion.reclamaciones IS '0: si; 12: no';
@@ -387,7 +427,7 @@ COMMENT ON COLUMN evaluacion.reclamaciones IS '0: si; 12: no';
 --
 -- TOC entry 3767 (class 0 OID 0)
 -- Dependencies: 200
--- Name: COLUMN evaluacion.reclamacion_solucion; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN evaluacion.reclamacion_solucion; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN evaluacion.reclamacion_solucion IS '12: si; 0: no';
@@ -396,7 +436,7 @@ COMMENT ON COLUMN evaluacion.reclamacion_solucion IS '12: si; 0: no';
 --
 -- TOC entry 3768 (class 0 OID 0)
 -- Dependencies: 200
--- Name: COLUMN evaluacion.servicio_venta; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN evaluacion.servicio_venta; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN evaluacion.servicio_venta IS '10: si; 0: no';
@@ -405,7 +445,7 @@ COMMENT ON COLUMN evaluacion.servicio_venta IS '10: si; 0: no';
 --
 -- TOC entry 3769 (class 0 OID 0)
 -- Dependencies: 200
--- Name: COLUMN evaluacion.procedimientos; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN evaluacion.procedimientos; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN evaluacion.procedimientos IS '9: excelente; 6: bueno; 3: regular; 0: malo';
@@ -414,7 +454,7 @@ COMMENT ON COLUMN evaluacion.procedimientos IS '9: excelente; 6: bueno; 3: regul
 --
 -- TOC entry 3770 (class 0 OID 0)
 -- Dependencies: 200
--- Name: COLUMN evaluacion.garantia; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN evaluacion.garantia; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN evaluacion.garantia IS '0: si; 15: no';
@@ -423,7 +463,7 @@ COMMENT ON COLUMN evaluacion.garantia IS '0: si; 15: no';
 --
 -- TOC entry 3771 (class 0 OID 0)
 -- Dependencies: 200
--- Name: COLUMN evaluacion.garantia_satisfaccion; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN evaluacion.garantia_satisfaccion; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN evaluacion.garantia_satisfaccion IS '15: si; 0: no';
@@ -432,7 +472,7 @@ COMMENT ON COLUMN evaluacion.garantia_satisfaccion IS '15: si; 0: no';
 --
 -- TOC entry 3772 (class 0 OID 0)
 -- Dependencies: 200
--- Name: COLUMN evaluacion.puntaje_total; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN evaluacion.puntaje_total; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN evaluacion.puntaje_total IS 'Puntaje total de la evaluación';
@@ -441,7 +481,7 @@ COMMENT ON COLUMN evaluacion.puntaje_total IS 'Puntaje total de la evaluación';
 --
 -- TOC entry 3773 (class 0 OID 0)
 -- Dependencies: 200
--- Name: COLUMN evaluacion.clasificacion; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN evaluacion.clasificacion; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN evaluacion.clasificacion IS 'Clasificacion:
@@ -451,8 +491,8 @@ C: Menor o igual a 44 puntos.';
 
 
 --
--- TOC entry 201 (class 1259 OID 35899)
--- Name: informacion_persona_juridica; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 201 (class 1259 OID 40063)
+-- Name: informacion_persona_juridica; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE informacion_persona_juridica (
@@ -484,9 +524,11 @@ CREATE TABLE informacion_persona_juridica (
 );
 
 
+ALTER TABLE informacion_persona_juridica OWNER TO postgres;
+
 --
--- TOC entry 202 (class 1259 OID 35906)
--- Name: informacion_persona_natural; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 202 (class 1259 OID 40070)
+-- Name: informacion_persona_natural; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE informacion_persona_natural (
@@ -508,9 +550,11 @@ CREATE TABLE informacion_persona_natural (
 );
 
 
+ALTER TABLE informacion_persona_natural OWNER TO postgres;
+
 --
--- TOC entry 203 (class 1259 OID 35913)
--- Name: prov_proveedor_info_id_proveedor_seq; Type: SEQUENCE; Schema: agora; Owner: -
+-- TOC entry 203 (class 1259 OID 40077)
+-- Name: prov_proveedor_info_id_proveedor_seq; Type: SEQUENCE; Schema: agora; Owner: postgres
 --
 
 CREATE SEQUENCE prov_proveedor_info_id_proveedor_seq
@@ -521,9 +565,11 @@ CREATE SEQUENCE prov_proveedor_info_id_proveedor_seq
     CACHE 1;
 
 
+ALTER TABLE prov_proveedor_info_id_proveedor_seq OWNER TO postgres;
+
 --
--- TOC entry 204 (class 1259 OID 35915)
--- Name: informacion_proveedor; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 204 (class 1259 OID 40079)
+-- Name: informacion_proveedor; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE informacion_proveedor (
@@ -552,10 +598,12 @@ CREATE TABLE informacion_proveedor (
 );
 
 
+ALTER TABLE informacion_proveedor OWNER TO postgres;
+
 --
 -- TOC entry 3774 (class 0 OID 0)
 -- Dependencies: 204
--- Name: COLUMN informacion_proveedor.id_proveedor; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN informacion_proveedor.id_proveedor; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN informacion_proveedor.id_proveedor IS 'id del proveedor - secuencia de proveedores';
@@ -564,7 +612,7 @@ COMMENT ON COLUMN informacion_proveedor.id_proveedor IS 'id del proveedor - secu
 --
 -- TOC entry 3775 (class 0 OID 0)
 -- Dependencies: 204
--- Name: COLUMN informacion_proveedor.tipopersona; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN informacion_proveedor.tipopersona; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN informacion_proveedor.tipopersona IS 'Tipo de persona. N: Natural ; J: Juridica';
@@ -573,7 +621,7 @@ COMMENT ON COLUMN informacion_proveedor.tipopersona IS 'Tipo de persona. N: Natu
 --
 -- TOC entry 3776 (class 0 OID 0)
 -- Dependencies: 204
--- Name: COLUMN informacion_proveedor.num_documento; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN informacion_proveedor.num_documento; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN informacion_proveedor.num_documento IS 'Nit o Cedula del proveedor';
@@ -582,7 +630,7 @@ COMMENT ON COLUMN informacion_proveedor.num_documento IS 'Nit o Cedula del prove
 --
 -- TOC entry 3777 (class 0 OID 0)
 -- Dependencies: 204
--- Name: COLUMN informacion_proveedor.direccion; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN informacion_proveedor.direccion; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN informacion_proveedor.direccion IS 'Municipio';
@@ -591,7 +639,7 @@ COMMENT ON COLUMN informacion_proveedor.direccion IS 'Municipio';
 --
 -- TOC entry 3778 (class 0 OID 0)
 -- Dependencies: 204
--- Name: COLUMN informacion_proveedor.correo; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN informacion_proveedor.correo; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN informacion_proveedor.correo IS 'Correo';
@@ -600,7 +648,7 @@ COMMENT ON COLUMN informacion_proveedor.correo IS 'Correo';
 --
 -- TOC entry 3779 (class 0 OID 0)
 -- Dependencies: 204
--- Name: COLUMN informacion_proveedor.web; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN informacion_proveedor.web; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN informacion_proveedor.web IS 'Pagina web';
@@ -609,7 +657,7 @@ COMMENT ON COLUMN informacion_proveedor.web IS 'Pagina web';
 --
 -- TOC entry 3780 (class 0 OID 0)
 -- Dependencies: 204
--- Name: COLUMN informacion_proveedor.puntaje_evaluacion; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN informacion_proveedor.puntaje_evaluacion; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN informacion_proveedor.puntaje_evaluacion IS 'Puntaje total de las evaluaciones realizadas al proveedor';
@@ -618,15 +666,15 @@ COMMENT ON COLUMN informacion_proveedor.puntaje_evaluacion IS 'Puntaje total de 
 --
 -- TOC entry 3781 (class 0 OID 0)
 -- Dependencies: 204
--- Name: COLUMN informacion_proveedor.clasificacion_evaluacion; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN informacion_proveedor.clasificacion_evaluacion; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN informacion_proveedor.clasificacion_evaluacion IS 'Tipo de clasificacion del proveedor de acuerdo al puntaje total';
 
 
 --
--- TOC entry 205 (class 1259 OID 35924)
--- Name: prov_inhabilidad_id_inhabilidad_seq; Type: SEQUENCE; Schema: agora; Owner: -
+-- TOC entry 205 (class 1259 OID 40088)
+-- Name: prov_inhabilidad_id_inhabilidad_seq; Type: SEQUENCE; Schema: agora; Owner: postgres
 --
 
 CREATE SEQUENCE prov_inhabilidad_id_inhabilidad_seq
@@ -637,9 +685,11 @@ CREATE SEQUENCE prov_inhabilidad_id_inhabilidad_seq
     CACHE 1;
 
 
+ALTER TABLE prov_inhabilidad_id_inhabilidad_seq OWNER TO postgres;
+
 --
--- TOC entry 206 (class 1259 OID 35926)
--- Name: inhabilidad; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 206 (class 1259 OID 40090)
+-- Name: inhabilidad; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE inhabilidad (
@@ -652,9 +702,11 @@ CREATE TABLE inhabilidad (
 );
 
 
+ALTER TABLE inhabilidad OWNER TO postgres;
+
 --
--- TOC entry 207 (class 1259 OID 35933)
--- Name: param_menu_id_menu_seq; Type: SEQUENCE; Schema: agora; Owner: -
+-- TOC entry 207 (class 1259 OID 40097)
+-- Name: param_menu_id_menu_seq; Type: SEQUENCE; Schema: agora; Owner: postgres
 --
 
 CREATE SEQUENCE param_menu_id_menu_seq
@@ -665,9 +717,11 @@ CREATE SEQUENCE param_menu_id_menu_seq
     CACHE 1;
 
 
+ALTER TABLE param_menu_id_menu_seq OWNER TO postgres;
+
 --
--- TOC entry 208 (class 1259 OID 35935)
--- Name: menu; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 208 (class 1259 OID 40099)
+-- Name: menu; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE menu (
@@ -681,9 +735,11 @@ CREATE TABLE menu (
 );
 
 
+ALTER TABLE menu OWNER TO postgres;
+
 --
--- TOC entry 209 (class 1259 OID 35942)
--- Name: nomenclatura_dian; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 209 (class 1259 OID 40106)
+-- Name: nomenclatura_dian; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE nomenclatura_dian (
@@ -696,9 +752,11 @@ CREATE TABLE nomenclatura_dian (
 );
 
 
+ALTER TABLE nomenclatura_dian OWNER TO postgres;
+
 --
--- TOC entry 210 (class 1259 OID 35946)
--- Name: prov_objeto_contratar_id_objeto_seq; Type: SEQUENCE; Schema: agora; Owner: -
+-- TOC entry 210 (class 1259 OID 40110)
+-- Name: prov_objeto_contratar_id_objeto_seq; Type: SEQUENCE; Schema: agora; Owner: postgres
 --
 
 CREATE SEQUENCE prov_objeto_contratar_id_objeto_seq
@@ -709,9 +767,11 @@ CREATE SEQUENCE prov_objeto_contratar_id_objeto_seq
     CACHE 1;
 
 
+ALTER TABLE prov_objeto_contratar_id_objeto_seq OWNER TO postgres;
+
 --
--- TOC entry 211 (class 1259 OID 35948)
--- Name: objeto_contratar; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 211 (class 1259 OID 40112)
+-- Name: objeto_contratar; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE objeto_contratar (
@@ -729,10 +789,12 @@ CREATE TABLE objeto_contratar (
 );
 
 
+ALTER TABLE objeto_contratar OWNER TO postgres;
+
 --
 -- TOC entry 3782 (class 0 OID 0)
 -- Dependencies: 211
--- Name: COLUMN objeto_contratar.id_objeto; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN objeto_contratar.id_objeto; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN objeto_contratar.id_objeto IS 'ID objeto a contratar';
@@ -741,7 +803,7 @@ COMMENT ON COLUMN objeto_contratar.id_objeto IS 'ID objeto a contratar';
 --
 -- TOC entry 3783 (class 0 OID 0)
 -- Dependencies: 211
--- Name: COLUMN objeto_contratar.numero_solicitud; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN objeto_contratar.numero_solicitud; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN objeto_contratar.numero_solicitud IS 'Número de la Solicitud de Necesidad';
@@ -750,7 +812,7 @@ COMMENT ON COLUMN objeto_contratar.numero_solicitud IS 'Número de la Solicitud 
 --
 -- TOC entry 3784 (class 0 OID 0)
 -- Dependencies: 211
--- Name: COLUMN objeto_contratar.vigencia; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN objeto_contratar.vigencia; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN objeto_contratar.vigencia IS 'Número de la Vigencia de la Solicitud de Necesidad';
@@ -759,7 +821,7 @@ COMMENT ON COLUMN objeto_contratar.vigencia IS 'Número de la Vigencia de la Sol
 --
 -- TOC entry 3785 (class 0 OID 0)
 -- Dependencies: 211
--- Name: COLUMN objeto_contratar.fecharegistro; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN objeto_contratar.fecharegistro; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN objeto_contratar.fecharegistro IS 'fecha en que se realizo el registro del objeto';
@@ -768,7 +830,7 @@ COMMENT ON COLUMN objeto_contratar.fecharegistro IS 'fecha en que se realizo el 
 --
 -- TOC entry 3786 (class 0 OID 0)
 -- Dependencies: 211
--- Name: COLUMN objeto_contratar.id_unidad; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN objeto_contratar.id_unidad; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN objeto_contratar.id_unidad IS 'unidad';
@@ -777,7 +839,7 @@ COMMENT ON COLUMN objeto_contratar.id_unidad IS 'unidad';
 --
 -- TOC entry 3787 (class 0 OID 0)
 -- Dependencies: 211
--- Name: COLUMN objeto_contratar.cantidad; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN objeto_contratar.cantidad; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN objeto_contratar.cantidad IS 'cantidad';
@@ -786,15 +848,15 @@ COMMENT ON COLUMN objeto_contratar.cantidad IS 'cantidad';
 --
 -- TOC entry 3788 (class 0 OID 0)
 -- Dependencies: 211
--- Name: COLUMN objeto_contratar.fechasolicitudcotizacion; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN objeto_contratar.fechasolicitudcotizacion; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN objeto_contratar.fechasolicitudcotizacion IS 'Fecha en que se realizo la solicitud de la cotizacion';
 
 
 --
--- TOC entry 212 (class 1259 OID 35956)
--- Name: param_ordenador_gasto_id_ordenador_seq; Type: SEQUENCE; Schema: agora; Owner: -
+-- TOC entry 212 (class 1259 OID 40120)
+-- Name: param_ordenador_gasto_id_ordenador_seq; Type: SEQUENCE; Schema: agora; Owner: postgres
 --
 
 CREATE SEQUENCE param_ordenador_gasto_id_ordenador_seq
@@ -805,9 +867,11 @@ CREATE SEQUENCE param_ordenador_gasto_id_ordenador_seq
     CACHE 1;
 
 
+ALTER TABLE param_ordenador_gasto_id_ordenador_seq OWNER TO postgres;
+
 --
--- TOC entry 213 (class 1259 OID 35958)
--- Name: ordenador_gasto; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 213 (class 1259 OID 40122)
+-- Name: ordenador_gasto; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE ordenador_gasto (
@@ -818,9 +882,11 @@ CREATE TABLE ordenador_gasto (
 );
 
 
+ALTER TABLE ordenador_gasto OWNER TO postgres;
+
 --
--- TOC entry 214 (class 1259 OID 35965)
--- Name: pais_id_pais_seq; Type: SEQUENCE; Schema: agora; Owner: -
+-- TOC entry 214 (class 1259 OID 40129)
+-- Name: pais_id_pais_seq; Type: SEQUENCE; Schema: agora; Owner: postgres
 --
 
 CREATE SEQUENCE pais_id_pais_seq
@@ -831,9 +897,11 @@ CREATE SEQUENCE pais_id_pais_seq
     CACHE 1;
 
 
+ALTER TABLE pais_id_pais_seq OWNER TO postgres;
+
 --
--- TOC entry 215 (class 1259 OID 35967)
--- Name: param_supervisor_id_supervisor_seq; Type: SEQUENCE; Schema: agora; Owner: -
+-- TOC entry 215 (class 1259 OID 40131)
+-- Name: param_supervisor_id_supervisor_seq; Type: SEQUENCE; Schema: agora; Owner: postgres
 --
 
 CREATE SEQUENCE param_supervisor_id_supervisor_seq
@@ -844,9 +912,11 @@ CREATE SEQUENCE param_supervisor_id_supervisor_seq
     CACHE 1;
 
 
+ALTER TABLE param_supervisor_id_supervisor_seq OWNER TO postgres;
+
 --
--- TOC entry 216 (class 1259 OID 35969)
--- Name: param_unidades_id_unidad_seq; Type: SEQUENCE; Schema: agora; Owner: -
+-- TOC entry 216 (class 1259 OID 40133)
+-- Name: param_unidades_id_unidad_seq; Type: SEQUENCE; Schema: agora; Owner: postgres
 --
 
 CREATE SEQUENCE param_unidades_id_unidad_seq
@@ -857,9 +927,11 @@ CREATE SEQUENCE param_unidades_id_unidad_seq
     CACHE 1;
 
 
+ALTER TABLE param_unidades_id_unidad_seq OWNER TO postgres;
+
 --
--- TOC entry 217 (class 1259 OID 35971)
--- Name: parametro_estandar; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 217 (class 1259 OID 40135)
+-- Name: parametro_estandar; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE parametro_estandar (
@@ -870,9 +942,11 @@ CREATE TABLE parametro_estandar (
 );
 
 
+ALTER TABLE parametro_estandar OWNER TO postgres;
+
 --
--- TOC entry 218 (class 1259 OID 35974)
--- Name: prov_formulario_tmp_id_data_seq; Type: SEQUENCE; Schema: agora; Owner: -
+-- TOC entry 218 (class 1259 OID 40138)
+-- Name: prov_formulario_tmp_id_data_seq; Type: SEQUENCE; Schema: agora; Owner: postgres
 --
 
 CREATE SEQUENCE prov_formulario_tmp_id_data_seq
@@ -883,9 +957,11 @@ CREATE SEQUENCE prov_formulario_tmp_id_data_seq
     CACHE 1;
 
 
+ALTER TABLE prov_formulario_tmp_id_data_seq OWNER TO postgres;
+
 --
--- TOC entry 219 (class 1259 OID 35976)
--- Name: prov_formulario_tmp; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 219 (class 1259 OID 40140)
+-- Name: prov_formulario_tmp; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE prov_formulario_tmp (
@@ -898,9 +974,11 @@ CREATE TABLE prov_formulario_tmp (
 );
 
 
+ALTER TABLE prov_formulario_tmp OWNER TO postgres;
+
 --
--- TOC entry 220 (class 1259 OID 35980)
--- Name: prov_proveedor_data_id_data_seq; Type: SEQUENCE; Schema: agora; Owner: -
+-- TOC entry 220 (class 1259 OID 40144)
+-- Name: prov_proveedor_data_id_data_seq; Type: SEQUENCE; Schema: agora; Owner: postgres
 --
 
 CREATE SEQUENCE prov_proveedor_data_id_data_seq
@@ -911,9 +989,11 @@ CREATE SEQUENCE prov_proveedor_data_id_data_seq
     CACHE 1;
 
 
+ALTER TABLE prov_proveedor_data_id_data_seq OWNER TO postgres;
+
 --
--- TOC entry 221 (class 1259 OID 35982)
--- Name: prov_proveedor_data; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 221 (class 1259 OID 40146)
+-- Name: prov_proveedor_data; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE prov_proveedor_data (
@@ -926,9 +1006,11 @@ CREATE TABLE prov_proveedor_data (
 );
 
 
+ALTER TABLE prov_proveedor_data OWNER TO postgres;
+
 --
--- TOC entry 222 (class 1259 OID 35986)
--- Name: prov_proveedor_telefono; Type: SEQUENCE; Schema: agora; Owner: -
+-- TOC entry 222 (class 1259 OID 40150)
+-- Name: prov_proveedor_telefono; Type: SEQUENCE; Schema: agora; Owner: postgres
 --
 
 CREATE SEQUENCE prov_proveedor_telefono
@@ -939,9 +1021,11 @@ CREATE SEQUENCE prov_proveedor_telefono
     CACHE 1;
 
 
+ALTER TABLE prov_proveedor_telefono OWNER TO postgres;
+
 --
--- TOC entry 223 (class 1259 OID 35988)
--- Name: prov_solicitud_cotizacion_id_soliciutd_seq; Type: SEQUENCE; Schema: agora; Owner: -
+-- TOC entry 223 (class 1259 OID 40152)
+-- Name: prov_solicitud_cotizacion_id_soliciutd_seq; Type: SEQUENCE; Schema: agora; Owner: postgres
 --
 
 CREATE SEQUENCE prov_solicitud_cotizacion_id_soliciutd_seq
@@ -952,9 +1036,11 @@ CREATE SEQUENCE prov_solicitud_cotizacion_id_soliciutd_seq
     CACHE 1;
 
 
+ALTER TABLE prov_solicitud_cotizacion_id_soliciutd_seq OWNER TO postgres;
+
 --
--- TOC entry 224 (class 1259 OID 35990)
--- Name: proveedor_actividad_ciiu; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 224 (class 1259 OID 40154)
+-- Name: proveedor_actividad_ciiu; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE proveedor_actividad_ciiu (
@@ -963,9 +1049,11 @@ CREATE TABLE proveedor_actividad_ciiu (
 );
 
 
+ALTER TABLE proveedor_actividad_ciiu OWNER TO postgres;
+
 --
--- TOC entry 225 (class 1259 OID 35993)
--- Name: proveedor_informacion_proveedor; Type: SEQUENCE; Schema: agora; Owner: -
+-- TOC entry 225 (class 1259 OID 40157)
+-- Name: proveedor_informacion_proveedor; Type: SEQUENCE; Schema: agora; Owner: postgres
 --
 
 CREATE SEQUENCE proveedor_informacion_proveedor
@@ -976,9 +1064,11 @@ CREATE SEQUENCE proveedor_informacion_proveedor
     CACHE 1;
 
 
+ALTER TABLE proveedor_informacion_proveedor OWNER TO postgres;
+
 --
--- TOC entry 226 (class 1259 OID 35995)
--- Name: proveedor_representante_legal; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 226 (class 1259 OID 40159)
+-- Name: proveedor_representante_legal; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE proveedor_representante_legal (
@@ -989,9 +1079,11 @@ CREATE TABLE proveedor_representante_legal (
 );
 
 
+ALTER TABLE proveedor_representante_legal OWNER TO postgres;
+
 --
--- TOC entry 227 (class 1259 OID 35998)
--- Name: proveedor_telefono; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 227 (class 1259 OID 40162)
+-- Name: proveedor_telefono; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE proveedor_telefono (
@@ -1000,9 +1092,11 @@ CREATE TABLE proveedor_telefono (
 );
 
 
+ALTER TABLE proveedor_telefono OWNER TO postgres;
+
 --
--- TOC entry 228 (class 1259 OID 36001)
--- Name: rup_especialidad; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 228 (class 1259 OID 40165)
+-- Name: rup_especialidad; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE rup_especialidad (
@@ -1012,9 +1106,11 @@ CREATE TABLE rup_especialidad (
 );
 
 
+ALTER TABLE rup_especialidad OWNER TO postgres;
+
 --
--- TOC entry 229 (class 1259 OID 36004)
--- Name: rup_grupo; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 229 (class 1259 OID 40168)
+-- Name: rup_grupo; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE rup_grupo (
@@ -1024,9 +1120,11 @@ CREATE TABLE rup_grupo (
 );
 
 
+ALTER TABLE rup_grupo OWNER TO postgres;
+
 --
--- TOC entry 230 (class 1259 OID 36007)
--- Name: rup_tipo; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 230 (class 1259 OID 40171)
+-- Name: rup_tipo; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE rup_tipo (
@@ -1035,9 +1133,11 @@ CREATE TABLE rup_tipo (
 );
 
 
+ALTER TABLE rup_tipo OWNER TO postgres;
+
 --
--- TOC entry 231 (class 1259 OID 36010)
--- Name: solicitud_cotizacion; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 231 (class 1259 OID 40174)
+-- Name: solicitud_cotizacion; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE solicitud_cotizacion (
@@ -1047,10 +1147,12 @@ CREATE TABLE solicitud_cotizacion (
 );
 
 
+ALTER TABLE solicitud_cotizacion OWNER TO postgres;
+
 --
 -- TOC entry 3793 (class 0 OID 0)
 -- Dependencies: 231
--- Name: COLUMN solicitud_cotizacion.id_soliciutd; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN solicitud_cotizacion.id_soliciutd; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_cotizacion.id_soliciutd IS 'Consecutivo ID solicitud de cotizacion';
@@ -1059,7 +1161,7 @@ COMMENT ON COLUMN solicitud_cotizacion.id_soliciutd IS 'Consecutivo ID solicitud
 --
 -- TOC entry 3794 (class 0 OID 0)
 -- Dependencies: 231
--- Name: COLUMN solicitud_cotizacion.id_objeto; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN solicitud_cotizacion.id_objeto; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_cotizacion.id_objeto IS 'ID del objeto a contratar';
@@ -1068,15 +1170,15 @@ COMMENT ON COLUMN solicitud_cotizacion.id_objeto IS 'ID del objeto a contratar';
 --
 -- TOC entry 3795 (class 0 OID 0)
 -- Dependencies: 231
--- Name: COLUMN solicitud_cotizacion.id_proveedor; Type: COMMENT; Schema: agora; Owner: -
+-- Name: COLUMN solicitud_cotizacion.id_proveedor; Type: COMMENT; Schema: agora; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_cotizacion.id_proveedor IS 'ID del proveedor al que se le solicita la cotizacion';
 
 
 --
--- TOC entry 232 (class 1259 OID 36014)
--- Name: supervisor; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 232 (class 1259 OID 40178)
+-- Name: supervisor; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE supervisor (
@@ -1090,9 +1192,11 @@ CREATE TABLE supervisor (
 );
 
 
+ALTER TABLE supervisor OWNER TO postgres;
+
 --
--- TOC entry 233 (class 1259 OID 36022)
--- Name: telefono; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 233 (class 1259 OID 40186)
+-- Name: telefono; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE telefono (
@@ -1103,9 +1207,11 @@ CREATE TABLE telefono (
 );
 
 
+ALTER TABLE telefono OWNER TO postgres;
+
 --
--- TOC entry 234 (class 1259 OID 36026)
--- Name: tipo_conformacion; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 234 (class 1259 OID 40190)
+-- Name: tipo_conformacion; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE tipo_conformacion (
@@ -1116,9 +1222,11 @@ CREATE TABLE tipo_conformacion (
 );
 
 
+ALTER TABLE tipo_conformacion OWNER TO postgres;
+
 --
--- TOC entry 235 (class 1259 OID 36029)
--- Name: unidad; Type: TABLE; Schema: agora; Owner: -
+-- TOC entry 235 (class 1259 OID 40193)
+-- Name: unidad; Type: TABLE; Schema: agora; Owner: postgres
 --
 
 CREATE TABLE unidad (
@@ -1128,11 +1236,13 @@ CREATE TABLE unidad (
 );
 
 
+ALTER TABLE unidad OWNER TO postgres;
+
 SET search_path = argo, pg_catalog;
 
 --
--- TOC entry 327 (class 1259 OID 37365)
--- Name: acta_inicio; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 236 (class 1259 OID 40200)
+-- Name: acta_inicio; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE acta_inicio (
@@ -1146,10 +1256,12 @@ CREATE TABLE acta_inicio (
 );
 
 
+ALTER TABLE acta_inicio OWNER TO postgres;
+
 --
 -- TOC entry 3796 (class 0 OID 0)
--- Dependencies: 327
--- Name: TABLE acta_inicio; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 236
+-- Name: TABLE acta_inicio; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE acta_inicio IS 'almacena la informacion de acta de inicio de un contrato';
@@ -1157,8 +1269,8 @@ COMMENT ON TABLE acta_inicio IS 'almacena la informacion de acta de inicio de un
 
 --
 -- TOC entry 3797 (class 0 OID 0)
--- Dependencies: 327
--- Name: COLUMN acta_inicio.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 236
+-- Name: COLUMN acta_inicio.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN acta_inicio.id IS 'identificador unico de la tabla de tipo serial';
@@ -1166,8 +1278,8 @@ COMMENT ON COLUMN acta_inicio.id IS 'identificador unico de la tabla de tipo ser
 
 --
 -- TOC entry 3798 (class 0 OID 0)
--- Dependencies: 327
--- Name: COLUMN acta_inicio.numero_contrato; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 236
+-- Name: COLUMN acta_inicio.numero_contrato; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN acta_inicio.numero_contrato IS 'numero unico del contrato, referencia foranea a contrato_general';
@@ -1175,8 +1287,8 @@ COMMENT ON COLUMN acta_inicio.numero_contrato IS 'numero unico del contrato, ref
 
 --
 -- TOC entry 3799 (class 0 OID 0)
--- Dependencies: 327
--- Name: COLUMN acta_inicio.vigencia; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 236
+-- Name: COLUMN acta_inicio.vigencia; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN acta_inicio.vigencia IS 'vigencia  del contrato, referencia foranea a contrato general';
@@ -1184,8 +1296,8 @@ COMMENT ON COLUMN acta_inicio.vigencia IS 'vigencia  del contrato, referencia fo
 
 --
 -- TOC entry 3800 (class 0 OID 0)
--- Dependencies: 327
--- Name: COLUMN acta_inicio.fecha_inicio; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 236
+-- Name: COLUMN acta_inicio.fecha_inicio; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN acta_inicio.fecha_inicio IS 'fecha de inicio del acta de inicion, fecha formal de cuando inicia el contrato';
@@ -1193,8 +1305,8 @@ COMMENT ON COLUMN acta_inicio.fecha_inicio IS 'fecha de inicio del acta de inici
 
 --
 -- TOC entry 3801 (class 0 OID 0)
--- Dependencies: 327
--- Name: COLUMN acta_inicio.fecha_fin; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 236
+-- Name: COLUMN acta_inicio.fecha_fin; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN acta_inicio.fecha_fin IS 'fecha fin del acta de inicion, fecha formal de cuando termina el contrato
@@ -1203,8 +1315,8 @@ COMMENT ON COLUMN acta_inicio.fecha_fin IS 'fecha fin del acta de inicion, fecha
 
 --
 -- TOC entry 3802 (class 0 OID 0)
--- Dependencies: 327
--- Name: COLUMN acta_inicio.descripcion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 236
+-- Name: COLUMN acta_inicio.descripcion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN acta_inicio.descripcion IS 'descripcion adicional acta de inicio';
@@ -1212,16 +1324,16 @@ COMMENT ON COLUMN acta_inicio.descripcion IS 'descripcion adicional acta de inic
 
 --
 -- TOC entry 3803 (class 0 OID 0)
--- Dependencies: 327
--- Name: COLUMN acta_inicio.usuario; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 236
+-- Name: COLUMN acta_inicio.usuario; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN acta_inicio.usuario IS 'usuario que realiza el registro del acta de inicio';
 
 
 --
--- TOC entry 328 (class 1259 OID 37371)
--- Name: acta_inicio_id_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 237 (class 1259 OID 40206)
+-- Name: acta_inicio_id_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE acta_inicio_id_seq
@@ -1232,9 +1344,11 @@ CREATE SEQUENCE acta_inicio_id_seq
     CACHE 1;
 
 
+ALTER TABLE acta_inicio_id_seq OWNER TO postgres;
+
 --
--- TOC entry 329 (class 1259 OID 37373)
--- Name: acta_inicio_id_seq1; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 238 (class 1259 OID 40208)
+-- Name: acta_inicio_id_seq1; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE acta_inicio_id_seq1
@@ -1245,18 +1359,20 @@ CREATE SEQUENCE acta_inicio_id_seq1
     CACHE 1;
 
 
+ALTER TABLE acta_inicio_id_seq1 OWNER TO postgres;
+
 --
 -- TOC entry 3804 (class 0 OID 0)
--- Dependencies: 329
--- Name: acta_inicio_id_seq1; Type: SEQUENCE OWNED BY; Schema: argo; Owner: -
+-- Dependencies: 238
+-- Name: acta_inicio_id_seq1; Type: SEQUENCE OWNED BY; Schema: argo; Owner: postgres
 --
 
 ALTER SEQUENCE acta_inicio_id_seq1 OWNED BY acta_inicio.id;
 
 
 --
--- TOC entry 330 (class 1259 OID 37375)
--- Name: actividad_economica_necesidad; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 239 (class 1259 OID 40210)
+-- Name: actividad_economica_necesidad; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE actividad_economica_necesidad (
@@ -1266,10 +1382,12 @@ CREATE TABLE actividad_economica_necesidad (
 );
 
 
+ALTER TABLE actividad_economica_necesidad OWNER TO postgres;
+
 --
 -- TOC entry 3805 (class 0 OID 0)
--- Dependencies: 330
--- Name: TABLE actividad_economica_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 239
+-- Name: TABLE actividad_economica_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE actividad_economica_necesidad IS 'Tabla de rompimiento entre la necesidad y las activiades económicas';
@@ -1277,8 +1395,8 @@ COMMENT ON TABLE actividad_economica_necesidad IS 'Tabla de rompimiento entre la
 
 --
 -- TOC entry 3806 (class 0 OID 0)
--- Dependencies: 330
--- Name: COLUMN actividad_economica_necesidad.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 239
+-- Name: COLUMN actividad_economica_necesidad.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN actividad_economica_necesidad.id IS 'Identificador de la tabla de rompimiento entre la necesidad y las actividades economicas';
@@ -1286,8 +1404,8 @@ COMMENT ON COLUMN actividad_economica_necesidad.id IS 'Identificador de la tabla
 
 --
 -- TOC entry 3807 (class 0 OID 0)
--- Dependencies: 330
--- Name: COLUMN actividad_economica_necesidad.solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 239
+-- Name: COLUMN actividad_economica_necesidad.solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN actividad_economica_necesidad.solicitud_necesidad IS 'Identificador de la necesidad a la que van a ir asociadas las actividades economicas';
@@ -1295,16 +1413,16 @@ COMMENT ON COLUMN actividad_economica_necesidad.solicitud_necesidad IS 'Identifi
 
 --
 -- TOC entry 3808 (class 0 OID 0)
--- Dependencies: 330
--- Name: COLUMN actividad_economica_necesidad.actividad_economica; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 239
+-- Name: COLUMN actividad_economica_necesidad.actividad_economica; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN actividad_economica_necesidad.actividad_economica IS 'Identificador de la actividad economica de menor jerarqiía que se asocia a una necesidad';
 
 
 --
--- TOC entry 331 (class 1259 OID 37378)
--- Name: actividad_economica_necesidad_id_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 240 (class 1259 OID 40213)
+-- Name: actividad_economica_necesidad_id_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE actividad_economica_necesidad_id_seq
@@ -1315,10 +1433,12 @@ CREATE SEQUENCE actividad_economica_necesidad_id_seq
     CACHE 1;
 
 
+ALTER TABLE actividad_economica_necesidad_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 3810 (class 0 OID 0)
--- Dependencies: 331
--- Name: actividad_economica_necesidad_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: -
+-- Dependencies: 240
+-- Name: actividad_economica_necesidad_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: postgres
 --
 
 ALTER SEQUENCE actividad_economica_necesidad_id_seq OWNED BY actividad_economica_necesidad.id;
@@ -1326,16 +1446,16 @@ ALTER SEQUENCE actividad_economica_necesidad_id_seq OWNED BY actividad_economica
 
 --
 -- TOC entry 3811 (class 0 OID 0)
--- Dependencies: 331
--- Name: SEQUENCE actividad_economica_necesidad_id_seq; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 240
+-- Name: SEQUENCE actividad_economica_necesidad_id_seq; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON SEQUENCE actividad_economica_necesidad_id_seq IS 'Secuencia del id de la tabla de rompimiento entre las actividades economicas y la solicitud de necesidad';
 
 
 --
--- TOC entry 332 (class 1259 OID 37380)
--- Name: actividad_solicitud_necesidad; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 241 (class 1259 OID 40215)
+-- Name: actividad_solicitud_necesidad; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE actividad_solicitud_necesidad (
@@ -1346,10 +1466,12 @@ CREATE TABLE actividad_solicitud_necesidad (
 );
 
 
+ALTER TABLE actividad_solicitud_necesidad OWNER TO postgres;
+
 --
 -- TOC entry 3813 (class 0 OID 0)
--- Dependencies: 332
--- Name: TABLE actividad_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 241
+-- Name: TABLE actividad_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE actividad_solicitud_necesidad IS 'Tabla encargada de gestionar las actividades posibles para una solicitud de la necesidad';
@@ -1357,8 +1479,8 @@ COMMENT ON TABLE actividad_solicitud_necesidad IS 'Tabla encargada de gestionar 
 
 --
 -- TOC entry 3814 (class 0 OID 0)
--- Dependencies: 332
--- Name: COLUMN actividad_solicitud_necesidad.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 241
+-- Name: COLUMN actividad_solicitud_necesidad.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN actividad_solicitud_necesidad.id IS 'Identificador del registro de la actividad de la solicitud de necesidad';
@@ -1366,8 +1488,8 @@ COMMENT ON COLUMN actividad_solicitud_necesidad.id IS 'Identificador del registr
 
 --
 -- TOC entry 3815 (class 0 OID 0)
--- Dependencies: 332
--- Name: COLUMN actividad_solicitud_necesidad.actividad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 241
+-- Name: COLUMN actividad_solicitud_necesidad.actividad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN actividad_solicitud_necesidad.actividad IS 'Identificador de la actividad asociada al centro de costos';
@@ -1375,8 +1497,8 @@ COMMENT ON COLUMN actividad_solicitud_necesidad.actividad IS 'Identificador de l
 
 --
 -- TOC entry 3816 (class 0 OID 0)
--- Dependencies: 332
--- Name: COLUMN actividad_solicitud_necesidad.rubro_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 241
+-- Name: COLUMN actividad_solicitud_necesidad.rubro_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN actividad_solicitud_necesidad.rubro_solicitud_necesidad IS 'Identificador de la tabla de rompimiento rubro_solicitud_necesidad asociada a la actividad y el centro de costos';
@@ -1384,16 +1506,16 @@ COMMENT ON COLUMN actividad_solicitud_necesidad.rubro_solicitud_necesidad IS 'Id
 
 --
 -- TOC entry 3817 (class 0 OID 0)
--- Dependencies: 332
--- Name: COLUMN actividad_solicitud_necesidad.monto_parcial; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 241
+-- Name: COLUMN actividad_solicitud_necesidad.monto_parcial; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN actividad_solicitud_necesidad.monto_parcial IS 'Monto para la actividad (en pesos)';
 
 
 --
--- TOC entry 333 (class 1259 OID 37383)
--- Name: actividad_solicitud_necesidad_id_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 242 (class 1259 OID 40218)
+-- Name: actividad_solicitud_necesidad_id_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE actividad_solicitud_necesidad_id_seq
@@ -1404,10 +1526,12 @@ CREATE SEQUENCE actividad_solicitud_necesidad_id_seq
     CACHE 1;
 
 
+ALTER TABLE actividad_solicitud_necesidad_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 3819 (class 0 OID 0)
--- Dependencies: 333
--- Name: actividad_solicitud_necesidad_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: -
+-- Dependencies: 242
+-- Name: actividad_solicitud_necesidad_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: postgres
 --
 
 ALTER SEQUENCE actividad_solicitud_necesidad_id_seq OWNED BY actividad_solicitud_necesidad.id;
@@ -1415,16 +1539,16 @@ ALTER SEQUENCE actividad_solicitud_necesidad_id_seq OWNED BY actividad_solicitud
 
 --
 -- TOC entry 3820 (class 0 OID 0)
--- Dependencies: 333
--- Name: SEQUENCE actividad_solicitud_necesidad_id_seq; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 242
+-- Name: SEQUENCE actividad_solicitud_necesidad_id_seq; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON SEQUENCE actividad_solicitud_necesidad_id_seq IS 'Secuencia del id de la tabla que relaciona las actividades y los centros de costos con la solicitud de necesidad';
 
 
 --
--- TOC entry 334 (class 1259 OID 37385)
--- Name: actividades_centro_costos; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 243 (class 1259 OID 40220)
+-- Name: actividades_centro_costos; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE actividades_centro_costos (
@@ -1435,10 +1559,12 @@ CREATE TABLE actividades_centro_costos (
 );
 
 
+ALTER TABLE actividades_centro_costos OWNER TO postgres;
+
 --
 -- TOC entry 3822 (class 0 OID 0)
--- Dependencies: 334
--- Name: TABLE actividades_centro_costos; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 243
+-- Name: TABLE actividades_centro_costos; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE actividades_centro_costos IS 'Tabla de las actividades pertenecientes a los centros de costos';
@@ -1446,8 +1572,8 @@ COMMENT ON TABLE actividades_centro_costos IS 'Tabla de las actividades pertenec
 
 --
 -- TOC entry 3823 (class 0 OID 0)
--- Dependencies: 334
--- Name: COLUMN actividades_centro_costos.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 243
+-- Name: COLUMN actividades_centro_costos.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN actividades_centro_costos.id IS 'Identificador de la actividad perteneciente a un centro de costos';
@@ -1455,8 +1581,8 @@ COMMENT ON COLUMN actividades_centro_costos.id IS 'Identificador de la actividad
 
 --
 -- TOC entry 3824 (class 0 OID 0)
--- Dependencies: 334
--- Name: COLUMN actividades_centro_costos.nombre; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 243
+-- Name: COLUMN actividades_centro_costos.nombre; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN actividades_centro_costos.nombre IS 'Nombre de la actividad perteneciente a un centro de costos';
@@ -1464,8 +1590,8 @@ COMMENT ON COLUMN actividades_centro_costos.nombre IS 'Nombre de la actividad pe
 
 --
 -- TOC entry 3825 (class 0 OID 0)
--- Dependencies: 334
--- Name: COLUMN actividades_centro_costos.descripcion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 243
+-- Name: COLUMN actividades_centro_costos.descripcion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN actividades_centro_costos.descripcion IS 'Descripcion de la actividad perteneciente a un centro de costos';
@@ -1473,16 +1599,16 @@ COMMENT ON COLUMN actividades_centro_costos.descripcion IS 'Descripcion de la ac
 
 --
 -- TOC entry 3826 (class 0 OID 0)
--- Dependencies: 334
--- Name: COLUMN actividades_centro_costos.centro_costos; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 243
+-- Name: COLUMN actividades_centro_costos.centro_costos; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN actividades_centro_costos.centro_costos IS 'Identificador del centro de costos al cual pertenece la actividad';
 
 
 --
--- TOC entry 335 (class 1259 OID 37391)
--- Name: actividades_centro_costos_id_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 244 (class 1259 OID 40226)
+-- Name: actividades_centro_costos_id_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE actividades_centro_costos_id_seq
@@ -1493,10 +1619,12 @@ CREATE SEQUENCE actividades_centro_costos_id_seq
     CACHE 1;
 
 
+ALTER TABLE actividades_centro_costos_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 3828 (class 0 OID 0)
--- Dependencies: 335
--- Name: actividades_centro_costos_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: -
+-- Dependencies: 244
+-- Name: actividades_centro_costos_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: postgres
 --
 
 ALTER SEQUENCE actividades_centro_costos_id_seq OWNED BY actividades_centro_costos.id;
@@ -1504,16 +1632,16 @@ ALTER SEQUENCE actividades_centro_costos_id_seq OWNED BY actividades_centro_cost
 
 --
 -- TOC entry 3829 (class 0 OID 0)
--- Dependencies: 335
--- Name: SEQUENCE actividades_centro_costos_id_seq; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 244
+-- Name: SEQUENCE actividades_centro_costos_id_seq; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON SEQUENCE actividades_centro_costos_id_seq IS 'Secuencia de las actividades pertenecientes a los centros de costos';
 
 
 --
--- TOC entry 336 (class 1259 OID 37393)
--- Name: adicion; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 245 (class 1259 OID 40228)
+-- Name: adicion; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE adicion (
@@ -1527,10 +1655,12 @@ CREATE TABLE adicion (
 );
 
 
+ALTER TABLE adicion OWNER TO postgres;
+
 --
 -- TOC entry 3831 (class 0 OID 0)
--- Dependencies: 336
--- Name: TABLE adicion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 245
+-- Name: TABLE adicion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE adicion IS 'tabla que almacenara la informacion particular de la novedad de adicion';
@@ -1538,8 +1668,8 @@ COMMENT ON TABLE adicion IS 'tabla que almacenara la informacion particular de l
 
 --
 -- TOC entry 3832 (class 0 OID 0)
--- Dependencies: 336
--- Name: COLUMN adicion.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 245
+-- Name: COLUMN adicion.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN adicion.id IS 'identificador foraneo y primero de la tabla de adicion que referencia a la tabla de novedad contractual';
@@ -1547,8 +1677,8 @@ COMMENT ON COLUMN adicion.id IS 'identificador foraneo y primero de la tabla de 
 
 --
 -- TOC entry 3833 (class 0 OID 0)
--- Dependencies: 336
--- Name: COLUMN adicion.tipo_adicion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 245
+-- Name: COLUMN adicion.tipo_adicion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN adicion.tipo_adicion IS 'identificador foraneo a la tabla de parametros que almacena el tipo de adicion';
@@ -1556,8 +1686,8 @@ COMMENT ON COLUMN adicion.tipo_adicion IS 'identificador foraneo a la tabla de p
 
 --
 -- TOC entry 3834 (class 0 OID 0)
--- Dependencies: 336
--- Name: COLUMN adicion.numero_solicitud; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 245
+-- Name: COLUMN adicion.numero_solicitud; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN adicion.numero_solicitud IS 'numero de la solicitud de necesidad que respalda la adicion de presupuesto';
@@ -1565,8 +1695,8 @@ COMMENT ON COLUMN adicion.numero_solicitud IS 'numero de la solicitud de necesid
 
 --
 -- TOC entry 3835 (class 0 OID 0)
--- Dependencies: 336
--- Name: COLUMN adicion.numero_cdp; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 245
+-- Name: COLUMN adicion.numero_cdp; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN adicion.numero_cdp IS 'numero de disponibilidad que respalda la novedad de adicion por presupuesto';
@@ -1574,8 +1704,8 @@ COMMENT ON COLUMN adicion.numero_cdp IS 'numero de disponibilidad que respalda l
 
 --
 -- TOC entry 3836 (class 0 OID 0)
--- Dependencies: 336
--- Name: COLUMN adicion.valor_presupuesto; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 245
+-- Name: COLUMN adicion.valor_presupuesto; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN adicion.valor_presupuesto IS 'valor del presupuesto que se adiciona';
@@ -1583,8 +1713,8 @@ COMMENT ON COLUMN adicion.valor_presupuesto IS 'valor del presupuesto que se adi
 
 --
 -- TOC entry 3837 (class 0 OID 0)
--- Dependencies: 336
--- Name: COLUMN adicion.unidad_tiempo_ejecucion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 245
+-- Name: COLUMN adicion.unidad_tiempo_ejecucion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN adicion.unidad_tiempo_ejecucion IS 'unidad de tiempo en la cual se mide el valor de adicion de tiempo ';
@@ -1592,16 +1722,16 @@ COMMENT ON COLUMN adicion.unidad_tiempo_ejecucion IS 'unidad de tiempo en la cua
 
 --
 -- TOC entry 3838 (class 0 OID 0)
--- Dependencies: 336
--- Name: COLUMN adicion.valor_tiempo; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 245
+-- Name: COLUMN adicion.valor_tiempo; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN adicion.valor_tiempo IS 'valor de tiempo de la adicion ';
 
 
 --
--- TOC entry 337 (class 1259 OID 37396)
--- Name: anulacion; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 246 (class 1259 OID 40231)
+-- Name: anulacion; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE anulacion (
@@ -1610,10 +1740,12 @@ CREATE TABLE anulacion (
 );
 
 
+ALTER TABLE anulacion OWNER TO postgres;
+
 --
 -- TOC entry 3839 (class 0 OID 0)
--- Dependencies: 337
--- Name: TABLE anulacion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 246
+-- Name: TABLE anulacion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE anulacion IS 'tabla que almacena la informacion particular de la novedad de anulacion';
@@ -1621,8 +1753,8 @@ COMMENT ON TABLE anulacion IS 'tabla que almacena la informacion particular de l
 
 --
 -- TOC entry 3840 (class 0 OID 0)
--- Dependencies: 337
--- Name: COLUMN anulacion.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 246
+-- Name: COLUMN anulacion.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN anulacion.id IS 'identificador primario y foraneo de la tabla cesion que apunta  a la tabla novedad contractual';
@@ -1630,16 +1762,16 @@ COMMENT ON COLUMN anulacion.id IS 'identificador primario y foraneo de la tabla 
 
 --
 -- TOC entry 3841 (class 0 OID 0)
--- Dependencies: 337
--- Name: COLUMN anulacion.tipo_anulacion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 246
+-- Name: COLUMN anulacion.tipo_anulacion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN anulacion.tipo_anulacion IS 'identificador foraneo que referencia el parametro de tipo de anulacion';
 
 
 --
--- TOC entry 338 (class 1259 OID 37399)
--- Name: argo_ordenadores; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 247 (class 1259 OID 40234)
+-- Name: argo_ordenadores; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE argo_ordenadores (
@@ -1653,10 +1785,12 @@ CREATE TABLE argo_ordenadores (
 );
 
 
+ALTER TABLE argo_ordenadores OWNER TO postgres;
+
 --
 -- TOC entry 3842 (class 0 OID 0)
--- Dependencies: 338
--- Name: TABLE argo_ordenadores; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 247
+-- Name: TABLE argo_ordenadores; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE argo_ordenadores IS 'Tabla para gestionar con talend los ordenadores del gasto registrados en sicapital';
@@ -1664,16 +1798,16 @@ COMMENT ON TABLE argo_ordenadores IS 'Tabla para gestionar con talend los ordena
 
 --
 -- TOC entry 3843 (class 0 OID 0)
--- Dependencies: 338
--- Name: COLUMN argo_ordenadores."ORG_IDENTIFICADOR_UNICO"; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 247
+-- Name: COLUMN argo_ordenadores."ORG_IDENTIFICADOR_UNICO"; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN argo_ordenadores."ORG_IDENTIFICADOR_UNICO" IS 'idnetificador unico del ordenador del gasto';
 
 
 --
--- TOC entry 339 (class 1259 OID 37405)
--- Name: cambio_supervisor; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 248 (class 1259 OID 40240)
+-- Name: cambio_supervisor; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE cambio_supervisor (
@@ -1685,10 +1819,12 @@ CREATE TABLE cambio_supervisor (
 );
 
 
+ALTER TABLE cambio_supervisor OWNER TO postgres;
+
 --
 -- TOC entry 3844 (class 0 OID 0)
--- Dependencies: 339
--- Name: TABLE cambio_supervisor; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 248
+-- Name: TABLE cambio_supervisor; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE cambio_supervisor IS 'tabla que almacena la informacion particular la novedad de cambio de supervisor';
@@ -1696,8 +1832,8 @@ COMMENT ON TABLE cambio_supervisor IS 'tabla que almacena la informacion particu
 
 --
 -- TOC entry 3845 (class 0 OID 0)
--- Dependencies: 339
--- Name: COLUMN cambio_supervisor.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 248
+-- Name: COLUMN cambio_supervisor.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN cambio_supervisor.id IS 'identificador primerio y foraneo(Novedad contractual) d ela tabla ';
@@ -1705,8 +1841,8 @@ COMMENT ON COLUMN cambio_supervisor.id IS 'identificador primerio y foraneo(Nove
 
 --
 -- TOC entry 3846 (class 0 OID 0)
--- Dependencies: 339
--- Name: COLUMN cambio_supervisor.tipo_cambio; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 248
+-- Name: COLUMN cambio_supervisor.tipo_cambio; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN cambio_supervisor.tipo_cambio IS 'tipo de cambio del supervisor';
@@ -1714,8 +1850,8 @@ COMMENT ON COLUMN cambio_supervisor.tipo_cambio IS 'tipo de cambio del superviso
 
 --
 -- TOC entry 3847 (class 0 OID 0)
--- Dependencies: 339
--- Name: COLUMN cambio_supervisor.supervisor_antiguo; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 248
+-- Name: COLUMN cambio_supervisor.supervisor_antiguo; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN cambio_supervisor.supervisor_antiguo IS 'identificacion del supervisor antiguo';
@@ -1723,8 +1859,8 @@ COMMENT ON COLUMN cambio_supervisor.supervisor_antiguo IS 'identificacion del su
 
 --
 -- TOC entry 3848 (class 0 OID 0)
--- Dependencies: 339
--- Name: COLUMN cambio_supervisor.supervisor_nuevo; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 248
+-- Name: COLUMN cambio_supervisor.supervisor_nuevo; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN cambio_supervisor.supervisor_nuevo IS 'identificacion del supervisor nuevo';
@@ -1732,16 +1868,16 @@ COMMENT ON COLUMN cambio_supervisor.supervisor_nuevo IS 'identificacion del supe
 
 --
 -- TOC entry 3849 (class 0 OID 0)
--- Dependencies: 339
--- Name: COLUMN cambio_supervisor.fecha_cambio; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 248
+-- Name: COLUMN cambio_supervisor.fecha_cambio; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN cambio_supervisor.fecha_cambio IS 'fecha ofical del cambio del supervisor';
 
 
 --
--- TOC entry 340 (class 1259 OID 37408)
--- Name: centro_costos; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 249 (class 1259 OID 40243)
+-- Name: centro_costos; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE centro_costos (
@@ -1754,10 +1890,12 @@ CREATE TABLE centro_costos (
 );
 
 
+ALTER TABLE centro_costos OWNER TO postgres;
+
 --
 -- TOC entry 3850 (class 0 OID 0)
--- Dependencies: 340
--- Name: TABLE centro_costos; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 249
+-- Name: TABLE centro_costos; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE centro_costos IS 'Tabla de los centros de costos asociados a algún rubro';
@@ -1765,8 +1903,8 @@ COMMENT ON TABLE centro_costos IS 'Tabla de los centros de costos asociados a al
 
 --
 -- TOC entry 3851 (class 0 OID 0)
--- Dependencies: 340
--- Name: COLUMN centro_costos.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 249
+-- Name: COLUMN centro_costos.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN centro_costos.id IS 'Identificador del centro de costos';
@@ -1774,8 +1912,8 @@ COMMENT ON COLUMN centro_costos.id IS 'Identificador del centro de costos';
 
 --
 -- TOC entry 3852 (class 0 OID 0)
--- Dependencies: 340
--- Name: COLUMN centro_costos.nombre; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 249
+-- Name: COLUMN centro_costos.nombre; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN centro_costos.nombre IS 'Nobmre del centro de costos';
@@ -1783,8 +1921,8 @@ COMMENT ON COLUMN centro_costos.nombre IS 'Nobmre del centro de costos';
 
 --
 -- TOC entry 3853 (class 0 OID 0)
--- Dependencies: 340
--- Name: COLUMN centro_costos.descripcion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 249
+-- Name: COLUMN centro_costos.descripcion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN centro_costos.descripcion IS 'Descripcion del centro de costos';
@@ -1792,8 +1930,8 @@ COMMENT ON COLUMN centro_costos.descripcion IS 'Descripcion del centro de costos
 
 --
 -- TOC entry 3854 (class 0 OID 0)
--- Dependencies: 340
--- Name: COLUMN centro_costos.rubro; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 249
+-- Name: COLUMN centro_costos.rubro; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN centro_costos.rubro IS 'Identificador del rubro con el cual se relaciona el centro de costos';
@@ -1801,8 +1939,8 @@ COMMENT ON COLUMN centro_costos.rubro IS 'Identificador del rubro con el cual se
 
 --
 -- TOC entry 3855 (class 0 OID 0)
--- Dependencies: 340
--- Name: COLUMN centro_costos.centro_costos_padre; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 249
+-- Name: COLUMN centro_costos.centro_costos_padre; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN centro_costos.centro_costos_padre IS 'Identificador del centro de costos "padre" para respetar la jerarquia';
@@ -1810,16 +1948,16 @@ COMMENT ON COLUMN centro_costos.centro_costos_padre IS 'Identificador del centro
 
 --
 -- TOC entry 3856 (class 0 OID 0)
--- Dependencies: 340
--- Name: COLUMN centro_costos.monto; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 249
+-- Name: COLUMN centro_costos.monto; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN centro_costos.monto IS 'Dinero restante en el centro de costos';
 
 
 --
--- TOC entry 341 (class 1259 OID 37414)
--- Name: centro_costos_id_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 250 (class 1259 OID 40249)
+-- Name: centro_costos_id_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE centro_costos_id_seq
@@ -1830,10 +1968,12 @@ CREATE SEQUENCE centro_costos_id_seq
     CACHE 1;
 
 
+ALTER TABLE centro_costos_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 3858 (class 0 OID 0)
--- Dependencies: 341
--- Name: centro_costos_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: -
+-- Dependencies: 250
+-- Name: centro_costos_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: postgres
 --
 
 ALTER SEQUENCE centro_costos_id_seq OWNED BY centro_costos.id;
@@ -1841,16 +1981,16 @@ ALTER SEQUENCE centro_costos_id_seq OWNED BY centro_costos.id;
 
 --
 -- TOC entry 3859 (class 0 OID 0)
--- Dependencies: 341
--- Name: SEQUENCE centro_costos_id_seq; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 250
+-- Name: SEQUENCE centro_costos_id_seq; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON SEQUENCE centro_costos_id_seq IS 'Secuencia del numero de centro de costos';
 
 
 --
--- TOC entry 342 (class 1259 OID 37416)
--- Name: cesion; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 251 (class 1259 OID 40251)
+-- Name: cesion; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE cesion (
@@ -1861,10 +2001,12 @@ CREATE TABLE cesion (
 );
 
 
+ALTER TABLE cesion OWNER TO postgres;
+
 --
 -- TOC entry 3861 (class 0 OID 0)
--- Dependencies: 342
--- Name: TABLE cesion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 251
+-- Name: TABLE cesion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE cesion IS 'tabla que almacena la informacion particular de la novedad de cesion';
@@ -1872,8 +2014,8 @@ COMMENT ON TABLE cesion IS 'tabla que almacena la informacion particular de la n
 
 --
 -- TOC entry 3862 (class 0 OID 0)
--- Dependencies: 342
--- Name: COLUMN cesion.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 251
+-- Name: COLUMN cesion.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN cesion.id IS 'identificador primario y foraneo de la tabla cesion que apunta  a la tabla novedad contractual';
@@ -1881,8 +2023,8 @@ COMMENT ON COLUMN cesion.id IS 'identificador primario y foraneo de la tabla ces
 
 --
 -- TOC entry 3863 (class 0 OID 0)
--- Dependencies: 342
--- Name: COLUMN cesion.nuevo_contratista; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 251
+-- Name: COLUMN cesion.nuevo_contratista; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN cesion.nuevo_contratista IS 'contratista que recibe la cesion';
@@ -1890,8 +2032,8 @@ COMMENT ON COLUMN cesion.nuevo_contratista IS 'contratista que recibe la cesion'
 
 --
 -- TOC entry 3864 (class 0 OID 0)
--- Dependencies: 342
--- Name: COLUMN cesion.antiguo_contratista; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 251
+-- Name: COLUMN cesion.antiguo_contratista; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN cesion.antiguo_contratista IS 'contratista que realiza la cesion';
@@ -1899,16 +2041,16 @@ COMMENT ON COLUMN cesion.antiguo_contratista IS 'contratista que realiza la cesi
 
 --
 -- TOC entry 3865 (class 0 OID 0)
--- Dependencies: 342
--- Name: COLUMN cesion.fecha_cesion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 251
+-- Name: COLUMN cesion.fecha_cesion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN cesion.fecha_cesion IS 'fecha en la cual se hace efectiva la cesion';
 
 
 --
--- TOC entry 343 (class 1259 OID 37419)
--- Name: consecutivo_unico_cambio_estado_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 252 (class 1259 OID 40254)
+-- Name: consecutivo_unico_cambio_estado_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE consecutivo_unico_cambio_estado_seq
@@ -1919,18 +2061,20 @@ CREATE SEQUENCE consecutivo_unico_cambio_estado_seq
     CACHE 1;
 
 
+ALTER TABLE consecutivo_unico_cambio_estado_seq OWNER TO postgres;
+
 --
 -- TOC entry 3866 (class 0 OID 0)
--- Dependencies: 343
--- Name: SEQUENCE consecutivo_unico_cambio_estado_seq; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 252
+-- Name: SEQUENCE consecutivo_unico_cambio_estado_seq; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON SEQUENCE consecutivo_unico_cambio_estado_seq IS 'esta secuencia sera la encargada de llevar el consecutivo unico de los cambios de estado de un contrato.';
 
 
 --
--- TOC entry 344 (class 1259 OID 37421)
--- Name: consecutivo_unico_cancelado_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 253 (class 1259 OID 40256)
+-- Name: consecutivo_unico_cancelado_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE consecutivo_unico_cancelado_seq
@@ -1941,18 +2085,20 @@ CREATE SEQUENCE consecutivo_unico_cancelado_seq
     CACHE 1;
 
 
+ALTER TABLE consecutivo_unico_cancelado_seq OWNER TO postgres;
+
 --
 -- TOC entry 3867 (class 0 OID 0)
--- Dependencies: 344
--- Name: SEQUENCE consecutivo_unico_cancelado_seq; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 253
+-- Name: SEQUENCE consecutivo_unico_cancelado_seq; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON SEQUENCE consecutivo_unico_cancelado_seq IS 'esta secuencia sera la encargada de llevar el consecutivo unico de los contratos cancelados.';
 
 
 --
--- TOC entry 345 (class 1259 OID 37423)
--- Name: consecutivo_unico_contrato_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 254 (class 1259 OID 40258)
+-- Name: consecutivo_unico_contrato_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE consecutivo_unico_contrato_seq
@@ -1963,18 +2109,20 @@ CREATE SEQUENCE consecutivo_unico_contrato_seq
     CACHE 1;
 
 
+ALTER TABLE consecutivo_unico_contrato_seq OWNER TO postgres;
+
 --
 -- TOC entry 3868 (class 0 OID 0)
--- Dependencies: 345
--- Name: SEQUENCE consecutivo_unico_contrato_seq; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 254
+-- Name: SEQUENCE consecutivo_unico_contrato_seq; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON SEQUENCE consecutivo_unico_contrato_seq IS 'esta secuencia sera la encargada de llevar el consecutivo unico de los contratos aprobados.';
 
 
 --
--- TOC entry 346 (class 1259 OID 37425)
--- Name: contratista_id_contratista_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 255 (class 1259 OID 40260)
+-- Name: contratista_id_contratista_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE contratista_id_contratista_seq
@@ -1985,9 +2133,11 @@ CREATE SEQUENCE contratista_id_contratista_seq
     CACHE 1;
 
 
+ALTER TABLE contratista_id_contratista_seq OWNER TO postgres;
+
 --
--- TOC entry 347 (class 1259 OID 37427)
--- Name: contrato_id_contrato_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 256 (class 1259 OID 40262)
+-- Name: contrato_id_contrato_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE contrato_id_contrato_seq
@@ -1998,9 +2148,11 @@ CREATE SEQUENCE contrato_id_contrato_seq
     CACHE 1;
 
 
+ALTER TABLE contrato_id_contrato_seq OWNER TO postgres;
+
 --
--- TOC entry 348 (class 1259 OID 37429)
--- Name: contrato; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 257 (class 1259 OID 40264)
+-- Name: contrato; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE contrato (
@@ -2015,18 +2167,20 @@ CREATE TABLE contrato (
 );
 
 
+ALTER TABLE contrato OWNER TO postgres;
+
 --
 -- TOC entry 3869 (class 0 OID 0)
--- Dependencies: 348
--- Name: COLUMN contrato.perfil; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 257
+-- Name: COLUMN contrato.perfil; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato.perfil IS 'perfil del contratista';
 
 
 --
--- TOC entry 349 (class 1259 OID 37437)
--- Name: contrato_cancelado; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 258 (class 1259 OID 40272)
+-- Name: contrato_cancelado; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE contrato_cancelado (
@@ -2041,10 +2195,12 @@ CREATE TABLE contrato_cancelado (
 );
 
 
+ALTER TABLE contrato_cancelado OWNER TO postgres;
+
 --
 -- TOC entry 3870 (class 0 OID 0)
--- Dependencies: 349
--- Name: TABLE contrato_cancelado; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 258
+-- Name: TABLE contrato_cancelado; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE contrato_cancelado IS 'tabla donde se almacenara la informacion de los contratos cancelados.';
@@ -2052,8 +2208,8 @@ COMMENT ON TABLE contrato_cancelado IS 'tabla donde se almacenara la informacion
 
 --
 -- TOC entry 3871 (class 0 OID 0)
--- Dependencies: 349
--- Name: COLUMN contrato_cancelado.consecutivo_contrato_cancelado; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 258
+-- Name: COLUMN contrato_cancelado.consecutivo_contrato_cancelado; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_cancelado.consecutivo_contrato_cancelado IS 'Consecutivo unico de contrato cancelado, se asigna al contrato una vez sea cancelado.';
@@ -2061,8 +2217,8 @@ COMMENT ON COLUMN contrato_cancelado.consecutivo_contrato_cancelado IS 'Consecut
 
 --
 -- TOC entry 3872 (class 0 OID 0)
--- Dependencies: 349
--- Name: COLUMN contrato_cancelado.numero_contrato; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 258
+-- Name: COLUMN contrato_cancelado.numero_contrato; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_cancelado.numero_contrato IS 'numero del contrato cancelado.';
@@ -2070,8 +2226,8 @@ COMMENT ON COLUMN contrato_cancelado.numero_contrato IS 'numero del contrato can
 
 --
 -- TOC entry 3873 (class 0 OID 0)
--- Dependencies: 349
--- Name: COLUMN contrato_cancelado.vigencia; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 258
+-- Name: COLUMN contrato_cancelado.vigencia; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_cancelado.vigencia IS 'Vigencia del contrato, año para el cual el contrato rige se define una vez se crea el contrato.';
@@ -2079,8 +2235,8 @@ COMMENT ON COLUMN contrato_cancelado.vigencia IS 'Vigencia del contrato, año pa
 
 --
 -- TOC entry 3874 (class 0 OID 0)
--- Dependencies: 349
--- Name: COLUMN contrato_cancelado.fecha_cancelacion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 258
+-- Name: COLUMN contrato_cancelado.fecha_cancelacion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_cancelado.fecha_cancelacion IS 'fecha en la cual se cancela el contrato.';
@@ -2088,8 +2244,8 @@ COMMENT ON COLUMN contrato_cancelado.fecha_cancelacion IS 'fecha en la cual se c
 
 --
 -- TOC entry 3875 (class 0 OID 0)
--- Dependencies: 349
--- Name: COLUMN contrato_cancelado.motivo_cancelacion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 258
+-- Name: COLUMN contrato_cancelado.motivo_cancelacion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_cancelado.motivo_cancelacion IS 'motivo por el cual se cancela el contrato.';
@@ -2097,8 +2253,8 @@ COMMENT ON COLUMN contrato_cancelado.motivo_cancelacion IS 'motivo por el cual s
 
 --
 -- TOC entry 3876 (class 0 OID 0)
--- Dependencies: 349
--- Name: COLUMN contrato_cancelado.usuario; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 258
+-- Name: COLUMN contrato_cancelado.usuario; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_cancelado.usuario IS 'identificacion del usuario que realiza la aprobacion del contrato';
@@ -2106,8 +2262,8 @@ COMMENT ON COLUMN contrato_cancelado.usuario IS 'identificacion del usuario que 
 
 --
 -- TOC entry 3877 (class 0 OID 0)
--- Dependencies: 349
--- Name: COLUMN contrato_cancelado.fecha_registro; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 258
+-- Name: COLUMN contrato_cancelado.fecha_registro; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_cancelado.fecha_registro IS 'fecha en la cual se registra la cancelacion del contrato';
@@ -2115,16 +2271,16 @@ COMMENT ON COLUMN contrato_cancelado.fecha_registro IS 'fecha en la cual se regi
 
 --
 -- TOC entry 3878 (class 0 OID 0)
--- Dependencies: 349
--- Name: COLUMN contrato_cancelado.estado; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 258
+-- Name: COLUMN contrato_cancelado.estado; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_cancelado.estado IS ' estado del registro.';
 
 
 --
--- TOC entry 350 (class 1259 OID 37445)
--- Name: contrato_estado; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 259 (class 1259 OID 40280)
+-- Name: contrato_estado; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE contrato_estado (
@@ -2137,10 +2293,12 @@ CREATE TABLE contrato_estado (
 );
 
 
+ALTER TABLE contrato_estado OWNER TO postgres;
+
 --
 -- TOC entry 3879 (class 0 OID 0)
--- Dependencies: 350
--- Name: TABLE contrato_estado; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 259
+-- Name: TABLE contrato_estado; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE contrato_estado IS 'tabla encargada de registrar la relacion entre los contratos y los estados.';
@@ -2148,8 +2306,8 @@ COMMENT ON TABLE contrato_estado IS 'tabla encargada de registrar la relacion en
 
 --
 -- TOC entry 3880 (class 0 OID 0)
--- Dependencies: 350
--- Name: COLUMN contrato_estado.numero_contrato; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 259
+-- Name: COLUMN contrato_estado.numero_contrato; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_estado.numero_contrato IS 'numero del contrato (consecutivo Unico)';
@@ -2157,8 +2315,8 @@ COMMENT ON COLUMN contrato_estado.numero_contrato IS 'numero del contrato (conse
 
 --
 -- TOC entry 3881 (class 0 OID 0)
--- Dependencies: 350
--- Name: COLUMN contrato_estado.vigencia; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 259
+-- Name: COLUMN contrato_estado.vigencia; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_estado.vigencia IS 'año de vigencia del contrato';
@@ -2166,8 +2324,8 @@ COMMENT ON COLUMN contrato_estado.vigencia IS 'año de vigencia del contrato';
 
 --
 -- TOC entry 3882 (class 0 OID 0)
--- Dependencies: 350
--- Name: COLUMN contrato_estado.fecha_registro; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 259
+-- Name: COLUMN contrato_estado.fecha_registro; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_estado.fecha_registro IS 'fecha de registro del cambio de estado';
@@ -2175,8 +2333,8 @@ COMMENT ON COLUMN contrato_estado.fecha_registro IS 'fecha de registro del cambi
 
 --
 -- TOC entry 3883 (class 0 OID 0)
--- Dependencies: 350
--- Name: COLUMN contrato_estado.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 259
+-- Name: COLUMN contrato_estado.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_estado.id IS 'identificador unico del registro de cambio de algun estado ';
@@ -2184,8 +2342,8 @@ COMMENT ON COLUMN contrato_estado.id IS 'identificador unico del registro de cam
 
 --
 -- TOC entry 3884 (class 0 OID 0)
--- Dependencies: 350
--- Name: COLUMN contrato_estado.estado; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 259
+-- Name: COLUMN contrato_estado.estado; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_estado.estado IS 'identificador foraneo que referencia a la tabla estado_contrato e indica el estado del contrato';
@@ -2193,16 +2351,16 @@ COMMENT ON COLUMN contrato_estado.estado IS 'identificador foraneo que referenci
 
 --
 -- TOC entry 3885 (class 0 OID 0)
--- Dependencies: 350
--- Name: COLUMN contrato_estado.usuario; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 259
+-- Name: COLUMN contrato_estado.usuario; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_estado.usuario IS 'usuario que realiza el cambio de estado';
 
 
 --
--- TOC entry 351 (class 1259 OID 37452)
--- Name: numero_unico_contrato_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 260 (class 1259 OID 40287)
+-- Name: numero_unico_contrato_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE numero_unico_contrato_seq
@@ -2213,18 +2371,20 @@ CREATE SEQUENCE numero_unico_contrato_seq
     CACHE 1;
 
 
+ALTER TABLE numero_unico_contrato_seq OWNER TO postgres;
+
 --
 -- TOC entry 3886 (class 0 OID 0)
--- Dependencies: 351
--- Name: SEQUENCE numero_unico_contrato_seq; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 260
+-- Name: SEQUENCE numero_unico_contrato_seq; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON SEQUENCE numero_unico_contrato_seq IS 'secuencia que determina el numero unico de contrato';
 
 
 --
--- TOC entry 352 (class 1259 OID 37454)
--- Name: contrato_general; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 261 (class 1259 OID 40289)
+-- Name: contrato_general; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE contrato_general (
@@ -2273,10 +2433,12 @@ CREATE TABLE contrato_general (
 );
 
 
+ALTER TABLE contrato_general OWNER TO postgres;
+
 --
 -- TOC entry 3887 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.numero_contrato; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.numero_contrato; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.numero_contrato IS 'identificador unico del contrato';
@@ -2284,8 +2446,8 @@ COMMENT ON COLUMN contrato_general.numero_contrato IS 'identificador unico del c
 
 --
 -- TOC entry 3888 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.vigencia; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.vigencia; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.vigencia IS 'vigencia del contrato';
@@ -2293,8 +2455,8 @@ COMMENT ON COLUMN contrato_general.vigencia IS 'vigencia del contrato';
 
 --
 -- TOC entry 3889 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.objeto_contrato; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.objeto_contrato; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.objeto_contrato IS 'descripcion objeto del contrato';
@@ -2302,8 +2464,8 @@ COMMENT ON COLUMN contrato_general.objeto_contrato IS 'descripcion objeto del co
 
 --
 -- TOC entry 3890 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.plazo_ejecucion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.plazo_ejecucion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.plazo_ejecucion IS 'plazo de ejecucion del contrato';
@@ -2311,8 +2473,8 @@ COMMENT ON COLUMN contrato_general.plazo_ejecucion IS 'plazo de ejecucion del co
 
 --
 -- TOC entry 3891 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.forma_pago; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.forma_pago; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.forma_pago IS 'forma de pago del contrato';
@@ -2320,8 +2482,8 @@ COMMENT ON COLUMN contrato_general.forma_pago IS 'forma de pago del contrato';
 
 --
 -- TOC entry 3892 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.ordenador_gasto; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.ordenador_gasto; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.ordenador_gasto IS 'identificador foraneo del ordenador del gasto del contrato';
@@ -2329,8 +2491,8 @@ COMMENT ON COLUMN contrato_general.ordenador_gasto IS 'identificador foraneo del
 
 --
 -- TOC entry 3893 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.clausula_registro_presupuestal; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.clausula_registro_presupuestal; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.clausula_registro_presupuestal IS 'clausula de presupuesto que indica si el contrato esta sujeto a disponibilidad de ddinero';
@@ -2338,8 +2500,8 @@ COMMENT ON COLUMN contrato_general.clausula_registro_presupuestal IS 'clausula d
 
 --
 -- TOC entry 3894 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.sede_solicitante; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.sede_solicitante; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.sede_solicitante IS 'sede solicitante del contrato, en la solcitud de necesidad se especifica la sede que realiza la solicitud.';
@@ -2347,8 +2509,8 @@ COMMENT ON COLUMN contrato_general.sede_solicitante IS 'sede solicitante del con
 
 --
 -- TOC entry 3895 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.dependencia_solicitante; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.dependencia_solicitante; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.dependencia_solicitante IS 'dependencia o convenio solicitante';
@@ -2356,8 +2518,8 @@ COMMENT ON COLUMN contrato_general.dependencia_solicitante IS 'dependencia o con
 
 --
 -- TOC entry 3896 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.numero_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.numero_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.numero_solicitud_necesidad IS 'numero de la solicitud asociada al contrato';
@@ -2365,8 +2527,8 @@ COMMENT ON COLUMN contrato_general.numero_solicitud_necesidad IS 'numero de la s
 
 --
 -- TOC entry 3897 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.numero_cdp; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.numero_cdp; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.numero_cdp IS 'numero del cdp con el cual se registra el contrato';
@@ -2374,8 +2536,8 @@ COMMENT ON COLUMN contrato_general.numero_cdp IS 'numero del cdp con el cual se 
 
 --
 -- TOC entry 3898 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.contratista; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.contratista; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.contratista IS 'Identificacion del Contratista';
@@ -2383,8 +2545,8 @@ COMMENT ON COLUMN contrato_general.contratista IS 'Identificacion del Contratist
 
 --
 -- TOC entry 3899 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.unidad_ejecucion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.unidad_ejecucion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.unidad_ejecucion IS 'unidad ejecucion bajo la cual se ejecuta el contrato';
@@ -2392,8 +2554,8 @@ COMMENT ON COLUMN contrato_general.unidad_ejecucion IS 'unidad ejecucion bajo la
 
 --
 -- TOC entry 3900 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.valor_contrato; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.valor_contrato; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.valor_contrato IS 'corresponde al valor del contrato o de una orden ';
@@ -2401,8 +2563,8 @@ COMMENT ON COLUMN contrato_general.valor_contrato IS 'corresponde al valor del c
 
 --
 -- TOC entry 3901 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.justificacion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.justificacion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.justificacion IS 'justificacion del contrato';
@@ -2410,8 +2572,8 @@ COMMENT ON COLUMN contrato_general.justificacion IS 'justificacion del contrato'
 
 --
 -- TOC entry 3902 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.descripcion_forma_pago; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.descripcion_forma_pago; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.descripcion_forma_pago IS 'descripcion de la forma de pago del contrato';
@@ -2419,8 +2581,8 @@ COMMENT ON COLUMN contrato_general.descripcion_forma_pago IS 'descripcion de la 
 
 --
 -- TOC entry 3903 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.condiciones; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.condiciones; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.condiciones IS 'condiciones del contrato';
@@ -2428,8 +2590,8 @@ COMMENT ON COLUMN contrato_general.condiciones IS 'condiciones del contrato';
 
 --
 -- TOC entry 3904 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.unidad_ejecutora; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.unidad_ejecutora; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.unidad_ejecutora IS 'identificador foraneo de la unidad ejecutora a cargo del contrato';
@@ -2437,8 +2599,8 @@ COMMENT ON COLUMN contrato_general.unidad_ejecutora IS 'identificador foraneo de
 
 --
 -- TOC entry 3905 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.fecha_registro; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.fecha_registro; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.fecha_registro IS 'fecha de registro del contrato general';
@@ -2446,8 +2608,8 @@ COMMENT ON COLUMN contrato_general.fecha_registro IS 'fecha de registro del cont
 
 --
 -- TOC entry 3906 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.tipologia_contrato; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.tipologia_contrato; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.tipologia_contrato IS 'Referencia Foranea al Tipo de Contrato que se esta creando';
@@ -2455,8 +2617,8 @@ COMMENT ON COLUMN contrato_general.tipologia_contrato IS 'Referencia Foranea al 
 
 --
 -- TOC entry 3907 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.tipo_compromiso; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.tipo_compromiso; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.tipo_compromiso IS 'referencia foranea al tipo de compromiso';
@@ -2464,8 +2626,8 @@ COMMENT ON COLUMN contrato_general.tipo_compromiso IS 'referencia foranea al tip
 
 --
 -- TOC entry 3908 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.modalidad_seleccion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.modalidad_seleccion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.modalidad_seleccion IS 'identificador foraneo al parameto modalidad de seleccion ';
@@ -2473,8 +2635,8 @@ COMMENT ON COLUMN contrato_general.modalidad_seleccion IS 'identificador foraneo
 
 --
 -- TOC entry 3909 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.procedimiento; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.procedimiento; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.procedimiento IS 'identificador foraneo del parametro procedimiento de contratacion';
@@ -2482,8 +2644,8 @@ COMMENT ON COLUMN contrato_general.procedimiento IS 'identificador foraneo del p
 
 --
 -- TOC entry 3910 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.regimen_contratacion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.regimen_contratacion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.regimen_contratacion IS 'identificador foraneo al parametro regimen de contratacion';
@@ -2491,8 +2653,8 @@ COMMENT ON COLUMN contrato_general.regimen_contratacion IS 'identificador forane
 
 --
 -- TOC entry 3911 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.tipo_gasto; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.tipo_gasto; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.tipo_gasto IS 'identificador foraneo al parametro tipo de gasto ';
@@ -2500,8 +2662,8 @@ COMMENT ON COLUMN contrato_general.tipo_gasto IS 'identificador foraneo al param
 
 --
 -- TOC entry 3912 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.tema_gasto_inversion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.tema_gasto_inversion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.tema_gasto_inversion IS 'identificador foraneo al parametro tema a que corresponde el gasto o la inversion';
@@ -2509,8 +2671,8 @@ COMMENT ON COLUMN contrato_general.tema_gasto_inversion IS 'identificador forane
 
 --
 -- TOC entry 3913 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.origen_presupueso; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.origen_presupueso; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.origen_presupueso IS 'identificador foraneo al parametro origen del presupuesto';
@@ -2518,8 +2680,8 @@ COMMENT ON COLUMN contrato_general.origen_presupueso IS 'identificador foraneo a
 
 --
 -- TOC entry 3914 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.origen_recursos; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.origen_recursos; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.origen_recursos IS 'identificador foraneo al parametro origen de los recursos';
@@ -2527,8 +2689,8 @@ COMMENT ON COLUMN contrato_general.origen_recursos IS 'identificador foraneo al 
 
 --
 -- TOC entry 3915 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.tipo_moneda; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.tipo_moneda; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.tipo_moneda IS 'identificador foraneo al parametro tipo de moneda ';
@@ -2536,8 +2698,8 @@ COMMENT ON COLUMN contrato_general.tipo_moneda IS 'identificador foraneo al para
 
 --
 -- TOC entry 3916 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.valor_contrato_me; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.valor_contrato_me; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.valor_contrato_me IS 'valor del contrato en moneda extrangera';
@@ -2545,8 +2707,8 @@ COMMENT ON COLUMN contrato_general.valor_contrato_me IS 'valor del contrato en m
 
 --
 -- TOC entry 3917 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.valor_tasa_cambio; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.valor_tasa_cambio; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.valor_tasa_cambio IS 'Valor tasa de cambio en el momento de la suscripcion del contrato';
@@ -2554,8 +2716,8 @@ COMMENT ON COLUMN contrato_general.valor_tasa_cambio IS 'Valor tasa de cambio en
 
 --
 -- TOC entry 3918 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.tipo_control; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.tipo_control; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.tipo_control IS 'identificador foraneo al parametro tipo de control ';
@@ -2563,8 +2725,8 @@ COMMENT ON COLUMN contrato_general.tipo_control IS 'identificador foraneo al par
 
 --
 -- TOC entry 3919 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.observaciones; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.observaciones; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.observaciones IS 'observaciones del contrato';
@@ -2572,8 +2734,8 @@ COMMENT ON COLUMN contrato_general.observaciones IS 'observaciones del contrato'
 
 --
 -- TOC entry 3920 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.supervisor; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.supervisor; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.supervisor IS 'identificador foraneo del supervisor del contrato';
@@ -2581,8 +2743,8 @@ COMMENT ON COLUMN contrato_general.supervisor IS 'identificador foraneo del supe
 
 --
 -- TOC entry 3921 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.convenio; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.convenio; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.convenio IS 'convenio asociado al contrato en caso de existir';
@@ -2590,8 +2752,8 @@ COMMENT ON COLUMN contrato_general.convenio IS 'convenio asociado al contrato en
 
 --
 -- TOC entry 3922 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.numero_constancia; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.numero_constancia; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.numero_constancia IS 'numero de constancia del contrato';
@@ -2599,8 +2761,8 @@ COMMENT ON COLUMN contrato_general.numero_constancia IS 'numero de constancia de
 
 --
 -- TOC entry 3923 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.estado; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.estado; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.estado IS 'estado del contrato';
@@ -2608,8 +2770,8 @@ COMMENT ON COLUMN contrato_general.estado IS 'estado del contrato';
 
 --
 -- TOC entry 3924 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.resgistro_presupuestal; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.resgistro_presupuestal; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.resgistro_presupuestal IS 'identificador del registro presupuestal asociado';
@@ -2617,8 +2779,8 @@ COMMENT ON COLUMN contrato_general.resgistro_presupuestal IS 'identificador del 
 
 --
 -- TOC entry 3925 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.tipo_contrato; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.tipo_contrato; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.tipo_contrato IS 'identificador foraneo que apunta a la tabla tipo_contrato';
@@ -2626,8 +2788,8 @@ COMMENT ON COLUMN contrato_general.tipo_contrato IS 'identificador foraneo que a
 
 --
 -- TOC entry 3926 (class 0 OID 0)
--- Dependencies: 352
--- Name: COLUMN contrato_general.lugar_ejecucion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: COLUMN contrato_general.lugar_ejecucion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_general.lugar_ejecucion IS 'identificador foraneo de la informacion del lugar de ejecucion del contrato';
@@ -2635,16 +2797,16 @@ COMMENT ON COLUMN contrato_general.lugar_ejecucion IS 'identificador foraneo de 
 
 --
 -- TOC entry 3927 (class 0 OID 0)
--- Dependencies: 352
--- Name: CONSTRAINT ck_numero_contrato_contrato_general ON contrato_general; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: CONSTRAINT ck_numero_contrato_contrato_general ON contrato_general; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT ck_numero_contrato_contrato_general ON contrato_general IS 'check que restringe el formato de numero_contrato  a numeroa y a tres letras (DVE) para el caso de la vinculacion especial';
 
 
 --
--- TOC entry 353 (class 1259 OID 37464)
--- Name: contrato_general_lugar_ejecucion_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 262 (class 1259 OID 40299)
+-- Name: contrato_general_lugar_ejecucion_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE contrato_general_lugar_ejecucion_seq
@@ -2655,9 +2817,11 @@ CREATE SEQUENCE contrato_general_lugar_ejecucion_seq
     CACHE 1;
 
 
+ALTER TABLE contrato_general_lugar_ejecucion_seq OWNER TO postgres;
+
 --
--- TOC entry 354 (class 1259 OID 37466)
--- Name: contrato_poliza; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 263 (class 1259 OID 40301)
+-- Name: contrato_poliza; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE contrato_poliza (
@@ -2670,10 +2834,12 @@ CREATE TABLE contrato_poliza (
 );
 
 
+ALTER TABLE contrato_poliza OWNER TO postgres;
+
 --
 -- TOC entry 3929 (class 0 OID 0)
--- Dependencies: 354
--- Name: TABLE contrato_poliza; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 263
+-- Name: TABLE contrato_poliza; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE contrato_poliza IS 'tabla de rompimiento entre poliza y contrato';
@@ -2681,8 +2847,8 @@ COMMENT ON TABLE contrato_poliza IS 'tabla de rompimiento entre poliza y contrat
 
 --
 -- TOC entry 3930 (class 0 OID 0)
--- Dependencies: 354
--- Name: COLUMN contrato_poliza.poliza; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 263
+-- Name: COLUMN contrato_poliza.poliza; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_poliza.poliza IS 'identificador foraneo de la poliza';
@@ -2690,8 +2856,8 @@ COMMENT ON COLUMN contrato_poliza.poliza IS 'identificador foraneo de la poliza'
 
 --
 -- TOC entry 3931 (class 0 OID 0)
--- Dependencies: 354
--- Name: COLUMN contrato_poliza.estado; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 263
+-- Name: COLUMN contrato_poliza.estado; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_poliza.estado IS 'indica si la poliza se utiliza en la orden';
@@ -2699,8 +2865,8 @@ COMMENT ON COLUMN contrato_poliza.estado IS 'indica si la poliza se utiliza en l
 
 --
 -- TOC entry 3932 (class 0 OID 0)
--- Dependencies: 354
--- Name: COLUMN contrato_poliza.fecha_inicio; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 263
+-- Name: COLUMN contrato_poliza.fecha_inicio; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_poliza.fecha_inicio IS 'Fecha de  inicio de la poliza';
@@ -2708,8 +2874,8 @@ COMMENT ON COLUMN contrato_poliza.fecha_inicio IS 'Fecha de  inicio de la poliza
 
 --
 -- TOC entry 3933 (class 0 OID 0)
--- Dependencies: 354
--- Name: COLUMN contrato_poliza.fecha_final; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 263
+-- Name: COLUMN contrato_poliza.fecha_final; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_poliza.fecha_final IS 'fecha final de la poliza ';
@@ -2717,8 +2883,8 @@ COMMENT ON COLUMN contrato_poliza.fecha_final IS 'fecha final de la poliza ';
 
 --
 -- TOC entry 3934 (class 0 OID 0)
--- Dependencies: 354
--- Name: COLUMN contrato_poliza.numero_contrato; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 263
+-- Name: COLUMN contrato_poliza.numero_contrato; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_poliza.numero_contrato IS 'numero unico del contrato por vigencia y restriccion foranea a la tabla contrato general';
@@ -2726,16 +2892,16 @@ COMMENT ON COLUMN contrato_poliza.numero_contrato IS 'numero unico del contrato 
 
 --
 -- TOC entry 3935 (class 0 OID 0)
--- Dependencies: 354
--- Name: COLUMN contrato_poliza.vigencia; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 263
+-- Name: COLUMN contrato_poliza.vigencia; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_poliza.vigencia IS 'vigencia del contrato, restriccion foranea a la tabla contrato general';
 
 
 --
--- TOC entry 355 (class 1259 OID 37473)
--- Name: contrato_suscrito; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 264 (class 1259 OID 40308)
+-- Name: contrato_suscrito; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE contrato_suscrito (
@@ -2748,10 +2914,12 @@ CREATE TABLE contrato_suscrito (
 );
 
 
+ALTER TABLE contrato_suscrito OWNER TO postgres;
+
 --
 -- TOC entry 3936 (class 0 OID 0)
--- Dependencies: 355
--- Name: TABLE contrato_suscrito; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 264
+-- Name: TABLE contrato_suscrito; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE contrato_suscrito IS 'tabla donde se almacenara la informacion de los contratos aprobados y el consecutivo unico de estos.';
@@ -2759,8 +2927,8 @@ COMMENT ON TABLE contrato_suscrito IS 'tabla donde se almacenara la informacion 
 
 --
 -- TOC entry 3937 (class 0 OID 0)
--- Dependencies: 355
--- Name: COLUMN contrato_suscrito.consecutivo_contrato_suscrito; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 264
+-- Name: COLUMN contrato_suscrito.consecutivo_contrato_suscrito; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_suscrito.consecutivo_contrato_suscrito IS 'Consecutivo unico de contrato, se asigna al contrato una vez sea aprobado.';
@@ -2768,8 +2936,8 @@ COMMENT ON COLUMN contrato_suscrito.consecutivo_contrato_suscrito IS 'Consecutiv
 
 --
 -- TOC entry 3938 (class 0 OID 0)
--- Dependencies: 355
--- Name: COLUMN contrato_suscrito.numero_contrato; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 264
+-- Name: COLUMN contrato_suscrito.numero_contrato; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_suscrito.numero_contrato IS 'numero del contrato asignado una vez se crea el contrato es un consecutivo unico de identificacion antes de la aprobacion';
@@ -2777,8 +2945,8 @@ COMMENT ON COLUMN contrato_suscrito.numero_contrato IS 'numero del contrato asig
 
 --
 -- TOC entry 3939 (class 0 OID 0)
--- Dependencies: 355
--- Name: COLUMN contrato_suscrito.vigencia; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 264
+-- Name: COLUMN contrato_suscrito.vigencia; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_suscrito.vigencia IS 'Vigencia del contrato, año para el cual el contrato rige se define una vez se crea el contrato';
@@ -2786,8 +2954,8 @@ COMMENT ON COLUMN contrato_suscrito.vigencia IS 'Vigencia del contrato, año par
 
 --
 -- TOC entry 3940 (class 0 OID 0)
--- Dependencies: 355
--- Name: COLUMN contrato_suscrito.fecha_registro; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 264
+-- Name: COLUMN contrato_suscrito.fecha_registro; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_suscrito.fecha_registro IS 'fecha en la cual el contrato previamente creado se aprueba';
@@ -2795,8 +2963,8 @@ COMMENT ON COLUMN contrato_suscrito.fecha_registro IS 'fecha en la cual el contr
 
 --
 -- TOC entry 3941 (class 0 OID 0)
--- Dependencies: 355
--- Name: COLUMN contrato_suscrito.usuario; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 264
+-- Name: COLUMN contrato_suscrito.usuario; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_suscrito.usuario IS 'identificacion del usuario que realiza la aprobacion del contrato';
@@ -2804,16 +2972,16 @@ COMMENT ON COLUMN contrato_suscrito.usuario IS 'identificacion del usuario que r
 
 --
 -- TOC entry 3942 (class 0 OID 0)
--- Dependencies: 355
--- Name: COLUMN contrato_suscrito.fecha_suscripcion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 264
+-- Name: COLUMN contrato_suscrito.fecha_suscripcion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN contrato_suscrito.fecha_suscripcion IS 'fecha de suscripcion del contrato, debe ser menor o igual a la fecha de registro del contrato.';
 
 
 --
--- TOC entry 356 (class 1259 OID 37480)
--- Name: convenio; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 265 (class 1259 OID 40315)
+-- Name: convenio; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE convenio (
@@ -2834,18 +3002,20 @@ CREATE TABLE convenio (
 );
 
 
+ALTER TABLE convenio OWNER TO postgres;
+
 --
 -- TOC entry 3943 (class 0 OID 0)
--- Dependencies: 356
--- Name: TABLE convenio; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 265
+-- Name: TABLE convenio; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE convenio IS 'Almacena los convenios del idexud(temporalmente)';
 
 
 --
--- TOC entry 357 (class 1259 OID 37486)
--- Name: id_dependencia_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 266 (class 1259 OID 40321)
+-- Name: id_dependencia_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE id_dependencia_seq
@@ -2856,18 +3026,20 @@ CREATE SEQUENCE id_dependencia_seq
     CACHE 1;
 
 
+ALTER TABLE id_dependencia_seq OWNER TO postgres;
+
 --
 -- TOC entry 3944 (class 0 OID 0)
--- Dependencies: 357
--- Name: SEQUENCE id_dependencia_seq; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 266
+-- Name: SEQUENCE id_dependencia_seq; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON SEQUENCE id_dependencia_seq IS 'secuencia llave primaria dependencia_SIC';
 
 
 --
--- TOC entry 358 (class 1259 OID 37488)
--- Name: dependencia_SIC; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 267 (class 1259 OID 40323)
+-- Name: dependencia_SIC; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE "dependencia_SIC" (
@@ -2885,10 +3057,12 @@ CREATE TABLE "dependencia_SIC" (
 );
 
 
+ALTER TABLE "dependencia_SIC" OWNER TO postgres;
+
 --
 -- TOC entry 3945 (class 0 OID 0)
--- Dependencies: 358
--- Name: COLUMN "dependencia_SIC".direccion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 267
+-- Name: COLUMN "dependencia_SIC".direccion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN "dependencia_SIC".direccion IS 'direccion donde se encuentra ubicada la dependecia';
@@ -2896,16 +3070,16 @@ COMMENT ON COLUMN "dependencia_SIC".direccion IS 'direccion donde se encuentra u
 
 --
 -- TOC entry 3946 (class 0 OID 0)
--- Dependencies: 358
--- Name: COLUMN "dependencia_SIC".id_dependencia; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 267
+-- Name: COLUMN "dependencia_SIC".id_dependencia; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN "dependencia_SIC".id_dependencia IS 'llave primaria';
 
 
 --
--- TOC entry 359 (class 1259 OID 37496)
--- Name: dependencia_id_dependencia_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 268 (class 1259 OID 40331)
+-- Name: dependencia_id_dependencia_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE dependencia_id_dependencia_seq
@@ -2916,9 +3090,11 @@ CREATE SEQUENCE dependencia_id_dependencia_seq
     CACHE 1;
 
 
+ALTER TABLE dependencia_id_dependencia_seq OWNER TO postgres;
+
 --
--- TOC entry 360 (class 1259 OID 37498)
--- Name: elemento_acta_recibido_id_elemento_ac_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 269 (class 1259 OID 40333)
+-- Name: elemento_acta_recibido_id_elemento_ac_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE elemento_acta_recibido_id_elemento_ac_seq
@@ -2929,9 +3105,11 @@ CREATE SEQUENCE elemento_acta_recibido_id_elemento_ac_seq
     CACHE 1;
 
 
+ALTER TABLE elemento_acta_recibido_id_elemento_ac_seq OWNER TO postgres;
+
 --
--- TOC entry 361 (class 1259 OID 37500)
--- Name: elemento_acta_recibido; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 270 (class 1259 OID 40335)
+-- Name: elemento_acta_recibido; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE elemento_acta_recibido (
@@ -2963,10 +3141,12 @@ CREATE TABLE elemento_acta_recibido (
 );
 
 
+ALTER TABLE elemento_acta_recibido OWNER TO postgres;
+
 --
 -- TOC entry 3947 (class 0 OID 0)
--- Dependencies: 361
--- Name: TABLE elemento_acta_recibido; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 270
+-- Name: TABLE elemento_acta_recibido; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE elemento_acta_recibido IS 'Tabla Permite hacer registro de los Elementos Acta de Recibido';
@@ -2974,8 +3154,8 @@ COMMENT ON TABLE elemento_acta_recibido IS 'Tabla Permite hacer registro de los 
 
 --
 -- TOC entry 3948 (class 0 OID 0)
--- Dependencies: 361
--- Name: COLUMN elemento_acta_recibido.codigo_dependencia; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 270
+-- Name: COLUMN elemento_acta_recibido.codigo_dependencia; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN elemento_acta_recibido.codigo_dependencia IS 'Codigo de la Dependencia';
@@ -2983,16 +3163,16 @@ COMMENT ON COLUMN elemento_acta_recibido.codigo_dependencia IS 'Codigo de la Dep
 
 --
 -- TOC entry 3949 (class 0 OID 0)
--- Dependencies: 361
--- Name: COLUMN elemento_acta_recibido.funcionario; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 270
+-- Name: COLUMN elemento_acta_recibido.funcionario; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN elemento_acta_recibido.funcionario IS 'identificacion del funcionario que quedara a cargo del elemento';
 
 
 --
--- TOC entry 362 (class 1259 OID 37508)
--- Name: espaciosfisicos_SIC; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 271 (class 1259 OID 40343)
+-- Name: espaciosfisicos_SIC; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE "espaciosfisicos_SIC" (
@@ -3005,9 +3185,11 @@ CREATE TABLE "espaciosfisicos_SIC" (
 );
 
 
+ALTER TABLE "espaciosfisicos_SIC" OWNER TO postgres;
+
 --
--- TOC entry 363 (class 1259 OID 37514)
--- Name: especificacion_tecnica; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 272 (class 1259 OID 40349)
+-- Name: especificacion_tecnica; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE especificacion_tecnica (
@@ -3023,10 +3205,12 @@ CREATE TABLE especificacion_tecnica (
 );
 
 
+ALTER TABLE especificacion_tecnica OWNER TO postgres;
+
 --
 -- TOC entry 3950 (class 0 OID 0)
--- Dependencies: 363
--- Name: TABLE especificacion_tecnica; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 272
+-- Name: TABLE especificacion_tecnica; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE especificacion_tecnica IS 'Tabla encargada de gestionar las especificaciones técnicas posibles para una solicitud de la necesidad';
@@ -3034,8 +3218,8 @@ COMMENT ON TABLE especificacion_tecnica IS 'Tabla encargada de gestionar las esp
 
 --
 -- TOC entry 3951 (class 0 OID 0)
--- Dependencies: 363
--- Name: COLUMN especificacion_tecnica.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 272
+-- Name: COLUMN especificacion_tecnica.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN especificacion_tecnica.id IS 'Identificador del registro de la especificación técnica de la solicitud de necesidad';
@@ -3043,8 +3227,8 @@ COMMENT ON COLUMN especificacion_tecnica.id IS 'Identificador del registro de la
 
 --
 -- TOC entry 3952 (class 0 OID 0)
--- Dependencies: 363
--- Name: COLUMN especificacion_tecnica.puc; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 272
+-- Name: COLUMN especificacion_tecnica.puc; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN especificacion_tecnica.puc IS 'Identificador del Plan Único de Cuentas proveniente del sistema Arka';
@@ -3052,8 +3236,8 @@ COMMENT ON COLUMN especificacion_tecnica.puc IS 'Identificador del Plan Único d
 
 --
 -- TOC entry 3953 (class 0 OID 0)
--- Dependencies: 363
--- Name: COLUMN especificacion_tecnica.catalogo; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 272
+-- Name: COLUMN especificacion_tecnica.catalogo; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN especificacion_tecnica.catalogo IS 'Identificador del catálogo de productos proveniente del sistema Arka';
@@ -3061,8 +3245,8 @@ COMMENT ON COLUMN especificacion_tecnica.catalogo IS 'Identificador del catálog
 
 --
 -- TOC entry 3954 (class 0 OID 0)
--- Dependencies: 363
--- Name: COLUMN especificacion_tecnica.solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 272
+-- Name: COLUMN especificacion_tecnica.solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN especificacion_tecnica.solicitud_necesidad IS 'Identificador de la solicitud de la necesidad a la que se le asocia la especificación técnica';
@@ -3070,8 +3254,8 @@ COMMENT ON COLUMN especificacion_tecnica.solicitud_necesidad IS 'Identificador d
 
 --
 -- TOC entry 3955 (class 0 OID 0)
--- Dependencies: 363
--- Name: COLUMN especificacion_tecnica.descripcion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 272
+-- Name: COLUMN especificacion_tecnica.descripcion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN especificacion_tecnica.descripcion IS 'Descripción de la especificación técnica de la solicitud';
@@ -3079,8 +3263,8 @@ COMMENT ON COLUMN especificacion_tecnica.descripcion IS 'Descripción de la espe
 
 --
 -- TOC entry 3956 (class 0 OID 0)
--- Dependencies: 363
--- Name: COLUMN especificacion_tecnica.cantidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 272
+-- Name: COLUMN especificacion_tecnica.cantidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN especificacion_tecnica.cantidad IS 'Cantidad del elemento requerido del catálogo elegido';
@@ -3088,8 +3272,8 @@ COMMENT ON COLUMN especificacion_tecnica.cantidad IS 'Cantidad del elemento requ
 
 --
 -- TOC entry 3957 (class 0 OID 0)
--- Dependencies: 363
--- Name: COLUMN especificacion_tecnica.unidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 272
+-- Name: COLUMN especificacion_tecnica.unidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN especificacion_tecnica.unidad IS 'Unidad de medida del elemento requerido en la solicitud';
@@ -3097,8 +3281,8 @@ COMMENT ON COLUMN especificacion_tecnica.unidad IS 'Unidad de medida del element
 
 --
 -- TOC entry 3958 (class 0 OID 0)
--- Dependencies: 363
--- Name: COLUMN especificacion_tecnica.valor; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 272
+-- Name: COLUMN especificacion_tecnica.valor; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN especificacion_tecnica.valor IS 'Valor total de todos los elementos requeridos (en pesos)';
@@ -3106,16 +3290,16 @@ COMMENT ON COLUMN especificacion_tecnica.valor IS 'Valor total de todos los elem
 
 --
 -- TOC entry 3959 (class 0 OID 0)
--- Dependencies: 363
--- Name: COLUMN especificacion_tecnica.iva; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 272
+-- Name: COLUMN especificacion_tecnica.iva; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN especificacion_tecnica.iva IS 'Porcentaje del impuesto IVA aplicado al total';
 
 
 --
--- TOC entry 364 (class 1259 OID 37520)
--- Name: especificacion_tecnica_id_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 273 (class 1259 OID 40355)
+-- Name: especificacion_tecnica_id_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE especificacion_tecnica_id_seq
@@ -3126,10 +3310,12 @@ CREATE SEQUENCE especificacion_tecnica_id_seq
     CACHE 1;
 
 
+ALTER TABLE especificacion_tecnica_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 3961 (class 0 OID 0)
--- Dependencies: 364
--- Name: especificacion_tecnica_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: -
+-- Dependencies: 273
+-- Name: especificacion_tecnica_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: postgres
 --
 
 ALTER SEQUENCE especificacion_tecnica_id_seq OWNED BY especificacion_tecnica.id;
@@ -3137,16 +3323,16 @@ ALTER SEQUENCE especificacion_tecnica_id_seq OWNED BY especificacion_tecnica.id;
 
 --
 -- TOC entry 3962 (class 0 OID 0)
--- Dependencies: 364
--- Name: SEQUENCE especificacion_tecnica_id_seq; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 273
+-- Name: SEQUENCE especificacion_tecnica_id_seq; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON SEQUENCE especificacion_tecnica_id_seq IS 'Secuencia del id de las especificaciones tecnicas';
 
 
 --
--- TOC entry 365 (class 1259 OID 37522)
--- Name: estado_constrato_id_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 274 (class 1259 OID 40357)
+-- Name: estado_constrato_id_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE estado_constrato_id_seq
@@ -3157,9 +3343,11 @@ CREATE SEQUENCE estado_constrato_id_seq
     CACHE 1;
 
 
+ALTER TABLE estado_constrato_id_seq OWNER TO postgres;
+
 --
--- TOC entry 366 (class 1259 OID 37524)
--- Name: estado_contrato; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 275 (class 1259 OID 40359)
+-- Name: estado_contrato; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE estado_contrato (
@@ -3169,10 +3357,12 @@ CREATE TABLE estado_contrato (
 );
 
 
+ALTER TABLE estado_contrato OWNER TO postgres;
+
 --
 -- TOC entry 3964 (class 0 OID 0)
--- Dependencies: 366
--- Name: TABLE estado_contrato; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 275
+-- Name: TABLE estado_contrato; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE estado_contrato IS 'Tabla que almacena todos los posibles estados por los cuales puede pasar un contrato desde su registro en el sistema hasta la aprobación del mismo';
@@ -3180,8 +3370,8 @@ COMMENT ON TABLE estado_contrato IS 'Tabla que almacena todos los posibles estad
 
 --
 -- TOC entry 3965 (class 0 OID 0)
--- Dependencies: 366
--- Name: COLUMN estado_contrato.nombre_estado; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 275
+-- Name: COLUMN estado_contrato.nombre_estado; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN estado_contrato.nombre_estado IS 'Nombre o descripcion del estado ';
@@ -3189,8 +3379,8 @@ COMMENT ON COLUMN estado_contrato.nombre_estado IS 'Nombre o descripcion del est
 
 --
 -- TOC entry 3966 (class 0 OID 0)
--- Dependencies: 366
--- Name: COLUMN estado_contrato.fecha_registro; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 275
+-- Name: COLUMN estado_contrato.fecha_registro; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN estado_contrato.fecha_registro IS 'fecha de registro del estado';
@@ -3198,16 +3388,16 @@ COMMENT ON COLUMN estado_contrato.fecha_registro IS 'fecha de registro del estad
 
 --
 -- TOC entry 3967 (class 0 OID 0)
--- Dependencies: 366
--- Name: COLUMN estado_contrato.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 275
+-- Name: COLUMN estado_contrato.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN estado_contrato.id IS 'identificador unico del estado del contrato';
 
 
 --
--- TOC entry 367 (class 1259 OID 37528)
--- Name: estado_solicitud_necesidad; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 276 (class 1259 OID 40363)
+-- Name: estado_solicitud_necesidad; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE estado_solicitud_necesidad (
@@ -3217,10 +3407,12 @@ CREATE TABLE estado_solicitud_necesidad (
 );
 
 
+ALTER TABLE estado_solicitud_necesidad OWNER TO postgres;
+
 --
 -- TOC entry 3968 (class 0 OID 0)
--- Dependencies: 367
--- Name: TABLE estado_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 276
+-- Name: TABLE estado_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE estado_solicitud_necesidad IS 'Tabla encargada de gestionar los estados posibles para una solicitud de la necesidad';
@@ -3228,8 +3420,8 @@ COMMENT ON TABLE estado_solicitud_necesidad IS 'Tabla encargada de gestionar los
 
 --
 -- TOC entry 3969 (class 0 OID 0)
--- Dependencies: 367
--- Name: COLUMN estado_solicitud_necesidad.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 276
+-- Name: COLUMN estado_solicitud_necesidad.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN estado_solicitud_necesidad.id IS 'Identificador del registro del estado de la solicitud de necesidad';
@@ -3237,8 +3429,8 @@ COMMENT ON COLUMN estado_solicitud_necesidad.id IS 'Identificador del registro d
 
 --
 -- TOC entry 3970 (class 0 OID 0)
--- Dependencies: 367
--- Name: COLUMN estado_solicitud_necesidad.nombre; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 276
+-- Name: COLUMN estado_solicitud_necesidad.nombre; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN estado_solicitud_necesidad.nombre IS 'Nombre del estado de la solicitud de necesidad';
@@ -3246,16 +3438,16 @@ COMMENT ON COLUMN estado_solicitud_necesidad.nombre IS 'Nombre del estado de la 
 
 --
 -- TOC entry 3971 (class 0 OID 0)
--- Dependencies: 367
--- Name: COLUMN estado_solicitud_necesidad.descripcion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 276
+-- Name: COLUMN estado_solicitud_necesidad.descripcion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN estado_solicitud_necesidad.descripcion IS 'Descripción corta del estado de la solicitud';
 
 
 --
--- TOC entry 368 (class 1259 OID 37534)
--- Name: estado_solicitud_necesidad_id_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 277 (class 1259 OID 40369)
+-- Name: estado_solicitud_necesidad_id_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE estado_solicitud_necesidad_id_seq
@@ -3266,10 +3458,12 @@ CREATE SEQUENCE estado_solicitud_necesidad_id_seq
     CACHE 1;
 
 
+ALTER TABLE estado_solicitud_necesidad_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 3973 (class 0 OID 0)
--- Dependencies: 368
--- Name: estado_solicitud_necesidad_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: -
+-- Dependencies: 277
+-- Name: estado_solicitud_necesidad_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: postgres
 --
 
 ALTER SEQUENCE estado_solicitud_necesidad_id_seq OWNED BY estado_solicitud_necesidad.id;
@@ -3277,16 +3471,16 @@ ALTER SEQUENCE estado_solicitud_necesidad_id_seq OWNED BY estado_solicitud_neces
 
 --
 -- TOC entry 3974 (class 0 OID 0)
--- Dependencies: 368
--- Name: SEQUENCE estado_solicitud_necesidad_id_seq; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 277
+-- Name: SEQUENCE estado_solicitud_necesidad_id_seq; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON SEQUENCE estado_solicitud_necesidad_id_seq IS 'Secuencia del id de los estados de una solicitud de necesidad';
 
 
 --
--- TOC entry 369 (class 1259 OID 37536)
--- Name: fuente_financiacion_rubro_necesidad; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 278 (class 1259 OID 40371)
+-- Name: fuente_financiacion_rubro_necesidad; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE fuente_financiacion_rubro_necesidad (
@@ -3297,10 +3491,12 @@ CREATE TABLE fuente_financiacion_rubro_necesidad (
 );
 
 
+ALTER TABLE fuente_financiacion_rubro_necesidad OWNER TO postgres;
+
 --
 -- TOC entry 3976 (class 0 OID 0)
--- Dependencies: 369
--- Name: TABLE fuente_financiacion_rubro_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 278
+-- Name: TABLE fuente_financiacion_rubro_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE fuente_financiacion_rubro_necesidad IS 'Tabla encargada de gestionar las fuentes de financiación asociadas a un rubro para una solicitud de la necesidad';
@@ -3308,8 +3504,8 @@ COMMENT ON TABLE fuente_financiacion_rubro_necesidad IS 'Tabla encargada de gest
 
 --
 -- TOC entry 3977 (class 0 OID 0)
--- Dependencies: 369
--- Name: COLUMN fuente_financiacion_rubro_necesidad.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 278
+-- Name: COLUMN fuente_financiacion_rubro_necesidad.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN fuente_financiacion_rubro_necesidad.id IS 'Identificador del registro de la fuente de financiación del rubro para la solicitud';
@@ -3317,8 +3513,8 @@ COMMENT ON COLUMN fuente_financiacion_rubro_necesidad.id IS 'Identificador del r
 
 --
 -- TOC entry 3978 (class 0 OID 0)
--- Dependencies: 369
--- Name: COLUMN fuente_financiacion_rubro_necesidad.fuente_financiacion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 278
+-- Name: COLUMN fuente_financiacion_rubro_necesidad.fuente_financiacion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN fuente_financiacion_rubro_necesidad.fuente_financiacion IS 'Identificador de la fuente de financiación asociada al rubro';
@@ -3326,8 +3522,8 @@ COMMENT ON COLUMN fuente_financiacion_rubro_necesidad.fuente_financiacion IS 'Id
 
 --
 -- TOC entry 3979 (class 0 OID 0)
--- Dependencies: 369
--- Name: COLUMN fuente_financiacion_rubro_necesidad.rubro_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 278
+-- Name: COLUMN fuente_financiacion_rubro_necesidad.rubro_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN fuente_financiacion_rubro_necesidad.rubro_solicitud_necesidad IS 'Identificador del rubro del cual proviene la fuente de financiación para la solicitud';
@@ -3335,16 +3531,16 @@ COMMENT ON COLUMN fuente_financiacion_rubro_necesidad.rubro_solicitud_necesidad 
 
 --
 -- TOC entry 3980 (class 0 OID 0)
--- Dependencies: 369
--- Name: COLUMN fuente_financiacion_rubro_necesidad.monto_parcial; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 278
+-- Name: COLUMN fuente_financiacion_rubro_necesidad.monto_parcial; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN fuente_financiacion_rubro_necesidad.monto_parcial IS 'Monto de la fuente de financiación (en pesos)';
 
 
 --
--- TOC entry 370 (class 1259 OID 37539)
--- Name: fuente_financiacion_rubro_necesidad_id_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 279 (class 1259 OID 40374)
+-- Name: fuente_financiacion_rubro_necesidad_id_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE fuente_financiacion_rubro_necesidad_id_seq
@@ -3355,18 +3551,20 @@ CREATE SEQUENCE fuente_financiacion_rubro_necesidad_id_seq
     CACHE 1;
 
 
+ALTER TABLE fuente_financiacion_rubro_necesidad_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 3982 (class 0 OID 0)
--- Dependencies: 370
--- Name: fuente_financiacion_rubro_necesidad_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: -
+-- Dependencies: 279
+-- Name: fuente_financiacion_rubro_necesidad_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: postgres
 --
 
 ALTER SEQUENCE fuente_financiacion_rubro_necesidad_id_seq OWNED BY fuente_financiacion_rubro_necesidad.id;
 
 
 --
--- TOC entry 371 (class 1259 OID 37541)
--- Name: id_orden_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 280 (class 1259 OID 40376)
+-- Name: id_orden_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE id_orden_seq
@@ -3377,18 +3575,20 @@ CREATE SEQUENCE id_orden_seq
     CACHE 1;
 
 
+ALTER TABLE id_orden_seq OWNER TO postgres;
+
 --
 -- TOC entry 3984 (class 0 OID 0)
--- Dependencies: 371
--- Name: SEQUENCE id_orden_seq; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 280
+-- Name: SEQUENCE id_orden_seq; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON SEQUENCE id_orden_seq IS 'secuencia del id de la orden';
 
 
 --
--- TOC entry 372 (class 1259 OID 37543)
--- Name: inf_bancaria_id_inf_bancaria_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 281 (class 1259 OID 40378)
+-- Name: inf_bancaria_id_inf_bancaria_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE inf_bancaria_id_inf_bancaria_seq
@@ -3399,9 +3599,11 @@ CREATE SEQUENCE inf_bancaria_id_inf_bancaria_seq
     CACHE 1;
 
 
+ALTER TABLE inf_bancaria_id_inf_bancaria_seq OWNER TO postgres;
+
 --
--- TOC entry 373 (class 1259 OID 37545)
--- Name: lugar_ejecucion_id_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 282 (class 1259 OID 40380)
+-- Name: lugar_ejecucion_id_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE lugar_ejecucion_id_seq
@@ -3412,9 +3614,11 @@ CREATE SEQUENCE lugar_ejecucion_id_seq
     CACHE 1;
 
 
+ALTER TABLE lugar_ejecucion_id_seq OWNER TO postgres;
+
 --
--- TOC entry 374 (class 1259 OID 37547)
--- Name: lugar_ejecucion; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 283 (class 1259 OID 40382)
+-- Name: lugar_ejecucion; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE lugar_ejecucion (
@@ -3426,10 +3630,12 @@ CREATE TABLE lugar_ejecucion (
 );
 
 
+ALTER TABLE lugar_ejecucion OWNER TO postgres;
+
 --
 -- TOC entry 3985 (class 0 OID 0)
--- Dependencies: 374
--- Name: TABLE lugar_ejecucion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 283
+-- Name: TABLE lugar_ejecucion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE lugar_ejecucion IS 'tabla que almacena el lugar de ejecucion del contrato';
@@ -3437,8 +3643,8 @@ COMMENT ON TABLE lugar_ejecucion IS 'tabla que almacena el lugar de ejecucion de
 
 --
 -- TOC entry 3986 (class 0 OID 0)
--- Dependencies: 374
--- Name: COLUMN lugar_ejecucion.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 283
+-- Name: COLUMN lugar_ejecucion.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN lugar_ejecucion.id IS 'identificador unico del regitro';
@@ -3446,8 +3652,8 @@ COMMENT ON COLUMN lugar_ejecucion.id IS 'identificador unico del regitro';
 
 --
 -- TOC entry 3987 (class 0 OID 0)
--- Dependencies: 374
--- Name: COLUMN lugar_ejecucion.direccion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 283
+-- Name: COLUMN lugar_ejecucion.direccion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN lugar_ejecucion.direccion IS 'direccion del lugar de ejecucion del contrato';
@@ -3455,8 +3661,8 @@ COMMENT ON COLUMN lugar_ejecucion.direccion IS 'direccion del lugar de ejecucion
 
 --
 -- TOC entry 3988 (class 0 OID 0)
--- Dependencies: 374
--- Name: COLUMN lugar_ejecucion.sede; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 283
+-- Name: COLUMN lugar_ejecucion.sede; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN lugar_ejecucion.sede IS 'sede de ejecucion del contrato, puede ser nula en caso de que el contrato no se ejecute en ninguna sede de la universidad';
@@ -3464,8 +3670,8 @@ COMMENT ON COLUMN lugar_ejecucion.sede IS 'sede de ejecucion del contrato, puede
 
 --
 -- TOC entry 3989 (class 0 OID 0)
--- Dependencies: 374
--- Name: COLUMN lugar_ejecucion.dependencia; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 283
+-- Name: COLUMN lugar_ejecucion.dependencia; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN lugar_ejecucion.dependencia IS 'dependencia, puede ser nula, similar a la sede';
@@ -3473,16 +3679,16 @@ COMMENT ON COLUMN lugar_ejecucion.dependencia IS 'dependencia, puede ser nula, s
 
 --
 -- TOC entry 3990 (class 0 OID 0)
--- Dependencies: 374
--- Name: COLUMN lugar_ejecucion.ciudad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 283
+-- Name: COLUMN lugar_ejecucion.ciudad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN lugar_ejecucion.ciudad IS 'ciudad donde se ejecuta el contrato';
 
 
 --
--- TOC entry 375 (class 1259 OID 37554)
--- Name: marco_legal; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 284 (class 1259 OID 40389)
+-- Name: marco_legal; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE marco_legal (
@@ -3492,10 +3698,12 @@ CREATE TABLE marco_legal (
 );
 
 
+ALTER TABLE marco_legal OWNER TO postgres;
+
 --
 -- TOC entry 3991 (class 0 OID 0)
--- Dependencies: 375
--- Name: TABLE marco_legal; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 284
+-- Name: TABLE marco_legal; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE marco_legal IS 'Tabla encargada de gestionar los marcos legales posibles para una solicitud de la necesidad';
@@ -3503,8 +3711,8 @@ COMMENT ON TABLE marco_legal IS 'Tabla encargada de gestionar los marcos legales
 
 --
 -- TOC entry 3992 (class 0 OID 0)
--- Dependencies: 375
--- Name: COLUMN marco_legal.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 284
+-- Name: COLUMN marco_legal.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN marco_legal.id IS 'Identificador del registro del marco legal de la solicitud de necesidad';
@@ -3512,8 +3720,8 @@ COMMENT ON COLUMN marco_legal.id IS 'Identificador del registro del marco legal 
 
 --
 -- TOC entry 3993 (class 0 OID 0)
--- Dependencies: 375
--- Name: COLUMN marco_legal.enlace; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 284
+-- Name: COLUMN marco_legal.enlace; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN marco_legal.enlace IS 'URL del documento determinado como marco legal para la solicitud en formato PDF';
@@ -3521,16 +3729,16 @@ COMMENT ON COLUMN marco_legal.enlace IS 'URL del documento determinado como marc
 
 --
 -- TOC entry 3994 (class 0 OID 0)
--- Dependencies: 375
--- Name: COLUMN marco_legal.nombre_documento; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 284
+-- Name: COLUMN marco_legal.nombre_documento; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN marco_legal.nombre_documento IS 'Nombre del documento determinado como marco legal para la solicitud de necesidad';
 
 
 --
--- TOC entry 376 (class 1259 OID 37560)
--- Name: marco_legal_id_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 285 (class 1259 OID 40395)
+-- Name: marco_legal_id_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE marco_legal_id_seq
@@ -3541,10 +3749,12 @@ CREATE SEQUENCE marco_legal_id_seq
     CACHE 1;
 
 
+ALTER TABLE marco_legal_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 3996 (class 0 OID 0)
--- Dependencies: 376
--- Name: marco_legal_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: -
+-- Dependencies: 285
+-- Name: marco_legal_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: postgres
 --
 
 ALTER SEQUENCE marco_legal_id_seq OWNED BY marco_legal.id;
@@ -3552,16 +3762,16 @@ ALTER SEQUENCE marco_legal_id_seq OWNED BY marco_legal.id;
 
 --
 -- TOC entry 3997 (class 0 OID 0)
--- Dependencies: 376
--- Name: SEQUENCE marco_legal_id_seq; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 285
+-- Name: SEQUENCE marco_legal_id_seq; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON SEQUENCE marco_legal_id_seq IS 'Secuencia del id de marco legal';
 
 
 --
--- TOC entry 377 (class 1259 OID 37562)
--- Name: marco_legal_necesidad; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 286 (class 1259 OID 40397)
+-- Name: marco_legal_necesidad; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE marco_legal_necesidad (
@@ -3571,10 +3781,12 @@ CREATE TABLE marco_legal_necesidad (
 );
 
 
+ALTER TABLE marco_legal_necesidad OWNER TO postgres;
+
 --
 -- TOC entry 3999 (class 0 OID 0)
--- Dependencies: 377
--- Name: TABLE marco_legal_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 286
+-- Name: TABLE marco_legal_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE marco_legal_necesidad IS 'Tabla de rompimiento entre el marco legal y la solicitud de necesidad';
@@ -3582,8 +3794,8 @@ COMMENT ON TABLE marco_legal_necesidad IS 'Tabla de rompimiento entre el marco l
 
 --
 -- TOC entry 4000 (class 0 OID 0)
--- Dependencies: 377
--- Name: COLUMN marco_legal_necesidad.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 286
+-- Name: COLUMN marco_legal_necesidad.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN marco_legal_necesidad.id IS 'Identificador del registro de la tabla de rompimiento entre marco legal y solicitud de necesidad';
@@ -3591,8 +3803,8 @@ COMMENT ON COLUMN marco_legal_necesidad.id IS 'Identificador del registro de la 
 
 --
 -- TOC entry 4001 (class 0 OID 0)
--- Dependencies: 377
--- Name: COLUMN marco_legal_necesidad.marco_legal; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 286
+-- Name: COLUMN marco_legal_necesidad.marco_legal; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN marco_legal_necesidad.marco_legal IS 'Identificador del marco legal asociado a la solicitud de la necesidad';
@@ -3600,16 +3812,16 @@ COMMENT ON COLUMN marco_legal_necesidad.marco_legal IS 'Identificador del marco 
 
 --
 -- TOC entry 4002 (class 0 OID 0)
--- Dependencies: 377
--- Name: COLUMN marco_legal_necesidad.solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 286
+-- Name: COLUMN marco_legal_necesidad.solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN marco_legal_necesidad.solicitud_necesidad IS 'Identificador de la solicitud de necesidad a la cual se le determina el marco legal';
 
 
 --
--- TOC entry 378 (class 1259 OID 37565)
--- Name: marco_legal_necesidad_id_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 287 (class 1259 OID 40400)
+-- Name: marco_legal_necesidad_id_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE marco_legal_necesidad_id_seq
@@ -3620,10 +3832,12 @@ CREATE SEQUENCE marco_legal_necesidad_id_seq
     CACHE 1;
 
 
+ALTER TABLE marco_legal_necesidad_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4004 (class 0 OID 0)
--- Dependencies: 378
--- Name: marco_legal_necesidad_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: -
+-- Dependencies: 287
+-- Name: marco_legal_necesidad_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: postgres
 --
 
 ALTER SEQUENCE marco_legal_necesidad_id_seq OWNED BY marco_legal_necesidad.id;
@@ -3631,16 +3845,16 @@ ALTER SEQUENCE marco_legal_necesidad_id_seq OWNED BY marco_legal_necesidad.id;
 
 --
 -- TOC entry 4005 (class 0 OID 0)
--- Dependencies: 378
--- Name: SEQUENCE marco_legal_necesidad_id_seq; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 287
+-- Name: SEQUENCE marco_legal_necesidad_id_seq; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON SEQUENCE marco_legal_necesidad_id_seq IS 'Secuencia del id de la tabla de rompimiento entre marco legal y la solicitud de necesidad';
 
 
 --
--- TOC entry 379 (class 1259 OID 37567)
--- Name: modalidad_seleccion; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 288 (class 1259 OID 40402)
+-- Name: modalidad_seleccion; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE modalidad_seleccion (
@@ -3650,10 +3864,12 @@ CREATE TABLE modalidad_seleccion (
 );
 
 
+ALTER TABLE modalidad_seleccion OWNER TO postgres;
+
 --
 -- TOC entry 4007 (class 0 OID 0)
--- Dependencies: 379
--- Name: TABLE modalidad_seleccion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 288
+-- Name: TABLE modalidad_seleccion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE modalidad_seleccion IS 'Tabla encargada de gestionar las modalidades de selección posibles para una solicitud de la necesidad';
@@ -3661,8 +3877,8 @@ COMMENT ON TABLE modalidad_seleccion IS 'Tabla encargada de gestionar las modali
 
 --
 -- TOC entry 4008 (class 0 OID 0)
--- Dependencies: 379
--- Name: COLUMN modalidad_seleccion.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 288
+-- Name: COLUMN modalidad_seleccion.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN modalidad_seleccion.id IS 'Identificador del registro de la modalidad de selección de la solicitud de necesidad';
@@ -3670,8 +3886,8 @@ COMMENT ON COLUMN modalidad_seleccion.id IS 'Identificador del registro de la mo
 
 --
 -- TOC entry 4009 (class 0 OID 0)
--- Dependencies: 379
--- Name: COLUMN modalidad_seleccion.nombre; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 288
+-- Name: COLUMN modalidad_seleccion.nombre; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN modalidad_seleccion.nombre IS 'Nombre de la modalidad de selección de la solicitud de necesidad';
@@ -3679,16 +3895,16 @@ COMMENT ON COLUMN modalidad_seleccion.nombre IS 'Nombre de la modalidad de selec
 
 --
 -- TOC entry 4010 (class 0 OID 0)
--- Dependencies: 379
--- Name: COLUMN modalidad_seleccion.descripcion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 288
+-- Name: COLUMN modalidad_seleccion.descripcion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN modalidad_seleccion.descripcion IS 'Descripción corta de la modalidad de selección de la solicitud';
 
 
 --
--- TOC entry 380 (class 1259 OID 37573)
--- Name: modalidad_seleccion_id_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 289 (class 1259 OID 40408)
+-- Name: modalidad_seleccion_id_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE modalidad_seleccion_id_seq
@@ -3699,10 +3915,12 @@ CREATE SEQUENCE modalidad_seleccion_id_seq
     CACHE 1;
 
 
+ALTER TABLE modalidad_seleccion_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4012 (class 0 OID 0)
--- Dependencies: 380
--- Name: modalidad_seleccion_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: -
+-- Dependencies: 289
+-- Name: modalidad_seleccion_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: postgres
 --
 
 ALTER SEQUENCE modalidad_seleccion_id_seq OWNED BY modalidad_seleccion.id;
@@ -3710,16 +3928,16 @@ ALTER SEQUENCE modalidad_seleccion_id_seq OWNED BY modalidad_seleccion.id;
 
 --
 -- TOC entry 4013 (class 0 OID 0)
--- Dependencies: 380
--- Name: SEQUENCE modalidad_seleccion_id_seq; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 289
+-- Name: SEQUENCE modalidad_seleccion_id_seq; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON SEQUENCE modalidad_seleccion_id_seq IS 'Secuencia del id de la modalidad de seleccion';
 
 
 --
--- TOC entry 381 (class 1259 OID 37575)
--- Name: novedad_contractual_id_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 290 (class 1259 OID 40410)
+-- Name: novedad_contractual_id_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE novedad_contractual_id_seq
@@ -3730,9 +3948,11 @@ CREATE SEQUENCE novedad_contractual_id_seq
     CACHE 1;
 
 
+ALTER TABLE novedad_contractual_id_seq OWNER TO postgres;
+
 --
--- TOC entry 382 (class 1259 OID 37577)
--- Name: novedad_contractual; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 291 (class 1259 OID 40412)
+-- Name: novedad_contractual; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE novedad_contractual (
@@ -3749,10 +3969,12 @@ CREATE TABLE novedad_contractual (
 );
 
 
+ALTER TABLE novedad_contractual OWNER TO postgres;
+
 --
 -- TOC entry 4015 (class 0 OID 0)
--- Dependencies: 382
--- Name: TABLE novedad_contractual; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 291
+-- Name: TABLE novedad_contractual; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE novedad_contractual IS 'Tabla que registra la informacion general de las novedades contractuales';
@@ -3760,8 +3982,8 @@ COMMENT ON TABLE novedad_contractual IS 'Tabla que registra la informacion gener
 
 --
 -- TOC entry 4016 (class 0 OID 0)
--- Dependencies: 382
--- Name: COLUMN novedad_contractual.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 291
+-- Name: COLUMN novedad_contractual.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN novedad_contractual.id IS 'identificador primario de la novedad';
@@ -3769,8 +3991,8 @@ COMMENT ON COLUMN novedad_contractual.id IS 'identificador primario de la noveda
 
 --
 -- TOC entry 4017 (class 0 OID 0)
--- Dependencies: 382
--- Name: COLUMN novedad_contractual.tipo_novedad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 291
+-- Name: COLUMN novedad_contractual.tipo_novedad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN novedad_contractual.tipo_novedad IS 'identificador foraneo del tipo de novedad';
@@ -3778,8 +4000,8 @@ COMMENT ON COLUMN novedad_contractual.tipo_novedad IS 'identificador foraneo del
 
 --
 -- TOC entry 4018 (class 0 OID 0)
--- Dependencies: 382
--- Name: COLUMN novedad_contractual.numero_contrato; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 291
+-- Name: COLUMN novedad_contractual.numero_contrato; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN novedad_contractual.numero_contrato IS 'numero del contrato al cual se le asocia la novedad';
@@ -3787,8 +4009,8 @@ COMMENT ON COLUMN novedad_contractual.numero_contrato IS 'numero del contrato al
 
 --
 -- TOC entry 4019 (class 0 OID 0)
--- Dependencies: 382
--- Name: COLUMN novedad_contractual.vigencia; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 291
+-- Name: COLUMN novedad_contractual.vigencia; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN novedad_contractual.vigencia IS 'vigencia a la cual se le asocia el contrato';
@@ -3796,8 +4018,8 @@ COMMENT ON COLUMN novedad_contractual.vigencia IS 'vigencia a la cual se le asoc
 
 --
 -- TOC entry 4020 (class 0 OID 0)
--- Dependencies: 382
--- Name: COLUMN novedad_contractual.estado; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 291
+-- Name: COLUMN novedad_contractual.estado; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN novedad_contractual.estado IS 'estado de la novedad';
@@ -3805,8 +4027,8 @@ COMMENT ON COLUMN novedad_contractual.estado IS 'estado de la novedad';
 
 --
 -- TOC entry 4021 (class 0 OID 0)
--- Dependencies: 382
--- Name: COLUMN novedad_contractual.fecha_registro; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 291
+-- Name: COLUMN novedad_contractual.fecha_registro; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN novedad_contractual.fecha_registro IS 'fecha en la cual se registra la novedad';
@@ -3814,8 +4036,8 @@ COMMENT ON COLUMN novedad_contractual.fecha_registro IS 'fecha en la cual se reg
 
 --
 -- TOC entry 4022 (class 0 OID 0)
--- Dependencies: 382
--- Name: COLUMN novedad_contractual.usuario; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 291
+-- Name: COLUMN novedad_contractual.usuario; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN novedad_contractual.usuario IS 'usuario quien lleva a cabo el registron de la novedad';
@@ -3823,8 +4045,8 @@ COMMENT ON COLUMN novedad_contractual.usuario IS 'usuario quien lleva a cabo el 
 
 --
 -- TOC entry 4023 (class 0 OID 0)
--- Dependencies: 382
--- Name: COLUMN novedad_contractual.acto_administrativo; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 291
+-- Name: COLUMN novedad_contractual.acto_administrativo; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN novedad_contractual.acto_administrativo IS 'numero de acto administrativo que respalda la novedad';
@@ -3832,8 +4054,8 @@ COMMENT ON COLUMN novedad_contractual.acto_administrativo IS 'numero de acto adm
 
 --
 -- TOC entry 4024 (class 0 OID 0)
--- Dependencies: 382
--- Name: COLUMN novedad_contractual.documento; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 291
+-- Name: COLUMN novedad_contractual.documento; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN novedad_contractual.documento IS 'ruta documento soporte del archivo asociado a la novedad';
@@ -3841,16 +4063,16 @@ COMMENT ON COLUMN novedad_contractual.documento IS 'ruta documento soporte del a
 
 --
 -- TOC entry 4025 (class 0 OID 0)
--- Dependencies: 382
--- Name: COLUMN novedad_contractual.descripcion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 291
+-- Name: COLUMN novedad_contractual.descripcion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN novedad_contractual.descripcion IS 'campo para almacenar informacion adicional referente al novedad a modo de descripcion';
 
 
 --
--- TOC entry 383 (class 1259 OID 37585)
--- Name: orden; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 292 (class 1259 OID 40420)
+-- Name: orden; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE orden (
@@ -3863,10 +4085,12 @@ CREATE TABLE orden (
 );
 
 
+ALTER TABLE orden OWNER TO postgres;
+
 --
 -- TOC entry 4026 (class 0 OID 0)
--- Dependencies: 383
--- Name: TABLE orden; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 292
+-- Name: TABLE orden; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE orden IS 'Tabla Permite hacer registro de Orden Adquisicion';
@@ -3874,16 +4098,16 @@ COMMENT ON TABLE orden IS 'Tabla Permite hacer registro de Orden Adquisicion';
 
 --
 -- TOC entry 4027 (class 0 OID 0)
--- Dependencies: 383
--- Name: COLUMN orden.numero_contrato; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 292
+-- Name: COLUMN orden.numero_contrato; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN orden.numero_contrato IS 'numero de contrato de la orden de compra';
 
 
 --
--- TOC entry 384 (class 1259 OID 37593)
--- Name: parametros_id_parametro_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 293 (class 1259 OID 40428)
+-- Name: parametros_id_parametro_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE parametros_id_parametro_seq
@@ -3894,9 +4118,11 @@ CREATE SEQUENCE parametros_id_parametro_seq
     CACHE 1;
 
 
+ALTER TABLE parametros_id_parametro_seq OWNER TO postgres;
+
 --
--- TOC entry 385 (class 1259 OID 37595)
--- Name: parametros; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 294 (class 1259 OID 40430)
+-- Name: parametros; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE parametros (
@@ -3909,9 +4135,11 @@ CREATE TABLE parametros (
 );
 
 
+ALTER TABLE parametros OWNER TO postgres;
+
 --
--- TOC entry 386 (class 1259 OID 37603)
--- Name: poliza; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 295 (class 1259 OID 40438)
+-- Name: poliza; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE poliza (
@@ -3924,10 +4152,12 @@ CREATE TABLE poliza (
 );
 
 
+ALTER TABLE poliza OWNER TO postgres;
+
 --
 -- TOC entry 4029 (class 0 OID 0)
--- Dependencies: 386
--- Name: COLUMN poliza.id_poliza; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 295
+-- Name: COLUMN poliza.id_poliza; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN poliza.id_poliza IS 'identificador unico de lsa poliza ';
@@ -3935,8 +4165,8 @@ COMMENT ON COLUMN poliza.id_poliza IS 'identificador unico de lsa poliza ';
 
 --
 -- TOC entry 4030 (class 0 OID 0)
--- Dependencies: 386
--- Name: COLUMN poliza.nombre_de_la_poliza; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 295
+-- Name: COLUMN poliza.nombre_de_la_poliza; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN poliza.nombre_de_la_poliza IS 'nombre de la poliza';
@@ -3944,8 +4174,8 @@ COMMENT ON COLUMN poliza.nombre_de_la_poliza IS 'nombre de la poliza';
 
 --
 -- TOC entry 4031 (class 0 OID 0)
--- Dependencies: 386
--- Name: COLUMN poliza.descripcion_poliza; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 295
+-- Name: COLUMN poliza.descripcion_poliza; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN poliza.descripcion_poliza IS 'descripcion de la poliza';
@@ -3953,8 +4183,8 @@ COMMENT ON COLUMN poliza.descripcion_poliza IS 'descripcion de la poliza';
 
 --
 -- TOC entry 4032 (class 0 OID 0)
--- Dependencies: 386
--- Name: COLUMN poliza.fecha_registro; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 295
+-- Name: COLUMN poliza.fecha_registro; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN poliza.fecha_registro IS 'fecha de registro de la poliza';
@@ -3962,8 +4192,8 @@ COMMENT ON COLUMN poliza.fecha_registro IS 'fecha de registro de la poliza';
 
 --
 -- TOC entry 4033 (class 0 OID 0)
--- Dependencies: 386
--- Name: COLUMN poliza.usuario; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 295
+-- Name: COLUMN poliza.usuario; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN poliza.usuario IS 'usuario que lleva a cabo el registro de la poliza';
@@ -3971,16 +4201,16 @@ COMMENT ON COLUMN poliza.usuario IS 'usuario que lleva a cabo el registro de la 
 
 --
 -- TOC entry 4034 (class 0 OID 0)
--- Dependencies: 386
--- Name: COLUMN poliza.estado; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 295
+-- Name: COLUMN poliza.estado; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN poliza.estado IS 'estado de la poliza';
 
 
 --
--- TOC entry 387 (class 1259 OID 37611)
--- Name: registro_novedad_id_novedad_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 296 (class 1259 OID 40446)
+-- Name: registro_novedad_id_novedad_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE registro_novedad_id_novedad_seq
@@ -3991,9 +4221,11 @@ CREATE SEQUENCE registro_novedad_id_novedad_seq
     CACHE 1;
 
 
+ALTER TABLE registro_novedad_id_novedad_seq OWNER TO postgres;
+
 --
--- TOC entry 388 (class 1259 OID 37613)
--- Name: registro_presupuestal_orden_id_registro_presupuestal_orden_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 297 (class 1259 OID 40448)
+-- Name: registro_presupuestal_orden_id_registro_presupuestal_orden_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE registro_presupuestal_orden_id_registro_presupuestal_orden_seq
@@ -4004,9 +4236,11 @@ CREATE SEQUENCE registro_presupuestal_orden_id_registro_presupuestal_orden_seq
     CACHE 1;
 
 
+ALTER TABLE registro_presupuestal_orden_id_registro_presupuestal_orden_seq OWNER TO postgres;
+
 --
--- TOC entry 389 (class 1259 OID 37615)
--- Name: relacion_parametro_id_rel_parametro_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 298 (class 1259 OID 40450)
+-- Name: relacion_parametro_id_rel_parametro_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE relacion_parametro_id_rel_parametro_seq
@@ -4017,9 +4251,11 @@ CREATE SEQUENCE relacion_parametro_id_rel_parametro_seq
     CACHE 1;
 
 
+ALTER TABLE relacion_parametro_id_rel_parametro_seq OWNER TO postgres;
+
 --
--- TOC entry 390 (class 1259 OID 37617)
--- Name: relacion_parametro; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 299 (class 1259 OID 40452)
+-- Name: relacion_parametro; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE relacion_parametro (
@@ -4030,9 +4266,11 @@ CREATE TABLE relacion_parametro (
 );
 
 
+ALTER TABLE relacion_parametro OWNER TO postgres;
+
 --
--- TOC entry 391 (class 1259 OID 37625)
--- Name: requisito_minimo; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 300 (class 1259 OID 40460)
+-- Name: requisito_minimo; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE requisito_minimo (
@@ -4042,10 +4280,12 @@ CREATE TABLE requisito_minimo (
 );
 
 
+ALTER TABLE requisito_minimo OWNER TO postgres;
+
 --
 -- TOC entry 4035 (class 0 OID 0)
--- Dependencies: 391
--- Name: TABLE requisito_minimo; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 300
+-- Name: TABLE requisito_minimo; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE requisito_minimo IS 'Tabla encargada de gestionar los requisitos mínimos asociados a una especificación técnica para una solicitud de la necesidad';
@@ -4053,8 +4293,8 @@ COMMENT ON TABLE requisito_minimo IS 'Tabla encargada de gestionar los requisito
 
 --
 -- TOC entry 4036 (class 0 OID 0)
--- Dependencies: 391
--- Name: COLUMN requisito_minimo.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 300
+-- Name: COLUMN requisito_minimo.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN requisito_minimo.id IS 'Identificador del registro del requisito mínimo de la especificación técnica para la solicitud';
@@ -4062,8 +4302,8 @@ COMMENT ON COLUMN requisito_minimo.id IS 'Identificador del registro del requisi
 
 --
 -- TOC entry 4037 (class 0 OID 0)
--- Dependencies: 391
--- Name: COLUMN requisito_minimo.especificacion_tecnica; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 300
+-- Name: COLUMN requisito_minimo.especificacion_tecnica; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN requisito_minimo.especificacion_tecnica IS 'Id de la especificación técnica asociada al requisito mínimo';
@@ -4071,16 +4311,16 @@ COMMENT ON COLUMN requisito_minimo.especificacion_tecnica IS 'Id de la especific
 
 --
 -- TOC entry 4038 (class 0 OID 0)
--- Dependencies: 391
--- Name: COLUMN requisito_minimo.descripcion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 300
+-- Name: COLUMN requisito_minimo.descripcion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN requisito_minimo.descripcion IS 'Descripción del requisito mínimo de la especificación técnica para la solicitud';
 
 
 --
--- TOC entry 392 (class 1259 OID 37628)
--- Name: requisito_minimo_id_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 301 (class 1259 OID 40463)
+-- Name: requisito_minimo_id_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE requisito_minimo_id_seq
@@ -4091,10 +4331,12 @@ CREATE SEQUENCE requisito_minimo_id_seq
     CACHE 1;
 
 
+ALTER TABLE requisito_minimo_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4040 (class 0 OID 0)
--- Dependencies: 392
--- Name: requisito_minimo_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: -
+-- Dependencies: 301
+-- Name: requisito_minimo_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: postgres
 --
 
 ALTER SEQUENCE requisito_minimo_id_seq OWNED BY requisito_minimo.id;
@@ -4102,16 +4344,16 @@ ALTER SEQUENCE requisito_minimo_id_seq OWNED BY requisito_minimo.id;
 
 --
 -- TOC entry 4041 (class 0 OID 0)
--- Dependencies: 392
--- Name: SEQUENCE requisito_minimo_id_seq; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 301
+-- Name: SEQUENCE requisito_minimo_id_seq; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON SEQUENCE requisito_minimo_id_seq IS 'Secuencia del id de los requisitos minimos';
 
 
 --
--- TOC entry 393 (class 1259 OID 37630)
--- Name: rubro_solicitud_necesidad; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 302 (class 1259 OID 40465)
+-- Name: rubro_solicitud_necesidad; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE rubro_solicitud_necesidad (
@@ -4122,10 +4364,12 @@ CREATE TABLE rubro_solicitud_necesidad (
 );
 
 
+ALTER TABLE rubro_solicitud_necesidad OWNER TO postgres;
+
 --
 -- TOC entry 4043 (class 0 OID 0)
--- Dependencies: 393
--- Name: TABLE rubro_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 302
+-- Name: TABLE rubro_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE rubro_solicitud_necesidad IS 'Tabla encargada de gestionar los rubros disponibles para una solicitud de la necesidad';
@@ -4133,8 +4377,8 @@ COMMENT ON TABLE rubro_solicitud_necesidad IS 'Tabla encargada de gestionar los 
 
 --
 -- TOC entry 4044 (class 0 OID 0)
--- Dependencies: 393
--- Name: COLUMN rubro_solicitud_necesidad.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 302
+-- Name: COLUMN rubro_solicitud_necesidad.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN rubro_solicitud_necesidad.id IS 'Identificador del registro del rubro asociado a la solicitud de necesidad';
@@ -4142,8 +4386,8 @@ COMMENT ON COLUMN rubro_solicitud_necesidad.id IS 'Identificador del registro de
 
 --
 -- TOC entry 4045 (class 0 OID 0)
--- Dependencies: 393
--- Name: COLUMN rubro_solicitud_necesidad.rubro; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 302
+-- Name: COLUMN rubro_solicitud_necesidad.rubro; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN rubro_solicitud_necesidad.rubro IS 'Identificador del rubro asociado a la solicitud';
@@ -4151,8 +4395,8 @@ COMMENT ON COLUMN rubro_solicitud_necesidad.rubro IS 'Identificador del rubro as
 
 --
 -- TOC entry 4046 (class 0 OID 0)
--- Dependencies: 393
--- Name: COLUMN rubro_solicitud_necesidad.solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 302
+-- Name: COLUMN rubro_solicitud_necesidad.solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN rubro_solicitud_necesidad.solicitud_necesidad IS 'Identificador de la solicitud de necesidad asociada al rubro';
@@ -4160,16 +4404,16 @@ COMMENT ON COLUMN rubro_solicitud_necesidad.solicitud_necesidad IS 'Identificado
 
 --
 -- TOC entry 4047 (class 0 OID 0)
--- Dependencies: 393
--- Name: COLUMN rubro_solicitud_necesidad.monto; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 302
+-- Name: COLUMN rubro_solicitud_necesidad.monto; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN rubro_solicitud_necesidad.monto IS 'Monto requerido para la solicitud de necesidad (en pesos)';
 
 
 --
--- TOC entry 394 (class 1259 OID 37633)
--- Name: rubro_solicitud_necesidad_id_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 303 (class 1259 OID 40468)
+-- Name: rubro_solicitud_necesidad_id_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE rubro_solicitud_necesidad_id_seq
@@ -4180,10 +4424,12 @@ CREATE SEQUENCE rubro_solicitud_necesidad_id_seq
     CACHE 1;
 
 
+ALTER TABLE rubro_solicitud_necesidad_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4049 (class 0 OID 0)
--- Dependencies: 394
--- Name: rubro_solicitud_necesidad_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: -
+-- Dependencies: 303
+-- Name: rubro_solicitud_necesidad_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: postgres
 --
 
 ALTER SEQUENCE rubro_solicitud_necesidad_id_seq OWNED BY rubro_solicitud_necesidad.id;
@@ -4191,16 +4437,16 @@ ALTER SEQUENCE rubro_solicitud_necesidad_id_seq OWNED BY rubro_solicitud_necesid
 
 --
 -- TOC entry 4050 (class 0 OID 0)
--- Dependencies: 394
--- Name: SEQUENCE rubro_solicitud_necesidad_id_seq; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 303
+-- Name: SEQUENCE rubro_solicitud_necesidad_id_seq; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON SEQUENCE rubro_solicitud_necesidad_id_seq IS 'Secuencia del id de la tabla que relaciona los rubros a la solicitud de necesidad';
 
 
 --
--- TOC entry 395 (class 1259 OID 37635)
--- Name: sedes_SIC; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 304 (class 1259 OID 40470)
+-- Name: sedes_SIC; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE "sedes_SIC" (
@@ -4212,9 +4458,11 @@ CREATE TABLE "sedes_SIC" (
 );
 
 
+ALTER TABLE "sedes_SIC" OWNER TO postgres;
+
 --
--- TOC entry 396 (class 1259 OID 37641)
--- Name: servicio_orden; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 305 (class 1259 OID 40476)
+-- Name: servicio_orden; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE servicio_orden (
@@ -4230,10 +4478,12 @@ CREATE TABLE servicio_orden (
 );
 
 
+ALTER TABLE servicio_orden OWNER TO postgres;
+
 --
 -- TOC entry 4052 (class 0 OID 0)
--- Dependencies: 396
--- Name: TABLE servicio_orden; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 305
+-- Name: TABLE servicio_orden; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE servicio_orden IS 'tabla que almacena los servicios asociados a una orden de compra';
@@ -4241,8 +4491,8 @@ COMMENT ON TABLE servicio_orden IS 'tabla que almacena los servicios asociados a
 
 --
 -- TOC entry 4053 (class 0 OID 0)
--- Dependencies: 396
--- Name: COLUMN servicio_orden.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 305
+-- Name: COLUMN servicio_orden.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN servicio_orden.id IS 'idnetificador unico de los registros de la tabla de servicio_orden';
@@ -4250,8 +4500,8 @@ COMMENT ON COLUMN servicio_orden.id IS 'idnetificador unico de los registros de 
 
 --
 -- TOC entry 4054 (class 0 OID 0)
--- Dependencies: 396
--- Name: COLUMN servicio_orden.descripcion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 305
+-- Name: COLUMN servicio_orden.descripcion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN servicio_orden.descripcion IS 'descripcion del servicio';
@@ -4259,8 +4509,8 @@ COMMENT ON COLUMN servicio_orden.descripcion IS 'descripcion del servicio';
 
 --
 -- TOC entry 4055 (class 0 OID 0)
--- Dependencies: 396
--- Name: COLUMN servicio_orden.nombre; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 305
+-- Name: COLUMN servicio_orden.nombre; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN servicio_orden.nombre IS 'nombre de resumen del servicio';
@@ -4268,8 +4518,8 @@ COMMENT ON COLUMN servicio_orden.nombre IS 'nombre de resumen del servicio';
 
 --
 -- TOC entry 4056 (class 0 OID 0)
--- Dependencies: 396
--- Name: COLUMN servicio_orden.fecha_registro; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 305
+-- Name: COLUMN servicio_orden.fecha_registro; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN servicio_orden.fecha_registro IS 'fecha de registro del servicio';
@@ -4277,8 +4527,8 @@ COMMENT ON COLUMN servicio_orden.fecha_registro IS 'fecha de registro del servic
 
 --
 -- TOC entry 4057 (class 0 OID 0)
--- Dependencies: 396
--- Name: COLUMN servicio_orden.numero_contrato; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 305
+-- Name: COLUMN servicio_orden.numero_contrato; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN servicio_orden.numero_contrato IS 'numero del contrato al cual se le asocia el servicio';
@@ -4286,8 +4536,8 @@ COMMENT ON COLUMN servicio_orden.numero_contrato IS 'numero del contrato al cual
 
 --
 -- TOC entry 4058 (class 0 OID 0)
--- Dependencies: 396
--- Name: COLUMN servicio_orden.vigencia; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 305
+-- Name: COLUMN servicio_orden.vigencia; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN servicio_orden.vigencia IS 'vigencia del contrato al cual se le asocia el servicio';
@@ -4295,8 +4545,8 @@ COMMENT ON COLUMN servicio_orden.vigencia IS 'vigencia del contrato al cual se l
 
 --
 -- TOC entry 4059 (class 0 OID 0)
--- Dependencies: 396
--- Name: COLUMN servicio_orden.codigo_ciiu; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 305
+-- Name: COLUMN servicio_orden.codigo_ciiu; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN servicio_orden.codigo_ciiu IS 'codigo de clasificacion de la DIAN';
@@ -4304,8 +4554,8 @@ COMMENT ON COLUMN servicio_orden.codigo_ciiu IS 'codigo de clasificacion de la D
 
 --
 -- TOC entry 4060 (class 0 OID 0)
--- Dependencies: 396
--- Name: COLUMN servicio_orden.usuario; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 305
+-- Name: COLUMN servicio_orden.usuario; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN servicio_orden.usuario IS 'usuario que realiza el registro';
@@ -4313,16 +4563,16 @@ COMMENT ON COLUMN servicio_orden.usuario IS 'usuario que realiza el registro';
 
 --
 -- TOC entry 4061 (class 0 OID 0)
--- Dependencies: 396
--- Name: COLUMN servicio_orden.valor_servicio; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 305
+-- Name: COLUMN servicio_orden.valor_servicio; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN servicio_orden.valor_servicio IS 'valor del servicio';
 
 
 --
--- TOC entry 397 (class 1259 OID 37647)
--- Name: servicio_orden_id_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 306 (class 1259 OID 40482)
+-- Name: servicio_orden_id_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE servicio_orden_id_seq
@@ -4333,9 +4583,11 @@ CREATE SEQUENCE servicio_orden_id_seq
     CACHE 1;
 
 
+ALTER TABLE servicio_orden_id_seq OWNER TO postgres;
+
 --
--- TOC entry 398 (class 1259 OID 37649)
--- Name: servicio_orden_id_seq1; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 307 (class 1259 OID 40484)
+-- Name: servicio_orden_id_seq1; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE servicio_orden_id_seq1
@@ -4346,18 +4598,20 @@ CREATE SEQUENCE servicio_orden_id_seq1
     CACHE 1;
 
 
+ALTER TABLE servicio_orden_id_seq1 OWNER TO postgres;
+
 --
 -- TOC entry 4062 (class 0 OID 0)
--- Dependencies: 398
--- Name: servicio_orden_id_seq1; Type: SEQUENCE OWNED BY; Schema: argo; Owner: -
+-- Dependencies: 307
+-- Name: servicio_orden_id_seq1; Type: SEQUENCE OWNED BY; Schema: argo; Owner: postgres
 --
 
 ALTER SEQUENCE servicio_orden_id_seq1 OWNED BY servicio_orden.id;
 
 
 --
--- TOC entry 399 (class 1259 OID 37651)
--- Name: solicitud_necesidad; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 308 (class 1259 OID 40486)
+-- Name: solicitud_necesidad; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE solicitud_necesidad (
@@ -4391,10 +4645,12 @@ CREATE TABLE solicitud_necesidad (
 );
 
 
+ALTER TABLE solicitud_necesidad OWNER TO postgres;
+
 --
 -- TOC entry 4063 (class 0 OID 0)
--- Dependencies: 399
--- Name: TABLE solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: TABLE solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE solicitud_necesidad IS 'Tabla encargada de gestionar la solicitud de la necesidad';
@@ -4402,8 +4658,8 @@ COMMENT ON TABLE solicitud_necesidad IS 'Tabla encargada de gestionar la solicit
 
 --
 -- TOC entry 4064 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.id IS 'Identificador del registro de la solicitud de necesidad';
@@ -4411,8 +4667,8 @@ COMMENT ON COLUMN solicitud_necesidad.id IS 'Identificador del registro de la so
 
 --
 -- TOC entry 4065 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.numero; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.numero; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.numero IS 'Número consecutivo de la solicitud de necesidad. Se reinicia al empezar el año';
@@ -4420,8 +4676,8 @@ COMMENT ON COLUMN solicitud_necesidad.numero IS 'Número consecutivo de la solic
 
 --
 -- TOC entry 4066 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.vigencia; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.vigencia; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.vigencia IS 'Año de realización de la solicitud';
@@ -4429,8 +4685,8 @@ COMMENT ON COLUMN solicitud_necesidad.vigencia IS 'Año de realización de la so
 
 --
 -- TOC entry 4067 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.dependencia; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.dependencia; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.dependencia IS 'Identificador de la dependencia solicitante a la cual pertenece el jefe de dependencia';
@@ -4438,8 +4694,8 @@ COMMENT ON COLUMN solicitud_necesidad.dependencia IS 'Identificador de la depend
 
 --
 -- TOC entry 4068 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.jefe_dependencia; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.jefe_dependencia; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.jefe_dependencia IS 'Identificador del jefe de la dependencia que solicita la necesidad';
@@ -4447,8 +4703,8 @@ COMMENT ON COLUMN solicitud_necesidad.jefe_dependencia IS 'Identificador del jef
 
 --
 -- TOC entry 4069 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.dependencia_destino; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.dependencia_destino; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.dependencia_destino IS 'Identificador de la dependencia destino de la necesidad, los rubros dependerán de esta seleccion';
@@ -4456,8 +4712,8 @@ COMMENT ON COLUMN solicitud_necesidad.dependencia_destino IS 'Identificador de l
 
 --
 -- TOC entry 4070 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.objeto_contractual; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.objeto_contractual; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.objeto_contractual IS 'Objeto del contrato a realizar';
@@ -4465,8 +4721,8 @@ COMMENT ON COLUMN solicitud_necesidad.objeto_contractual IS 'Objeto del contrato
 
 --
 -- TOC entry 4071 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.estado; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.estado; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.estado IS 'Identificador del estado actual de la solicitud de necesidad';
@@ -4474,8 +4730,8 @@ COMMENT ON COLUMN solicitud_necesidad.estado IS 'Identificador del estado actual
 
 --
 -- TOC entry 4072 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.fecha_solicitud; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.fecha_solicitud; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.fecha_solicitud IS 'Fecha de realización de la solicitud de necesidad';
@@ -4483,8 +4739,8 @@ COMMENT ON COLUMN solicitud_necesidad.fecha_solicitud IS 'Fecha de realización 
 
 --
 -- TOC entry 4073 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.valor_contratacion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.valor_contratacion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.valor_contratacion IS 'Valor total por el cual se solicita la necesidad (en pesos)';
@@ -4492,8 +4748,8 @@ COMMENT ON COLUMN solicitud_necesidad.valor_contratacion IS 'Valor total por el 
 
 --
 -- TOC entry 4074 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.justificacion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.justificacion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.justificacion IS 'Justificación del objeto contractual a realizar';
@@ -4501,8 +4757,8 @@ COMMENT ON COLUMN solicitud_necesidad.justificacion IS 'Justificación del objet
 
 --
 -- TOC entry 4075 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.unidad_ejecutora; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.unidad_ejecutora; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.unidad_ejecutora IS 'Id de la unidad ejecutora de la necesidad solicitada';
@@ -4510,8 +4766,8 @@ COMMENT ON COLUMN solicitud_necesidad.unidad_ejecutora IS 'Id de la unidad ejecu
 
 --
 -- TOC entry 4076 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.dias_duracion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.dias_duracion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.dias_duracion IS 'días de duración del contrato (se guardan solo los días, los meses corresponden a 30 días y los años a 360). Sólo es 0 en caso que sea Único Pago o Hasta Agotar Presupuesto';
@@ -4519,8 +4775,8 @@ COMMENT ON COLUMN solicitud_necesidad.dias_duracion IS 'días de duración del c
 
 --
 -- TOC entry 4077 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.unico_pago; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.unico_pago; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.unico_pago IS 'Caso especial de los días de duración, si es verdadero Hasta Agotar Presupuesto es falso y los días son 0';
@@ -4528,8 +4784,8 @@ COMMENT ON COLUMN solicitud_necesidad.unico_pago IS 'Caso especial de los días 
 
 --
 -- TOC entry 4078 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.agotar_presupuesto; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.agotar_presupuesto; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.agotar_presupuesto IS 'Caso especial de los días de duración, si es verdadero Único Pago es falso y los días son 0';
@@ -4537,8 +4793,8 @@ COMMENT ON COLUMN solicitud_necesidad.agotar_presupuesto IS 'Caso especial de lo
 
 --
 -- TOC entry 4079 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.novedad_otro_si; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.novedad_otro_si; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.novedad_otro_si IS 'Condición para saber si la necesidad en cuestión es una novedad otro si de un contrato ya existente';
@@ -4546,8 +4802,8 @@ COMMENT ON COLUMN solicitud_necesidad.novedad_otro_si IS 'Condición para saber 
 
 --
 -- TOC entry 4080 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.codigo_contrato_otro_si; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.codigo_contrato_otro_si; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.codigo_contrato_otro_si IS 'Código del contrato al cual se le realiza la novedad otro si';
@@ -4555,8 +4811,8 @@ COMMENT ON COLUMN solicitud_necesidad.codigo_contrato_otro_si IS 'Código del co
 
 --
 -- TOC entry 4081 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.modalidad_seleccion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.modalidad_seleccion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.modalidad_seleccion IS 'Identificador de la modalidad de selección aplicada a la necesidad';
@@ -4564,8 +4820,8 @@ COMMENT ON COLUMN solicitud_necesidad.modalidad_seleccion IS 'Identificador de l
 
 --
 -- TOC entry 4082 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.entidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.entidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.entidad IS 'Identificador de la entidad en la cual se está generando la necesidad';
@@ -4573,8 +4829,8 @@ COMMENT ON COLUMN solicitud_necesidad.entidad IS 'Identificador de la entidad en
 
 --
 -- TOC entry 4083 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.servicio; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.servicio; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.servicio IS 'Identificador del servicio requerido en la necesidad';
@@ -4582,8 +4838,8 @@ COMMENT ON COLUMN solicitud_necesidad.servicio IS 'Identificador del servicio re
 
 --
 -- TOC entry 4084 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.plan_anual_adquisiciones; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.plan_anual_adquisiciones; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.plan_anual_adquisiciones IS 'Plan anual de adquisiciones de la entidad';
@@ -4591,8 +4847,8 @@ COMMENT ON COLUMN solicitud_necesidad.plan_anual_adquisiciones IS 'Plan anual de
 
 --
 -- TOC entry 4085 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.estudio_mercado; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.estudio_mercado; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.estudio_mercado IS 'Estudio de mercado realizado para tener un panorama claro sobe la necesidad en cuestión';
@@ -4600,8 +4856,8 @@ COMMENT ON COLUMN solicitud_necesidad.estudio_mercado IS 'Estudio de mercado rea
 
 --
 -- TOC entry 4086 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.fecha_evaluacion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.fecha_evaluacion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.fecha_evaluacion IS 'Fecha de evaluación de la necesidad solicitada por parte del Ordenador de Gasto';
@@ -4609,8 +4865,8 @@ COMMENT ON COLUMN solicitud_necesidad.fecha_evaluacion IS 'Fecha de evaluación 
 
 --
 -- TOC entry 4087 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.ordenador_gasto; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.ordenador_gasto; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.ordenador_gasto IS 'Identificador del Ordenador de Gasto que aprueba o rechaza la solicitud de necesidad';
@@ -4618,8 +4874,8 @@ COMMENT ON COLUMN solicitud_necesidad.ordenador_gasto IS 'Identificador del Orde
 
 --
 -- TOC entry 4088 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.justificacion_rechazo; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.justificacion_rechazo; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.justificacion_rechazo IS 'Justificación de rechazo de la solicitud por parte del Ordenador de Gasto';
@@ -4627,8 +4883,8 @@ COMMENT ON COLUMN solicitud_necesidad.justificacion_rechazo IS 'Justificación d
 
 --
 -- TOC entry 4089 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.tipo_contratacion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.tipo_contratacion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.tipo_contratacion IS 'Identificador del tipo de contratación a realizar mediante la necesidad';
@@ -4636,16 +4892,16 @@ COMMENT ON COLUMN solicitud_necesidad.tipo_contratacion IS 'Identificador del ti
 
 --
 -- TOC entry 4090 (class 0 OID 0)
--- Dependencies: 399
--- Name: COLUMN solicitud_necesidad.analisis_riesgo; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: COLUMN solicitud_necesidad.analisis_riesgo; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN solicitud_necesidad.analisis_riesgo IS 'Análisis de riesgos de la necesidad solicitada';
 
 
 --
--- TOC entry 400 (class 1259 OID 37660)
--- Name: solicitud_necesidad_id_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 309 (class 1259 OID 40495)
+-- Name: solicitud_necesidad_id_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE solicitud_necesidad_id_seq
@@ -4656,10 +4912,12 @@ CREATE SEQUENCE solicitud_necesidad_id_seq
     CACHE 1;
 
 
+ALTER TABLE solicitud_necesidad_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4092 (class 0 OID 0)
--- Dependencies: 400
--- Name: solicitud_necesidad_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: -
+-- Dependencies: 309
+-- Name: solicitud_necesidad_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: postgres
 --
 
 ALTER SEQUENCE solicitud_necesidad_id_seq OWNED BY solicitud_necesidad.id;
@@ -4667,16 +4925,16 @@ ALTER SEQUENCE solicitud_necesidad_id_seq OWNED BY solicitud_necesidad.id;
 
 --
 -- TOC entry 4093 (class 0 OID 0)
--- Dependencies: 400
--- Name: SEQUENCE solicitud_necesidad_id_seq; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 309
+-- Name: SEQUENCE solicitud_necesidad_id_seq; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON SEQUENCE solicitud_necesidad_id_seq IS 'Secuencia del id de la solicitud de necesidad';
 
 
 --
--- TOC entry 401 (class 1259 OID 37662)
--- Name: solicitud_necesidad_numero_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 310 (class 1259 OID 40497)
+-- Name: solicitud_necesidad_numero_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE solicitud_necesidad_numero_seq
@@ -4687,18 +4945,20 @@ CREATE SEQUENCE solicitud_necesidad_numero_seq
     CACHE 1;
 
 
+ALTER TABLE solicitud_necesidad_numero_seq OWNER TO postgres;
+
 --
 -- TOC entry 4095 (class 0 OID 0)
--- Dependencies: 401
--- Name: SEQUENCE solicitud_necesidad_numero_seq; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 310
+-- Name: SEQUENCE solicitud_necesidad_numero_seq; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON SEQUENCE solicitud_necesidad_numero_seq IS 'Secuencia del numero de solicitud de necesidad, este numero es reiniciado en cada vigencia';
 
 
 --
--- TOC entry 402 (class 1259 OID 37664)
--- Name: supervisor_contrato_id_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 311 (class 1259 OID 40499)
+-- Name: supervisor_contrato_id_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE supervisor_contrato_id_seq
@@ -4709,18 +4969,20 @@ CREATE SEQUENCE supervisor_contrato_id_seq
     CACHE 1;
 
 
+ALTER TABLE supervisor_contrato_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4097 (class 0 OID 0)
--- Dependencies: 402
--- Name: SEQUENCE supervisor_contrato_id_seq; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 311
+-- Name: SEQUENCE supervisor_contrato_id_seq; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON SEQUENCE supervisor_contrato_id_seq IS 'sequencia del id de la tabla de supervisor contrato';
 
 
 --
--- TOC entry 403 (class 1259 OID 37666)
--- Name: supervisor_contrato; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 312 (class 1259 OID 40501)
+-- Name: supervisor_contrato; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE supervisor_contrato (
@@ -4736,10 +4998,12 @@ CREATE TABLE supervisor_contrato (
 );
 
 
+ALTER TABLE supervisor_contrato OWNER TO postgres;
+
 --
 -- TOC entry 4098 (class 0 OID 0)
--- Dependencies: 403
--- Name: TABLE supervisor_contrato; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 312
+-- Name: TABLE supervisor_contrato; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE supervisor_contrato IS 'tabla que almacena la informacion del supervisor del contrato';
@@ -4747,8 +5011,8 @@ COMMENT ON TABLE supervisor_contrato IS 'tabla que almacena la informacion del s
 
 --
 -- TOC entry 4099 (class 0 OID 0)
--- Dependencies: 403
--- Name: COLUMN supervisor_contrato.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 312
+-- Name: COLUMN supervisor_contrato.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN supervisor_contrato.id IS 'identificador unico de la tabla ';
@@ -4756,8 +5020,8 @@ COMMENT ON COLUMN supervisor_contrato.id IS 'identificador unico de la tabla ';
 
 --
 -- TOC entry 4100 (class 0 OID 0)
--- Dependencies: 403
--- Name: COLUMN supervisor_contrato.nombre; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 312
+-- Name: COLUMN supervisor_contrato.nombre; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN supervisor_contrato.nombre IS 'Nombre del supervisor ';
@@ -4765,8 +5029,8 @@ COMMENT ON COLUMN supervisor_contrato.nombre IS 'Nombre del supervisor ';
 
 --
 -- TOC entry 4101 (class 0 OID 0)
--- Dependencies: 403
--- Name: COLUMN supervisor_contrato.documento; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 312
+-- Name: COLUMN supervisor_contrato.documento; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN supervisor_contrato.documento IS 'documento de identificacion del supervisor';
@@ -4774,8 +5038,8 @@ COMMENT ON COLUMN supervisor_contrato.documento IS 'documento de identificacion 
 
 --
 -- TOC entry 4102 (class 0 OID 0)
--- Dependencies: 403
--- Name: COLUMN supervisor_contrato.cargo; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 312
+-- Name: COLUMN supervisor_contrato.cargo; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN supervisor_contrato.cargo IS 'Cargo del supervisor';
@@ -4783,8 +5047,8 @@ COMMENT ON COLUMN supervisor_contrato.cargo IS 'Cargo del supervisor';
 
 --
 -- TOC entry 4103 (class 0 OID 0)
--- Dependencies: 403
--- Name: COLUMN supervisor_contrato.tipo; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 312
+-- Name: COLUMN supervisor_contrato.tipo; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN supervisor_contrato.tipo IS 'campo tipo supervisor se crea con el fin de poder tipificar a futuro los supervisores que son funcionarios y lo que no los son';
@@ -4792,8 +5056,8 @@ COMMENT ON COLUMN supervisor_contrato.tipo IS 'campo tipo supervisor se crea con
 
 --
 -- TOC entry 4104 (class 0 OID 0)
--- Dependencies: 403
--- Name: COLUMN supervisor_contrato.estado; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 312
+-- Name: COLUMN supervisor_contrato.estado; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN supervisor_contrato.estado IS 'estado del registro';
@@ -4801,16 +5065,16 @@ COMMENT ON COLUMN supervisor_contrato.estado IS 'estado del registro';
 
 --
 -- TOC entry 4105 (class 0 OID 0)
--- Dependencies: 403
--- Name: COLUMN supervisor_contrato.digito_verificacion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 312
+-- Name: COLUMN supervisor_contrato.digito_verificacion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN supervisor_contrato.digito_verificacion IS 'Digito de Verificacion supervisor';
 
 
 --
--- TOC entry 404 (class 1259 OID 37674)
--- Name: supervisor_solicitud_necesidad; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 313 (class 1259 OID 40509)
+-- Name: supervisor_solicitud_necesidad; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE supervisor_solicitud_necesidad (
@@ -4822,10 +5086,12 @@ CREATE TABLE supervisor_solicitud_necesidad (
 );
 
 
+ALTER TABLE supervisor_solicitud_necesidad OWNER TO postgres;
+
 --
 -- TOC entry 4106 (class 0 OID 0)
--- Dependencies: 404
--- Name: TABLE supervisor_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 313
+-- Name: TABLE supervisor_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE supervisor_solicitud_necesidad IS 'Tabla encargada de gestionar los supervisores posibles para una solicitud de la necesidad';
@@ -4833,8 +5099,8 @@ COMMENT ON TABLE supervisor_solicitud_necesidad IS 'Tabla encargada de gestionar
 
 --
 -- TOC entry 4107 (class 0 OID 0)
--- Dependencies: 404
--- Name: COLUMN supervisor_solicitud_necesidad.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 313
+-- Name: COLUMN supervisor_solicitud_necesidad.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN supervisor_solicitud_necesidad.id IS 'Identificador del registro del supervisor de la solicitud de necesidad';
@@ -4842,8 +5108,8 @@ COMMENT ON COLUMN supervisor_solicitud_necesidad.id IS 'Identificador del regist
 
 --
 -- TOC entry 4108 (class 0 OID 0)
--- Dependencies: 404
--- Name: COLUMN supervisor_solicitud_necesidad.solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 313
+-- Name: COLUMN supervisor_solicitud_necesidad.solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN supervisor_solicitud_necesidad.solicitud_necesidad IS 'Identificador de la solicitud de necesidad a la que el supervisor ha sido asignado';
@@ -4851,8 +5117,8 @@ COMMENT ON COLUMN supervisor_solicitud_necesidad.solicitud_necesidad IS 'Identif
 
 --
 -- TOC entry 4109 (class 0 OID 0)
--- Dependencies: 404
--- Name: COLUMN supervisor_solicitud_necesidad.funcionario; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 313
+-- Name: COLUMN supervisor_solicitud_necesidad.funcionario; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN supervisor_solicitud_necesidad.funcionario IS 'Id del funcionario asignado como supervisor de la solicitud';
@@ -4860,8 +5126,8 @@ COMMENT ON COLUMN supervisor_solicitud_necesidad.funcionario IS 'Id del funciona
 
 --
 -- TOC entry 4110 (class 0 OID 0)
--- Dependencies: 404
--- Name: COLUMN supervisor_solicitud_necesidad.fecha_asginacion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 313
+-- Name: COLUMN supervisor_solicitud_necesidad.fecha_asginacion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN supervisor_solicitud_necesidad.fecha_asginacion IS 'Fecha de asignación del supervisor';
@@ -4869,16 +5135,16 @@ COMMENT ON COLUMN supervisor_solicitud_necesidad.fecha_asginacion IS 'Fecha de a
 
 --
 -- TOC entry 4111 (class 0 OID 0)
--- Dependencies: 404
--- Name: COLUMN supervisor_solicitud_necesidad.estado; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 313
+-- Name: COLUMN supervisor_solicitud_necesidad.estado; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN supervisor_solicitud_necesidad.estado IS 'Estado actual del supervisor asignado';
 
 
 --
--- TOC entry 405 (class 1259 OID 37680)
--- Name: supervisor_solicitud_necesidad_id_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 314 (class 1259 OID 40515)
+-- Name: supervisor_solicitud_necesidad_id_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE supervisor_solicitud_necesidad_id_seq
@@ -4889,18 +5155,20 @@ CREATE SEQUENCE supervisor_solicitud_necesidad_id_seq
     CACHE 1;
 
 
+ALTER TABLE supervisor_solicitud_necesidad_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4113 (class 0 OID 0)
--- Dependencies: 405
--- Name: supervisor_solicitud_necesidad_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: -
+-- Dependencies: 314
+-- Name: supervisor_solicitud_necesidad_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: postgres
 --
 
 ALTER SEQUENCE supervisor_solicitud_necesidad_id_seq OWNED BY supervisor_solicitud_necesidad.id;
 
 
 --
--- TOC entry 406 (class 1259 OID 37682)
--- Name: suspension; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 315 (class 1259 OID 40517)
+-- Name: suspension; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE suspension (
@@ -4913,10 +5181,12 @@ CREATE TABLE suspension (
 );
 
 
+ALTER TABLE suspension OWNER TO postgres;
+
 --
 -- TOC entry 4115 (class 0 OID 0)
--- Dependencies: 406
--- Name: TABLE suspension; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 315
+-- Name: TABLE suspension; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE suspension IS 'tabla que almacena la info';
@@ -4924,8 +5194,8 @@ COMMENT ON TABLE suspension IS 'tabla que almacena la info';
 
 --
 -- TOC entry 4116 (class 0 OID 0)
--- Dependencies: 406
--- Name: COLUMN suspension.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 315
+-- Name: COLUMN suspension.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN suspension.id IS 'identificador primario y foraneo de la tabla cesion que apunta  a la tabla novedad contractual';
@@ -4933,8 +5203,8 @@ COMMENT ON COLUMN suspension.id IS 'identificador primario y foraneo de la tabla
 
 --
 -- TOC entry 4117 (class 0 OID 0)
--- Dependencies: 406
--- Name: COLUMN suspension.fecha_inicio; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 315
+-- Name: COLUMN suspension.fecha_inicio; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN suspension.fecha_inicio IS 'fecha inicio de la suspension';
@@ -4942,8 +5212,8 @@ COMMENT ON COLUMN suspension.fecha_inicio IS 'fecha inicio de la suspension';
 
 --
 -- TOC entry 4118 (class 0 OID 0)
--- Dependencies: 406
--- Name: COLUMN suspension.fecha_fin; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 315
+-- Name: COLUMN suspension.fecha_fin; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN suspension.fecha_fin IS 'fecha fin de la suspension';
@@ -4951,8 +5221,8 @@ COMMENT ON COLUMN suspension.fecha_fin IS 'fecha fin de la suspension';
 
 --
 -- TOC entry 4119 (class 0 OID 0)
--- Dependencies: 406
--- Name: COLUMN suspension.fecha_reanudacion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 315
+-- Name: COLUMN suspension.fecha_reanudacion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN suspension.fecha_reanudacion IS 'Feche en la cual se reanuda el contrato, pueden ser diferente a la fecha fin dado que esta ultima se registra inicialmente con la novedad pero puede que no se cumpla.';
@@ -4960,8 +5230,8 @@ COMMENT ON COLUMN suspension.fecha_reanudacion IS 'Feche en la cual se reanuda e
 
 --
 -- TOC entry 4120 (class 0 OID 0)
--- Dependencies: 406
--- Name: COLUMN suspension.estado; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 315
+-- Name: COLUMN suspension.estado; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN suspension.estado IS 'estado de la suspension, puede tomar dos estados true si esta vigente false si la suspension ya paso ';
@@ -4969,16 +5239,16 @@ COMMENT ON COLUMN suspension.estado IS 'estado de la suspension, puede tomar dos
 
 --
 -- TOC entry 4121 (class 0 OID 0)
--- Dependencies: 406
--- Name: COLUMN suspension.id_reanudacion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 315
+-- Name: COLUMN suspension.id_reanudacion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN suspension.id_reanudacion IS 'identificador que referencia a la novedad de reanudacion';
 
 
 --
--- TOC entry 407 (class 1259 OID 37686)
--- Name: tipo_contratacion; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 316 (class 1259 OID 40521)
+-- Name: tipo_contratacion; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE tipo_contratacion (
@@ -4988,10 +5258,12 @@ CREATE TABLE tipo_contratacion (
 );
 
 
+ALTER TABLE tipo_contratacion OWNER TO postgres;
+
 --
 -- TOC entry 4122 (class 0 OID 0)
--- Dependencies: 407
--- Name: TABLE tipo_contratacion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 316
+-- Name: TABLE tipo_contratacion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE tipo_contratacion IS 'Tabla encargada de gestionar los tipos de contratación posibles para una solicitud de la necesidad';
@@ -4999,8 +5271,8 @@ COMMENT ON TABLE tipo_contratacion IS 'Tabla encargada de gestionar los tipos de
 
 --
 -- TOC entry 4123 (class 0 OID 0)
--- Dependencies: 407
--- Name: COLUMN tipo_contratacion.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 316
+-- Name: COLUMN tipo_contratacion.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN tipo_contratacion.id IS 'Identificador del registro del tipo de contratación de la solicitud de necesidad';
@@ -5008,8 +5280,8 @@ COMMENT ON COLUMN tipo_contratacion.id IS 'Identificador del registro del tipo d
 
 --
 -- TOC entry 4124 (class 0 OID 0)
--- Dependencies: 407
--- Name: COLUMN tipo_contratacion.nombre; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 316
+-- Name: COLUMN tipo_contratacion.nombre; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN tipo_contratacion.nombre IS 'Nombre del tipo de contratación de la solicitud de necesidad';
@@ -5017,16 +5289,16 @@ COMMENT ON COLUMN tipo_contratacion.nombre IS 'Nombre del tipo de contratación 
 
 --
 -- TOC entry 4125 (class 0 OID 0)
--- Dependencies: 407
--- Name: COLUMN tipo_contratacion.descripcion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 316
+-- Name: COLUMN tipo_contratacion.descripcion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN tipo_contratacion.descripcion IS 'Descripción corta del tipo de contratación de la solicitud';
 
 
 --
--- TOC entry 408 (class 1259 OID 37692)
--- Name: tipo_contratacion_id_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 317 (class 1259 OID 40527)
+-- Name: tipo_contratacion_id_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE tipo_contratacion_id_seq
@@ -5037,10 +5309,12 @@ CREATE SEQUENCE tipo_contratacion_id_seq
     CACHE 1;
 
 
+ALTER TABLE tipo_contratacion_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4127 (class 0 OID 0)
--- Dependencies: 408
--- Name: tipo_contratacion_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: -
+-- Dependencies: 317
+-- Name: tipo_contratacion_id_seq; Type: SEQUENCE OWNED BY; Schema: argo; Owner: postgres
 --
 
 ALTER SEQUENCE tipo_contratacion_id_seq OWNED BY tipo_contratacion.id;
@@ -5048,16 +5322,16 @@ ALTER SEQUENCE tipo_contratacion_id_seq OWNED BY tipo_contratacion.id;
 
 --
 -- TOC entry 4128 (class 0 OID 0)
--- Dependencies: 408
--- Name: SEQUENCE tipo_contratacion_id_seq; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 317
+-- Name: SEQUENCE tipo_contratacion_id_seq; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON SEQUENCE tipo_contratacion_id_seq IS 'Secuencia del id del tipo de contratacion';
 
 
 --
--- TOC entry 409 (class 1259 OID 37694)
--- Name: tipo_contrato; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 318 (class 1259 OID 40529)
+-- Name: tipo_contrato; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE tipo_contrato (
@@ -5066,10 +5340,12 @@ CREATE TABLE tipo_contrato (
 );
 
 
+ALTER TABLE tipo_contrato OWNER TO postgres;
+
 --
 -- TOC entry 4130 (class 0 OID 0)
--- Dependencies: 409
--- Name: TABLE tipo_contrato; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 318
+-- Name: TABLE tipo_contrato; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE tipo_contrato IS 'tipo especifico del contrato ';
@@ -5077,8 +5353,8 @@ COMMENT ON TABLE tipo_contrato IS 'tipo especifico del contrato ';
 
 --
 -- TOC entry 4131 (class 0 OID 0)
--- Dependencies: 409
--- Name: COLUMN tipo_contrato.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 318
+-- Name: COLUMN tipo_contrato.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN tipo_contrato.id IS 'identificador unico del registro';
@@ -5086,16 +5362,16 @@ COMMENT ON COLUMN tipo_contrato.id IS 'identificador unico del registro';
 
 --
 -- TOC entry 4132 (class 0 OID 0)
--- Dependencies: 409
--- Name: COLUMN tipo_contrato.tipo_contrato; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 318
+-- Name: COLUMN tipo_contrato.tipo_contrato; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN tipo_contrato.tipo_contrato IS 'descripcion del tipo de contrato';
 
 
 --
--- TOC entry 410 (class 1259 OID 37700)
--- Name: tipo_contrato_id_seq; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 319 (class 1259 OID 40535)
+-- Name: tipo_contrato_id_seq; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE tipo_contrato_id_seq
@@ -5106,9 +5382,11 @@ CREATE SEQUENCE tipo_contrato_id_seq
     CACHE 1;
 
 
+ALTER TABLE tipo_contrato_id_seq OWNER TO postgres;
+
 --
--- TOC entry 411 (class 1259 OID 37702)
--- Name: tipo_contrato_id_seq1; Type: SEQUENCE; Schema: argo; Owner: -
+-- TOC entry 320 (class 1259 OID 40537)
+-- Name: tipo_contrato_id_seq1; Type: SEQUENCE; Schema: argo; Owner: postgres
 --
 
 CREATE SEQUENCE tipo_contrato_id_seq1
@@ -5119,18 +5397,20 @@ CREATE SEQUENCE tipo_contrato_id_seq1
     CACHE 1;
 
 
+ALTER TABLE tipo_contrato_id_seq1 OWNER TO postgres;
+
 --
 -- TOC entry 4133 (class 0 OID 0)
--- Dependencies: 411
--- Name: tipo_contrato_id_seq1; Type: SEQUENCE OWNED BY; Schema: argo; Owner: -
+-- Dependencies: 320
+-- Name: tipo_contrato_id_seq1; Type: SEQUENCE OWNED BY; Schema: argo; Owner: postgres
 --
 
 ALTER SEQUENCE tipo_contrato_id_seq1 OWNED BY tipo_contrato.id;
 
 
 --
--- TOC entry 412 (class 1259 OID 37704)
--- Name: unidad_ejecutora; Type: TABLE; Schema: argo; Owner: -
+-- TOC entry 321 (class 1259 OID 40539)
+-- Name: unidad_ejecutora; Type: TABLE; Schema: argo; Owner: postgres
 --
 
 CREATE TABLE unidad_ejecutora (
@@ -5140,10 +5420,12 @@ CREATE TABLE unidad_ejecutora (
 );
 
 
+ALTER TABLE unidad_ejecutora OWNER TO postgres;
+
 --
 -- TOC entry 4134 (class 0 OID 0)
--- Dependencies: 412
--- Name: TABLE unidad_ejecutora; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 321
+-- Name: TABLE unidad_ejecutora; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON TABLE unidad_ejecutora IS 'tabla que almacena las unidades ejecutoras involucradas en el sistema';
@@ -5151,8 +5433,8 @@ COMMENT ON TABLE unidad_ejecutora IS 'tabla que almacena las unidades ejecutoras
 
 --
 -- TOC entry 4135 (class 0 OID 0)
--- Dependencies: 412
--- Name: COLUMN unidad_ejecutora.id; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 321
+-- Name: COLUMN unidad_ejecutora.id; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN unidad_ejecutora.id IS 'identificador unico de la unidad ejecutora';
@@ -5160,8 +5442,8 @@ COMMENT ON COLUMN unidad_ejecutora.id IS 'identificador unico de la unidad ejecu
 
 --
 -- TOC entry 4136 (class 0 OID 0)
--- Dependencies: 412
--- Name: COLUMN unidad_ejecutora.nombre; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 321
+-- Name: COLUMN unidad_ejecutora.nombre; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN unidad_ejecutora.nombre IS 'nombre de la unidad ejecutora';
@@ -5169,8 +5451,8 @@ COMMENT ON COLUMN unidad_ejecutora.nombre IS 'nombre de la unidad ejecutora';
 
 --
 -- TOC entry 4137 (class 0 OID 0)
--- Dependencies: 412
--- Name: COLUMN unidad_ejecutora.descripcion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 321
+-- Name: COLUMN unidad_ejecutora.descripcion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON COLUMN unidad_ejecutora.descripcion IS 'descripcion de la unidad ejecutora ';
@@ -5179,8 +5461,8 @@ COMMENT ON COLUMN unidad_ejecutora.descripcion IS 'descripcion de la unidad ejec
 SET search_path = core, pg_catalog;
 
 --
--- TOC entry 236 (class 1259 OID 36200)
--- Name: actividad_economica; Type: TABLE; Schema: core; Owner: -
+-- TOC entry 322 (class 1259 OID 40545)
+-- Name: actividad_economica; Type: TABLE; Schema: core; Owner: postgres
 --
 
 CREATE TABLE actividad_economica (
@@ -5195,9 +5477,11 @@ CREATE TABLE actividad_economica (
 );
 
 
+ALTER TABLE actividad_economica OWNER TO postgres;
+
 --
--- TOC entry 237 (class 1259 OID 36206)
--- Name: actividad_economica_consecutivo_seq; Type: SEQUENCE; Schema: core; Owner: -
+-- TOC entry 323 (class 1259 OID 40551)
+-- Name: actividad_economica_consecutivo_seq; Type: SEQUENCE; Schema: core; Owner: postgres
 --
 
 CREATE SEQUENCE actividad_economica_consecutivo_seq
@@ -5208,18 +5492,20 @@ CREATE SEQUENCE actividad_economica_consecutivo_seq
     CACHE 1;
 
 
+ALTER TABLE actividad_economica_consecutivo_seq OWNER TO postgres;
+
 --
 -- TOC entry 4138 (class 0 OID 0)
--- Dependencies: 237
--- Name: actividad_economica_consecutivo_seq; Type: SEQUENCE OWNED BY; Schema: core; Owner: -
+-- Dependencies: 323
+-- Name: actividad_economica_consecutivo_seq; Type: SEQUENCE OWNED BY; Schema: core; Owner: postgres
 --
 
 ALTER SEQUENCE actividad_economica_consecutivo_seq OWNED BY actividad_economica.consecutivo;
 
 
 --
--- TOC entry 238 (class 1259 OID 36208)
--- Name: banco; Type: TABLE; Schema: core; Owner: -
+-- TOC entry 324 (class 1259 OID 40553)
+-- Name: banco; Type: TABLE; Schema: core; Owner: postgres
 --
 
 CREATE TABLE banco (
@@ -5231,9 +5517,11 @@ CREATE TABLE banco (
 );
 
 
+ALTER TABLE banco OWNER TO postgres;
+
 --
--- TOC entry 239 (class 1259 OID 36211)
--- Name: ciudad; Type: TABLE; Schema: core; Owner: -
+-- TOC entry 325 (class 1259 OID 40556)
+-- Name: ciudad; Type: TABLE; Schema: core; Owner: postgres
 --
 
 CREATE TABLE ciudad (
@@ -5252,9 +5540,11 @@ CREATE TABLE ciudad (
 );
 
 
+ALTER TABLE ciudad OWNER TO postgres;
+
 --
--- TOC entry 240 (class 1259 OID 36216)
--- Name: departamento; Type: TABLE; Schema: core; Owner: -
+-- TOC entry 326 (class 1259 OID 40561)
+-- Name: departamento; Type: TABLE; Schema: core; Owner: postgres
 --
 
 CREATE TABLE departamento (
@@ -5273,9 +5563,11 @@ CREATE TABLE departamento (
 );
 
 
+ALTER TABLE departamento OWNER TO postgres;
+
 --
--- TOC entry 241 (class 1259 OID 36221)
--- Name: estado; Type: TABLE; Schema: core; Owner: -
+-- TOC entry 327 (class 1259 OID 40566)
+-- Name: estado; Type: TABLE; Schema: core; Owner: postgres
 --
 
 CREATE TABLE estado (
@@ -5284,9 +5576,11 @@ CREATE TABLE estado (
 );
 
 
+ALTER TABLE estado OWNER TO postgres;
+
 --
--- TOC entry 242 (class 1259 OID 36224)
--- Name: estado_id_seq; Type: SEQUENCE; Schema: core; Owner: -
+-- TOC entry 328 (class 1259 OID 40569)
+-- Name: estado_id_seq; Type: SEQUENCE; Schema: core; Owner: postgres
 --
 
 CREATE SEQUENCE estado_id_seq
@@ -5297,18 +5591,20 @@ CREATE SEQUENCE estado_id_seq
     CACHE 1;
 
 
+ALTER TABLE estado_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4139 (class 0 OID 0)
--- Dependencies: 242
--- Name: estado_id_seq; Type: SEQUENCE OWNED BY; Schema: core; Owner: -
+-- Dependencies: 328
+-- Name: estado_id_seq; Type: SEQUENCE OWNED BY; Schema: core; Owner: postgres
 --
 
 ALTER SEQUENCE estado_id_seq OWNED BY estado.id;
 
 
 --
--- TOC entry 243 (class 1259 OID 36226)
--- Name: info_entidad; Type: TABLE; Schema: core; Owner: -
+-- TOC entry 329 (class 1259 OID 40571)
+-- Name: info_entidad; Type: TABLE; Schema: core; Owner: postgres
 --
 
 CREATE TABLE info_entidad (
@@ -5325,9 +5621,11 @@ CREATE TABLE info_entidad (
 );
 
 
+ALTER TABLE info_entidad OWNER TO postgres;
+
 --
--- TOC entry 244 (class 1259 OID 36231)
--- Name: info_entidad_id_seq; Type: SEQUENCE; Schema: core; Owner: -
+-- TOC entry 330 (class 1259 OID 40576)
+-- Name: info_entidad_id_seq; Type: SEQUENCE; Schema: core; Owner: postgres
 --
 
 CREATE SEQUENCE info_entidad_id_seq
@@ -5338,18 +5636,20 @@ CREATE SEQUENCE info_entidad_id_seq
     CACHE 1;
 
 
+ALTER TABLE info_entidad_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4140 (class 0 OID 0)
--- Dependencies: 244
--- Name: info_entidad_id_seq; Type: SEQUENCE OWNED BY; Schema: core; Owner: -
+-- Dependencies: 330
+-- Name: info_entidad_id_seq; Type: SEQUENCE OWNED BY; Schema: core; Owner: postgres
 --
 
 ALTER SEQUENCE info_entidad_id_seq OWNED BY info_entidad.id;
 
 
 --
--- TOC entry 245 (class 1259 OID 36233)
--- Name: pais; Type: TABLE; Schema: core; Owner: -
+-- TOC entry 331 (class 1259 OID 40578)
+-- Name: pais; Type: TABLE; Schema: core; Owner: postgres
 --
 
 CREATE TABLE pais (
@@ -5366,9 +5666,11 @@ CREATE TABLE pais (
 );
 
 
+ALTER TABLE pais OWNER TO postgres;
+
 --
--- TOC entry 246 (class 1259 OID 36238)
--- Name: parametro_entidad; Type: TABLE; Schema: core; Owner: -
+-- TOC entry 332 (class 1259 OID 40583)
+-- Name: parametro_entidad; Type: TABLE; Schema: core; Owner: postgres
 --
 
 CREATE TABLE parametro_entidad (
@@ -5382,9 +5684,11 @@ CREATE TABLE parametro_entidad (
 );
 
 
+ALTER TABLE parametro_entidad OWNER TO postgres;
+
 --
--- TOC entry 247 (class 1259 OID 36243)
--- Name: parametro_entidad_id_seq; Type: SEQUENCE; Schema: core; Owner: -
+-- TOC entry 333 (class 1259 OID 40588)
+-- Name: parametro_entidad_id_seq; Type: SEQUENCE; Schema: core; Owner: postgres
 --
 
 CREATE SEQUENCE parametro_entidad_id_seq
@@ -5395,18 +5699,20 @@ CREATE SEQUENCE parametro_entidad_id_seq
     CACHE 1;
 
 
+ALTER TABLE parametro_entidad_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4141 (class 0 OID 0)
--- Dependencies: 247
--- Name: parametro_entidad_id_seq; Type: SEQUENCE OWNED BY; Schema: core; Owner: -
+-- Dependencies: 333
+-- Name: parametro_entidad_id_seq; Type: SEQUENCE OWNED BY; Schema: core; Owner: postgres
 --
 
 ALTER SEQUENCE parametro_entidad_id_seq OWNED BY parametro_entidad.id;
 
 
 --
--- TOC entry 248 (class 1259 OID 36245)
--- Name: tipo_documento; Type: TABLE; Schema: core; Owner: -
+-- TOC entry 334 (class 1259 OID 40590)
+-- Name: tipo_documento; Type: TABLE; Schema: core; Owner: postgres
 --
 
 CREATE TABLE tipo_documento (
@@ -5416,9 +5722,11 @@ CREATE TABLE tipo_documento (
 );
 
 
+ALTER TABLE tipo_documento OWNER TO postgres;
+
 --
--- TOC entry 249 (class 1259 OID 36248)
--- Name: tipo_documento_id_seq; Type: SEQUENCE; Schema: core; Owner: -
+-- TOC entry 335 (class 1259 OID 40593)
+-- Name: tipo_documento_id_seq; Type: SEQUENCE; Schema: core; Owner: postgres
 --
 
 CREATE SEQUENCE tipo_documento_id_seq
@@ -5429,18 +5737,20 @@ CREATE SEQUENCE tipo_documento_id_seq
     CACHE 1;
 
 
+ALTER TABLE tipo_documento_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4142 (class 0 OID 0)
--- Dependencies: 249
--- Name: tipo_documento_id_seq; Type: SEQUENCE OWNED BY; Schema: core; Owner: -
+-- Dependencies: 335
+-- Name: tipo_documento_id_seq; Type: SEQUENCE OWNED BY; Schema: core; Owner: postgres
 --
 
 ALTER SEQUENCE tipo_documento_id_seq OWNED BY tipo_documento.id;
 
 
 --
--- TOC entry 250 (class 1259 OID 36250)
--- Name: tipo_entidad; Type: TABLE; Schema: core; Owner: -
+-- TOC entry 336 (class 1259 OID 40595)
+-- Name: tipo_entidad; Type: TABLE; Schema: core; Owner: postgres
 --
 
 CREATE TABLE tipo_entidad (
@@ -5451,18 +5761,20 @@ CREATE TABLE tipo_entidad (
 );
 
 
+ALTER TABLE tipo_entidad OWNER TO postgres;
+
 --
 -- TOC entry 4143 (class 0 OID 0)
--- Dependencies: 250
--- Name: TABLE tipo_entidad; Type: COMMENT; Schema: core; Owner: -
+-- Dependencies: 336
+-- Name: TABLE tipo_entidad; Type: COMMENT; Schema: core; Owner: postgres
 --
 
 COMMENT ON TABLE tipo_entidad IS 'tipos de entidades (arl, eps, etc)';
 
 
 --
--- TOC entry 251 (class 1259 OID 36255)
--- Name: tipo_entidad_id_seq; Type: SEQUENCE; Schema: core; Owner: -
+-- TOC entry 337 (class 1259 OID 40600)
+-- Name: tipo_entidad_id_seq; Type: SEQUENCE; Schema: core; Owner: postgres
 --
 
 CREATE SEQUENCE tipo_entidad_id_seq
@@ -5473,10 +5785,12 @@ CREATE SEQUENCE tipo_entidad_id_seq
     CACHE 1;
 
 
+ALTER TABLE tipo_entidad_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4144 (class 0 OID 0)
--- Dependencies: 251
--- Name: tipo_entidad_id_seq; Type: SEQUENCE OWNED BY; Schema: core; Owner: -
+-- Dependencies: 337
+-- Name: tipo_entidad_id_seq; Type: SEQUENCE OWNED BY; Schema: core; Owner: postgres
 --
 
 ALTER SEQUENCE tipo_entidad_id_seq OWNED BY tipo_entidad.id;
@@ -5485,8 +5799,8 @@ ALTER SEQUENCE tipo_entidad_id_seq OWNED BY tipo_entidad.id;
 SET search_path = nix, pg_catalog;
 
 --
--- TOC entry 252 (class 1259 OID 36257)
--- Name: entidad; Type: TABLE; Schema: nix; Owner: -
+-- TOC entry 338 (class 1259 OID 40602)
+-- Name: entidad; Type: TABLE; Schema: nix; Owner: postgres
 --
 
 CREATE TABLE entidad (
@@ -5496,10 +5810,12 @@ CREATE TABLE entidad (
 );
 
 
+ALTER TABLE entidad OWNER TO postgres;
+
 --
 -- TOC entry 4145 (class 0 OID 0)
--- Dependencies: 252
--- Name: COLUMN entidad.id; Type: COMMENT; Schema: nix; Owner: -
+-- Dependencies: 338
+-- Name: COLUMN entidad.id; Type: COMMENT; Schema: nix; Owner: postgres
 --
 
 COMMENT ON COLUMN entidad.id IS 'identificador de la entidad';
@@ -5507,8 +5823,8 @@ COMMENT ON COLUMN entidad.id IS 'identificador de la entidad';
 
 --
 -- TOC entry 4146 (class 0 OID 0)
--- Dependencies: 252
--- Name: COLUMN entidad.nombre; Type: COMMENT; Schema: nix; Owner: -
+-- Dependencies: 338
+-- Name: COLUMN entidad.nombre; Type: COMMENT; Schema: nix; Owner: postgres
 --
 
 COMMENT ON COLUMN entidad.nombre IS 'nombre de la entidad';
@@ -5516,16 +5832,16 @@ COMMENT ON COLUMN entidad.nombre IS 'nombre de la entidad';
 
 --
 -- TOC entry 4147 (class 0 OID 0)
--- Dependencies: 252
--- Name: COLUMN entidad.codigo_entidad; Type: COMMENT; Schema: nix; Owner: -
+-- Dependencies: 338
+-- Name: COLUMN entidad.codigo_entidad; Type: COMMENT; Schema: nix; Owner: postgres
 --
 
 COMMENT ON COLUMN entidad.codigo_entidad IS 'código de la entidad';
 
 
 --
--- TOC entry 253 (class 1259 OID 36260)
--- Name: entidad_homologacion; Type: TABLE; Schema: nix; Owner: -
+-- TOC entry 339 (class 1259 OID 40605)
+-- Name: entidad_homologacion; Type: TABLE; Schema: nix; Owner: postgres
 --
 
 CREATE TABLE entidad_homologacion (
@@ -5535,10 +5851,12 @@ CREATE TABLE entidad_homologacion (
 );
 
 
+ALTER TABLE entidad_homologacion OWNER TO postgres;
+
 --
 -- TOC entry 4148 (class 0 OID 0)
--- Dependencies: 253
--- Name: TABLE entidad_homologacion; Type: COMMENT; Schema: nix; Owner: -
+-- Dependencies: 339
+-- Name: TABLE entidad_homologacion; Type: COMMENT; Schema: nix; Owner: postgres
 --
 
 COMMENT ON TABLE entidad_homologacion IS 'entidades para enviar información';
@@ -5546,8 +5864,8 @@ COMMENT ON TABLE entidad_homologacion IS 'entidades para enviar información';
 
 --
 -- TOC entry 4149 (class 0 OID 0)
--- Dependencies: 253
--- Name: COLUMN entidad_homologacion.id; Type: COMMENT; Schema: nix; Owner: -
+-- Dependencies: 339
+-- Name: COLUMN entidad_homologacion.id; Type: COMMENT; Schema: nix; Owner: postgres
 --
 
 COMMENT ON COLUMN entidad_homologacion.id IS 'identificador entidad de homologación';
@@ -5555,8 +5873,8 @@ COMMENT ON COLUMN entidad_homologacion.id IS 'identificador entidad de homologac
 
 --
 -- TOC entry 4150 (class 0 OID 0)
--- Dependencies: 253
--- Name: COLUMN entidad_homologacion.nombre; Type: COMMENT; Schema: nix; Owner: -
+-- Dependencies: 339
+-- Name: COLUMN entidad_homologacion.nombre; Type: COMMENT; Schema: nix; Owner: postgres
 --
 
 COMMENT ON COLUMN entidad_homologacion.nombre IS 'nombre de la entidad de homologación';
@@ -5564,16 +5882,16 @@ COMMENT ON COLUMN entidad_homologacion.nombre IS 'nombre de la entidad de homolo
 
 --
 -- TOC entry 4151 (class 0 OID 0)
--- Dependencies: 253
--- Name: COLUMN entidad_homologacion.codigo_entidad; Type: COMMENT; Schema: nix; Owner: -
+-- Dependencies: 339
+-- Name: COLUMN entidad_homologacion.codigo_entidad; Type: COMMENT; Schema: nix; Owner: postgres
 --
 
 COMMENT ON COLUMN entidad_homologacion.codigo_entidad IS 'código de la entidad';
 
 
 --
--- TOC entry 254 (class 1259 OID 36263)
--- Name: entidad_homologacion_id_seq; Type: SEQUENCE; Schema: nix; Owner: -
+-- TOC entry 340 (class 1259 OID 40608)
+-- Name: entidad_homologacion_id_seq; Type: SEQUENCE; Schema: nix; Owner: postgres
 --
 
 CREATE SEQUENCE entidad_homologacion_id_seq
@@ -5584,18 +5902,20 @@ CREATE SEQUENCE entidad_homologacion_id_seq
     CACHE 1;
 
 
+ALTER TABLE entidad_homologacion_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4152 (class 0 OID 0)
--- Dependencies: 254
--- Name: entidad_homologacion_id_seq; Type: SEQUENCE OWNED BY; Schema: nix; Owner: -
+-- Dependencies: 340
+-- Name: entidad_homologacion_id_seq; Type: SEQUENCE OWNED BY; Schema: nix; Owner: postgres
 --
 
 ALTER SEQUENCE entidad_homologacion_id_seq OWNED BY entidad_homologacion.id;
 
 
 --
--- TOC entry 255 (class 1259 OID 36265)
--- Name: entidad_id_seq; Type: SEQUENCE; Schema: nix; Owner: -
+-- TOC entry 341 (class 1259 OID 40610)
+-- Name: entidad_id_seq; Type: SEQUENCE; Schema: nix; Owner: postgres
 --
 
 CREATE SEQUENCE entidad_id_seq
@@ -5606,10 +5926,12 @@ CREATE SEQUENCE entidad_id_seq
     CACHE 1;
 
 
+ALTER TABLE entidad_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4153 (class 0 OID 0)
--- Dependencies: 255
--- Name: entidad_id_seq; Type: SEQUENCE OWNED BY; Schema: nix; Owner: -
+-- Dependencies: 341
+-- Name: entidad_id_seq; Type: SEQUENCE OWNED BY; Schema: nix; Owner: postgres
 --
 
 ALTER SEQUENCE entidad_id_seq OWNED BY entidad.id;
@@ -5618,8 +5940,8 @@ ALTER SEQUENCE entidad_id_seq OWNED BY entidad.id;
 SET search_path = nix_presupuesto, pg_catalog;
 
 --
--- TOC entry 256 (class 1259 OID 36267)
--- Name: anulacion_reserva; Type: TABLE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 342 (class 1259 OID 40612)
+-- Name: anulacion_reserva; Type: TABLE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE TABLE anulacion_reserva (
@@ -5630,10 +5952,12 @@ CREATE TABLE anulacion_reserva (
 );
 
 
+ALTER TABLE anulacion_reserva OWNER TO postgres;
+
 --
 -- TOC entry 4154 (class 0 OID 0)
--- Dependencies: 256
--- Name: TABLE anulacion_reserva; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 342
+-- Name: TABLE anulacion_reserva; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON TABLE anulacion_reserva IS 'anulaciones de reservas presupuestales';
@@ -5641,8 +5965,8 @@ COMMENT ON TABLE anulacion_reserva IS 'anulaciones de reservas presupuestales';
 
 --
 -- TOC entry 4155 (class 0 OID 0)
--- Dependencies: 256
--- Name: COLUMN anulacion_reserva.id; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 342
+-- Name: COLUMN anulacion_reserva.id; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN anulacion_reserva.id IS 'identificador de la reserva';
@@ -5650,8 +5974,8 @@ COMMENT ON COLUMN anulacion_reserva.id IS 'identificador de la reserva';
 
 --
 -- TOC entry 4156 (class 0 OID 0)
--- Dependencies: 256
--- Name: COLUMN anulacion_reserva.fecha_anulacion; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 342
+-- Name: COLUMN anulacion_reserva.fecha_anulacion; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN anulacion_reserva.fecha_anulacion IS 'fecha de la anulación';
@@ -5659,8 +5983,8 @@ COMMENT ON COLUMN anulacion_reserva.fecha_anulacion IS 'fecha de la anulación';
 
 --
 -- TOC entry 4157 (class 0 OID 0)
--- Dependencies: 256
--- Name: COLUMN anulacion_reserva.reserva_presupuestal; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 342
+-- Name: COLUMN anulacion_reserva.reserva_presupuestal; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN anulacion_reserva.reserva_presupuestal IS 'identificador de la reserva asociada';
@@ -5668,16 +5992,16 @@ COMMENT ON COLUMN anulacion_reserva.reserva_presupuestal IS 'identificador de la
 
 --
 -- TOC entry 4158 (class 0 OID 0)
--- Dependencies: 256
--- Name: COLUMN anulacion_reserva.valor; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 342
+-- Name: COLUMN anulacion_reserva.valor; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN anulacion_reserva.valor IS 'valor de la anulación';
 
 
 --
--- TOC entry 257 (class 1259 OID 36270)
--- Name: anulacion_reserva_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 343 (class 1259 OID 40615)
+-- Name: anulacion_reserva_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE SEQUENCE anulacion_reserva_id_seq
@@ -5688,18 +6012,20 @@ CREATE SEQUENCE anulacion_reserva_id_seq
     CACHE 1;
 
 
+ALTER TABLE anulacion_reserva_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4159 (class 0 OID 0)
--- Dependencies: 257
--- Name: anulacion_reserva_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 343
+-- Name: anulacion_reserva_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER SEQUENCE anulacion_reserva_id_seq OWNED BY anulacion_reserva.id;
 
 
 --
--- TOC entry 258 (class 1259 OID 36272)
--- Name: apropiacion; Type: TABLE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 344 (class 1259 OID 40617)
+-- Name: apropiacion; Type: TABLE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE TABLE apropiacion (
@@ -5716,10 +6042,12 @@ CREATE TABLE apropiacion (
 );
 
 
+ALTER TABLE apropiacion OWNER TO postgres;
+
 --
 -- TOC entry 4160 (class 0 OID 0)
--- Dependencies: 258
--- Name: TABLE apropiacion; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 344
+-- Name: TABLE apropiacion; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON TABLE apropiacion IS 'apropiaciones iniciales';
@@ -5727,8 +6055,8 @@ COMMENT ON TABLE apropiacion IS 'apropiaciones iniciales';
 
 --
 -- TOC entry 4161 (class 0 OID 0)
--- Dependencies: 258
--- Name: COLUMN apropiacion.id; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 344
+-- Name: COLUMN apropiacion.id; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN apropiacion.id IS 'identificador de la apropiación';
@@ -5736,8 +6064,8 @@ COMMENT ON COLUMN apropiacion.id IS 'identificador de la apropiación';
 
 --
 -- TOC entry 4162 (class 0 OID 0)
--- Dependencies: 258
--- Name: COLUMN apropiacion.vigencia; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 344
+-- Name: COLUMN apropiacion.vigencia; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN apropiacion.vigencia IS 'año de la vigencia';
@@ -5745,8 +6073,8 @@ COMMENT ON COLUMN apropiacion.vigencia IS 'año de la vigencia';
 
 --
 -- TOC entry 4163 (class 0 OID 0)
--- Dependencies: 258
--- Name: COLUMN apropiacion.rubro; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 344
+-- Name: COLUMN apropiacion.rubro; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN apropiacion.rubro IS 'rubro asociado';
@@ -5754,8 +6082,8 @@ COMMENT ON COLUMN apropiacion.rubro IS 'rubro asociado';
 
 --
 -- TOC entry 4164 (class 0 OID 0)
--- Dependencies: 258
--- Name: COLUMN apropiacion.unidad_ejecutora; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 344
+-- Name: COLUMN apropiacion.unidad_ejecutora; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN apropiacion.unidad_ejecutora IS 'unidad ejecutora';
@@ -5763,8 +6091,8 @@ COMMENT ON COLUMN apropiacion.unidad_ejecutora IS 'unidad ejecutora';
 
 --
 -- TOC entry 4165 (class 0 OID 0)
--- Dependencies: 258
--- Name: COLUMN apropiacion.valor_rezago; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 344
+-- Name: COLUMN apropiacion.valor_rezago; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN apropiacion.valor_rezago IS 'valor rezago de la apropiación';
@@ -5772,8 +6100,8 @@ COMMENT ON COLUMN apropiacion.valor_rezago IS 'valor rezago de la apropiación';
 
 --
 -- TOC entry 4166 (class 0 OID 0)
--- Dependencies: 258
--- Name: COLUMN apropiacion.valor; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 344
+-- Name: COLUMN apropiacion.valor; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN apropiacion.valor IS 'valor de la apropiación';
@@ -5781,8 +6109,8 @@ COMMENT ON COLUMN apropiacion.valor IS 'valor de la apropiación';
 
 --
 -- TOC entry 4167 (class 0 OID 0)
--- Dependencies: 258
--- Name: COLUMN apropiacion.tipo_documento; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 344
+-- Name: COLUMN apropiacion.tipo_documento; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN apropiacion.tipo_documento IS 'tipo de documento';
@@ -5790,8 +6118,8 @@ COMMENT ON COLUMN apropiacion.tipo_documento IS 'tipo de documento';
 
 --
 -- TOC entry 4168 (class 0 OID 0)
--- Dependencies: 258
--- Name: COLUMN apropiacion.documento_numero; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 344
+-- Name: COLUMN apropiacion.documento_numero; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN apropiacion.documento_numero IS 'número del documento';
@@ -5799,16 +6127,16 @@ COMMENT ON COLUMN apropiacion.documento_numero IS 'número del documento';
 
 --
 -- TOC entry 4169 (class 0 OID 0)
--- Dependencies: 258
--- Name: COLUMN apropiacion.documento_fecha; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 344
+-- Name: COLUMN apropiacion.documento_fecha; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN apropiacion.documento_fecha IS 'fecha del documento';
 
 
 --
--- TOC entry 259 (class 1259 OID 36276)
--- Name: apropiacion_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 345 (class 1259 OID 40621)
+-- Name: apropiacion_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE SEQUENCE apropiacion_id_seq
@@ -5819,18 +6147,20 @@ CREATE SEQUENCE apropiacion_id_seq
     CACHE 1;
 
 
+ALTER TABLE apropiacion_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4170 (class 0 OID 0)
--- Dependencies: 259
--- Name: apropiacion_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 345
+-- Name: apropiacion_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER SEQUENCE apropiacion_id_seq OWNED BY apropiacion.id;
 
 
 --
--- TOC entry 260 (class 1259 OID 36278)
--- Name: concepto; Type: TABLE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 346 (class 1259 OID 40623)
+-- Name: concepto; Type: TABLE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE TABLE concepto (
@@ -5842,9 +6172,11 @@ CREATE TABLE concepto (
 );
 
 
+ALTER TABLE concepto OWNER TO postgres;
+
 --
--- TOC entry 261 (class 1259 OID 36281)
--- Name: concepto_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 347 (class 1259 OID 40626)
+-- Name: concepto_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE SEQUENCE concepto_id_seq
@@ -5855,18 +6187,20 @@ CREATE SEQUENCE concepto_id_seq
     CACHE 1;
 
 
+ALTER TABLE concepto_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4171 (class 0 OID 0)
--- Dependencies: 261
--- Name: concepto_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 347
+-- Name: concepto_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER SEQUENCE concepto_id_seq OWNED BY concepto.id;
 
 
 --
--- TOC entry 262 (class 1259 OID 36283)
--- Name: desagregacion_ingreso; Type: TABLE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 348 (class 1259 OID 40628)
+-- Name: desagregacion_ingreso; Type: TABLE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE TABLE desagregacion_ingreso (
@@ -5877,18 +6211,20 @@ CREATE TABLE desagregacion_ingreso (
 );
 
 
+ALTER TABLE desagregacion_ingreso OWNER TO postgres;
+
 --
 -- TOC entry 4172 (class 0 OID 0)
--- Dependencies: 262
--- Name: TABLE desagregacion_ingreso; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 348
+-- Name: TABLE desagregacion_ingreso; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON TABLE desagregacion_ingreso IS 'desagregacion por concepto de los ingresos';
 
 
 --
--- TOC entry 263 (class 1259 OID 36286)
--- Name: desagregacion_ingreso_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 349 (class 1259 OID 40631)
+-- Name: desagregacion_ingreso_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE SEQUENCE desagregacion_ingreso_id_seq
@@ -5899,18 +6235,20 @@ CREATE SEQUENCE desagregacion_ingreso_id_seq
     CACHE 1;
 
 
+ALTER TABLE desagregacion_ingreso_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4173 (class 0 OID 0)
--- Dependencies: 263
--- Name: desagregacion_ingreso_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 349
+-- Name: desagregacion_ingreso_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER SEQUENCE desagregacion_ingreso_id_seq OWNED BY desagregacion_ingreso.id;
 
 
 --
--- TOC entry 264 (class 1259 OID 36288)
--- Name: destino_disponibilidad; Type: TABLE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 350 (class 1259 OID 40633)
+-- Name: destino_disponibilidad; Type: TABLE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE TABLE destino_disponibilidad (
@@ -5920,10 +6258,12 @@ CREATE TABLE destino_disponibilidad (
 );
 
 
+ALTER TABLE destino_disponibilidad OWNER TO postgres;
+
 --
 -- TOC entry 4174 (class 0 OID 0)
--- Dependencies: 264
--- Name: TABLE destino_disponibilidad; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 350
+-- Name: TABLE destino_disponibilidad; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON TABLE destino_disponibilidad IS 'paramétrica destino de disponibilidades ej para modificación o suspención';
@@ -5931,16 +6271,16 @@ COMMENT ON TABLE destino_disponibilidad IS 'paramétrica destino de disponibilid
 
 --
 -- TOC entry 4175 (class 0 OID 0)
--- Dependencies: 264
--- Name: COLUMN destino_disponibilidad.descripcion; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 350
+-- Name: COLUMN destino_disponibilidad.descripcion; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN destino_disponibilidad.descripcion IS 'descripción del destino';
 
 
 --
--- TOC entry 265 (class 1259 OID 36291)
--- Name: destino_disponibilidad_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 351 (class 1259 OID 40636)
+-- Name: destino_disponibilidad_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE SEQUENCE destino_disponibilidad_id_seq
@@ -5951,18 +6291,20 @@ CREATE SEQUENCE destino_disponibilidad_id_seq
     CACHE 1;
 
 
+ALTER TABLE destino_disponibilidad_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4176 (class 0 OID 0)
--- Dependencies: 265
--- Name: destino_disponibilidad_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 351
+-- Name: destino_disponibilidad_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER SEQUENCE destino_disponibilidad_id_seq OWNED BY destino_disponibilidad.id;
 
 
 --
--- TOC entry 266 (class 1259 OID 36293)
--- Name: disponibilidad; Type: TABLE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 352 (class 1259 OID 40638)
+-- Name: disponibilidad; Type: TABLE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE TABLE disponibilidad (
@@ -5985,10 +6327,12 @@ CREATE TABLE disponibilidad (
 );
 
 
+ALTER TABLE disponibilidad OWNER TO postgres;
+
 --
 -- TOC entry 4177 (class 0 OID 0)
--- Dependencies: 266
--- Name: COLUMN disponibilidad.id; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 352
+-- Name: COLUMN disponibilidad.id; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN disponibilidad.id IS 'identificador de la disponibilidad';
@@ -5996,8 +6340,8 @@ COMMENT ON COLUMN disponibilidad.id IS 'identificador de la disponibilidad';
 
 --
 -- TOC entry 4178 (class 0 OID 0)
--- Dependencies: 266
--- Name: COLUMN disponibilidad.entidad; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 352
+-- Name: COLUMN disponibilidad.entidad; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN disponibilidad.entidad IS 'id de la entidad';
@@ -6005,8 +6349,8 @@ COMMENT ON COLUMN disponibilidad.entidad IS 'id de la entidad';
 
 --
 -- TOC entry 4179 (class 0 OID 0)
--- Dependencies: 266
--- Name: COLUMN disponibilidad.unidad_ejecutora; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 352
+-- Name: COLUMN disponibilidad.unidad_ejecutora; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN disponibilidad.unidad_ejecutora IS 'codigo de la unidad ejecutora';
@@ -6014,8 +6358,8 @@ COMMENT ON COLUMN disponibilidad.unidad_ejecutora IS 'codigo de la unidad ejecut
 
 --
 -- TOC entry 4180 (class 0 OID 0)
--- Dependencies: 266
--- Name: COLUMN disponibilidad.vigencia; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 352
+-- Name: COLUMN disponibilidad.vigencia; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN disponibilidad.vigencia IS 'Vigencia de la disponibilidad';
@@ -6023,8 +6367,8 @@ COMMENT ON COLUMN disponibilidad.vigencia IS 'Vigencia de la disponibilidad';
 
 --
 -- TOC entry 4181 (class 0 OID 0)
--- Dependencies: 266
--- Name: COLUMN disponibilidad.numero_disponibilidad; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 352
+-- Name: COLUMN disponibilidad.numero_disponibilidad; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN disponibilidad.numero_disponibilidad IS 'número de la disponibilidad';
@@ -6032,8 +6376,8 @@ COMMENT ON COLUMN disponibilidad.numero_disponibilidad IS 'número de la disponi
 
 --
 -- TOC entry 4182 (class 0 OID 0)
--- Dependencies: 266
--- Name: COLUMN disponibilidad.responsable; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 352
+-- Name: COLUMN disponibilidad.responsable; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN disponibilidad.responsable IS 'crear tabla de usuarios para este rol';
@@ -6041,8 +6385,8 @@ COMMENT ON COLUMN disponibilidad.responsable IS 'crear tabla de usuarios para es
 
 --
 -- TOC entry 4183 (class 0 OID 0)
--- Dependencies: 266
--- Name: COLUMN disponibilidad.solicitante; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 352
+-- Name: COLUMN disponibilidad.solicitante; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN disponibilidad.solicitante IS 'sacar de la tabla de usuarios el id';
@@ -6050,8 +6394,8 @@ COMMENT ON COLUMN disponibilidad.solicitante IS 'sacar de la tabla de usuarios e
 
 --
 -- TOC entry 4184 (class 0 OID 0)
--- Dependencies: 266
--- Name: COLUMN disponibilidad.fecha_registro; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 352
+-- Name: COLUMN disponibilidad.fecha_registro; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN disponibilidad.fecha_registro IS 'fecha de registro de la disponibilidad';
@@ -6059,8 +6403,8 @@ COMMENT ON COLUMN disponibilidad.fecha_registro IS 'fecha de registro de la disp
 
 --
 -- TOC entry 4185 (class 0 OID 0)
--- Dependencies: 266
--- Name: COLUMN disponibilidad.fecha_expedicion; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 352
+-- Name: COLUMN disponibilidad.fecha_expedicion; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN disponibilidad.fecha_expedicion IS 'fecha de la expedición de la disponibilidad';
@@ -6068,8 +6412,8 @@ COMMENT ON COLUMN disponibilidad.fecha_expedicion IS 'fecha de la expedición de
 
 --
 -- TOC entry 4186 (class 0 OID 0)
--- Dependencies: 266
--- Name: COLUMN disponibilidad.fecha_expiracion; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 352
+-- Name: COLUMN disponibilidad.fecha_expiracion; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN disponibilidad.fecha_expiracion IS 'fecha expiración de disponiblidad';
@@ -6077,8 +6421,8 @@ COMMENT ON COLUMN disponibilidad.fecha_expiracion IS 'fecha expiración de dispo
 
 --
 -- TOC entry 4187 (class 0 OID 0)
--- Dependencies: 266
--- Name: COLUMN disponibilidad.modalidad_giro; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 352
+-- Name: COLUMN disponibilidad.modalidad_giro; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN disponibilidad.modalidad_giro IS 'campo paramétrico';
@@ -6086,8 +6430,8 @@ COMMENT ON COLUMN disponibilidad.modalidad_giro IS 'campo paramétrico';
 
 --
 -- TOC entry 4188 (class 0 OID 0)
--- Dependencies: 266
--- Name: COLUMN disponibilidad.estado; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 352
+-- Name: COLUMN disponibilidad.estado; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN disponibilidad.estado IS 'paramétrica estado disponibilidad';
@@ -6095,8 +6439,8 @@ COMMENT ON COLUMN disponibilidad.estado IS 'paramétrica estado disponibilidad';
 
 --
 -- TOC entry 4189 (class 0 OID 0)
--- Dependencies: 266
--- Name: COLUMN disponibilidad.numero_oficio; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 352
+-- Name: COLUMN disponibilidad.numero_oficio; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN disponibilidad.numero_oficio IS 'numero del oficio asociado';
@@ -6104,8 +6448,8 @@ COMMENT ON COLUMN disponibilidad.numero_oficio IS 'numero del oficio asociado';
 
 --
 -- TOC entry 4190 (class 0 OID 0)
--- Dependencies: 266
--- Name: COLUMN disponibilidad.objeto; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 352
+-- Name: COLUMN disponibilidad.objeto; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN disponibilidad.objeto IS 'objeto de la disponibilidad';
@@ -6113,8 +6457,8 @@ COMMENT ON COLUMN disponibilidad.objeto IS 'objeto de la disponibilidad';
 
 --
 -- TOC entry 4191 (class 0 OID 0)
--- Dependencies: 266
--- Name: COLUMN disponibilidad.vigencia_futura; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 352
+-- Name: COLUMN disponibilidad.vigencia_futura; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN disponibilidad.vigencia_futura IS 'indicador de si es para vigencias futuras';
@@ -6122,16 +6466,16 @@ COMMENT ON COLUMN disponibilidad.vigencia_futura IS 'indicador de si es para vig
 
 --
 -- TOC entry 4192 (class 0 OID 0)
--- Dependencies: 266
--- Name: COLUMN disponibilidad.destino; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 352
+-- Name: COLUMN disponibilidad.destino; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN disponibilidad.destino IS 'paramétrica destino disponibilidad por ejemplo modificación o anulación';
 
 
 --
--- TOC entry 267 (class 1259 OID 36299)
--- Name: disponibilidad_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 353 (class 1259 OID 40644)
+-- Name: disponibilidad_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE SEQUENCE disponibilidad_id_seq
@@ -6142,18 +6486,20 @@ CREATE SEQUENCE disponibilidad_id_seq
     CACHE 1;
 
 
+ALTER TABLE disponibilidad_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4193 (class 0 OID 0)
--- Dependencies: 267
--- Name: disponibilidad_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 353
+-- Name: disponibilidad_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER SEQUENCE disponibilidad_id_seq OWNED BY disponibilidad.id;
 
 
 --
--- TOC entry 268 (class 1259 OID 36301)
--- Name: disponibilidad_rubro; Type: TABLE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 354 (class 1259 OID 40646)
+-- Name: disponibilidad_rubro; Type: TABLE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE TABLE disponibilidad_rubro (
@@ -6165,10 +6511,12 @@ CREATE TABLE disponibilidad_rubro (
 );
 
 
+ALTER TABLE disponibilidad_rubro OWNER TO postgres;
+
 --
 -- TOC entry 4194 (class 0 OID 0)
--- Dependencies: 268
--- Name: TABLE disponibilidad_rubro; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 354
+-- Name: TABLE disponibilidad_rubro; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON TABLE disponibilidad_rubro IS 'tabla de disponibilidades desagregadas por rubro';
@@ -6176,8 +6524,8 @@ COMMENT ON TABLE disponibilidad_rubro IS 'tabla de disponibilidades desagregadas
 
 --
 -- TOC entry 4195 (class 0 OID 0)
--- Dependencies: 268
--- Name: COLUMN disponibilidad_rubro.id; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 354
+-- Name: COLUMN disponibilidad_rubro.id; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN disponibilidad_rubro.id IS 'identificador de la desagregación';
@@ -6185,8 +6533,8 @@ COMMENT ON COLUMN disponibilidad_rubro.id IS 'identificador de la desagregación
 
 --
 -- TOC entry 4196 (class 0 OID 0)
--- Dependencies: 268
--- Name: COLUMN disponibilidad_rubro.vigencia; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 354
+-- Name: COLUMN disponibilidad_rubro.vigencia; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN disponibilidad_rubro.vigencia IS 'vigencia de la desagregación';
@@ -6194,8 +6542,8 @@ COMMENT ON COLUMN disponibilidad_rubro.vigencia IS 'vigencia de la desagregació
 
 --
 -- TOC entry 4197 (class 0 OID 0)
--- Dependencies: 268
--- Name: COLUMN disponibilidad_rubro.rubro; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 354
+-- Name: COLUMN disponibilidad_rubro.rubro; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN disponibilidad_rubro.rubro IS 'identificador del rubro';
@@ -6203,8 +6551,8 @@ COMMENT ON COLUMN disponibilidad_rubro.rubro IS 'identificador del rubro';
 
 --
 -- TOC entry 4198 (class 0 OID 0)
--- Dependencies: 268
--- Name: COLUMN disponibilidad_rubro.disponibilidad; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 354
+-- Name: COLUMN disponibilidad_rubro.disponibilidad; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN disponibilidad_rubro.disponibilidad IS 'identificador de la disponibilidad';
@@ -6212,16 +6560,16 @@ COMMENT ON COLUMN disponibilidad_rubro.disponibilidad IS 'identificador de la di
 
 --
 -- TOC entry 4199 (class 0 OID 0)
--- Dependencies: 268
--- Name: COLUMN disponibilidad_rubro.valor; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 354
+-- Name: COLUMN disponibilidad_rubro.valor; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN disponibilidad_rubro.valor IS 'valor de la desagregación';
 
 
 --
--- TOC entry 269 (class 1259 OID 36304)
--- Name: disponibilidad_rubro_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 355 (class 1259 OID 40649)
+-- Name: disponibilidad_rubro_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE SEQUENCE disponibilidad_rubro_id_seq
@@ -6232,18 +6580,20 @@ CREATE SEQUENCE disponibilidad_rubro_id_seq
     CACHE 1;
 
 
+ALTER TABLE disponibilidad_rubro_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4200 (class 0 OID 0)
--- Dependencies: 269
--- Name: disponibilidad_rubro_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 355
+-- Name: disponibilidad_rubro_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER SEQUENCE disponibilidad_rubro_id_seq OWNED BY disponibilidad_rubro.id;
 
 
 --
--- TOC entry 270 (class 1259 OID 36306)
--- Name: estado_apropiacion; Type: TABLE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 356 (class 1259 OID 40651)
+-- Name: estado_apropiacion; Type: TABLE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE TABLE estado_apropiacion (
@@ -6253,10 +6603,12 @@ CREATE TABLE estado_apropiacion (
 );
 
 
+ALTER TABLE estado_apropiacion OWNER TO postgres;
+
 --
 -- TOC entry 4201 (class 0 OID 0)
--- Dependencies: 270
--- Name: TABLE estado_apropiacion; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 356
+-- Name: TABLE estado_apropiacion; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON TABLE estado_apropiacion IS 'paramétrica estado de apropiaciones';
@@ -6264,8 +6616,8 @@ COMMENT ON TABLE estado_apropiacion IS 'paramétrica estado de apropiaciones';
 
 --
 -- TOC entry 4202 (class 0 OID 0)
--- Dependencies: 270
--- Name: COLUMN estado_apropiacion.id; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 356
+-- Name: COLUMN estado_apropiacion.id; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN estado_apropiacion.id IS 'identificador único del registro';
@@ -6273,8 +6625,8 @@ COMMENT ON COLUMN estado_apropiacion.id IS 'identificador único del registro';
 
 --
 -- TOC entry 4203 (class 0 OID 0)
--- Dependencies: 270
--- Name: COLUMN estado_apropiacion.nombre; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 356
+-- Name: COLUMN estado_apropiacion.nombre; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN estado_apropiacion.nombre IS 'nombre del estado, será el mostrado';
@@ -6282,16 +6634,16 @@ COMMENT ON COLUMN estado_apropiacion.nombre IS 'nombre del estado, será el most
 
 --
 -- TOC entry 4204 (class 0 OID 0)
--- Dependencies: 270
--- Name: COLUMN estado_apropiacion.descripcion; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 356
+-- Name: COLUMN estado_apropiacion.descripcion; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN estado_apropiacion.descripcion IS 'descripción del estado';
 
 
 --
--- TOC entry 271 (class 1259 OID 36309)
--- Name: estado_disponibilidad; Type: TABLE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 357 (class 1259 OID 40654)
+-- Name: estado_disponibilidad; Type: TABLE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE TABLE estado_disponibilidad (
@@ -6301,10 +6653,12 @@ CREATE TABLE estado_disponibilidad (
 );
 
 
+ALTER TABLE estado_disponibilidad OWNER TO postgres;
+
 --
 -- TOC entry 4205 (class 0 OID 0)
--- Dependencies: 271
--- Name: TABLE estado_disponibilidad; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 357
+-- Name: TABLE estado_disponibilidad; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON TABLE estado_disponibilidad IS 'paramétrica estado de disponibilidades';
@@ -6312,16 +6666,16 @@ COMMENT ON TABLE estado_disponibilidad IS 'paramétrica estado de disponibilidad
 
 --
 -- TOC entry 4206 (class 0 OID 0)
--- Dependencies: 271
--- Name: COLUMN estado_disponibilidad.descripcion; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 357
+-- Name: COLUMN estado_disponibilidad.descripcion; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN estado_disponibilidad.descripcion IS 'descripción del estado';
 
 
 --
--- TOC entry 272 (class 1259 OID 36312)
--- Name: estado_disponibilidad_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 358 (class 1259 OID 40657)
+-- Name: estado_disponibilidad_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE SEQUENCE estado_disponibilidad_id_seq
@@ -6332,18 +6686,20 @@ CREATE SEQUENCE estado_disponibilidad_id_seq
     CACHE 1;
 
 
+ALTER TABLE estado_disponibilidad_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4207 (class 0 OID 0)
--- Dependencies: 272
--- Name: estado_disponibilidad_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 358
+-- Name: estado_disponibilidad_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER SEQUENCE estado_disponibilidad_id_seq OWNED BY estado_disponibilidad.id;
 
 
 --
--- TOC entry 273 (class 1259 OID 36314)
--- Name: estado_registro_presupuestal; Type: TABLE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 359 (class 1259 OID 40659)
+-- Name: estado_registro_presupuestal; Type: TABLE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE TABLE estado_registro_presupuestal (
@@ -6353,10 +6709,12 @@ CREATE TABLE estado_registro_presupuestal (
 );
 
 
+ALTER TABLE estado_registro_presupuestal OWNER TO postgres;
+
 --
 -- TOC entry 4208 (class 0 OID 0)
--- Dependencies: 273
--- Name: TABLE estado_registro_presupuestal; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 359
+-- Name: TABLE estado_registro_presupuestal; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON TABLE estado_registro_presupuestal IS 'paramétrica estado de registros';
@@ -6364,8 +6722,8 @@ COMMENT ON TABLE estado_registro_presupuestal IS 'paramétrica estado de registr
 
 --
 -- TOC entry 4209 (class 0 OID 0)
--- Dependencies: 273
--- Name: COLUMN estado_registro_presupuestal.nombre; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 359
+-- Name: COLUMN estado_registro_presupuestal.nombre; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN estado_registro_presupuestal.nombre IS 'nombre del estado';
@@ -6373,16 +6731,16 @@ COMMENT ON COLUMN estado_registro_presupuestal.nombre IS 'nombre del estado';
 
 --
 -- TOC entry 4210 (class 0 OID 0)
--- Dependencies: 273
--- Name: COLUMN estado_registro_presupuestal.descripcion; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 359
+-- Name: COLUMN estado_registro_presupuestal.descripcion; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN estado_registro_presupuestal.descripcion IS 'descripción del estado';
 
 
 --
--- TOC entry 274 (class 1259 OID 36317)
--- Name: estado_registro_presupuestal_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 360 (class 1259 OID 40662)
+-- Name: estado_registro_presupuestal_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE SEQUENCE estado_registro_presupuestal_id_seq
@@ -6393,18 +6751,20 @@ CREATE SEQUENCE estado_registro_presupuestal_id_seq
     CACHE 1;
 
 
+ALTER TABLE estado_registro_presupuestal_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4211 (class 0 OID 0)
--- Dependencies: 274
--- Name: estado_registro_presupuestal_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 360
+-- Name: estado_registro_presupuestal_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER SEQUENCE estado_registro_presupuestal_id_seq OWNED BY estado_registro_presupuestal.id;
 
 
 --
--- TOC entry 275 (class 1259 OID 36319)
--- Name: estado_reserva_presupuestal; Type: TABLE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 361 (class 1259 OID 40664)
+-- Name: estado_reserva_presupuestal; Type: TABLE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE TABLE estado_reserva_presupuestal (
@@ -6414,10 +6774,12 @@ CREATE TABLE estado_reserva_presupuestal (
 );
 
 
+ALTER TABLE estado_reserva_presupuestal OWNER TO postgres;
+
 --
 -- TOC entry 4212 (class 0 OID 0)
--- Dependencies: 275
--- Name: TABLE estado_reserva_presupuestal; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 361
+-- Name: TABLE estado_reserva_presupuestal; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON TABLE estado_reserva_presupuestal IS 'estados de las reservas presupuestales';
@@ -6425,8 +6787,8 @@ COMMENT ON TABLE estado_reserva_presupuestal IS 'estados de las reservas presupu
 
 --
 -- TOC entry 4213 (class 0 OID 0)
--- Dependencies: 275
--- Name: COLUMN estado_reserva_presupuestal.id; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 361
+-- Name: COLUMN estado_reserva_presupuestal.id; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN estado_reserva_presupuestal.id IS 'identificador del estado de reserva';
@@ -6434,8 +6796,8 @@ COMMENT ON COLUMN estado_reserva_presupuestal.id IS 'identificador del estado de
 
 --
 -- TOC entry 4214 (class 0 OID 0)
--- Dependencies: 275
--- Name: COLUMN estado_reserva_presupuestal.nombre; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 361
+-- Name: COLUMN estado_reserva_presupuestal.nombre; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN estado_reserva_presupuestal.nombre IS 'nombre del estado';
@@ -6443,16 +6805,16 @@ COMMENT ON COLUMN estado_reserva_presupuestal.nombre IS 'nombre del estado';
 
 --
 -- TOC entry 4215 (class 0 OID 0)
--- Dependencies: 275
--- Name: COLUMN estado_reserva_presupuestal.descripcion; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 361
+-- Name: COLUMN estado_reserva_presupuestal.descripcion; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN estado_reserva_presupuestal.descripcion IS 'descripción del estado';
 
 
 --
--- TOC entry 276 (class 1259 OID 36322)
--- Name: estado_reserva_presupuestal_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 362 (class 1259 OID 40667)
+-- Name: estado_reserva_presupuestal_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE SEQUENCE estado_reserva_presupuestal_id_seq
@@ -6463,18 +6825,20 @@ CREATE SEQUENCE estado_reserva_presupuestal_id_seq
     CACHE 1;
 
 
+ALTER TABLE estado_reserva_presupuestal_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4216 (class 0 OID 0)
--- Dependencies: 276
--- Name: estado_reserva_presupuestal_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 362
+-- Name: estado_reserva_presupuestal_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER SEQUENCE estado_reserva_presupuestal_id_seq OWNED BY estado_reserva_presupuestal.id;
 
 
 --
--- TOC entry 277 (class 1259 OID 36324)
--- Name: fuente_financiacion; Type: TABLE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 363 (class 1259 OID 40669)
+-- Name: fuente_financiacion; Type: TABLE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE TABLE fuente_financiacion (
@@ -6484,10 +6848,12 @@ CREATE TABLE fuente_financiacion (
 );
 
 
+ALTER TABLE fuente_financiacion OWNER TO postgres;
+
 --
 -- TOC entry 4217 (class 0 OID 0)
--- Dependencies: 277
--- Name: COLUMN fuente_financiacion.id; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 363
+-- Name: COLUMN fuente_financiacion.id; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN fuente_financiacion.id IS 'identificador fuente financiación';
@@ -6495,8 +6861,8 @@ COMMENT ON COLUMN fuente_financiacion.id IS 'identificador fuente financiación'
 
 --
 -- TOC entry 4218 (class 0 OID 0)
--- Dependencies: 277
--- Name: COLUMN fuente_financiacion.descripcion; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 363
+-- Name: COLUMN fuente_financiacion.descripcion; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN fuente_financiacion.descripcion IS 'descripción de la fuente de financiación';
@@ -6504,16 +6870,16 @@ COMMENT ON COLUMN fuente_financiacion.descripcion IS 'descripción de la fuente 
 
 --
 -- TOC entry 4219 (class 0 OID 0)
--- Dependencies: 277
--- Name: COLUMN fuente_financiacion.sigla; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 363
+-- Name: COLUMN fuente_financiacion.sigla; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN fuente_financiacion.sigla IS 'sigla de la fuente de financiación';
 
 
 --
--- TOC entry 278 (class 1259 OID 36330)
--- Name: fuente_financiacion_entidad; Type: TABLE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 364 (class 1259 OID 40675)
+-- Name: fuente_financiacion_entidad; Type: TABLE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE TABLE fuente_financiacion_entidad (
@@ -6525,9 +6891,11 @@ CREATE TABLE fuente_financiacion_entidad (
 );
 
 
+ALTER TABLE fuente_financiacion_entidad OWNER TO postgres;
+
 --
--- TOC entry 279 (class 1259 OID 36333)
--- Name: fuente_financiacion_entidad_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 365 (class 1259 OID 40678)
+-- Name: fuente_financiacion_entidad_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE SEQUENCE fuente_financiacion_entidad_id_seq
@@ -6538,18 +6906,20 @@ CREATE SEQUENCE fuente_financiacion_entidad_id_seq
     CACHE 1;
 
 
+ALTER TABLE fuente_financiacion_entidad_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4220 (class 0 OID 0)
--- Dependencies: 279
--- Name: fuente_financiacion_entidad_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 365
+-- Name: fuente_financiacion_entidad_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER SEQUENCE fuente_financiacion_entidad_id_seq OWNED BY fuente_financiacion_entidad.id;
 
 
 --
--- TOC entry 280 (class 1259 OID 36335)
--- Name: fuente_financiacion_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 366 (class 1259 OID 40680)
+-- Name: fuente_financiacion_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE SEQUENCE fuente_financiacion_id_seq
@@ -6560,18 +6930,20 @@ CREATE SEQUENCE fuente_financiacion_id_seq
     CACHE 1;
 
 
+ALTER TABLE fuente_financiacion_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4221 (class 0 OID 0)
--- Dependencies: 280
--- Name: fuente_financiacion_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 366
+-- Name: fuente_financiacion_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER SEQUENCE fuente_financiacion_id_seq OWNED BY fuente_financiacion.id;
 
 
 --
--- TOC entry 281 (class 1259 OID 36337)
--- Name: ingreso; Type: TABLE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 367 (class 1259 OID 40682)
+-- Name: ingreso; Type: TABLE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE TABLE ingreso (
@@ -6585,9 +6957,11 @@ CREATE TABLE ingreso (
 );
 
 
+ALTER TABLE ingreso OWNER TO postgres;
+
 --
--- TOC entry 282 (class 1259 OID 36340)
--- Name: ingreso_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 368 (class 1259 OID 40685)
+-- Name: ingreso_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE SEQUENCE ingreso_id_seq
@@ -6598,18 +6972,20 @@ CREATE SEQUENCE ingreso_id_seq
     CACHE 1;
 
 
+ALTER TABLE ingreso_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4222 (class 0 OID 0)
--- Dependencies: 282
--- Name: ingreso_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 368
+-- Name: ingreso_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER SEQUENCE ingreso_id_seq OWNED BY ingreso.id;
 
 
 --
--- TOC entry 283 (class 1259 OID 36342)
--- Name: modificacion_presupuestal; Type: TABLE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 369 (class 1259 OID 40687)
+-- Name: modificacion_presupuestal; Type: TABLE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE TABLE modificacion_presupuestal (
@@ -6625,10 +7001,12 @@ CREATE TABLE modificacion_presupuestal (
 );
 
 
+ALTER TABLE modificacion_presupuestal OWNER TO postgres;
+
 --
 -- TOC entry 4223 (class 0 OID 0)
--- Dependencies: 283
--- Name: COLUMN modificacion_presupuestal.id; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 369
+-- Name: COLUMN modificacion_presupuestal.id; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN modificacion_presupuestal.id IS 'identificador de la modificación';
@@ -6636,8 +7014,8 @@ COMMENT ON COLUMN modificacion_presupuestal.id IS 'identificador de la modificac
 
 --
 -- TOC entry 4224 (class 0 OID 0)
--- Dependencies: 283
--- Name: COLUMN modificacion_presupuestal.apropiacion; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 369
+-- Name: COLUMN modificacion_presupuestal.apropiacion; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN modificacion_presupuestal.apropiacion IS 'apropiación asociada';
@@ -6645,8 +7023,8 @@ COMMENT ON COLUMN modificacion_presupuestal.apropiacion IS 'apropiación asociad
 
 --
 -- TOC entry 4225 (class 0 OID 0)
--- Dependencies: 283
--- Name: COLUMN modificacion_presupuestal.tipo_documento; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 369
+-- Name: COLUMN modificacion_presupuestal.tipo_documento; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN modificacion_presupuestal.tipo_documento IS 'tipo de documento';
@@ -6654,8 +7032,8 @@ COMMENT ON COLUMN modificacion_presupuestal.tipo_documento IS 'tipo de documento
 
 --
 -- TOC entry 4226 (class 0 OID 0)
--- Dependencies: 283
--- Name: COLUMN modificacion_presupuestal.tipo_movimiento; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 369
+-- Name: COLUMN modificacion_presupuestal.tipo_movimiento; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN modificacion_presupuestal.tipo_movimiento IS 'tipo de movimiento';
@@ -6663,8 +7041,8 @@ COMMENT ON COLUMN modificacion_presupuestal.tipo_movimiento IS 'tipo de movimien
 
 --
 -- TOC entry 4227 (class 0 OID 0)
--- Dependencies: 283
--- Name: COLUMN modificacion_presupuestal.numero_disponibilidad; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 369
+-- Name: COLUMN modificacion_presupuestal.numero_disponibilidad; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN modificacion_presupuestal.numero_disponibilidad IS 'número de la disponibilidad que modifica la apropiación';
@@ -6672,8 +7050,8 @@ COMMENT ON COLUMN modificacion_presupuestal.numero_disponibilidad IS 'número de
 
 --
 -- TOC entry 4228 (class 0 OID 0)
--- Dependencies: 283
--- Name: COLUMN modificacion_presupuestal.fecha_registro; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 369
+-- Name: COLUMN modificacion_presupuestal.fecha_registro; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN modificacion_presupuestal.fecha_registro IS 'fecha del registro';
@@ -6681,8 +7059,8 @@ COMMENT ON COLUMN modificacion_presupuestal.fecha_registro IS 'fecha del registr
 
 --
 -- TOC entry 4229 (class 0 OID 0)
--- Dependencies: 283
--- Name: COLUMN modificacion_presupuestal.valor_credito; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 369
+-- Name: COLUMN modificacion_presupuestal.valor_credito; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN modificacion_presupuestal.valor_credito IS 'valor de credito';
@@ -6690,16 +7068,16 @@ COMMENT ON COLUMN modificacion_presupuestal.valor_credito IS 'valor de credito';
 
 --
 -- TOC entry 4230 (class 0 OID 0)
--- Dependencies: 283
--- Name: COLUMN modificacion_presupuestal.valor_contra_credito; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 369
+-- Name: COLUMN modificacion_presupuestal.valor_contra_credito; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN modificacion_presupuestal.valor_contra_credito IS 'valor contra credito';
 
 
 --
--- TOC entry 284 (class 1259 OID 36345)
--- Name: modificacion_presupuestal_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 370 (class 1259 OID 40690)
+-- Name: modificacion_presupuestal_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE SEQUENCE modificacion_presupuestal_id_seq
@@ -6710,18 +7088,20 @@ CREATE SEQUENCE modificacion_presupuestal_id_seq
     CACHE 1;
 
 
+ALTER TABLE modificacion_presupuestal_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4231 (class 0 OID 0)
--- Dependencies: 284
--- Name: modificacion_presupuestal_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 370
+-- Name: modificacion_presupuestal_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER SEQUENCE modificacion_presupuestal_id_seq OWNED BY modificacion_presupuestal.id;
 
 
 --
--- TOC entry 285 (class 1259 OID 36347)
--- Name: registo_presupuestal; Type: TABLE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 371 (class 1259 OID 40692)
+-- Name: registo_presupuestal; Type: TABLE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE TABLE registo_presupuestal (
@@ -6739,10 +7119,12 @@ CREATE TABLE registo_presupuestal (
 );
 
 
+ALTER TABLE registo_presupuestal OWNER TO postgres;
+
 --
 -- TOC entry 4232 (class 0 OID 0)
--- Dependencies: 285
--- Name: COLUMN registo_presupuestal.id; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 371
+-- Name: COLUMN registo_presupuestal.id; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN registo_presupuestal.id IS 'identificador del registro';
@@ -6750,8 +7132,8 @@ COMMENT ON COLUMN registo_presupuestal.id IS 'identificador del registro';
 
 --
 -- TOC entry 4233 (class 0 OID 0)
--- Dependencies: 285
--- Name: COLUMN registo_presupuestal.unidad_ejecutora; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 371
+-- Name: COLUMN registo_presupuestal.unidad_ejecutora; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN registo_presupuestal.unidad_ejecutora IS 'unidad ejecutora';
@@ -6759,8 +7141,8 @@ COMMENT ON COLUMN registo_presupuestal.unidad_ejecutora IS 'unidad ejecutora';
 
 --
 -- TOC entry 4234 (class 0 OID 0)
--- Dependencies: 285
--- Name: COLUMN registo_presupuestal.vigencia; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 371
+-- Name: COLUMN registo_presupuestal.vigencia; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN registo_presupuestal.vigencia IS 'vigencia del registro presupuestal';
@@ -6768,8 +7150,8 @@ COMMENT ON COLUMN registo_presupuestal.vigencia IS 'vigencia del registro presup
 
 --
 -- TOC entry 4235 (class 0 OID 0)
--- Dependencies: 285
--- Name: COLUMN registo_presupuestal.fecha_movimiento; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 371
+-- Name: COLUMN registo_presupuestal.fecha_movimiento; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN registo_presupuestal.fecha_movimiento IS 'fecha del movimiento';
@@ -6777,8 +7159,8 @@ COMMENT ON COLUMN registo_presupuestal.fecha_movimiento IS 'fecha del movimiento
 
 --
 -- TOC entry 4236 (class 0 OID 0)
--- Dependencies: 285
--- Name: COLUMN registo_presupuestal.responsable; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 371
+-- Name: COLUMN registo_presupuestal.responsable; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN registo_presupuestal.responsable IS 'crear tabla de usuarios para asignar la responsabilidad';
@@ -6786,8 +7168,8 @@ COMMENT ON COLUMN registo_presupuestal.responsable IS 'crear tabla de usuarios p
 
 --
 -- TOC entry 4237 (class 0 OID 0)
--- Dependencies: 285
--- Name: COLUMN registo_presupuestal.estado; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 371
+-- Name: COLUMN registo_presupuestal.estado; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN registo_presupuestal.estado IS 'estado del registros';
@@ -6795,8 +7177,8 @@ COMMENT ON COLUMN registo_presupuestal.estado IS 'estado del registros';
 
 --
 -- TOC entry 4238 (class 0 OID 0)
--- Dependencies: 285
--- Name: COLUMN registo_presupuestal.rubro; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 371
+-- Name: COLUMN registo_presupuestal.rubro; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN registo_presupuestal.rubro IS 'rubro asociado';
@@ -6804,8 +7186,8 @@ COMMENT ON COLUMN registo_presupuestal.rubro IS 'rubro asociado';
 
 --
 -- TOC entry 4239 (class 0 OID 0)
--- Dependencies: 285
--- Name: COLUMN registo_presupuestal.valor; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 371
+-- Name: COLUMN registo_presupuestal.valor; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN registo_presupuestal.valor IS 'valor del registro presupuestal';
@@ -6813,16 +7195,16 @@ COMMENT ON COLUMN registo_presupuestal.valor IS 'valor del registro presupuestal
 
 --
 -- TOC entry 4240 (class 0 OID 0)
--- Dependencies: 285
--- Name: COLUMN registo_presupuestal.disponibilidad; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 371
+-- Name: COLUMN registo_presupuestal.disponibilidad; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN registo_presupuestal.disponibilidad IS 'identificador de la disponibilidad asociada';
 
 
 --
--- TOC entry 286 (class 1259 OID 36350)
--- Name: registo_presupuestal_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 372 (class 1259 OID 40695)
+-- Name: registo_presupuestal_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE SEQUENCE registo_presupuestal_id_seq
@@ -6833,18 +7215,20 @@ CREATE SEQUENCE registo_presupuestal_id_seq
     CACHE 1;
 
 
+ALTER TABLE registo_presupuestal_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4241 (class 0 OID 0)
--- Dependencies: 286
--- Name: registo_presupuestal_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 372
+-- Name: registo_presupuestal_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER SEQUENCE registo_presupuestal_id_seq OWNED BY registo_presupuestal.id;
 
 
 --
--- TOC entry 287 (class 1259 OID 36352)
--- Name: registro_presupuestal_disponibilidad; Type: TABLE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 373 (class 1259 OID 40697)
+-- Name: registro_presupuestal_disponibilidad; Type: TABLE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE TABLE registro_presupuestal_disponibilidad (
@@ -6855,10 +7239,12 @@ CREATE TABLE registro_presupuestal_disponibilidad (
 );
 
 
+ALTER TABLE registro_presupuestal_disponibilidad OWNER TO postgres;
+
 --
 -- TOC entry 4242 (class 0 OID 0)
--- Dependencies: 287
--- Name: TABLE registro_presupuestal_disponibilidad; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 373
+-- Name: TABLE registro_presupuestal_disponibilidad; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON TABLE registro_presupuestal_disponibilidad IS 'tabla de disponibilidades desagregadas por rubro';
@@ -6866,8 +7252,8 @@ COMMENT ON TABLE registro_presupuestal_disponibilidad IS 'tabla de disponibilida
 
 --
 -- TOC entry 4243 (class 0 OID 0)
--- Dependencies: 287
--- Name: COLUMN registro_presupuestal_disponibilidad.id; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 373
+-- Name: COLUMN registro_presupuestal_disponibilidad.id; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN registro_presupuestal_disponibilidad.id IS 'identificador de la desagregación de RP';
@@ -6875,8 +7261,8 @@ COMMENT ON COLUMN registro_presupuestal_disponibilidad.id IS 'identificador de l
 
 --
 -- TOC entry 4244 (class 0 OID 0)
--- Dependencies: 287
--- Name: COLUMN registro_presupuestal_disponibilidad.disponibilidad; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 373
+-- Name: COLUMN registro_presupuestal_disponibilidad.disponibilidad; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN registro_presupuestal_disponibilidad.disponibilidad IS 'identificador de la disponibilidad';
@@ -6884,8 +7270,8 @@ COMMENT ON COLUMN registro_presupuestal_disponibilidad.disponibilidad IS 'identi
 
 --
 -- TOC entry 4245 (class 0 OID 0)
--- Dependencies: 287
--- Name: COLUMN registro_presupuestal_disponibilidad.rubro; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 373
+-- Name: COLUMN registro_presupuestal_disponibilidad.rubro; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN registro_presupuestal_disponibilidad.rubro IS 'identificador del rubro';
@@ -6893,16 +7279,16 @@ COMMENT ON COLUMN registro_presupuestal_disponibilidad.rubro IS 'identificador d
 
 --
 -- TOC entry 4246 (class 0 OID 0)
--- Dependencies: 287
--- Name: COLUMN registro_presupuestal_disponibilidad.valor; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 373
+-- Name: COLUMN registro_presupuestal_disponibilidad.valor; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN registro_presupuestal_disponibilidad.valor IS 'valor de la desagregación';
 
 
 --
--- TOC entry 288 (class 1259 OID 36355)
--- Name: registro_presupuestal_disponibilidad_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 374 (class 1259 OID 40700)
+-- Name: registro_presupuestal_disponibilidad_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE SEQUENCE registro_presupuestal_disponibilidad_id_seq
@@ -6913,18 +7299,20 @@ CREATE SEQUENCE registro_presupuestal_disponibilidad_id_seq
     CACHE 1;
 
 
+ALTER TABLE registro_presupuestal_disponibilidad_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4247 (class 0 OID 0)
--- Dependencies: 288
--- Name: registro_presupuestal_disponibilidad_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 374
+-- Name: registro_presupuestal_disponibilidad_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER SEQUENCE registro_presupuestal_disponibilidad_id_seq OWNED BY registro_presupuestal_disponibilidad.id;
 
 
 --
--- TOC entry 289 (class 1259 OID 36357)
--- Name: reserva_presupuestal; Type: TABLE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 375 (class 1259 OID 40702)
+-- Name: reserva_presupuestal; Type: TABLE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE TABLE reserva_presupuestal (
@@ -6939,10 +7327,12 @@ CREATE TABLE reserva_presupuestal (
 );
 
 
+ALTER TABLE reserva_presupuestal OWNER TO postgres;
+
 --
 -- TOC entry 4248 (class 0 OID 0)
--- Dependencies: 289
--- Name: TABLE reserva_presupuestal; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 375
+-- Name: TABLE reserva_presupuestal; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON TABLE reserva_presupuestal IS 'reservas presupuestales';
@@ -6950,8 +7340,8 @@ COMMENT ON TABLE reserva_presupuestal IS 'reservas presupuestales';
 
 --
 -- TOC entry 4249 (class 0 OID 0)
--- Dependencies: 289
--- Name: COLUMN reserva_presupuestal.id; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 375
+-- Name: COLUMN reserva_presupuestal.id; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN reserva_presupuestal.id IS 'identificador reserva';
@@ -6959,8 +7349,8 @@ COMMENT ON COLUMN reserva_presupuestal.id IS 'identificador reserva';
 
 --
 -- TOC entry 4250 (class 0 OID 0)
--- Dependencies: 289
--- Name: COLUMN reserva_presupuestal.unidad_ejecutora; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 375
+-- Name: COLUMN reserva_presupuestal.unidad_ejecutora; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN reserva_presupuestal.unidad_ejecutora IS 'unidad ejecutora';
@@ -6968,8 +7358,8 @@ COMMENT ON COLUMN reserva_presupuestal.unidad_ejecutora IS 'unidad ejecutora';
 
 --
 -- TOC entry 4251 (class 0 OID 0)
--- Dependencies: 289
--- Name: COLUMN reserva_presupuestal.fecha_movimiento; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 375
+-- Name: COLUMN reserva_presupuestal.fecha_movimiento; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN reserva_presupuestal.fecha_movimiento IS 'fecha del movimiento';
@@ -6977,8 +7367,8 @@ COMMENT ON COLUMN reserva_presupuestal.fecha_movimiento IS 'fecha del movimiento
 
 --
 -- TOC entry 4252 (class 0 OID 0)
--- Dependencies: 289
--- Name: COLUMN reserva_presupuestal.responsable; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 375
+-- Name: COLUMN reserva_presupuestal.responsable; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN reserva_presupuestal.responsable IS 'crear tabla de usuarios para asignar la responsabilidad';
@@ -6986,8 +7376,8 @@ COMMENT ON COLUMN reserva_presupuestal.responsable IS 'crear tabla de usuarios p
 
 --
 -- TOC entry 4253 (class 0 OID 0)
--- Dependencies: 289
--- Name: COLUMN reserva_presupuestal.estado; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 375
+-- Name: COLUMN reserva_presupuestal.estado; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN reserva_presupuestal.estado IS 'crear tabla de estado_reserva';
@@ -6995,8 +7385,8 @@ COMMENT ON COLUMN reserva_presupuestal.estado IS 'crear tabla de estado_reserva'
 
 --
 -- TOC entry 4254 (class 0 OID 0)
--- Dependencies: 289
--- Name: COLUMN reserva_presupuestal.rubro; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 375
+-- Name: COLUMN reserva_presupuestal.rubro; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN reserva_presupuestal.rubro IS 'identificador del rubro asociado a la reserva';
@@ -7004,16 +7394,16 @@ COMMENT ON COLUMN reserva_presupuestal.rubro IS 'identificador del rubro asociad
 
 --
 -- TOC entry 4255 (class 0 OID 0)
--- Dependencies: 289
--- Name: COLUMN reserva_presupuestal.valor; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 375
+-- Name: COLUMN reserva_presupuestal.valor; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN reserva_presupuestal.valor IS 'valor de la reserva';
 
 
 --
--- TOC entry 290 (class 1259 OID 36360)
--- Name: reserva_presupuestal_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 376 (class 1259 OID 40705)
+-- Name: reserva_presupuestal_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE SEQUENCE reserva_presupuestal_id_seq
@@ -7024,18 +7414,20 @@ CREATE SEQUENCE reserva_presupuestal_id_seq
     CACHE 1;
 
 
+ALTER TABLE reserva_presupuestal_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4256 (class 0 OID 0)
--- Dependencies: 290
--- Name: reserva_presupuestal_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 376
+-- Name: reserva_presupuestal_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER SEQUENCE reserva_presupuestal_id_seq OWNED BY reserva_presupuestal.id;
 
 
 --
--- TOC entry 291 (class 1259 OID 36362)
--- Name: rubro; Type: TABLE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 377 (class 1259 OID 40707)
+-- Name: rubro; Type: TABLE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE TABLE rubro (
@@ -7051,10 +7443,12 @@ CREATE TABLE rubro (
 );
 
 
+ALTER TABLE rubro OWNER TO postgres;
+
 --
 -- TOC entry 4257 (class 0 OID 0)
--- Dependencies: 291
--- Name: COLUMN rubro.id; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 377
+-- Name: COLUMN rubro.id; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN rubro.id IS 'identificador del rubro';
@@ -7062,8 +7456,8 @@ COMMENT ON COLUMN rubro.id IS 'identificador del rubro';
 
 --
 -- TOC entry 4258 (class 0 OID 0)
--- Dependencies: 291
--- Name: COLUMN rubro.entidad; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 377
+-- Name: COLUMN rubro.entidad; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN rubro.entidad IS 'entidad a la que pertenece el rubro';
@@ -7071,8 +7465,8 @@ COMMENT ON COLUMN rubro.entidad IS 'entidad a la que pertenece el rubro';
 
 --
 -- TOC entry 4259 (class 0 OID 0)
--- Dependencies: 291
--- Name: COLUMN rubro.codigo; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 377
+-- Name: COLUMN rubro.codigo; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN rubro.codigo IS 'codigo interno';
@@ -7080,8 +7474,8 @@ COMMENT ON COLUMN rubro.codigo IS 'codigo interno';
 
 --
 -- TOC entry 4260 (class 0 OID 0)
--- Dependencies: 291
--- Name: COLUMN rubro.vigencia; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 377
+-- Name: COLUMN rubro.vigencia; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN rubro.vigencia IS 'vigencia del rubro';
@@ -7089,8 +7483,8 @@ COMMENT ON COLUMN rubro.vigencia IS 'vigencia del rubro';
 
 --
 -- TOC entry 4261 (class 0 OID 0)
--- Dependencies: 291
--- Name: COLUMN rubro.descripcion; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 377
+-- Name: COLUMN rubro.descripcion; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN rubro.descripcion IS 'descripción del rubro';
@@ -7098,8 +7492,8 @@ COMMENT ON COLUMN rubro.descripcion IS 'descripción del rubro';
 
 --
 -- TOC entry 4262 (class 0 OID 0)
--- Dependencies: 291
--- Name: COLUMN rubro.tipo_plan; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 377
+-- Name: COLUMN rubro.tipo_plan; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN rubro.tipo_plan IS 'tipo plan de cuentas';
@@ -7107,8 +7501,8 @@ COMMENT ON COLUMN rubro.tipo_plan IS 'tipo plan de cuentas';
 
 --
 -- TOC entry 4263 (class 0 OID 0)
--- Dependencies: 291
--- Name: COLUMN rubro.administracion; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 377
+-- Name: COLUMN rubro.administracion; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN rubro.administracion IS 'Nombre De La Administracion';
@@ -7116,16 +7510,16 @@ COMMENT ON COLUMN rubro.administracion IS 'Nombre De La Administracion';
 
 --
 -- TOC entry 4264 (class 0 OID 0)
--- Dependencies: 291
--- Name: COLUMN rubro.estado; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 377
+-- Name: COLUMN rubro.estado; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN rubro.estado IS 'parámetrica de estados del rubro';
 
 
 --
--- TOC entry 292 (class 1259 OID 36369)
--- Name: rubro_homologado; Type: TABLE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 378 (class 1259 OID 40714)
+-- Name: rubro_homologado; Type: TABLE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE TABLE rubro_homologado (
@@ -7138,10 +7532,12 @@ CREATE TABLE rubro_homologado (
 );
 
 
+ALTER TABLE rubro_homologado OWNER TO postgres;
+
 --
 -- TOC entry 4265 (class 0 OID 0)
--- Dependencies: 292
--- Name: COLUMN rubro_homologado.id; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 378
+-- Name: COLUMN rubro_homologado.id; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN rubro_homologado.id IS 'identificador del rubro homologado';
@@ -7149,8 +7545,8 @@ COMMENT ON COLUMN rubro_homologado.id IS 'identificador del rubro homologado';
 
 --
 -- TOC entry 4266 (class 0 OID 0)
--- Dependencies: 292
--- Name: COLUMN rubro_homologado.rubro; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 378
+-- Name: COLUMN rubro_homologado.rubro; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN rubro_homologado.rubro IS 'rubro a homologar';
@@ -7158,8 +7554,8 @@ COMMENT ON COLUMN rubro_homologado.rubro IS 'rubro a homologar';
 
 --
 -- TOC entry 4267 (class 0 OID 0)
--- Dependencies: 292
--- Name: COLUMN rubro_homologado.codigo_homologado; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 378
+-- Name: COLUMN rubro_homologado.codigo_homologado; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN rubro_homologado.codigo_homologado IS 'codigo de homologación';
@@ -7167,8 +7563,8 @@ COMMENT ON COLUMN rubro_homologado.codigo_homologado IS 'codigo de homologación
 
 --
 -- TOC entry 4268 (class 0 OID 0)
--- Dependencies: 292
--- Name: COLUMN rubro_homologado.nombre_homologado; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 378
+-- Name: COLUMN rubro_homologado.nombre_homologado; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN rubro_homologado.nombre_homologado IS 'nombre del codigo homologado';
@@ -7176,8 +7572,8 @@ COMMENT ON COLUMN rubro_homologado.nombre_homologado IS 'nombre del codigo homol
 
 --
 -- TOC entry 4269 (class 0 OID 0)
--- Dependencies: 292
--- Name: COLUMN rubro_homologado.entidad_homologado; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 378
+-- Name: COLUMN rubro_homologado.entidad_homologado; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN rubro_homologado.entidad_homologado IS 'identificador de la entidad de homologación';
@@ -7185,16 +7581,16 @@ COMMENT ON COLUMN rubro_homologado.entidad_homologado IS 'identificador de la en
 
 --
 -- TOC entry 4270 (class 0 OID 0)
--- Dependencies: 292
--- Name: COLUMN rubro_homologado.vigencia; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 378
+-- Name: COLUMN rubro_homologado.vigencia; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN rubro_homologado.vigencia IS 'vigencia de la homologación';
 
 
 --
--- TOC entry 293 (class 1259 OID 36372)
--- Name: rubro_homologado_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 379 (class 1259 OID 40717)
+-- Name: rubro_homologado_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE SEQUENCE rubro_homologado_id_seq
@@ -7205,18 +7601,20 @@ CREATE SEQUENCE rubro_homologado_id_seq
     CACHE 1;
 
 
+ALTER TABLE rubro_homologado_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4271 (class 0 OID 0)
--- Dependencies: 293
--- Name: rubro_homologado_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 379
+-- Name: rubro_homologado_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER SEQUENCE rubro_homologado_id_seq OWNED BY rubro_homologado.id;
 
 
 --
--- TOC entry 294 (class 1259 OID 36374)
--- Name: rubro_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 380 (class 1259 OID 40719)
+-- Name: rubro_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE SEQUENCE rubro_id_seq
@@ -7227,18 +7625,20 @@ CREATE SEQUENCE rubro_id_seq
     CACHE 1;
 
 
+ALTER TABLE rubro_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4272 (class 0 OID 0)
--- Dependencies: 294
--- Name: rubro_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 380
+-- Name: rubro_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER SEQUENCE rubro_id_seq OWNED BY rubro.id;
 
 
 --
--- TOC entry 295 (class 1259 OID 36376)
--- Name: rubro_rubro; Type: TABLE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 381 (class 1259 OID 40721)
+-- Name: rubro_rubro; Type: TABLE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE TABLE rubro_rubro (
@@ -7248,18 +7648,20 @@ CREATE TABLE rubro_rubro (
 );
 
 
+ALTER TABLE rubro_rubro OWNER TO postgres;
+
 --
 -- TOC entry 4273 (class 0 OID 0)
--- Dependencies: 295
--- Name: TABLE rubro_rubro; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 381
+-- Name: TABLE rubro_rubro; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON TABLE rubro_rubro IS 'Tabla para normalizar la relacion reflexiva entre rubros';
 
 
 --
--- TOC entry 296 (class 1259 OID 36379)
--- Name: rubro_rubro_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 382 (class 1259 OID 40724)
+-- Name: rubro_rubro_id_seq; Type: SEQUENCE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE SEQUENCE rubro_rubro_id_seq
@@ -7270,18 +7672,20 @@ CREATE SEQUENCE rubro_rubro_id_seq
     CACHE 1;
 
 
+ALTER TABLE rubro_rubro_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4274 (class 0 OID 0)
--- Dependencies: 296
--- Name: rubro_rubro_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 382
+-- Name: rubro_rubro_id_seq; Type: SEQUENCE OWNED BY; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER SEQUENCE rubro_rubro_id_seq OWNED BY rubro_rubro.id;
 
 
 --
--- TOC entry 297 (class 1259 OID 36381)
--- Name: unidad_ejecutora; Type: TABLE; Schema: nix_presupuesto; Owner: -
+-- TOC entry 383 (class 1259 OID 40726)
+-- Name: unidad_ejecutora; Type: TABLE; Schema: nix_presupuesto; Owner: postgres
 --
 
 CREATE TABLE unidad_ejecutora (
@@ -7291,10 +7695,12 @@ CREATE TABLE unidad_ejecutora (
 );
 
 
+ALTER TABLE unidad_ejecutora OWNER TO postgres;
+
 --
 -- TOC entry 4275 (class 0 OID 0)
--- Dependencies: 297
--- Name: TABLE unidad_ejecutora; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 383
+-- Name: TABLE unidad_ejecutora; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON TABLE unidad_ejecutora IS 'tabla que almacena las unidades ejecutoras involucradas en el sistema';
@@ -7302,8 +7708,8 @@ COMMENT ON TABLE unidad_ejecutora IS 'tabla que almacena las unidades ejecutoras
 
 --
 -- TOC entry 4276 (class 0 OID 0)
--- Dependencies: 297
--- Name: COLUMN unidad_ejecutora.id; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 383
+-- Name: COLUMN unidad_ejecutora.id; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN unidad_ejecutora.id IS 'identificador unico de la unidad ejecutora';
@@ -7311,8 +7717,8 @@ COMMENT ON COLUMN unidad_ejecutora.id IS 'identificador unico de la unidad ejecu
 
 --
 -- TOC entry 4277 (class 0 OID 0)
--- Dependencies: 297
--- Name: COLUMN unidad_ejecutora.nombre; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 383
+-- Name: COLUMN unidad_ejecutora.nombre; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN unidad_ejecutora.nombre IS 'nombre de la unidad ejecutora';
@@ -7320,8 +7726,8 @@ COMMENT ON COLUMN unidad_ejecutora.nombre IS 'nombre de la unidad ejecutora';
 
 --
 -- TOC entry 4278 (class 0 OID 0)
--- Dependencies: 297
--- Name: COLUMN unidad_ejecutora.descripcion; Type: COMMENT; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 383
+-- Name: COLUMN unidad_ejecutora.descripcion; Type: COMMENT; Schema: nix_presupuesto; Owner: postgres
 --
 
 COMMENT ON COLUMN unidad_ejecutora.descripcion IS 'descripcion de la unidad ejecutora ';
@@ -7330,8 +7736,8 @@ COMMENT ON COLUMN unidad_ejecutora.descripcion IS 'descripcion de la unidad ejec
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 298 (class 1259 OID 36387)
--- Name: schema_version; Type: TABLE; Schema: public; Owner: -
+-- TOC entry 384 (class 1259 OID 40732)
+-- Name: schema_version; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE schema_version (
@@ -7348,11 +7754,13 @@ CREATE TABLE schema_version (
 );
 
 
+ALTER TABLE schema_version OWNER TO postgres;
+
 SET search_path = ruler, pg_catalog;
 
 --
--- TOC entry 299 (class 1259 OID 36394)
--- Name: dominio; Type: TABLE; Schema: ruler; Owner: -
+-- TOC entry 385 (class 1259 OID 40739)
+-- Name: dominio; Type: TABLE; Schema: ruler; Owner: postgres
 --
 
 CREATE TABLE dominio (
@@ -7362,10 +7770,12 @@ CREATE TABLE dominio (
 );
 
 
+ALTER TABLE dominio OWNER TO postgres;
+
 --
 -- TOC entry 4279 (class 0 OID 0)
--- Dependencies: 299
--- Name: COLUMN dominio.id; Type: COMMENT; Schema: ruler; Owner: -
+-- Dependencies: 385
+-- Name: COLUMN dominio.id; Type: COMMENT; Schema: ruler; Owner: postgres
 --
 
 COMMENT ON COLUMN dominio.id IS 'Identificador del dominio';
@@ -7373,8 +7783,8 @@ COMMENT ON COLUMN dominio.id IS 'Identificador del dominio';
 
 --
 -- TOC entry 4280 (class 0 OID 0)
--- Dependencies: 299
--- Name: COLUMN dominio.nombre; Type: COMMENT; Schema: ruler; Owner: -
+-- Dependencies: 385
+-- Name: COLUMN dominio.nombre; Type: COMMENT; Schema: ruler; Owner: postgres
 --
 
 COMMENT ON COLUMN dominio.nombre IS 'Nombre del dominio';
@@ -7382,16 +7792,16 @@ COMMENT ON COLUMN dominio.nombre IS 'Nombre del dominio';
 
 --
 -- TOC entry 4281 (class 0 OID 0)
--- Dependencies: 299
--- Name: COLUMN dominio.descripcion; Type: COMMENT; Schema: ruler; Owner: -
+-- Dependencies: 385
+-- Name: COLUMN dominio.descripcion; Type: COMMENT; Schema: ruler; Owner: postgres
 --
 
 COMMENT ON COLUMN dominio.descripcion IS 'Descripcion del dominio';
 
 
 --
--- TOC entry 300 (class 1259 OID 36397)
--- Name: dominio_id_seq; Type: SEQUENCE; Schema: ruler; Owner: -
+-- TOC entry 386 (class 1259 OID 40742)
+-- Name: dominio_id_seq; Type: SEQUENCE; Schema: ruler; Owner: postgres
 --
 
 CREATE SEQUENCE dominio_id_seq
@@ -7402,18 +7812,20 @@ CREATE SEQUENCE dominio_id_seq
     CACHE 1;
 
 
+ALTER TABLE dominio_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4282 (class 0 OID 0)
--- Dependencies: 300
--- Name: dominio_id_seq; Type: SEQUENCE OWNED BY; Schema: ruler; Owner: -
+-- Dependencies: 386
+-- Name: dominio_id_seq; Type: SEQUENCE OWNED BY; Schema: ruler; Owner: postgres
 --
 
 ALTER SEQUENCE dominio_id_seq OWNED BY dominio.id;
 
 
 --
--- TOC entry 301 (class 1259 OID 36399)
--- Name: predicado; Type: TABLE; Schema: ruler; Owner: -
+-- TOC entry 387 (class 1259 OID 40744)
+-- Name: predicado; Type: TABLE; Schema: ruler; Owner: postgres
 --
 
 CREATE TABLE predicado (
@@ -7425,10 +7837,12 @@ CREATE TABLE predicado (
 );
 
 
+ALTER TABLE predicado OWNER TO postgres;
+
 --
 -- TOC entry 4283 (class 0 OID 0)
--- Dependencies: 301
--- Name: COLUMN predicado.id; Type: COMMENT; Schema: ruler; Owner: -
+-- Dependencies: 387
+-- Name: COLUMN predicado.id; Type: COMMENT; Schema: ruler; Owner: postgres
 --
 
 COMMENT ON COLUMN predicado.id IS 'Identificador del predicado';
@@ -7436,8 +7850,8 @@ COMMENT ON COLUMN predicado.id IS 'Identificador del predicado';
 
 --
 -- TOC entry 4284 (class 0 OID 0)
--- Dependencies: 301
--- Name: COLUMN predicado.dominio; Type: COMMENT; Schema: ruler; Owner: -
+-- Dependencies: 387
+-- Name: COLUMN predicado.dominio; Type: COMMENT; Schema: ruler; Owner: postgres
 --
 
 COMMENT ON COLUMN predicado.dominio IS 'Identificador del dominio';
@@ -7445,8 +7859,8 @@ COMMENT ON COLUMN predicado.dominio IS 'Identificador del dominio';
 
 --
 -- TOC entry 4285 (class 0 OID 0)
--- Dependencies: 301
--- Name: COLUMN predicado.nombre; Type: COMMENT; Schema: ruler; Owner: -
+-- Dependencies: 387
+-- Name: COLUMN predicado.nombre; Type: COMMENT; Schema: ruler; Owner: postgres
 --
 
 COMMENT ON COLUMN predicado.nombre IS 'Texto del predicado';
@@ -7454,8 +7868,8 @@ COMMENT ON COLUMN predicado.nombre IS 'Texto del predicado';
 
 --
 -- TOC entry 4286 (class 0 OID 0)
--- Dependencies: 301
--- Name: COLUMN predicado.descripcion; Type: COMMENT; Schema: ruler; Owner: -
+-- Dependencies: 387
+-- Name: COLUMN predicado.descripcion; Type: COMMENT; Schema: ruler; Owner: postgres
 --
 
 COMMENT ON COLUMN predicado.descripcion IS 'Descripcion del predicado';
@@ -7463,16 +7877,16 @@ COMMENT ON COLUMN predicado.descripcion IS 'Descripcion del predicado';
 
 --
 -- TOC entry 4287 (class 0 OID 0)
--- Dependencies: 301
--- Name: COLUMN predicado.tipo_predicado; Type: COMMENT; Schema: ruler; Owner: -
+-- Dependencies: 387
+-- Name: COLUMN predicado.tipo_predicado; Type: COMMENT; Schema: ruler; Owner: postgres
 --
 
 COMMENT ON COLUMN predicado.tipo_predicado IS 'Define si es un hecho o una regla';
 
 
 --
--- TOC entry 302 (class 1259 OID 36402)
--- Name: predicado_id_seq; Type: SEQUENCE; Schema: ruler; Owner: -
+-- TOC entry 388 (class 1259 OID 40747)
+-- Name: predicado_id_seq; Type: SEQUENCE; Schema: ruler; Owner: postgres
 --
 
 CREATE SEQUENCE predicado_id_seq
@@ -7483,18 +7897,20 @@ CREATE SEQUENCE predicado_id_seq
     CACHE 1;
 
 
+ALTER TABLE predicado_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4288 (class 0 OID 0)
--- Dependencies: 302
--- Name: predicado_id_seq; Type: SEQUENCE OWNED BY; Schema: ruler; Owner: -
+-- Dependencies: 388
+-- Name: predicado_id_seq; Type: SEQUENCE OWNED BY; Schema: ruler; Owner: postgres
 --
 
 ALTER SEQUENCE predicado_id_seq OWNED BY predicado.id;
 
 
 --
--- TOC entry 303 (class 1259 OID 36404)
--- Name: tipo_predicado; Type: TABLE; Schema: ruler; Owner: -
+-- TOC entry 389 (class 1259 OID 40749)
+-- Name: tipo_predicado; Type: TABLE; Schema: ruler; Owner: postgres
 --
 
 CREATE TABLE tipo_predicado (
@@ -7503,10 +7919,12 @@ CREATE TABLE tipo_predicado (
 );
 
 
+ALTER TABLE tipo_predicado OWNER TO postgres;
+
 --
 -- TOC entry 4289 (class 0 OID 0)
--- Dependencies: 303
--- Name: COLUMN tipo_predicado.id; Type: COMMENT; Schema: ruler; Owner: -
+-- Dependencies: 389
+-- Name: COLUMN tipo_predicado.id; Type: COMMENT; Schema: ruler; Owner: postgres
 --
 
 COMMENT ON COLUMN tipo_predicado.id IS 'Identificador del tipo de predicado';
@@ -7514,16 +7932,16 @@ COMMENT ON COLUMN tipo_predicado.id IS 'Identificador del tipo de predicado';
 
 --
 -- TOC entry 4290 (class 0 OID 0)
--- Dependencies: 303
--- Name: COLUMN tipo_predicado.nombre; Type: COMMENT; Schema: ruler; Owner: -
+-- Dependencies: 389
+-- Name: COLUMN tipo_predicado.nombre; Type: COMMENT; Schema: ruler; Owner: postgres
 --
 
 COMMENT ON COLUMN tipo_predicado.nombre IS 'Nombre del tipo de predicado';
 
 
 --
--- TOC entry 304 (class 1259 OID 36407)
--- Name: tipo_predicado_id_seq; Type: SEQUENCE; Schema: ruler; Owner: -
+-- TOC entry 390 (class 1259 OID 40752)
+-- Name: tipo_predicado_id_seq; Type: SEQUENCE; Schema: ruler; Owner: postgres
 --
 
 CREATE SEQUENCE tipo_predicado_id_seq
@@ -7534,10 +7952,12 @@ CREATE SEQUENCE tipo_predicado_id_seq
     CACHE 1;
 
 
+ALTER TABLE tipo_predicado_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4291 (class 0 OID 0)
--- Dependencies: 304
--- Name: tipo_predicado_id_seq; Type: SEQUENCE OWNED BY; Schema: ruler; Owner: -
+-- Dependencies: 390
+-- Name: tipo_predicado_id_seq; Type: SEQUENCE OWNED BY; Schema: ruler; Owner: postgres
 --
 
 ALTER SEQUENCE tipo_predicado_id_seq OWNED BY tipo_predicado.id;
@@ -7546,8 +7966,8 @@ ALTER SEQUENCE tipo_predicado_id_seq OWNED BY tipo_predicado.id;
 SET search_path = titan, pg_catalog;
 
 --
--- TOC entry 305 (class 1259 OID 36409)
--- Name: categoria_novedad; Type: TABLE; Schema: titan; Owner: -
+-- TOC entry 391 (class 1259 OID 40754)
+-- Name: categoria_novedad; Type: TABLE; Schema: titan; Owner: postgres
 --
 
 CREATE TABLE categoria_novedad (
@@ -7559,9 +7979,11 @@ CREATE TABLE categoria_novedad (
 );
 
 
+ALTER TABLE categoria_novedad OWNER TO postgres;
+
 --
--- TOC entry 306 (class 1259 OID 36416)
--- Name: categoria_novedad_id_seq; Type: SEQUENCE; Schema: titan; Owner: -
+-- TOC entry 392 (class 1259 OID 40761)
+-- Name: categoria_novedad_id_seq; Type: SEQUENCE; Schema: titan; Owner: postgres
 --
 
 CREATE SEQUENCE categoria_novedad_id_seq
@@ -7572,18 +7994,20 @@ CREATE SEQUENCE categoria_novedad_id_seq
     CACHE 1;
 
 
+ALTER TABLE categoria_novedad_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4292 (class 0 OID 0)
--- Dependencies: 306
--- Name: categoria_novedad_id_seq; Type: SEQUENCE OWNED BY; Schema: titan; Owner: -
+-- Dependencies: 392
+-- Name: categoria_novedad_id_seq; Type: SEQUENCE OWNED BY; Schema: titan; Owner: postgres
 --
 
 ALTER SEQUENCE categoria_novedad_id_seq OWNED BY categoria_novedad.id;
 
 
 --
--- TOC entry 307 (class 1259 OID 36418)
--- Name: categoria_parametro; Type: TABLE; Schema: titan; Owner: -
+-- TOC entry 393 (class 1259 OID 40763)
+-- Name: categoria_parametro; Type: TABLE; Schema: titan; Owner: postgres
 --
 
 CREATE TABLE categoria_parametro (
@@ -7594,9 +8018,11 @@ CREATE TABLE categoria_parametro (
 );
 
 
+ALTER TABLE categoria_parametro OWNER TO postgres;
+
 --
--- TOC entry 308 (class 1259 OID 36424)
--- Name: categoria_parametro_id_seq; Type: SEQUENCE; Schema: titan; Owner: -
+-- TOC entry 394 (class 1259 OID 40769)
+-- Name: categoria_parametro_id_seq; Type: SEQUENCE; Schema: titan; Owner: postgres
 --
 
 CREATE SEQUENCE categoria_parametro_id_seq
@@ -7607,18 +8033,20 @@ CREATE SEQUENCE categoria_parametro_id_seq
     CACHE 1;
 
 
+ALTER TABLE categoria_parametro_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4293 (class 0 OID 0)
--- Dependencies: 308
--- Name: categoria_parametro_id_seq; Type: SEQUENCE OWNED BY; Schema: titan; Owner: -
+-- Dependencies: 394
+-- Name: categoria_parametro_id_seq; Type: SEQUENCE OWNED BY; Schema: titan; Owner: postgres
 --
 
 ALTER SEQUENCE categoria_parametro_id_seq OWNED BY categoria_parametro.id;
 
 
 --
--- TOC entry 309 (class 1259 OID 36426)
--- Name: descuentos; Type: TABLE; Schema: titan; Owner: -
+-- TOC entry 395 (class 1259 OID 40771)
+-- Name: descuentos; Type: TABLE; Schema: titan; Owner: postgres
 --
 
 CREATE TABLE descuentos (
@@ -7630,9 +8058,11 @@ CREATE TABLE descuentos (
 );
 
 
+ALTER TABLE descuentos OWNER TO postgres;
+
 --
--- TOC entry 310 (class 1259 OID 36429)
--- Name: descuentos_id_seq; Type: SEQUENCE; Schema: titan; Owner: -
+-- TOC entry 396 (class 1259 OID 40774)
+-- Name: descuentos_id_seq; Type: SEQUENCE; Schema: titan; Owner: postgres
 --
 
 CREATE SEQUENCE descuentos_id_seq
@@ -7643,18 +8073,20 @@ CREATE SEQUENCE descuentos_id_seq
     CACHE 1;
 
 
+ALTER TABLE descuentos_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4294 (class 0 OID 0)
--- Dependencies: 310
--- Name: descuentos_id_seq; Type: SEQUENCE OWNED BY; Schema: titan; Owner: -
+-- Dependencies: 396
+-- Name: descuentos_id_seq; Type: SEQUENCE OWNED BY; Schema: titan; Owner: postgres
 --
 
 ALTER SEQUENCE descuentos_id_seq OWNED BY descuentos.id;
 
 
 --
--- TOC entry 311 (class 1259 OID 36431)
--- Name: detalle_novedad; Type: TABLE; Schema: titan; Owner: -
+-- TOC entry 397 (class 1259 OID 40776)
+-- Name: detalle_novedad; Type: TABLE; Schema: titan; Owner: postgres
 --
 
 CREATE TABLE detalle_novedad (
@@ -7668,9 +8100,11 @@ CREATE TABLE detalle_novedad (
 );
 
 
+ALTER TABLE detalle_novedad OWNER TO postgres;
+
 --
--- TOC entry 312 (class 1259 OID 36434)
--- Name: detalle_novedad_id_seq; Type: SEQUENCE; Schema: titan; Owner: -
+-- TOC entry 398 (class 1259 OID 40779)
+-- Name: detalle_novedad_id_seq; Type: SEQUENCE; Schema: titan; Owner: postgres
 --
 
 CREATE SEQUENCE detalle_novedad_id_seq
@@ -7681,18 +8115,20 @@ CREATE SEQUENCE detalle_novedad_id_seq
     CACHE 1;
 
 
+ALTER TABLE detalle_novedad_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4295 (class 0 OID 0)
--- Dependencies: 312
--- Name: detalle_novedad_id_seq; Type: SEQUENCE OWNED BY; Schema: titan; Owner: -
+-- Dependencies: 398
+-- Name: detalle_novedad_id_seq; Type: SEQUENCE OWNED BY; Schema: titan; Owner: postgres
 --
 
 ALTER SEQUENCE detalle_novedad_id_seq OWNED BY detalle_novedad.id;
 
 
 --
--- TOC entry 313 (class 1259 OID 36436)
--- Name: detalle_preliquidacion; Type: TABLE; Schema: titan; Owner: -
+-- TOC entry 399 (class 1259 OID 40781)
+-- Name: detalle_preliquidacion; Type: TABLE; Schema: titan; Owner: postgres
 --
 
 CREATE TABLE detalle_preliquidacion (
@@ -7705,10 +8141,12 @@ CREATE TABLE detalle_preliquidacion (
 );
 
 
+ALTER TABLE detalle_preliquidacion OWNER TO postgres;
+
 --
 -- TOC entry 4296 (class 0 OID 0)
--- Dependencies: 313
--- Name: TABLE detalle_preliquidacion; Type: COMMENT; Schema: titan; Owner: -
+-- Dependencies: 399
+-- Name: TABLE detalle_preliquidacion; Type: COMMENT; Schema: titan; Owner: postgres
 --
 
 COMMENT ON TABLE detalle_preliquidacion IS 'Tabla para almacenar el valor de cada concepto por persona';
@@ -7716,8 +8154,8 @@ COMMENT ON TABLE detalle_preliquidacion IS 'Tabla para almacenar el valor de cad
 
 --
 -- TOC entry 4297 (class 0 OID 0)
--- Dependencies: 313
--- Name: COLUMN detalle_preliquidacion.preliquidacion; Type: COMMENT; Schema: titan; Owner: -
+-- Dependencies: 399
+-- Name: COLUMN detalle_preliquidacion.preliquidacion; Type: COMMENT; Schema: titan; Owner: postgres
 --
 
 COMMENT ON COLUMN detalle_preliquidacion.preliquidacion IS 'Preliquidación sobre la que se calcula el valor';
@@ -7725,8 +8163,8 @@ COMMENT ON COLUMN detalle_preliquidacion.preliquidacion IS 'Preliquidación sobr
 
 --
 -- TOC entry 4298 (class 0 OID 0)
--- Dependencies: 313
--- Name: COLUMN detalle_preliquidacion.persona; Type: COMMENT; Schema: titan; Owner: -
+-- Dependencies: 399
+-- Name: COLUMN detalle_preliquidacion.persona; Type: COMMENT; Schema: titan; Owner: postgres
 --
 
 COMMENT ON COLUMN detalle_preliquidacion.persona IS 'Identificador único de la persona a la que se le aclcula el valor del concept';
@@ -7734,8 +8172,8 @@ COMMENT ON COLUMN detalle_preliquidacion.persona IS 'Identificador único de la 
 
 --
 -- TOC entry 4299 (class 0 OID 0)
--- Dependencies: 313
--- Name: COLUMN detalle_preliquidacion.valor; Type: COMMENT; Schema: titan; Owner: -
+-- Dependencies: 399
+-- Name: COLUMN detalle_preliquidacion.valor; Type: COMMENT; Schema: titan; Owner: postgres
 --
 
 COMMENT ON COLUMN detalle_preliquidacion.valor IS 'Valor del concepto que se está calculando';
@@ -7743,16 +8181,16 @@ COMMENT ON COLUMN detalle_preliquidacion.valor IS 'Valor del concepto que se est
 
 --
 -- TOC entry 4300 (class 0 OID 0)
--- Dependencies: 313
--- Name: COLUMN detalle_preliquidacion.concepto; Type: COMMENT; Schema: titan; Owner: -
+-- Dependencies: 399
+-- Name: COLUMN detalle_preliquidacion.concepto; Type: COMMENT; Schema: titan; Owner: postgres
 --
 
 COMMENT ON COLUMN detalle_preliquidacion.concepto IS 'Identificador del concepto asouciado a un rubro sobre el cual se calcula el valor';
 
 
 --
--- TOC entry 314 (class 1259 OID 36439)
--- Name: detalle_preliquidacion_id_seq; Type: SEQUENCE; Schema: titan; Owner: -
+-- TOC entry 400 (class 1259 OID 40784)
+-- Name: detalle_preliquidacion_id_seq; Type: SEQUENCE; Schema: titan; Owner: postgres
 --
 
 CREATE SEQUENCE detalle_preliquidacion_id_seq
@@ -7763,18 +8201,20 @@ CREATE SEQUENCE detalle_preliquidacion_id_seq
     CACHE 1;
 
 
+ALTER TABLE detalle_preliquidacion_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4301 (class 0 OID 0)
--- Dependencies: 314
--- Name: detalle_preliquidacion_id_seq; Type: SEQUENCE OWNED BY; Schema: titan; Owner: -
+-- Dependencies: 400
+-- Name: detalle_preliquidacion_id_seq; Type: SEQUENCE OWNED BY; Schema: titan; Owner: postgres
 --
 
 ALTER SEQUENCE detalle_preliquidacion_id_seq OWNED BY detalle_preliquidacion.id;
 
 
 --
--- TOC entry 315 (class 1259 OID 36441)
--- Name: nomina; Type: TABLE; Schema: titan; Owner: -
+-- TOC entry 401 (class 1259 OID 40786)
+-- Name: nomina; Type: TABLE; Schema: titan; Owner: postgres
 --
 
 CREATE TABLE nomina (
@@ -7790,10 +8230,12 @@ CREATE TABLE nomina (
 );
 
 
+ALTER TABLE nomina OWNER TO postgres;
+
 --
 -- TOC entry 4302 (class 0 OID 0)
--- Dependencies: 315
--- Name: TABLE nomina; Type: COMMENT; Schema: titan; Owner: -
+-- Dependencies: 401
+-- Name: TABLE nomina; Type: COMMENT; Schema: titan; Owner: postgres
 --
 
 COMMENT ON TABLE nomina IS 'Tabla encargada de almacenar las nóminas (agrupamiento de conceptos) para un determinado tipo de vinculacion';
@@ -7801,8 +8243,8 @@ COMMENT ON TABLE nomina IS 'Tabla encargada de almacenar las nóminas (agrupamie
 
 --
 -- TOC entry 4303 (class 0 OID 0)
--- Dependencies: 315
--- Name: COLUMN nomina.id; Type: COMMENT; Schema: titan; Owner: -
+-- Dependencies: 401
+-- Name: COLUMN nomina.id; Type: COMMENT; Schema: titan; Owner: postgres
 --
 
 COMMENT ON COLUMN nomina.id IS 'Identificador consecutivo para cada uno de las nóminas';
@@ -7810,8 +8252,8 @@ COMMENT ON COLUMN nomina.id IS 'Identificador consecutivo para cada uno de las n
 
 --
 -- TOC entry 4304 (class 0 OID 0)
--- Dependencies: 315
--- Name: COLUMN nomina.vinculacion; Type: COMMENT; Schema: titan; Owner: -
+-- Dependencies: 401
+-- Name: COLUMN nomina.vinculacion; Type: COMMENT; Schema: titan; Owner: postgres
 --
 
 COMMENT ON COLUMN nomina.vinculacion IS 'Vinculación a la cual se asocia la nómina';
@@ -7819,8 +8261,8 @@ COMMENT ON COLUMN nomina.vinculacion IS 'Vinculación a la cual se asocia la nó
 
 --
 -- TOC entry 4305 (class 0 OID 0)
--- Dependencies: 315
--- Name: COLUMN nomina.nombre; Type: COMMENT; Schema: titan; Owner: -
+-- Dependencies: 401
+-- Name: COLUMN nomina.nombre; Type: COMMENT; Schema: titan; Owner: postgres
 --
 
 COMMENT ON COLUMN nomina.nombre IS 'Nombre de la nómina';
@@ -7828,8 +8270,8 @@ COMMENT ON COLUMN nomina.nombre IS 'Nombre de la nómina';
 
 --
 -- TOC entry 4306 (class 0 OID 0)
--- Dependencies: 315
--- Name: COLUMN nomina.descripcion; Type: COMMENT; Schema: titan; Owner: -
+-- Dependencies: 401
+-- Name: COLUMN nomina.descripcion; Type: COMMENT; Schema: titan; Owner: postgres
 --
 
 COMMENT ON COLUMN nomina.descripcion IS 'Corta descripción adicional al nombre para aclarar su propósito';
@@ -7837,8 +8279,8 @@ COMMENT ON COLUMN nomina.descripcion IS 'Corta descripción adicional al nombre 
 
 --
 -- TOC entry 4307 (class 0 OID 0)
--- Dependencies: 315
--- Name: COLUMN nomina.tipo_nomina; Type: COMMENT; Schema: titan; Owner: -
+-- Dependencies: 401
+-- Name: COLUMN nomina.tipo_nomina; Type: COMMENT; Schema: titan; Owner: postgres
 --
 
 COMMENT ON COLUMN nomina.tipo_nomina IS 'Tipo de nómina';
@@ -7846,16 +8288,16 @@ COMMENT ON COLUMN nomina.tipo_nomina IS 'Tipo de nómina';
 
 --
 -- TOC entry 4308 (class 0 OID 0)
--- Dependencies: 315
--- Name: COLUMN nomina.estado; Type: COMMENT; Schema: titan; Owner: -
+-- Dependencies: 401
+-- Name: COLUMN nomina.estado; Type: COMMENT; Schema: titan; Owner: postgres
 --
 
 COMMENT ON COLUMN nomina.estado IS 'Estado de la nómina';
 
 
 --
--- TOC entry 316 (class 1259 OID 36446)
--- Name: nomina_id_seq; Type: SEQUENCE; Schema: titan; Owner: -
+-- TOC entry 402 (class 1259 OID 40791)
+-- Name: nomina_id_seq; Type: SEQUENCE; Schema: titan; Owner: postgres
 --
 
 CREATE SEQUENCE nomina_id_seq
@@ -7866,18 +8308,20 @@ CREATE SEQUENCE nomina_id_seq
     CACHE 1;
 
 
+ALTER TABLE nomina_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4309 (class 0 OID 0)
--- Dependencies: 316
--- Name: nomina_id_seq; Type: SEQUENCE OWNED BY; Schema: titan; Owner: -
+-- Dependencies: 402
+-- Name: nomina_id_seq; Type: SEQUENCE OWNED BY; Schema: titan; Owner: postgres
 --
 
 ALTER SEQUENCE nomina_id_seq OWNED BY nomina.id;
 
 
 --
--- TOC entry 317 (class 1259 OID 36448)
--- Name: novedad; Type: TABLE; Schema: titan; Owner: -
+-- TOC entry 403 (class 1259 OID 40793)
+-- Name: novedad; Type: TABLE; Schema: titan; Owner: postgres
 --
 
 CREATE TABLE novedad (
@@ -7897,9 +8341,11 @@ CREATE TABLE novedad (
 );
 
 
+ALTER TABLE novedad OWNER TO postgres;
+
 --
--- TOC entry 318 (class 1259 OID 36457)
--- Name: novedad_aplicada; Type: TABLE; Schema: titan; Owner: -
+-- TOC entry 404 (class 1259 OID 40802)
+-- Name: novedad_aplicada; Type: TABLE; Schema: titan; Owner: postgres
 --
 
 CREATE TABLE novedad_aplicada (
@@ -7909,9 +8355,11 @@ CREATE TABLE novedad_aplicada (
 );
 
 
+ALTER TABLE novedad_aplicada OWNER TO postgres;
+
 --
--- TOC entry 319 (class 1259 OID 36460)
--- Name: novedad_aplicada_id_seq; Type: SEQUENCE; Schema: titan; Owner: -
+-- TOC entry 405 (class 1259 OID 40805)
+-- Name: novedad_aplicada_id_seq; Type: SEQUENCE; Schema: titan; Owner: postgres
 --
 
 CREATE SEQUENCE novedad_aplicada_id_seq
@@ -7922,18 +8370,20 @@ CREATE SEQUENCE novedad_aplicada_id_seq
     CACHE 1;
 
 
+ALTER TABLE novedad_aplicada_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4310 (class 0 OID 0)
--- Dependencies: 319
--- Name: novedad_aplicada_id_seq; Type: SEQUENCE OWNED BY; Schema: titan; Owner: -
+-- Dependencies: 405
+-- Name: novedad_aplicada_id_seq; Type: SEQUENCE OWNED BY; Schema: titan; Owner: postgres
 --
 
 ALTER SEQUENCE novedad_aplicada_id_seq OWNED BY novedad_aplicada.id;
 
 
 --
--- TOC entry 320 (class 1259 OID 36462)
--- Name: novedad_id_seq; Type: SEQUENCE; Schema: titan; Owner: -
+-- TOC entry 406 (class 1259 OID 40807)
+-- Name: novedad_id_seq; Type: SEQUENCE; Schema: titan; Owner: postgres
 --
 
 CREATE SEQUENCE novedad_id_seq
@@ -7944,18 +8394,20 @@ CREATE SEQUENCE novedad_id_seq
     CACHE 1;
 
 
+ALTER TABLE novedad_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4311 (class 0 OID 0)
--- Dependencies: 320
--- Name: novedad_id_seq; Type: SEQUENCE OWNED BY; Schema: titan; Owner: -
+-- Dependencies: 406
+-- Name: novedad_id_seq; Type: SEQUENCE OWNED BY; Schema: titan; Owner: postgres
 --
 
 ALTER SEQUENCE novedad_id_seq OWNED BY novedad.id;
 
 
 --
--- TOC entry 321 (class 1259 OID 36464)
--- Name: parametro_liquidacion; Type: TABLE; Schema: titan; Owner: -
+-- TOC entry 407 (class 1259 OID 40809)
+-- Name: parametro_liquidacion; Type: TABLE; Schema: titan; Owner: postgres
 --
 
 CREATE TABLE parametro_liquidacion (
@@ -7969,9 +8421,11 @@ CREATE TABLE parametro_liquidacion (
 );
 
 
+ALTER TABLE parametro_liquidacion OWNER TO postgres;
+
 --
--- TOC entry 322 (class 1259 OID 36470)
--- Name: parametro_liquidacion_id_seq; Type: SEQUENCE; Schema: titan; Owner: -
+-- TOC entry 408 (class 1259 OID 40815)
+-- Name: parametro_liquidacion_id_seq; Type: SEQUENCE; Schema: titan; Owner: postgres
 --
 
 CREATE SEQUENCE parametro_liquidacion_id_seq
@@ -7982,18 +8436,20 @@ CREATE SEQUENCE parametro_liquidacion_id_seq
     CACHE 1;
 
 
+ALTER TABLE parametro_liquidacion_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4312 (class 0 OID 0)
--- Dependencies: 322
--- Name: parametro_liquidacion_id_seq; Type: SEQUENCE OWNED BY; Schema: titan; Owner: -
+-- Dependencies: 408
+-- Name: parametro_liquidacion_id_seq; Type: SEQUENCE OWNED BY; Schema: titan; Owner: postgres
 --
 
 ALTER SEQUENCE parametro_liquidacion_id_seq OWNED BY parametro_liquidacion.id;
 
 
 --
--- TOC entry 323 (class 1259 OID 36472)
--- Name: preliquidacion; Type: TABLE; Schema: titan; Owner: -
+-- TOC entry 409 (class 1259 OID 40817)
+-- Name: preliquidacion; Type: TABLE; Schema: titan; Owner: postgres
 --
 
 CREATE TABLE preliquidacion (
@@ -8009,10 +8465,12 @@ CREATE TABLE preliquidacion (
 );
 
 
+ALTER TABLE preliquidacion OWNER TO postgres;
+
 --
 -- TOC entry 4313 (class 0 OID 0)
--- Dependencies: 323
--- Name: TABLE preliquidacion; Type: COMMENT; Schema: titan; Owner: -
+-- Dependencies: 409
+-- Name: TABLE preliquidacion; Type: COMMENT; Schema: titan; Owner: postgres
 --
 
 COMMENT ON TABLE preliquidacion IS 'Tabla para almacenar las preliquidaciones hechas por los usuarios';
@@ -8020,8 +8478,8 @@ COMMENT ON TABLE preliquidacion IS 'Tabla para almacenar las preliquidaciones he
 
 --
 -- TOC entry 4314 (class 0 OID 0)
--- Dependencies: 323
--- Name: COLUMN preliquidacion.id; Type: COMMENT; Schema: titan; Owner: -
+-- Dependencies: 409
+-- Name: COLUMN preliquidacion.id; Type: COMMENT; Schema: titan; Owner: postgres
 --
 
 COMMENT ON COLUMN preliquidacion.id IS 'Identificador consecutivo para identificar las preliquidaciones';
@@ -8029,8 +8487,8 @@ COMMENT ON COLUMN preliquidacion.id IS 'Identificador consecutivo para identific
 
 --
 -- TOC entry 4315 (class 0 OID 0)
--- Dependencies: 323
--- Name: COLUMN preliquidacion.nomina; Type: COMMENT; Schema: titan; Owner: -
+-- Dependencies: 409
+-- Name: COLUMN preliquidacion.nomina; Type: COMMENT; Schema: titan; Owner: postgres
 --
 
 COMMENT ON COLUMN preliquidacion.nomina IS 'Nomina sobre la cual se calcula la preliquidación';
@@ -8038,8 +8496,8 @@ COMMENT ON COLUMN preliquidacion.nomina IS 'Nomina sobre la cual se calcula la p
 
 --
 -- TOC entry 4316 (class 0 OID 0)
--- Dependencies: 323
--- Name: COLUMN preliquidacion.id_usuario; Type: COMMENT; Schema: titan; Owner: -
+-- Dependencies: 409
+-- Name: COLUMN preliquidacion.id_usuario; Type: COMMENT; Schema: titan; Owner: postgres
 --
 
 COMMENT ON COLUMN preliquidacion.id_usuario IS 'Identificador único del usuario que ejcutó la preliquidación';
@@ -8047,8 +8505,8 @@ COMMENT ON COLUMN preliquidacion.id_usuario IS 'Identificador único del usuario
 
 --
 -- TOC entry 4317 (class 0 OID 0)
--- Dependencies: 323
--- Name: COLUMN preliquidacion.estado; Type: COMMENT; Schema: titan; Owner: -
+-- Dependencies: 409
+-- Name: COLUMN preliquidacion.estado; Type: COMMENT; Schema: titan; Owner: postgres
 --
 
 COMMENT ON COLUMN preliquidacion.estado IS 'Estado de la preliquidación';
@@ -8056,8 +8514,8 @@ COMMENT ON COLUMN preliquidacion.estado IS 'Estado de la preliquidación';
 
 --
 -- TOC entry 4318 (class 0 OID 0)
--- Dependencies: 323
--- Name: COLUMN preliquidacion.fecha; Type: COMMENT; Schema: titan; Owner: -
+-- Dependencies: 409
+-- Name: COLUMN preliquidacion.fecha; Type: COMMENT; Schema: titan; Owner: postgres
 --
 
 COMMENT ON COLUMN preliquidacion.fecha IS 'Fecha en la que se calcula la preliquidación';
@@ -8065,8 +8523,8 @@ COMMENT ON COLUMN preliquidacion.fecha IS 'Fecha en la que se calcula la preliqu
 
 --
 -- TOC entry 4319 (class 0 OID 0)
--- Dependencies: 323
--- Name: COLUMN preliquidacion.descripcion; Type: COMMENT; Schema: titan; Owner: -
+-- Dependencies: 409
+-- Name: COLUMN preliquidacion.descripcion; Type: COMMENT; Schema: titan; Owner: postgres
 --
 
 COMMENT ON COLUMN preliquidacion.descripcion IS 'Deescripción de la preliquidación';
@@ -8074,8 +8532,8 @@ COMMENT ON COLUMN preliquidacion.descripcion IS 'Deescripción de la preliquidac
 
 --
 -- TOC entry 4320 (class 0 OID 0)
--- Dependencies: 323
--- Name: COLUMN preliquidacion.fecha_inicio; Type: COMMENT; Schema: titan; Owner: -
+-- Dependencies: 409
+-- Name: COLUMN preliquidacion.fecha_inicio; Type: COMMENT; Schema: titan; Owner: postgres
 --
 
 COMMENT ON COLUMN preliquidacion.fecha_inicio IS 'Fecha de inicio de los cálculos de la preliquidación';
@@ -8083,16 +8541,16 @@ COMMENT ON COLUMN preliquidacion.fecha_inicio IS 'Fecha de inicio de los cálcul
 
 --
 -- TOC entry 4321 (class 0 OID 0)
--- Dependencies: 323
--- Name: COLUMN preliquidacion.fecha_fin; Type: COMMENT; Schema: titan; Owner: -
+-- Dependencies: 409
+-- Name: COLUMN preliquidacion.fecha_fin; Type: COMMENT; Schema: titan; Owner: postgres
 --
 
 COMMENT ON COLUMN preliquidacion.fecha_fin IS 'Fecha final de los calculos de la preliquidación';
 
 
 --
--- TOC entry 324 (class 1259 OID 36479)
--- Name: preliquidacion_id_seq; Type: SEQUENCE; Schema: titan; Owner: -
+-- TOC entry 410 (class 1259 OID 40824)
+-- Name: preliquidacion_id_seq; Type: SEQUENCE; Schema: titan; Owner: postgres
 --
 
 CREATE SEQUENCE preliquidacion_id_seq
@@ -8103,18 +8561,20 @@ CREATE SEQUENCE preliquidacion_id_seq
     CACHE 1;
 
 
+ALTER TABLE preliquidacion_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4322 (class 0 OID 0)
--- Dependencies: 324
--- Name: preliquidacion_id_seq; Type: SEQUENCE OWNED BY; Schema: titan; Owner: -
+-- Dependencies: 410
+-- Name: preliquidacion_id_seq; Type: SEQUENCE OWNED BY; Schema: titan; Owner: postgres
 --
 
 ALTER SEQUENCE preliquidacion_id_seq OWNED BY preliquidacion.id;
 
 
 --
--- TOC entry 325 (class 1259 OID 36481)
--- Name: variable; Type: TABLE; Schema: titan; Owner: -
+-- TOC entry 411 (class 1259 OID 40826)
+-- Name: variable; Type: TABLE; Schema: titan; Owner: postgres
 --
 
 CREATE TABLE variable (
@@ -8125,9 +8585,11 @@ CREATE TABLE variable (
 );
 
 
+ALTER TABLE variable OWNER TO postgres;
+
 --
--- TOC entry 326 (class 1259 OID 36487)
--- Name: variable_id_seq; Type: SEQUENCE; Schema: titan; Owner: -
+-- TOC entry 412 (class 1259 OID 40832)
+-- Name: variable_id_seq; Type: SEQUENCE; Schema: titan; Owner: postgres
 --
 
 CREATE SEQUENCE variable_id_seq
@@ -8138,10 +8600,12 @@ CREATE SEQUENCE variable_id_seq
     CACHE 1;
 
 
+ALTER TABLE variable_id_seq OWNER TO postgres;
+
 --
 -- TOC entry 4323 (class 0 OID 0)
--- Dependencies: 326
--- Name: variable_id_seq; Type: SEQUENCE OWNED BY; Schema: titan; Owner: -
+-- Dependencies: 412
+-- Name: variable_id_seq; Type: SEQUENCE OWNED BY; Schema: titan; Owner: postgres
 --
 
 ALTER SEQUENCE variable_id_seq OWNED BY variable.id;
@@ -8150,144 +8614,144 @@ ALTER SEQUENCE variable_id_seq OWNED BY variable.id;
 SET search_path = argo, pg_catalog;
 
 --
--- TOC entry 2906 (class 2604 OID 37710)
--- Name: id; Type: DEFAULT; Schema: argo; Owner: -
+-- TOC entry 2842 (class 2604 OID 40834)
+-- Name: id; Type: DEFAULT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY acta_inicio ALTER COLUMN id SET DEFAULT nextval('acta_inicio_id_seq1'::regclass);
 
 
 --
--- TOC entry 2907 (class 2604 OID 37711)
--- Name: id; Type: DEFAULT; Schema: argo; Owner: -
+-- TOC entry 2843 (class 2604 OID 40835)
+-- Name: id; Type: DEFAULT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY actividad_economica_necesidad ALTER COLUMN id SET DEFAULT nextval('actividad_economica_necesidad_id_seq'::regclass);
 
 
 --
--- TOC entry 2908 (class 2604 OID 37712)
--- Name: id; Type: DEFAULT; Schema: argo; Owner: -
+-- TOC entry 2844 (class 2604 OID 40836)
+-- Name: id; Type: DEFAULT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY actividad_solicitud_necesidad ALTER COLUMN id SET DEFAULT nextval('actividad_solicitud_necesidad_id_seq'::regclass);
 
 
 --
--- TOC entry 2909 (class 2604 OID 37713)
--- Name: id; Type: DEFAULT; Schema: argo; Owner: -
+-- TOC entry 2845 (class 2604 OID 40837)
+-- Name: id; Type: DEFAULT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY actividades_centro_costos ALTER COLUMN id SET DEFAULT nextval('actividades_centro_costos_id_seq'::regclass);
 
 
 --
--- TOC entry 2910 (class 2604 OID 37714)
--- Name: id; Type: DEFAULT; Schema: argo; Owner: -
+-- TOC entry 2846 (class 2604 OID 40838)
+-- Name: id; Type: DEFAULT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY centro_costos ALTER COLUMN id SET DEFAULT nextval('centro_costos_id_seq'::regclass);
 
 
 --
--- TOC entry 2926 (class 2604 OID 37715)
--- Name: id; Type: DEFAULT; Schema: argo; Owner: -
+-- TOC entry 2862 (class 2604 OID 40839)
+-- Name: id; Type: DEFAULT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY especificacion_tecnica ALTER COLUMN id SET DEFAULT nextval('especificacion_tecnica_id_seq'::regclass);
 
 
 --
--- TOC entry 2928 (class 2604 OID 37716)
--- Name: id; Type: DEFAULT; Schema: argo; Owner: -
+-- TOC entry 2864 (class 2604 OID 40840)
+-- Name: id; Type: DEFAULT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY estado_solicitud_necesidad ALTER COLUMN id SET DEFAULT nextval('estado_solicitud_necesidad_id_seq'::regclass);
 
 
 --
--- TOC entry 2929 (class 2604 OID 37717)
--- Name: id; Type: DEFAULT; Schema: argo; Owner: -
+-- TOC entry 2865 (class 2604 OID 40841)
+-- Name: id; Type: DEFAULT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY fuente_financiacion_rubro_necesidad ALTER COLUMN id SET DEFAULT nextval('fuente_financiacion_rubro_necesidad_id_seq'::regclass);
 
 
 --
--- TOC entry 2931 (class 2604 OID 37718)
--- Name: id; Type: DEFAULT; Schema: argo; Owner: -
+-- TOC entry 2867 (class 2604 OID 40842)
+-- Name: id; Type: DEFAULT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY marco_legal ALTER COLUMN id SET DEFAULT nextval('marco_legal_id_seq'::regclass);
 
 
 --
--- TOC entry 2932 (class 2604 OID 37719)
--- Name: id; Type: DEFAULT; Schema: argo; Owner: -
+-- TOC entry 2868 (class 2604 OID 40843)
+-- Name: id; Type: DEFAULT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY marco_legal_necesidad ALTER COLUMN id SET DEFAULT nextval('marco_legal_necesidad_id_seq'::regclass);
 
 
 --
--- TOC entry 2933 (class 2604 OID 37720)
--- Name: id; Type: DEFAULT; Schema: argo; Owner: -
+-- TOC entry 2869 (class 2604 OID 40844)
+-- Name: id; Type: DEFAULT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY modalidad_seleccion ALTER COLUMN id SET DEFAULT nextval('modalidad_seleccion_id_seq'::regclass);
 
 
 --
--- TOC entry 2944 (class 2604 OID 37721)
--- Name: id; Type: DEFAULT; Schema: argo; Owner: -
+-- TOC entry 2880 (class 2604 OID 40845)
+-- Name: id; Type: DEFAULT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY requisito_minimo ALTER COLUMN id SET DEFAULT nextval('requisito_minimo_id_seq'::regclass);
 
 
 --
--- TOC entry 2945 (class 2604 OID 37722)
--- Name: id; Type: DEFAULT; Schema: argo; Owner: -
+-- TOC entry 2881 (class 2604 OID 40846)
+-- Name: id; Type: DEFAULT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY rubro_solicitud_necesidad ALTER COLUMN id SET DEFAULT nextval('rubro_solicitud_necesidad_id_seq'::regclass);
 
 
 --
--- TOC entry 2946 (class 2604 OID 37723)
--- Name: id; Type: DEFAULT; Schema: argo; Owner: -
+-- TOC entry 2882 (class 2604 OID 40847)
+-- Name: id; Type: DEFAULT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY servicio_orden ALTER COLUMN id SET DEFAULT nextval('servicio_orden_id_seq1'::regclass);
 
 
 --
--- TOC entry 2947 (class 2604 OID 37724)
--- Name: id; Type: DEFAULT; Schema: argo; Owner: -
+-- TOC entry 2886 (class 2604 OID 40848)
+-- Name: id; Type: DEFAULT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY solicitud_necesidad ALTER COLUMN id SET DEFAULT nextval('solicitud_necesidad_id_seq'::regclass);
 
 
 --
--- TOC entry 2953 (class 2604 OID 37725)
--- Name: id; Type: DEFAULT; Schema: argo; Owner: -
+-- TOC entry 2889 (class 2604 OID 40849)
+-- Name: id; Type: DEFAULT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY supervisor_solicitud_necesidad ALTER COLUMN id SET DEFAULT nextval('supervisor_solicitud_necesidad_id_seq'::regclass);
 
 
 --
--- TOC entry 2955 (class 2604 OID 37726)
--- Name: id; Type: DEFAULT; Schema: argo; Owner: -
+-- TOC entry 2891 (class 2604 OID 40850)
+-- Name: id; Type: DEFAULT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY tipo_contratacion ALTER COLUMN id SET DEFAULT nextval('tipo_contratacion_id_seq'::regclass);
 
 
 --
--- TOC entry 2956 (class 2604 OID 37727)
--- Name: id; Type: DEFAULT; Schema: argo; Owner: -
+-- TOC entry 2892 (class 2604 OID 40851)
+-- Name: id; Type: DEFAULT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY tipo_contrato ALTER COLUMN id SET DEFAULT nextval('tipo_contrato_id_seq1'::regclass);
@@ -8296,48 +8760,48 @@ ALTER TABLE ONLY tipo_contrato ALTER COLUMN id SET DEFAULT nextval('tipo_contrat
 SET search_path = core, pg_catalog;
 
 --
--- TOC entry 2842 (class 2604 OID 36489)
--- Name: consecutivo; Type: DEFAULT; Schema: core; Owner: -
+-- TOC entry 2893 (class 2604 OID 40852)
+-- Name: consecutivo; Type: DEFAULT; Schema: core; Owner: postgres
 --
 
 ALTER TABLE ONLY actividad_economica ALTER COLUMN consecutivo SET DEFAULT nextval('actividad_economica_consecutivo_seq'::regclass);
 
 
 --
--- TOC entry 2847 (class 2604 OID 36490)
--- Name: id; Type: DEFAULT; Schema: core; Owner: -
+-- TOC entry 2898 (class 2604 OID 40853)
+-- Name: id; Type: DEFAULT; Schema: core; Owner: postgres
 --
 
 ALTER TABLE ONLY estado ALTER COLUMN id SET DEFAULT nextval('estado_id_seq'::regclass);
 
 
 --
--- TOC entry 2850 (class 2604 OID 36491)
--- Name: id; Type: DEFAULT; Schema: core; Owner: -
+-- TOC entry 2901 (class 2604 OID 40854)
+-- Name: id; Type: DEFAULT; Schema: core; Owner: postgres
 --
 
 ALTER TABLE ONLY info_entidad ALTER COLUMN id SET DEFAULT nextval('info_entidad_id_seq'::regclass);
 
 
 --
--- TOC entry 2855 (class 2604 OID 36492)
--- Name: id; Type: DEFAULT; Schema: core; Owner: -
+-- TOC entry 2906 (class 2604 OID 40855)
+-- Name: id; Type: DEFAULT; Schema: core; Owner: postgres
 --
 
 ALTER TABLE ONLY parametro_entidad ALTER COLUMN id SET DEFAULT nextval('parametro_entidad_id_seq'::regclass);
 
 
 --
--- TOC entry 2856 (class 2604 OID 36493)
--- Name: id; Type: DEFAULT; Schema: core; Owner: -
+-- TOC entry 2907 (class 2604 OID 40856)
+-- Name: id; Type: DEFAULT; Schema: core; Owner: postgres
 --
 
 ALTER TABLE ONLY tipo_documento ALTER COLUMN id SET DEFAULT nextval('tipo_documento_id_seq'::regclass);
 
 
 --
--- TOC entry 2859 (class 2604 OID 36494)
--- Name: id; Type: DEFAULT; Schema: core; Owner: -
+-- TOC entry 2910 (class 2604 OID 40857)
+-- Name: id; Type: DEFAULT; Schema: core; Owner: postgres
 --
 
 ALTER TABLE ONLY tipo_entidad ALTER COLUMN id SET DEFAULT nextval('tipo_entidad_id_seq'::regclass);
@@ -8346,16 +8810,16 @@ ALTER TABLE ONLY tipo_entidad ALTER COLUMN id SET DEFAULT nextval('tipo_entidad_
 SET search_path = nix, pg_catalog;
 
 --
--- TOC entry 2860 (class 2604 OID 36495)
--- Name: id; Type: DEFAULT; Schema: nix; Owner: -
+-- TOC entry 2911 (class 2604 OID 40858)
+-- Name: id; Type: DEFAULT; Schema: nix; Owner: postgres
 --
 
 ALTER TABLE ONLY entidad ALTER COLUMN id SET DEFAULT nextval('entidad_id_seq'::regclass);
 
 
 --
--- TOC entry 2861 (class 2604 OID 36496)
--- Name: id; Type: DEFAULT; Schema: nix; Owner: -
+-- TOC entry 2912 (class 2604 OID 40859)
+-- Name: id; Type: DEFAULT; Schema: nix; Owner: postgres
 --
 
 ALTER TABLE ONLY entidad_homologacion ALTER COLUMN id SET DEFAULT nextval('entidad_homologacion_id_seq'::regclass);
@@ -8364,160 +8828,160 @@ ALTER TABLE ONLY entidad_homologacion ALTER COLUMN id SET DEFAULT nextval('entid
 SET search_path = nix_presupuesto, pg_catalog;
 
 --
--- TOC entry 2862 (class 2604 OID 36497)
--- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 2913 (class 2604 OID 40860)
+-- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY anulacion_reserva ALTER COLUMN id SET DEFAULT nextval('anulacion_reserva_id_seq'::regclass);
 
 
 --
--- TOC entry 2864 (class 2604 OID 36498)
--- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 2915 (class 2604 OID 40861)
+-- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY apropiacion ALTER COLUMN id SET DEFAULT nextval('apropiacion_id_seq'::regclass);
 
 
 --
--- TOC entry 2865 (class 2604 OID 36499)
--- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 2916 (class 2604 OID 40862)
+-- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY concepto ALTER COLUMN id SET DEFAULT nextval('concepto_id_seq'::regclass);
 
 
 --
--- TOC entry 2866 (class 2604 OID 36500)
--- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 2917 (class 2604 OID 40863)
+-- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY desagregacion_ingreso ALTER COLUMN id SET DEFAULT nextval('desagregacion_ingreso_id_seq'::regclass);
 
 
 --
--- TOC entry 2867 (class 2604 OID 36501)
--- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 2918 (class 2604 OID 40864)
+-- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY destino_disponibilidad ALTER COLUMN id SET DEFAULT nextval('destino_disponibilidad_id_seq'::regclass);
 
 
 --
--- TOC entry 2868 (class 2604 OID 36502)
--- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 2919 (class 2604 OID 40865)
+-- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY disponibilidad ALTER COLUMN id SET DEFAULT nextval('disponibilidad_id_seq'::regclass);
 
 
 --
--- TOC entry 2869 (class 2604 OID 36503)
--- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 2920 (class 2604 OID 40866)
+-- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY disponibilidad_rubro ALTER COLUMN id SET DEFAULT nextval('disponibilidad_rubro_id_seq'::regclass);
 
 
 --
--- TOC entry 2870 (class 2604 OID 36504)
--- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 2921 (class 2604 OID 40867)
+-- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY estado_disponibilidad ALTER COLUMN id SET DEFAULT nextval('estado_disponibilidad_id_seq'::regclass);
 
 
 --
--- TOC entry 2871 (class 2604 OID 36505)
--- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 2922 (class 2604 OID 40868)
+-- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY estado_registro_presupuestal ALTER COLUMN id SET DEFAULT nextval('estado_registro_presupuestal_id_seq'::regclass);
 
 
 --
--- TOC entry 2872 (class 2604 OID 36506)
--- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 2923 (class 2604 OID 40869)
+-- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY estado_reserva_presupuestal ALTER COLUMN id SET DEFAULT nextval('estado_reserva_presupuestal_id_seq'::regclass);
 
 
 --
--- TOC entry 2873 (class 2604 OID 36507)
--- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 2924 (class 2604 OID 40870)
+-- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY fuente_financiacion ALTER COLUMN id SET DEFAULT nextval('fuente_financiacion_id_seq'::regclass);
 
 
 --
--- TOC entry 2874 (class 2604 OID 36508)
--- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 2925 (class 2604 OID 40871)
+-- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY fuente_financiacion_entidad ALTER COLUMN id SET DEFAULT nextval('fuente_financiacion_entidad_id_seq'::regclass);
 
 
 --
--- TOC entry 2875 (class 2604 OID 36509)
--- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 2926 (class 2604 OID 40872)
+-- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY ingreso ALTER COLUMN id SET DEFAULT nextval('ingreso_id_seq'::regclass);
 
 
 --
--- TOC entry 2876 (class 2604 OID 36510)
--- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 2927 (class 2604 OID 40873)
+-- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY modificacion_presupuestal ALTER COLUMN id SET DEFAULT nextval('modificacion_presupuestal_id_seq'::regclass);
 
 
 --
--- TOC entry 2877 (class 2604 OID 36511)
--- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 2928 (class 2604 OID 40874)
+-- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY registo_presupuestal ALTER COLUMN id SET DEFAULT nextval('registo_presupuestal_id_seq'::regclass);
 
 
 --
--- TOC entry 2878 (class 2604 OID 36512)
--- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 2929 (class 2604 OID 40875)
+-- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY registro_presupuestal_disponibilidad ALTER COLUMN id SET DEFAULT nextval('registro_presupuestal_disponibilidad_id_seq'::regclass);
 
 
 --
--- TOC entry 2879 (class 2604 OID 36513)
--- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 2930 (class 2604 OID 40876)
+-- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY reserva_presupuestal ALTER COLUMN id SET DEFAULT nextval('reserva_presupuestal_id_seq'::regclass);
 
 
 --
--- TOC entry 2880 (class 2604 OID 36514)
--- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 2931 (class 2604 OID 40877)
+-- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY rubro ALTER COLUMN id SET DEFAULT nextval('rubro_id_seq'::regclass);
 
 
 --
--- TOC entry 2882 (class 2604 OID 36515)
--- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 2933 (class 2604 OID 40878)
+-- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY rubro_homologado ALTER COLUMN id SET DEFAULT nextval('rubro_homologado_id_seq'::regclass);
 
 
 --
--- TOC entry 2883 (class 2604 OID 36516)
--- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 2934 (class 2604 OID 40879)
+-- Name: id; Type: DEFAULT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY rubro_rubro ALTER COLUMN id SET DEFAULT nextval('rubro_rubro_id_seq'::regclass);
@@ -8526,24 +8990,24 @@ ALTER TABLE ONLY rubro_rubro ALTER COLUMN id SET DEFAULT nextval('rubro_rubro_id
 SET search_path = ruler, pg_catalog;
 
 --
--- TOC entry 2885 (class 2604 OID 36517)
--- Name: id; Type: DEFAULT; Schema: ruler; Owner: -
+-- TOC entry 2936 (class 2604 OID 40880)
+-- Name: id; Type: DEFAULT; Schema: ruler; Owner: postgres
 --
 
 ALTER TABLE ONLY dominio ALTER COLUMN id SET DEFAULT nextval('dominio_id_seq'::regclass);
 
 
 --
--- TOC entry 2886 (class 2604 OID 36518)
--- Name: id; Type: DEFAULT; Schema: ruler; Owner: -
+-- TOC entry 2937 (class 2604 OID 40881)
+-- Name: id; Type: DEFAULT; Schema: ruler; Owner: postgres
 --
 
 ALTER TABLE ONLY predicado ALTER COLUMN id SET DEFAULT nextval('predicado_id_seq'::regclass);
 
 
 --
--- TOC entry 2887 (class 2604 OID 36519)
--- Name: id; Type: DEFAULT; Schema: ruler; Owner: -
+-- TOC entry 2938 (class 2604 OID 40882)
+-- Name: id; Type: DEFAULT; Schema: ruler; Owner: postgres
 --
 
 ALTER TABLE ONLY tipo_predicado ALTER COLUMN id SET DEFAULT nextval('tipo_predicado_id_seq'::regclass);
@@ -8552,88 +9016,88 @@ ALTER TABLE ONLY tipo_predicado ALTER COLUMN id SET DEFAULT nextval('tipo_predic
 SET search_path = titan, pg_catalog;
 
 --
--- TOC entry 2888 (class 2604 OID 36520)
--- Name: id; Type: DEFAULT; Schema: titan; Owner: -
+-- TOC entry 2939 (class 2604 OID 40883)
+-- Name: id; Type: DEFAULT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY categoria_novedad ALTER COLUMN id SET DEFAULT nextval('categoria_novedad_id_seq'::regclass);
 
 
 --
--- TOC entry 2890 (class 2604 OID 36521)
--- Name: id; Type: DEFAULT; Schema: titan; Owner: -
+-- TOC entry 2941 (class 2604 OID 40884)
+-- Name: id; Type: DEFAULT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY categoria_parametro ALTER COLUMN id SET DEFAULT nextval('categoria_parametro_id_seq'::regclass);
 
 
 --
--- TOC entry 2891 (class 2604 OID 36522)
--- Name: id; Type: DEFAULT; Schema: titan; Owner: -
+-- TOC entry 2942 (class 2604 OID 40885)
+-- Name: id; Type: DEFAULT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY descuentos ALTER COLUMN id SET DEFAULT nextval('descuentos_id_seq'::regclass);
 
 
 --
--- TOC entry 2892 (class 2604 OID 36523)
--- Name: id; Type: DEFAULT; Schema: titan; Owner: -
+-- TOC entry 2943 (class 2604 OID 40886)
+-- Name: id; Type: DEFAULT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY detalle_novedad ALTER COLUMN id SET DEFAULT nextval('detalle_novedad_id_seq'::regclass);
 
 
 --
--- TOC entry 2893 (class 2604 OID 36524)
--- Name: id; Type: DEFAULT; Schema: titan; Owner: -
+-- TOC entry 2944 (class 2604 OID 40887)
+-- Name: id; Type: DEFAULT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY detalle_preliquidacion ALTER COLUMN id SET DEFAULT nextval('detalle_preliquidacion_id_seq'::regclass);
 
 
 --
--- TOC entry 2894 (class 2604 OID 36525)
--- Name: id; Type: DEFAULT; Schema: titan; Owner: -
+-- TOC entry 2945 (class 2604 OID 40888)
+-- Name: id; Type: DEFAULT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY nomina ALTER COLUMN id SET DEFAULT nextval('nomina_id_seq'::regclass);
 
 
 --
--- TOC entry 2897 (class 2604 OID 36526)
--- Name: id; Type: DEFAULT; Schema: titan; Owner: -
+-- TOC entry 2948 (class 2604 OID 40889)
+-- Name: id; Type: DEFAULT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY novedad ALTER COLUMN id SET DEFAULT nextval('novedad_id_seq'::regclass);
 
 
 --
--- TOC entry 2901 (class 2604 OID 36527)
--- Name: id; Type: DEFAULT; Schema: titan; Owner: -
+-- TOC entry 2952 (class 2604 OID 40890)
+-- Name: id; Type: DEFAULT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY novedad_aplicada ALTER COLUMN id SET DEFAULT nextval('novedad_aplicada_id_seq'::regclass);
 
 
 --
--- TOC entry 2902 (class 2604 OID 36528)
--- Name: id; Type: DEFAULT; Schema: titan; Owner: -
+-- TOC entry 2953 (class 2604 OID 40891)
+-- Name: id; Type: DEFAULT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY parametro_liquidacion ALTER COLUMN id SET DEFAULT nextval('parametro_liquidacion_id_seq'::regclass);
 
 
 --
--- TOC entry 2904 (class 2604 OID 36529)
--- Name: id; Type: DEFAULT; Schema: titan; Owner: -
+-- TOC entry 2955 (class 2604 OID 40892)
+-- Name: id; Type: DEFAULT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY preliquidacion ALTER COLUMN id SET DEFAULT nextval('preliquidacion_id_seq'::regclass);
 
 
 --
--- TOC entry 2905 (class 2604 OID 36530)
--- Name: id; Type: DEFAULT; Schema: titan; Owner: -
+-- TOC entry 2956 (class 2604 OID 40893)
+-- Name: id; Type: DEFAULT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY variable ALTER COLUMN id SET DEFAULT nextval('variable_id_seq'::regclass);
@@ -8642,9 +9106,9 @@ ALTER TABLE ONLY variable ALTER COLUMN id SET DEFAULT nextval('variable_id_seq':
 SET search_path = agora, pg_catalog;
 
 --
--- TOC entry 3517 (class 0 OID 35844)
+-- TOC entry 3517 (class 0 OID 40008)
 -- Dependencies: 188
--- Data for Name: ciiu_clase; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: ciiu_clase; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO ciiu_clase VALUES ('01', '011', 'Cultivos agrícolas transitorios');
@@ -8896,9 +9360,9 @@ INSERT INTO ciiu_clase VALUES ('99', '990', 'Actividades de organizaciones y ent
 
 
 --
--- TOC entry 3518 (class 0 OID 35847)
+-- TOC entry 3518 (class 0 OID 40011)
 -- Dependencies: 189
--- Data for Name: ciiu_division; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: ciiu_division; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO ciiu_division VALUES ('A', '01', 'Agricultura, ganadería, caza y actividades de servicios conexas');
@@ -8992,9 +9456,9 @@ INSERT INTO ciiu_division VALUES ('U', '99', 'Actividades de organizaciones y en
 
 
 --
--- TOC entry 3519 (class 0 OID 35850)
+-- TOC entry 3519 (class 0 OID 40014)
 -- Dependencies: 190
--- Data for Name: ciiu_subclase; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: ciiu_subclase; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO ciiu_subclase VALUES ('011', '0112', 'Cultivo de arroz');
@@ -9494,9 +9958,9 @@ INSERT INTO ciiu_subclase VALUES ('990', '9900', 'Actividades de organizaciones 
 
 
 --
--- TOC entry 3520 (class 0 OID 35853)
+-- TOC entry 3520 (class 0 OID 40017)
 -- Dependencies: 191
--- Data for Name: ciiu_tipo; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: ciiu_tipo; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO ciiu_tipo VALUES ('A', 'AGRICULTURA, GANADERÍA, CAZA, SILVICULTURA Y PESCA');
@@ -9524,16 +9988,16 @@ INSERT INTO ciiu_tipo VALUES ('U', 'ACTIVIDADES DE ORGANIZACIONES Y ENTIDADES EX
 --
 -- TOC entry 4324 (class 0 OID 0)
 -- Dependencies: 192
--- Name: ciudad_id_ciudad_seq; Type: SEQUENCE SET; Schema: agora; Owner: -
+-- Name: ciudad_id_ciudad_seq; Type: SEQUENCE SET; Schema: agora; Owner: postgres
 --
 
 SELECT pg_catalog.setval('ciudad_id_ciudad_seq', 4136, false);
 
 
 --
--- TOC entry 3523 (class 0 OID 35863)
+-- TOC entry 3523 (class 0 OID 40027)
 -- Dependencies: 194
--- Data for Name: codigo_validacion; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: codigo_validacion; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO codigo_validacion VALUES (1, 1, 2, '2016-07-15 10:18:31');
@@ -9550,9 +10014,9 @@ INSERT INTO codigo_validacion VALUES (19, 18, 2, '2016-08-23 11:35:52');
 
 
 --
--- TOC entry 3525 (class 0 OID 35869)
+-- TOC entry 3525 (class 0 OID 40033)
 -- Dependencies: 196
--- Data for Name: contrato; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: contrato; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO contrato VALUES (9, 26, 77, '2016-01-01', '2016-01-21', 10, 34, 1, 44, 34, '2016-01-21', '2016-01-22', 2, 1, 456789, '34345345', 1, 'efectiv', 2016, 'EVALUADO');
@@ -9571,16 +10035,16 @@ INSERT INTO contrato VALUES (3, 31, 7777777777, '2016-07-04', '2016-07-11', 10, 
 --
 -- TOC entry 4325 (class 0 OID 0)
 -- Dependencies: 197
--- Name: departamento_id_departamento_seq; Type: SEQUENCE SET; Schema: agora; Owner: -
+-- Name: departamento_id_departamento_seq; Type: SEQUENCE SET; Schema: agora; Owner: postgres
 --
 
 SELECT pg_catalog.setval('departamento_id_departamento_seq', 1382, false);
 
 
 --
--- TOC entry 3527 (class 0 OID 35880)
+-- TOC entry 3527 (class 0 OID 40044)
 -- Dependencies: 198
--- Data for Name: dependencia; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: dependencia; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO dependencia VALUES (1, 'ACREDITACIÓN Y AUTOEVALUACIÓN FACULTAD DE CIENCIAS Y EDUCACIÓN', '');
@@ -9735,9 +10199,9 @@ INSERT INTO dependencia VALUES (149, 'VICERRECTORIA ACADEMICA', 'vicerrecacad@ud
 
 
 --
--- TOC entry 3529 (class 0 OID 35888)
+-- TOC entry 3529 (class 0 OID 40052)
 -- Dependencies: 200
--- Data for Name: evaluacion; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: evaluacion; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO evaluacion VALUES (18, 10, '2016-01-24', '0', '0', '20', '10', '0', '12', '10', '9', '15', '', 76, 'B');
@@ -9751,9 +10215,9 @@ INSERT INTO evaluacion VALUES (24, 16, '2016-02-02', '12', '12', '0', '10', '0',
 
 
 --
--- TOC entry 3530 (class 0 OID 35899)
+-- TOC entry 3530 (class 0 OID 40063)
 -- Dependencies: 201
--- Data for Name: informacion_persona_juridica; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: informacion_persona_juridica; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO informacion_persona_juridica VALUES (899999999, 1, 'EXTRANJERO', 196, 23, 65464654654, 'PASAPORTE', NULL, 55555555554, 2, 654654699.00, false, 'COMUN', true, true, false, true, false, false, 'NO APLICA', 'Distri Lack Alemania');
@@ -9762,9 +10226,9 @@ INSERT INTO informacion_persona_juridica VALUES (51550980, 6, 'EXTRANJERO', 42, 
 
 
 --
--- TOC entry 3531 (class 0 OID 35906)
+-- TOC entry 3531 (class 0 OID 40070)
 -- Dependencies: 202
--- Data for Name: informacion_persona_natural; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: informacion_persona_natural; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO informacion_persona_natural VALUES (10, 114753, 8, 'GIANGRANDI', '', 'UMBERTO', '', 'Docente', 10, 20, NULL, NULL, NULL, NULL);
@@ -10153,9 +10617,9 @@ INSERT INTO informacion_persona_natural VALUES (7, 1030546628, 9, 'ALBARRACIN', 
 
 
 --
--- TOC entry 3533 (class 0 OID 35915)
+-- TOC entry 3533 (class 0 OID 40079)
 -- Dependencies: 204
--- Data for Name: informacion_proveedor; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: informacion_proveedor; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO informacion_proveedor VALUES (25, 'NATURAL', 1231231, 3056, 'AD 105', 'asdasd@fsdfdsf.com', 'asdasdsad.com', 'adasdasd', '2131323', '', 'http://localhost/agora/blocks/proveedor/registroProveedor/files/0dc851-certificacion.pdf', NULL, NULL, 2, 'CORRIENTE', '54654654454', 59, '2016-07-14 - 11:38:05 AM', '2016-07-14 - 11:38:05 AM', 'sadasds asdasd sadsd sadsad');
@@ -10553,18 +11017,18 @@ INSERT INTO informacion_proveedor VALUES (466, 'NATURAL', 1030546628, 96, 'SIN I
 
 
 --
--- TOC entry 3535 (class 0 OID 35926)
+-- TOC entry 3535 (class 0 OID 40090)
 -- Dependencies: 206
--- Data for Name: inhabilidad; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: inhabilidad; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO inhabilidad VALUES (1, 3, 'Falta de Compromiso', '546', '2016-07-11', 'No se cumplió con lo pactado.');
 
 
 --
--- TOC entry 3537 (class 0 OID 35935)
+-- TOC entry 3537 (class 0 OID 40099)
 -- Dependencies: 208
--- Data for Name: menu; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: menu; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO menu VALUES (1, 3, 'Contrato', 'Contrato', 1, 3, NULL);
@@ -10591,9 +11055,9 @@ INSERT INTO menu VALUES (20, 3, 'Contrato', 'Contrato', 10, 4, NULL);
 
 
 --
--- TOC entry 3538 (class 0 OID 35942)
+-- TOC entry 3538 (class 0 OID 40106)
 -- Dependencies: 209
--- Data for Name: nomenclatura_dian; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: nomenclatura_dian; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO nomenclatura_dian VALUES (1, 'Adelante', 'ADL', '''''', 'ACTIVO');
@@ -10709,9 +11173,9 @@ INSERT INTO nomenclatura_dian VALUES (110, 'Zona Franca', 'ZF', '''''', 'ACTIVO'
 
 
 --
--- TOC entry 3540 (class 0 OID 35948)
+-- TOC entry 3540 (class 0 OID 40112)
 -- Dependencies: 211
--- Data for Name: objeto_contratar; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: objeto_contratar; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO objeto_contratar VALUES (28, 6, 2008, '2016-08-08', 1, 567, 2, '2016-01-24', '8211', 'ASIGNADO');
@@ -10740,9 +11204,9 @@ INSERT INTO objeto_contratar VALUES (18, 10, 2009, '2016-08-23', 5, 1000, 5, '20
 
 
 --
--- TOC entry 3542 (class 0 OID 35958)
+-- TOC entry 3542 (class 0 OID 40122)
 -- Dependencies: 213
--- Data for Name: ordenador_gasto; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: ordenador_gasto; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO ordenador_gasto VALUES (3, 'Vicerrector Académico', NULL, 1);
@@ -10761,7 +11225,7 @@ INSERT INTO ordenador_gasto VALUES (2, 'Secretario General', NULL, 1);
 --
 -- TOC entry 4326 (class 0 OID 0)
 -- Dependencies: 214
--- Name: pais_id_pais_seq; Type: SEQUENCE SET; Schema: agora; Owner: -
+-- Name: pais_id_pais_seq; Type: SEQUENCE SET; Schema: agora; Owner: postgres
 --
 
 SELECT pg_catalog.setval('pais_id_pais_seq', 195, false);
@@ -10770,7 +11234,7 @@ SELECT pg_catalog.setval('pais_id_pais_seq', 195, false);
 --
 -- TOC entry 4327 (class 0 OID 0)
 -- Dependencies: 193
--- Name: param_codigo_validacion_id_codigo_validacion_seq; Type: SEQUENCE SET; Schema: agora; Owner: -
+-- Name: param_codigo_validacion_id_codigo_validacion_seq; Type: SEQUENCE SET; Schema: agora; Owner: postgres
 --
 
 SELECT pg_catalog.setval('param_codigo_validacion_id_codigo_validacion_seq', 19, true);
@@ -10779,7 +11243,7 @@ SELECT pg_catalog.setval('param_codigo_validacion_id_codigo_validacion_seq', 19,
 --
 -- TOC entry 4328 (class 0 OID 0)
 -- Dependencies: 207
--- Name: param_menu_id_menu_seq; Type: SEQUENCE SET; Schema: agora; Owner: -
+-- Name: param_menu_id_menu_seq; Type: SEQUENCE SET; Schema: agora; Owner: postgres
 --
 
 SELECT pg_catalog.setval('param_menu_id_menu_seq', 1, false);
@@ -10788,7 +11252,7 @@ SELECT pg_catalog.setval('param_menu_id_menu_seq', 1, false);
 --
 -- TOC entry 4329 (class 0 OID 0)
 -- Dependencies: 212
--- Name: param_ordenador_gasto_id_ordenador_seq; Type: SEQUENCE SET; Schema: agora; Owner: -
+-- Name: param_ordenador_gasto_id_ordenador_seq; Type: SEQUENCE SET; Schema: agora; Owner: postgres
 --
 
 SELECT pg_catalog.setval('param_ordenador_gasto_id_ordenador_seq', 1, false);
@@ -10797,7 +11261,7 @@ SELECT pg_catalog.setval('param_ordenador_gasto_id_ordenador_seq', 1, false);
 --
 -- TOC entry 4330 (class 0 OID 0)
 -- Dependencies: 215
--- Name: param_supervisor_id_supervisor_seq; Type: SEQUENCE SET; Schema: agora; Owner: -
+-- Name: param_supervisor_id_supervisor_seq; Type: SEQUENCE SET; Schema: agora; Owner: postgres
 --
 
 SELECT pg_catalog.setval('param_supervisor_id_supervisor_seq', 1, false);
@@ -10806,16 +11270,16 @@ SELECT pg_catalog.setval('param_supervisor_id_supervisor_seq', 1, false);
 --
 -- TOC entry 4331 (class 0 OID 0)
 -- Dependencies: 216
--- Name: param_unidades_id_unidad_seq; Type: SEQUENCE SET; Schema: agora; Owner: -
+-- Name: param_unidades_id_unidad_seq; Type: SEQUENCE SET; Schema: agora; Owner: postgres
 --
 
 SELECT pg_catalog.setval('param_unidades_id_unidad_seq', 1, false);
 
 
 --
--- TOC entry 3546 (class 0 OID 35971)
+-- TOC entry 3546 (class 0 OID 40135)
 -- Dependencies: 217
--- Data for Name: parametro_estandar; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: parametro_estandar; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO parametro_estandar VALUES (1, 'Estados', 'ACTIVO', 'Estado Activo');
@@ -10845,7 +11309,7 @@ INSERT INTO parametro_estandar VALUES (22, 'Tipo Perfil', 'NO APLICA', NULL);
 --
 -- TOC entry 4332 (class 0 OID 0)
 -- Dependencies: 195
--- Name: prov_contrato_id_contrato_seq; Type: SEQUENCE SET; Schema: agora; Owner: -
+-- Name: prov_contrato_id_contrato_seq; Type: SEQUENCE SET; Schema: agora; Owner: postgres
 --
 
 SELECT pg_catalog.setval('prov_contrato_id_contrato_seq', 3, true);
@@ -10854,16 +11318,16 @@ SELECT pg_catalog.setval('prov_contrato_id_contrato_seq', 3, true);
 --
 -- TOC entry 4333 (class 0 OID 0)
 -- Dependencies: 199
--- Name: prov_evaluacion_id_evaluacion_seq; Type: SEQUENCE SET; Schema: agora; Owner: -
+-- Name: prov_evaluacion_id_evaluacion_seq; Type: SEQUENCE SET; Schema: agora; Owner: postgres
 --
 
 SELECT pg_catalog.setval('prov_evaluacion_id_evaluacion_seq', 1, false);
 
 
 --
--- TOC entry 3548 (class 0 OID 35976)
+-- TOC entry 3548 (class 0 OID 40140)
 -- Dependencies: 219
--- Data for Name: prov_formulario_tmp; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: prov_formulario_tmp; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 
@@ -10871,7 +11335,7 @@ SELECT pg_catalog.setval('prov_evaluacion_id_evaluacion_seq', 1, false);
 --
 -- TOC entry 4334 (class 0 OID 0)
 -- Dependencies: 218
--- Name: prov_formulario_tmp_id_data_seq; Type: SEQUENCE SET; Schema: agora; Owner: -
+-- Name: prov_formulario_tmp_id_data_seq; Type: SEQUENCE SET; Schema: agora; Owner: postgres
 --
 
 SELECT pg_catalog.setval('prov_formulario_tmp_id_data_seq', 1, false);
@@ -10880,7 +11344,7 @@ SELECT pg_catalog.setval('prov_formulario_tmp_id_data_seq', 1, false);
 --
 -- TOC entry 4335 (class 0 OID 0)
 -- Dependencies: 205
--- Name: prov_inhabilidad_id_inhabilidad_seq; Type: SEQUENCE SET; Schema: agora; Owner: -
+-- Name: prov_inhabilidad_id_inhabilidad_seq; Type: SEQUENCE SET; Schema: agora; Owner: postgres
 --
 
 SELECT pg_catalog.setval('prov_inhabilidad_id_inhabilidad_seq', 1, true);
@@ -10889,16 +11353,16 @@ SELECT pg_catalog.setval('prov_inhabilidad_id_inhabilidad_seq', 1, true);
 --
 -- TOC entry 4336 (class 0 OID 0)
 -- Dependencies: 210
--- Name: prov_objeto_contratar_id_objeto_seq; Type: SEQUENCE SET; Schema: agora; Owner: -
+-- Name: prov_objeto_contratar_id_objeto_seq; Type: SEQUENCE SET; Schema: agora; Owner: postgres
 --
 
 SELECT pg_catalog.setval('prov_objeto_contratar_id_objeto_seq', 18, true);
 
 
 --
--- TOC entry 3550 (class 0 OID 35982)
+-- TOC entry 3550 (class 0 OID 40146)
 -- Dependencies: 221
--- Data for Name: prov_proveedor_data; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: prov_proveedor_data; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 
@@ -10906,7 +11370,7 @@ SELECT pg_catalog.setval('prov_objeto_contratar_id_objeto_seq', 18, true);
 --
 -- TOC entry 4337 (class 0 OID 0)
 -- Dependencies: 220
--- Name: prov_proveedor_data_id_data_seq; Type: SEQUENCE SET; Schema: agora; Owner: -
+-- Name: prov_proveedor_data_id_data_seq; Type: SEQUENCE SET; Schema: agora; Owner: postgres
 --
 
 SELECT pg_catalog.setval('prov_proveedor_data_id_data_seq', 1, false);
@@ -10915,7 +11379,7 @@ SELECT pg_catalog.setval('prov_proveedor_data_id_data_seq', 1, false);
 --
 -- TOC entry 4338 (class 0 OID 0)
 -- Dependencies: 203
--- Name: prov_proveedor_info_id_proveedor_seq; Type: SEQUENCE SET; Schema: agora; Owner: -
+-- Name: prov_proveedor_info_id_proveedor_seq; Type: SEQUENCE SET; Schema: agora; Owner: postgres
 --
 
 SELECT pg_catalog.setval('prov_proveedor_info_id_proveedor_seq', 47, true);
@@ -10924,7 +11388,7 @@ SELECT pg_catalog.setval('prov_proveedor_info_id_proveedor_seq', 47, true);
 --
 -- TOC entry 4339 (class 0 OID 0)
 -- Dependencies: 222
--- Name: prov_proveedor_telefono; Type: SEQUENCE SET; Schema: agora; Owner: -
+-- Name: prov_proveedor_telefono; Type: SEQUENCE SET; Schema: agora; Owner: postgres
 --
 
 SELECT pg_catalog.setval('prov_proveedor_telefono', 42, true);
@@ -10933,16 +11397,16 @@ SELECT pg_catalog.setval('prov_proveedor_telefono', 42, true);
 --
 -- TOC entry 4340 (class 0 OID 0)
 -- Dependencies: 223
--- Name: prov_solicitud_cotizacion_id_soliciutd_seq; Type: SEQUENCE SET; Schema: agora; Owner: -
+-- Name: prov_solicitud_cotizacion_id_soliciutd_seq; Type: SEQUENCE SET; Schema: agora; Owner: postgres
 --
 
 SELECT pg_catalog.setval('prov_solicitud_cotizacion_id_soliciutd_seq', 87, true);
 
 
 --
--- TOC entry 3553 (class 0 OID 35990)
+-- TOC entry 3553 (class 0 OID 40154)
 -- Dependencies: 224
--- Data for Name: proveedor_actividad_ciiu; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: proveedor_actividad_ciiu; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO proveedor_actividad_ciiu VALUES (51550980, '5920');
@@ -10968,24 +11432,24 @@ INSERT INTO proveedor_actividad_ciiu VALUES (90800500, '8230');
 --
 -- TOC entry 4341 (class 0 OID 0)
 -- Dependencies: 225
--- Name: proveedor_informacion_proveedor; Type: SEQUENCE SET; Schema: agora; Owner: -
+-- Name: proveedor_informacion_proveedor; Type: SEQUENCE SET; Schema: agora; Owner: postgres
 --
 
 SELECT pg_catalog.setval('proveedor_informacion_proveedor', 4, true);
 
 
 --
--- TOC entry 3555 (class 0 OID 35995)
+-- TOC entry 3555 (class 0 OID 40159)
 -- Dependencies: 226
--- Data for Name: proveedor_representante_legal; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: proveedor_representante_legal; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3556 (class 0 OID 35998)
+-- TOC entry 3556 (class 0 OID 40162)
 -- Dependencies: 227
--- Data for Name: proveedor_telefono; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: proveedor_telefono; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO proveedor_telefono VALUES (1, 1);
@@ -11006,9 +11470,9 @@ INSERT INTO proveedor_telefono VALUES (47, 42);
 
 
 --
--- TOC entry 3557 (class 0 OID 36001)
+-- TOC entry 3557 (class 0 OID 40165)
 -- Dependencies: 228
--- Data for Name: rup_especialidad; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: rup_especialidad; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO rup_especialidad VALUES (101, 1, 'OBRAS CIVILES HIDRAULICAS');
@@ -11079,9 +11543,9 @@ INSERT INTO rup_especialidad VALUES (333, 3, 'SISTEMAS DE INFORMACIÓN Y TECNOLO
 
 
 --
--- TOC entry 3558 (class 0 OID 36004)
+-- TOC entry 3558 (class 0 OID 40168)
 -- Dependencies: 229
--- Data for Name: rup_grupo; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: rup_grupo; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO rup_grupo VALUES (10101, 101, 'Presas, diques y muelles.');
@@ -11487,9 +11951,9 @@ INSERT INTO rup_grupo VALUES (33303, 333, 'Software');
 
 
 --
--- TOC entry 3559 (class 0 OID 36007)
+-- TOC entry 3559 (class 0 OID 40171)
 -- Dependencies: 230
--- Data for Name: rup_tipo; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: rup_tipo; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO rup_tipo VALUES (3, 'PROVEEDOR');
@@ -11498,9 +11962,9 @@ INSERT INTO rup_tipo VALUES (2, 'CONSULTOR');
 
 
 --
--- TOC entry 3560 (class 0 OID 36010)
+-- TOC entry 3560 (class 0 OID 40174)
 -- Dependencies: 231
--- Data for Name: solicitud_cotizacion; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: solicitud_cotizacion; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO solicitud_cotizacion VALUES (1, 1, 1);
@@ -11519,9 +11983,9 @@ INSERT INTO solicitud_cotizacion VALUES (87, 18, 1);
 
 
 --
--- TOC entry 3561 (class 0 OID 36014)
+-- TOC entry 3561 (class 0 OID 40178)
 -- Dependencies: 232
--- Data for Name: supervisor; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: supervisor; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO supervisor VALUES (7, 52858512, 'Fausto Puerto', 12, 'faustopuerto@gmail.com', 'ACTIVO');
@@ -11531,9 +11995,9 @@ INSERT INTO supervisor VALUES (10, 12345678, 'Jairo Valezco', 20, 'benmotta@gmai
 
 
 --
--- TOC entry 3562 (class 0 OID 36022)
+-- TOC entry 3562 (class 0 OID 40186)
 -- Dependencies: 233
--- Data for Name: telefono; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: telefono; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO telefono VALUES (2, 3146857451, NULL, 2);
@@ -11562,9 +12026,9 @@ INSERT INTO telefono VALUES (42, 7845214, NULL, 1);
 
 
 --
--- TOC entry 3563 (class 0 OID 36026)
+-- TOC entry 3563 (class 0 OID 40190)
 -- Dependencies: 234
--- Data for Name: tipo_conformacion; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: tipo_conformacion; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO tipo_conformacion VALUES (1, 'Unión Temporal', NULL, 'ACTIVO');
@@ -11596,9 +12060,9 @@ INSERT INTO tipo_conformacion VALUES (26, 'Persona Natural', NULL, 'INACTIVO');
 
 
 --
--- TOC entry 3564 (class 0 OID 36029)
+-- TOC entry 3564 (class 0 OID 40193)
 -- Dependencies: 235
--- Data for Name: unidad; Type: TABLE DATA; Schema: agora; Owner: -
+-- Data for Name: unidad; Type: TABLE DATA; Schema: agora; Owner: postgres
 --
 
 INSERT INTO unidad VALUES (1, 'Metro', 'Longitud');
@@ -11611,9 +12075,9 @@ INSERT INTO unidad VALUES (5, 'Sin Referencia', 'No Aplica');
 SET search_path = argo, pg_catalog;
 
 --
--- TOC entry 3656 (class 0 OID 37365)
--- Dependencies: 327
--- Data for Name: acta_inicio; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3565 (class 0 OID 40200)
+-- Dependencies: 236
+-- Data for Name: acta_inicio; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO acta_inicio VALUES (1, 'DVE1', 2016, '2016-01-02', '2016-05-17', 'acta de inicio contrato Numero: DVE1', NULL);
@@ -12039,8 +12503,8 @@ INSERT INTO acta_inicio VALUES (419, 'DVE419', 2016, '2016-01-02', '2016-05-17',
 
 --
 -- TOC entry 4342 (class 0 OID 0)
--- Dependencies: 328
--- Name: acta_inicio_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 237
+-- Name: acta_inicio_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('acta_inicio_id_seq', 455, false);
@@ -12048,68 +12512,68 @@ SELECT pg_catalog.setval('acta_inicio_id_seq', 455, false);
 
 --
 -- TOC entry 4343 (class 0 OID 0)
--- Dependencies: 329
--- Name: acta_inicio_id_seq1; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 238
+-- Name: acta_inicio_id_seq1; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('acta_inicio_id_seq1', 425, true);
 
 
 --
--- TOC entry 3659 (class 0 OID 37375)
--- Dependencies: 330
--- Data for Name: actividad_economica_necesidad; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3568 (class 0 OID 40210)
+-- Dependencies: 239
+-- Data for Name: actividad_economica_necesidad; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4344 (class 0 OID 0)
--- Dependencies: 331
--- Name: actividad_economica_necesidad_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 240
+-- Name: actividad_economica_necesidad_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('actividad_economica_necesidad_id_seq', 1, false);
 
 
 --
--- TOC entry 3661 (class 0 OID 37380)
--- Dependencies: 332
--- Data for Name: actividad_solicitud_necesidad; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3570 (class 0 OID 40215)
+-- Dependencies: 241
+-- Data for Name: actividad_solicitud_necesidad; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4345 (class 0 OID 0)
--- Dependencies: 333
--- Name: actividad_solicitud_necesidad_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 242
+-- Name: actividad_solicitud_necesidad_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('actividad_solicitud_necesidad_id_seq', 1, false);
 
 
 --
--- TOC entry 3663 (class 0 OID 37385)
--- Dependencies: 334
--- Data for Name: actividades_centro_costos; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3572 (class 0 OID 40220)
+-- Dependencies: 243
+-- Data for Name: actividades_centro_costos; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4346 (class 0 OID 0)
--- Dependencies: 335
--- Name: actividades_centro_costos_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 244
+-- Name: actividades_centro_costos_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('actividades_centro_costos_id_seq', 1, false);
 
 
 --
--- TOC entry 3665 (class 0 OID 37393)
--- Dependencies: 336
--- Data for Name: adicion; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3574 (class 0 OID 40228)
+-- Dependencies: 245
+-- Data for Name: adicion; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO adicion VALUES (117, 248, 5596, 2645, 1838800, NULL, NULL);
@@ -12118,9 +12582,9 @@ INSERT INTO adicion VALUES (125, 249, NULL, NULL, NULL, 205, 15);
 
 
 --
--- TOC entry 3666 (class 0 OID 37396)
--- Dependencies: 337
--- Data for Name: anulacion; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3575 (class 0 OID 40231)
+-- Dependencies: 246
+-- Data for Name: anulacion; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO anulacion VALUES (130, 250);
@@ -12128,9 +12592,9 @@ INSERT INTO anulacion VALUES (133, 250);
 
 
 --
--- TOC entry 3667 (class 0 OID 37399)
--- Dependencies: 338
--- Data for Name: argo_ordenadores; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3576 (class 0 OID 40234)
+-- Dependencies: 247
+-- Data for Name: argo_ordenadores; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO argo_ordenadores VALUES ('4', 10, 'DECANO FACULTAD INGENIERIA', 'JOSE NELSON PEREZ CASTILLO', 197019, 'I', '1');
@@ -12221,9 +12685,9 @@ INSERT INTO argo_ordenadores VALUES ('4', 1373, 'DECANO FACULTAD INGENIERIA', 'R
 
 
 --
--- TOC entry 3668 (class 0 OID 37405)
--- Dependencies: 339
--- Data for Name: cambio_supervisor; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3577 (class 0 OID 40240)
+-- Dependencies: 248
+-- Data for Name: cambio_supervisor; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO cambio_supervisor VALUES (119, 252, '17188746', '19056999', '2016-10-13');
@@ -12231,26 +12695,26 @@ INSERT INTO cambio_supervisor VALUES (126, 252, '2896807', '78092', '2016-10-15'
 
 
 --
--- TOC entry 3669 (class 0 OID 37408)
--- Dependencies: 340
--- Data for Name: centro_costos; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3578 (class 0 OID 40243)
+-- Dependencies: 249
+-- Data for Name: centro_costos; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4347 (class 0 OID 0)
--- Dependencies: 341
--- Name: centro_costos_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 250
+-- Name: centro_costos_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('centro_costos_id_seq', 1, false);
 
 
 --
--- TOC entry 3671 (class 0 OID 37416)
--- Dependencies: 342
--- Data for Name: cesion; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3580 (class 0 OID 40251)
+-- Dependencies: 251
+-- Data for Name: cesion; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO cesion VALUES (120, 10711676895, 20688524, '2016-10-21');
@@ -12259,8 +12723,8 @@ INSERT INTO cesion VALUES (127, 73555111, 51550980, '2016-10-19');
 
 --
 -- TOC entry 4348 (class 0 OID 0)
--- Dependencies: 343
--- Name: consecutivo_unico_cambio_estado_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 252
+-- Name: consecutivo_unico_cambio_estado_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('consecutivo_unico_cambio_estado_seq', 372, true);
@@ -12268,8 +12732,8 @@ SELECT pg_catalog.setval('consecutivo_unico_cambio_estado_seq', 372, true);
 
 --
 -- TOC entry 4349 (class 0 OID 0)
--- Dependencies: 344
--- Name: consecutivo_unico_cancelado_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 253
+-- Name: consecutivo_unico_cancelado_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('consecutivo_unico_cancelado_seq', 147, false);
@@ -12277,8 +12741,8 @@ SELECT pg_catalog.setval('consecutivo_unico_cancelado_seq', 147, false);
 
 --
 -- TOC entry 4350 (class 0 OID 0)
--- Dependencies: 345
--- Name: consecutivo_unico_contrato_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 254
+-- Name: consecutivo_unico_contrato_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('consecutivo_unico_contrato_seq', 176, true);
@@ -12286,17 +12750,17 @@ SELECT pg_catalog.setval('consecutivo_unico_contrato_seq', 176, true);
 
 --
 -- TOC entry 4351 (class 0 OID 0)
--- Dependencies: 346
--- Name: contratista_id_contratista_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 255
+-- Name: contratista_id_contratista_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('contratista_id_contratista_seq', 53, false);
 
 
 --
--- TOC entry 3677 (class 0 OID 37429)
--- Dependencies: 348
--- Data for Name: contrato; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3586 (class 0 OID 40264)
+-- Dependencies: 257
+-- Data for Name: contrato; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO contrato VALUES (464, 2016, 'DVE1', true, '2016-06-16', NULL, NULL, '212');
@@ -12721,17 +13185,17 @@ INSERT INTO contrato VALUES (882, 2016, 'DVE419', true, '2016-06-16', NULL, NULL
 
 
 --
--- TOC entry 3678 (class 0 OID 37437)
--- Dependencies: 349
--- Data for Name: contrato_cancelado; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3587 (class 0 OID 40272)
+-- Dependencies: 258
+-- Data for Name: contrato_cancelado; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3679 (class 0 OID 37445)
--- Dependencies: 350
--- Data for Name: contrato_estado; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3588 (class 0 OID 40280)
+-- Dependencies: 259
+-- Data for Name: contrato_estado; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO contrato_estado VALUES ('190', 2016, '2016-10-25 18:08:52', 342, 1, 'CC12222');
@@ -12768,9 +13232,9 @@ INSERT INTO contrato_estado VALUES ('197', 2016, '2016-10-27 08:47:10', 372, 5, 
 
 
 --
--- TOC entry 3681 (class 0 OID 37454)
--- Dependencies: 352
--- Data for Name: contrato_general; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3590 (class 0 OID 40289)
+-- Dependencies: 261
+-- Data for Name: contrato_general; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO contrato_general VALUES ('DVE11', 2016, 'Doncente de Vinculacion Especial', 180, 240, '15', NULL, NULL, NULL, 1, 548, 3039094, 205, 4858272.00, 'Docente de Vinculacion Especial', 'Abono a Cuenta Mensual de acuerdo a puntas y hotras laboradas', 'Sin Condiciones', 1, '2016-10-25', 46, 35, 123, 132, 136, 146, 166, 156, 149, 137, NULL, NULL, 181, 'Contrato Doncente de Vinculacion Especial', NULL, 33, NULL, NULL, true, 971, 2, 2);
@@ -13529,8 +13993,8 @@ INSERT INTO contrato_general VALUES ('DVE412', 2016, 'Doncente de Vinculacion Es
 
 --
 -- TOC entry 4352 (class 0 OID 0)
--- Dependencies: 353
--- Name: contrato_general_lugar_ejecucion_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 262
+-- Name: contrato_general_lugar_ejecucion_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('contrato_general_lugar_ejecucion_seq', 49, false);
@@ -13538,17 +14002,17 @@ SELECT pg_catalog.setval('contrato_general_lugar_ejecucion_seq', 49, false);
 
 --
 -- TOC entry 4353 (class 0 OID 0)
--- Dependencies: 347
--- Name: contrato_id_contrato_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 256
+-- Name: contrato_id_contrato_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('contrato_id_contrato_seq', 882, true);
 
 
 --
--- TOC entry 3683 (class 0 OID 37466)
--- Dependencies: 354
--- Data for Name: contrato_poliza; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3592 (class 0 OID 40301)
+-- Dependencies: 263
+-- Data for Name: contrato_poliza; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO contrato_poliza VALUES (2, true, '2016-10-12', '2016-10-17', '190', 2016);
@@ -13566,9 +14030,9 @@ INSERT INTO contrato_poliza VALUES (2, true, '2016-10-04', '2016-10-20', '198', 
 
 
 --
--- TOC entry 3684 (class 0 OID 37473)
--- Dependencies: 355
--- Data for Name: contrato_suscrito; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3593 (class 0 OID 40308)
+-- Dependencies: 264
+-- Data for Name: contrato_suscrito; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO contrato_suscrito VALUES (169, '190', 2016, '2016-10-25', 'CC12222', '2016-10-03');
@@ -13581,9 +14045,9 @@ INSERT INTO contrato_suscrito VALUES (176, '197', 2016, '2016-10-27', 'CC12222',
 
 
 --
--- TOC entry 3685 (class 0 OID 37480)
--- Dependencies: 356
--- Data for Name: convenio; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3594 (class 0 OID 40315)
+-- Dependencies: 265
+-- Data for Name: convenio; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO convenio VALUES ('5430', '54302011', '005', 2011, 'CONTRATO INTERADMINISTRATIVO DE COFINANCIACIÓN NO. 005 DE 2011 CELEBRADO ENTRE EL FONDO DE DESARROLLO LOCAL DE SUBA Y LA UNIVERSIDAD DISTRITAL FRANCISCO JOSÉ DE CALDAS', 'AUNAR ESFUERZOS PARA EJECUTAR EL LEVANTAMIENTO DE PRECISIÓN Y LA INCORPORACIÓN LIGADA AL IGAC, QUE DEBE CUMPLIR CON LOS REQUISITOS NORMATIVOS, A FIN DE REFLEJAR LA REALIDA TOPOGRÁFICA Y CARTOGRÁFICA A NIVEL DE DETALLE URBANÍSTICO Y LOTEO DE LA URBANIZACIÓN LA ESPERANZA DE LA LOCALIDAD DE SUBA.', 'FDL SUBA', 0, '2011-09-08', '2011-12-07', 'EN EJECUCIÓN', 'U. E. FACULTAD TECNOLÓGICA', 'A', 'ASISTENCIA TÉCNICA');
@@ -13927,9 +14391,9 @@ INSERT INTO convenio VALUES ('5979', '59792016', '30', 2016, 'DETERMINAR EL USO 
 
 
 --
--- TOC entry 3687 (class 0 OID 37488)
--- Dependencies: 358
--- Data for Name: dependencia_SIC; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3596 (class 0 OID 40323)
+-- Dependencies: 267
+-- Data for Name: dependencia_SIC; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO "dependencia_SIC" VALUES ('FMVI050509', 'DEP23', 'FACULTAD DE MEDIO AMBIENTE Y RECURSOS NATURALES', 'A', NULL, NULL, NULL, NULL, true, NULL, 26226);
@@ -14933,17 +15397,17 @@ INSERT INTO "dependencia_SIC" VALUES ('IDEX0002', 'IDEX0002', 'CONTRATACION -IDE
 
 --
 -- TOC entry 4354 (class 0 OID 0)
--- Dependencies: 359
--- Name: dependencia_id_dependencia_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 268
+-- Name: dependencia_id_dependencia_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('dependencia_id_dependencia_seq', 1, false);
 
 
 --
--- TOC entry 3690 (class 0 OID 37500)
--- Dependencies: 361
--- Data for Name: elemento_acta_recibido; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3599 (class 0 OID 40335)
+-- Dependencies: 270
+-- Data for Name: elemento_acta_recibido; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO elemento_acta_recibido VALUES (64, '2016-10-26', 104, 3, 'Libro devolutivo', 1, 'libro', 500000, 4, 500000, 20000, 520000, 0, NULL, NULL, NULL, NULL, NULL, 102, true, NULL, NULL, NULL, 'OTR2', '17104879');
@@ -14952,17 +15416,17 @@ INSERT INTO elemento_acta_recibido VALUES (65, '2016-10-26', 12, 1, 'consumo con
 
 --
 -- TOC entry 4355 (class 0 OID 0)
--- Dependencies: 360
--- Name: elemento_acta_recibido_id_elemento_ac_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 269
+-- Name: elemento_acta_recibido_id_elemento_ac_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('elemento_acta_recibido_id_elemento_ac_seq', 65, true);
 
 
 --
--- TOC entry 3691 (class 0 OID 37508)
--- Dependencies: 362
--- Data for Name: espaciosfisicos_SIC; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3600 (class 0 OID 40343)
+-- Dependencies: 271
+-- Data for Name: espaciosfisicos_SIC; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO "espaciosfisicos_SIC" VALUES (13, 'FAAS010103', 'COMITÉ DE CURRICULO Y CREACIÓN', 'CRA 13 CLL 14', 0, 'A');
@@ -15925,17 +16389,17 @@ INSERT INTO "espaciosfisicos_SIC" VALUES (0, 'PAS0000000', 'POR ASIGNAR', 'N/A',
 
 
 --
--- TOC entry 3692 (class 0 OID 37514)
--- Dependencies: 363
--- Data for Name: especificacion_tecnica; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3601 (class 0 OID 40349)
+-- Dependencies: 272
+-- Data for Name: especificacion_tecnica; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4356 (class 0 OID 0)
--- Dependencies: 364
--- Name: especificacion_tecnica_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 273
+-- Name: especificacion_tecnica_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('especificacion_tecnica_id_seq', 1, false);
@@ -15943,17 +16407,17 @@ SELECT pg_catalog.setval('especificacion_tecnica_id_seq', 1, false);
 
 --
 -- TOC entry 4357 (class 0 OID 0)
--- Dependencies: 365
--- Name: estado_constrato_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 274
+-- Name: estado_constrato_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('estado_constrato_id_seq', 7, false);
 
 
 --
--- TOC entry 3695 (class 0 OID 37524)
--- Dependencies: 366
--- Data for Name: estado_contrato; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3604 (class 0 OID 40359)
+-- Dependencies: 275
+-- Data for Name: estado_contrato; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO estado_contrato VALUES ('Por Aprobar', '2016-01-08', 1);
@@ -15966,34 +16430,34 @@ INSERT INTO estado_contrato VALUES ('Cancelado', '2016-02-09', 7);
 
 
 --
--- TOC entry 3696 (class 0 OID 37528)
--- Dependencies: 367
--- Data for Name: estado_solicitud_necesidad; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3605 (class 0 OID 40363)
+-- Dependencies: 276
+-- Data for Name: estado_solicitud_necesidad; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4358 (class 0 OID 0)
--- Dependencies: 368
--- Name: estado_solicitud_necesidad_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 277
+-- Name: estado_solicitud_necesidad_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('estado_solicitud_necesidad_id_seq', 1, false);
 
 
 --
--- TOC entry 3698 (class 0 OID 37536)
--- Dependencies: 369
--- Data for Name: fuente_financiacion_rubro_necesidad; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3607 (class 0 OID 40371)
+-- Dependencies: 278
+-- Data for Name: fuente_financiacion_rubro_necesidad; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4359 (class 0 OID 0)
--- Dependencies: 370
--- Name: fuente_financiacion_rubro_necesidad_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 279
+-- Name: fuente_financiacion_rubro_necesidad_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('fuente_financiacion_rubro_necesidad_id_seq', 1, false);
@@ -16001,8 +16465,8 @@ SELECT pg_catalog.setval('fuente_financiacion_rubro_necesidad_id_seq', 1, false)
 
 --
 -- TOC entry 4360 (class 0 OID 0)
--- Dependencies: 357
--- Name: id_dependencia_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 266
+-- Name: id_dependencia_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('id_dependencia_seq', 27220, false);
@@ -16010,8 +16474,8 @@ SELECT pg_catalog.setval('id_dependencia_seq', 27220, false);
 
 --
 -- TOC entry 4361 (class 0 OID 0)
--- Dependencies: 371
--- Name: id_orden_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 280
+-- Name: id_orden_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('id_orden_seq', 107, true);
@@ -16019,17 +16483,17 @@ SELECT pg_catalog.setval('id_orden_seq', 107, true);
 
 --
 -- TOC entry 4362 (class 0 OID 0)
--- Dependencies: 372
--- Name: inf_bancaria_id_inf_bancaria_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 281
+-- Name: inf_bancaria_id_inf_bancaria_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('inf_bancaria_id_inf_bancaria_seq', 3, false);
 
 
 --
--- TOC entry 3703 (class 0 OID 37547)
--- Dependencies: 374
--- Data for Name: lugar_ejecucion; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3612 (class 0 OID 40382)
+-- Dependencies: 283
+-- Data for Name: lugar_ejecucion; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO lugar_ejecucion VALUES (2, 'Universidad Distital', NULL, NULL, 96);
@@ -16046,68 +16510,68 @@ INSERT INTO lugar_ejecucion VALUES (41, 'Calle 15 ', 'FALC', 'DEP101', 3056);
 
 --
 -- TOC entry 4363 (class 0 OID 0)
--- Dependencies: 373
--- Name: lugar_ejecucion_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 282
+-- Name: lugar_ejecucion_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('lugar_ejecucion_id_seq', 48, true);
 
 
 --
--- TOC entry 3704 (class 0 OID 37554)
--- Dependencies: 375
--- Data for Name: marco_legal; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3613 (class 0 OID 40389)
+-- Dependencies: 284
+-- Data for Name: marco_legal; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4364 (class 0 OID 0)
--- Dependencies: 376
--- Name: marco_legal_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 285
+-- Name: marco_legal_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('marco_legal_id_seq', 1, false);
 
 
 --
--- TOC entry 3706 (class 0 OID 37562)
--- Dependencies: 377
--- Data for Name: marco_legal_necesidad; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3615 (class 0 OID 40397)
+-- Dependencies: 286
+-- Data for Name: marco_legal_necesidad; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4365 (class 0 OID 0)
--- Dependencies: 378
--- Name: marco_legal_necesidad_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 287
+-- Name: marco_legal_necesidad_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('marco_legal_necesidad_id_seq', 1, false);
 
 
 --
--- TOC entry 3708 (class 0 OID 37567)
--- Dependencies: 379
--- Data for Name: modalidad_seleccion; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3617 (class 0 OID 40402)
+-- Dependencies: 288
+-- Data for Name: modalidad_seleccion; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4366 (class 0 OID 0)
--- Dependencies: 380
--- Name: modalidad_seleccion_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 289
+-- Name: modalidad_seleccion_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('modalidad_seleccion_id_seq', 1, false);
 
 
 --
--- TOC entry 3711 (class 0 OID 37577)
--- Dependencies: 382
--- Data for Name: novedad_contractual; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3620 (class 0 OID 40412)
+-- Dependencies: 291
+-- Data for Name: novedad_contractual; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO novedad_contractual VALUES (117, 220, '190', 2016, true, '2016-10-25 18:11:47', 'CC12222', 'AD1', 'cef2b5_14701813.pdf', 'Adicion de Presupuesto');
@@ -16130,8 +16594,8 @@ INSERT INTO novedad_contractual VALUES (133, 234, '197', 2016, true, '2016-10-27
 
 --
 -- TOC entry 4367 (class 0 OID 0)
--- Dependencies: 381
--- Name: novedad_contractual_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 290
+-- Name: novedad_contractual_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('novedad_contractual_id_seq', 133, true);
@@ -16139,17 +16603,17 @@ SELECT pg_catalog.setval('novedad_contractual_id_seq', 133, true);
 
 --
 -- TOC entry 4368 (class 0 OID 0)
--- Dependencies: 351
--- Name: numero_unico_contrato_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 260
+-- Name: numero_unico_contrato_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('numero_unico_contrato_seq', 198, true);
 
 
 --
--- TOC entry 3712 (class 0 OID 37585)
--- Dependencies: 383
--- Data for Name: orden; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3621 (class 0 OID 40420)
+-- Dependencies: 292
+-- Data for Name: orden; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO orden VALUES (103, 246, '192', 2016, '2016-10-26', true);
@@ -16161,9 +16625,9 @@ INSERT INTO orden VALUES (107, 245, '196', 2016, '2016-10-27', true);
 
 
 --
--- TOC entry 3714 (class 0 OID 37595)
--- Dependencies: 385
--- Data for Name: parametros; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3623 (class 0 OID 40430)
+-- Dependencies: 294
+-- Data for Name: parametros; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO parametros VALUES (1, 'Natural', '1', 1, true, '2016-10-25');
@@ -16454,17 +16918,17 @@ INSERT INTO parametros VALUES (256, 'Terminadas', '''', 35, true, '2016-10-25');
 
 --
 -- TOC entry 4369 (class 0 OID 0)
--- Dependencies: 384
--- Name: parametros_id_parametro_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 293
+-- Name: parametros_id_parametro_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('parametros_id_parametro_seq', 241, false);
 
 
 --
--- TOC entry 3715 (class 0 OID 37603)
--- Dependencies: 386
--- Data for Name: poliza; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3624 (class 0 OID 40438)
+-- Dependencies: 295
+-- Data for Name: poliza; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO poliza VALUES (1, 'Poliza 1', 'POLIZA DE CALIDAD Y CORRECTO FUNCIONAMIENTO DEL BIEN O SERVICIO EQUIVALENTE AL VEINTE (20%) DEL VALOR TOTAL DEL CONTRATO INCLUIDO EL IVA, DURANTE SU EJECUCIÓN Y DOCE (12) MESES MAS, A PARTIR DE LA FECHA DE ENTREGA DE LOS BIENES Y PUESTA EN FUNCIONAMIENTO DE LOS MISMOS', '2016-10-01', 'CC39674528', true);
@@ -16476,8 +16940,8 @@ INSERT INTO poliza VALUES (5, 'Poliza 5', 'POLIZA DE ESTABILIDAD DE LA OBRA SERA
 
 --
 -- TOC entry 4370 (class 0 OID 0)
--- Dependencies: 387
--- Name: registro_novedad_id_novedad_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 296
+-- Name: registro_novedad_id_novedad_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('registro_novedad_id_novedad_seq', 3, false);
@@ -16485,17 +16949,17 @@ SELECT pg_catalog.setval('registro_novedad_id_novedad_seq', 3, false);
 
 --
 -- TOC entry 4371 (class 0 OID 0)
--- Dependencies: 388
--- Name: registro_presupuestal_orden_id_registro_presupuestal_orden_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 297
+-- Name: registro_presupuestal_orden_id_registro_presupuestal_orden_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('registro_presupuestal_orden_id_registro_presupuestal_orden_seq', 1, false);
 
 
 --
--- TOC entry 3719 (class 0 OID 37617)
--- Dependencies: 390
--- Data for Name: relacion_parametro; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3628 (class 0 OID 40452)
+-- Dependencies: 299
+-- Data for Name: relacion_parametro; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO relacion_parametro VALUES (1, 'tipo_persona', true, '2016-10-25');
@@ -16537,51 +17001,51 @@ INSERT INTO relacion_parametro VALUES (35, 'ordenes_ATC', true, '2016-10-25');
 
 --
 -- TOC entry 4372 (class 0 OID 0)
--- Dependencies: 389
--- Name: relacion_parametro_id_rel_parametro_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 298
+-- Name: relacion_parametro_id_rel_parametro_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('relacion_parametro_id_rel_parametro_seq', 1, false);
 
 
 --
--- TOC entry 3720 (class 0 OID 37625)
--- Dependencies: 391
--- Data for Name: requisito_minimo; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3629 (class 0 OID 40460)
+-- Dependencies: 300
+-- Data for Name: requisito_minimo; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4373 (class 0 OID 0)
--- Dependencies: 392
--- Name: requisito_minimo_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 301
+-- Name: requisito_minimo_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('requisito_minimo_id_seq', 1, false);
 
 
 --
--- TOC entry 3722 (class 0 OID 37630)
--- Dependencies: 393
--- Data for Name: rubro_solicitud_necesidad; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3631 (class 0 OID 40465)
+-- Dependencies: 302
+-- Data for Name: rubro_solicitud_necesidad; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4374 (class 0 OID 0)
--- Dependencies: 394
--- Name: rubro_solicitud_necesidad_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 303
+-- Name: rubro_solicitud_necesidad_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('rubro_solicitud_necesidad_id_seq', 1, false);
 
 
 --
--- TOC entry 3724 (class 0 OID 37635)
--- Dependencies: 395
--- Data for Name: sedes_SIC; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3633 (class 0 OID 40470)
+-- Dependencies: 304
+-- Data for Name: sedes_SIC; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO "sedes_SIC" VALUES (0, 'PAS', 'POR ASIGNAR', 'N/A', 'A');
@@ -16603,9 +17067,9 @@ INSERT INTO "sedes_SIC" VALUES (107, 'IDEX', 'UNIDAD DE EXTENSION - IDEXUD', 'Av
 
 
 --
--- TOC entry 3725 (class 0 OID 37641)
--- Dependencies: 396
--- Data for Name: servicio_orden; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3634 (class 0 OID 40476)
+-- Dependencies: 305
+-- Data for Name: servicio_orden; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO servicio_orden VALUES (1, 'asdasdsadadasd', 'prueba servicio', '2016-10-26', '191', 2016, '0112', 'CC11111', 845.00);
@@ -16613,8 +17077,8 @@ INSERT INTO servicio_orden VALUES (1, 'asdasdsadadasd', 'prueba servicio', '2016
 
 --
 -- TOC entry 4375 (class 0 OID 0)
--- Dependencies: 397
--- Name: servicio_orden_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 306
+-- Name: servicio_orden_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('servicio_orden_id_seq', 27, false);
@@ -16622,25 +17086,25 @@ SELECT pg_catalog.setval('servicio_orden_id_seq', 27, false);
 
 --
 -- TOC entry 4376 (class 0 OID 0)
--- Dependencies: 398
--- Name: servicio_orden_id_seq1; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 307
+-- Name: servicio_orden_id_seq1; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('servicio_orden_id_seq1', 1, true);
 
 
 --
--- TOC entry 3728 (class 0 OID 37651)
--- Dependencies: 399
--- Data for Name: solicitud_necesidad; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3637 (class 0 OID 40486)
+-- Dependencies: 308
+-- Data for Name: solicitud_necesidad; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4377 (class 0 OID 0)
--- Dependencies: 400
--- Name: solicitud_necesidad_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 309
+-- Name: solicitud_necesidad_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('solicitud_necesidad_id_seq', 1, false);
@@ -16648,17 +17112,17 @@ SELECT pg_catalog.setval('solicitud_necesidad_id_seq', 1, false);
 
 --
 -- TOC entry 4378 (class 0 OID 0)
--- Dependencies: 401
--- Name: solicitud_necesidad_numero_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 310
+-- Name: solicitud_necesidad_numero_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('solicitud_necesidad_numero_seq', 1, false);
 
 
 --
--- TOC entry 3732 (class 0 OID 37666)
--- Dependencies: 403
--- Data for Name: supervisor_contrato; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3641 (class 0 OID 40501)
+-- Dependencies: 312
+-- Data for Name: supervisor_contrato; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO supervisor_contrato VALUES (91, 'ESGUERRA REAL MELIDA', 37218883, 'PENSIONADO ADM', 'FALC', 'DEP101', 1, true, 454);
@@ -16676,34 +17140,34 @@ INSERT INTO supervisor_contrato VALUES (90, 'Jose Luis Martinez Moreno', 7355511
 
 --
 -- TOC entry 4379 (class 0 OID 0)
--- Dependencies: 402
--- Name: supervisor_contrato_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 311
+-- Name: supervisor_contrato_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('supervisor_contrato_id_seq', 94, true);
 
 
 --
--- TOC entry 3733 (class 0 OID 37674)
--- Dependencies: 404
--- Data for Name: supervisor_solicitud_necesidad; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3642 (class 0 OID 40509)
+-- Dependencies: 313
+-- Data for Name: supervisor_solicitud_necesidad; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4380 (class 0 OID 0)
--- Dependencies: 405
--- Name: supervisor_solicitud_necesidad_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 314
+-- Name: supervisor_solicitud_necesidad_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('supervisor_solicitud_necesidad_id_seq', 1, false);
 
 
 --
--- TOC entry 3735 (class 0 OID 37682)
--- Dependencies: 406
--- Data for Name: suspension; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3644 (class 0 OID 40517)
+-- Dependencies: 315
+-- Data for Name: suspension; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO suspension VALUES (121, '2016-10-26', '2016-10-31', '2016-10-29', false, 122);
@@ -16711,26 +17175,26 @@ INSERT INTO suspension VALUES (128, '2016-10-05', '2016-10-31', '2016-10-31', fa
 
 
 --
--- TOC entry 3736 (class 0 OID 37686)
--- Dependencies: 407
--- Data for Name: tipo_contratacion; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3645 (class 0 OID 40521)
+-- Dependencies: 316
+-- Data for Name: tipo_contratacion; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4381 (class 0 OID 0)
--- Dependencies: 408
--- Name: tipo_contratacion_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 317
+-- Name: tipo_contratacion_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('tipo_contratacion_id_seq', 1, false);
 
 
 --
--- TOC entry 3738 (class 0 OID 37694)
--- Dependencies: 409
--- Data for Name: tipo_contrato; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3647 (class 0 OID 40529)
+-- Dependencies: 318
+-- Data for Name: tipo_contrato; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO tipo_contrato VALUES (1, 'Orden');
@@ -16739,8 +17203,8 @@ INSERT INTO tipo_contrato VALUES (2, 'Contrato');
 
 --
 -- TOC entry 4382 (class 0 OID 0)
--- Dependencies: 410
--- Name: tipo_contrato_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 319
+-- Name: tipo_contrato_id_seq; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('tipo_contrato_id_seq', 2, false);
@@ -16748,17 +17212,17 @@ SELECT pg_catalog.setval('tipo_contrato_id_seq', 2, false);
 
 --
 -- TOC entry 4383 (class 0 OID 0)
--- Dependencies: 411
--- Name: tipo_contrato_id_seq1; Type: SEQUENCE SET; Schema: argo; Owner: -
+-- Dependencies: 320
+-- Name: tipo_contrato_id_seq1; Type: SEQUENCE SET; Schema: argo; Owner: postgres
 --
 
 SELECT pg_catalog.setval('tipo_contrato_id_seq1', 1, false);
 
 
 --
--- TOC entry 3741 (class 0 OID 37704)
--- Dependencies: 412
--- Data for Name: unidad_ejecutora; Type: TABLE DATA; Schema: argo; Owner: -
+-- TOC entry 3650 (class 0 OID 40539)
+-- Dependencies: 321
+-- Data for Name: unidad_ejecutora; Type: TABLE DATA; Schema: argo; Owner: postgres
 --
 
 INSERT INTO unidad_ejecutora VALUES (1, 'Rector', 'Unidad ejecutora sede administrativa, abora las dependencias de juridica y compras  que realizan la ejecucion de contratos');
@@ -16768,26 +17232,26 @@ INSERT INTO unidad_ejecutora VALUES (2, 'Convenios', 'Unidad ejecutora idexud, l
 SET search_path = core, pg_catalog;
 
 --
--- TOC entry 3565 (class 0 OID 36200)
--- Dependencies: 236
--- Data for Name: actividad_economica; Type: TABLE DATA; Schema: core; Owner: -
+-- TOC entry 3651 (class 0 OID 40545)
+-- Dependencies: 322
+-- Data for Name: actividad_economica; Type: TABLE DATA; Schema: core; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4384 (class 0 OID 0)
--- Dependencies: 237
--- Name: actividad_economica_consecutivo_seq; Type: SEQUENCE SET; Schema: core; Owner: -
+-- Dependencies: 323
+-- Name: actividad_economica_consecutivo_seq; Type: SEQUENCE SET; Schema: core; Owner: postgres
 --
 
 SELECT pg_catalog.setval('actividad_economica_consecutivo_seq', 1, false);
 
 
 --
--- TOC entry 3567 (class 0 OID 36208)
--- Dependencies: 238
--- Data for Name: banco; Type: TABLE DATA; Schema: core; Owner: -
+-- TOC entry 3653 (class 0 OID 40553)
+-- Dependencies: 324
+-- Data for Name: banco; Type: TABLE DATA; Schema: core; Owner: postgres
 --
 
 INSERT INTO banco VALUES (0, 'Banco de la República', 'BANCO DE LA REPÚBLICA', '''''', 'ACTIVO');
@@ -16819,9 +17283,9 @@ INSERT INTO banco VALUES (58, 'Banco Procredit', 'BANCO PROCREDIT', '''''', 'ACT
 
 
 --
--- TOC entry 3568 (class 0 OID 36211)
--- Dependencies: 239
--- Data for Name: ciudad; Type: TABLE DATA; Schema: core; Owner: -
+-- TOC entry 3654 (class 0 OID 40556)
+-- Dependencies: 325
+-- Data for Name: ciudad; Type: TABLE DATA; Schema: core; Owner: postgres
 --
 
 INSERT INTO ciudad VALUES (15, 146, 'Madrid', NULL, NULL, 'Activo', 'E', 'Madrid', 3041101, -3.683, 40.417);
@@ -20963,9 +21427,9 @@ INSERT INTO ciudad VALUES (2788, 265, 'Monteria', NULL, NULL, 'Activo', 'CO', 'C
 
 
 --
--- TOC entry 3569 (class 0 OID 36216)
--- Dependencies: 240
--- Data for Name: departamento; Type: TABLE DATA; Schema: core; Owner: -
+-- TOC entry 3655 (class 0 OID 40561)
+-- Dependencies: 326
+-- Data for Name: departamento; Type: TABLE DATA; Schema: core; Owner: postgres
 --
 
 INSERT INTO departamento VALUES (32, 55, 'Bahrain', NULL, NULL, 'Activo', 'BRN', 590042, 620, 'Manama', 'Bahrain');
@@ -22353,9 +22817,9 @@ INSERT INTO departamento VALUES (1382, 155, 'Southern', NULL, NULL, 'Activo', 'Z
 
 
 --
--- TOC entry 3570 (class 0 OID 36221)
--- Dependencies: 241
--- Data for Name: estado; Type: TABLE DATA; Schema: core; Owner: -
+-- TOC entry 3656 (class 0 OID 40566)
+-- Dependencies: 327
+-- Data for Name: estado; Type: TABLE DATA; Schema: core; Owner: postgres
 --
 
 INSERT INTO estado VALUES (1, 'ACTIVO');
@@ -22364,17 +22828,17 @@ INSERT INTO estado VALUES (2, 'INACTIVO');
 
 --
 -- TOC entry 4385 (class 0 OID 0)
--- Dependencies: 242
--- Name: estado_id_seq; Type: SEQUENCE SET; Schema: core; Owner: -
+-- Dependencies: 328
+-- Name: estado_id_seq; Type: SEQUENCE SET; Schema: core; Owner: postgres
 --
 
 SELECT pg_catalog.setval('estado_id_seq', 1, false);
 
 
 --
--- TOC entry 3572 (class 0 OID 36226)
--- Dependencies: 243
--- Data for Name: info_entidad; Type: TABLE DATA; Schema: core; Owner: -
+-- TOC entry 3658 (class 0 OID 40571)
+-- Dependencies: 329
+-- Data for Name: info_entidad; Type: TABLE DATA; Schema: core; Owner: postgres
 --
 
 INSERT INTO info_entidad VALUES (1, 'Calle 140 # 30 - 25', 4758693, NULL, NULL, 1425, 'fd@gmail.com', '2016-08-24', '2016-08-24', 1);
@@ -22412,17 +22876,17 @@ INSERT INTO info_entidad VALUES (31, 'Carrera. 9a N.° 99 - 07', 5200169, 193, N
 
 --
 -- TOC entry 4386 (class 0 OID 0)
--- Dependencies: 244
--- Name: info_entidad_id_seq; Type: SEQUENCE SET; Schema: core; Owner: -
+-- Dependencies: 330
+-- Name: info_entidad_id_seq; Type: SEQUENCE SET; Schema: core; Owner: postgres
 --
 
 SELECT pg_catalog.setval('info_entidad_id_seq', 15, true);
 
 
 --
--- TOC entry 3574 (class 0 OID 36233)
--- Dependencies: 245
--- Data for Name: pais; Type: TABLE DATA; Schema: core; Owner: -
+-- TOC entry 3660 (class 0 OID 40578)
+-- Dependencies: 331
+-- Data for Name: pais; Type: TABLE DATA; Schema: core; Owner: postgres
 --
 
 INSERT INTO pais VALUES (53, 'Georgia', 'GE', 'Activo', 'Tbilisi', 'Georgia', 69700, 5219810, 287);
@@ -22623,9 +23087,9 @@ INSERT INTO pais VALUES (187, 'Uganda', 'EAU', 'Activo', 'Kampala', 'Uganda', 23
 
 
 --
--- TOC entry 3575 (class 0 OID 36238)
--- Dependencies: 246
--- Data for Name: parametro_entidad; Type: TABLE DATA; Schema: core; Owner: -
+-- TOC entry 3661 (class 0 OID 40583)
+-- Dependencies: 332
+-- Data for Name: parametro_entidad; Type: TABLE DATA; Schema: core; Owner: postgres
 --
 
 INSERT INTO parametro_entidad VALUES (1, '800088702', 'EPS Sura', '2016-08-24', 1, 1, '2016-08-24');
@@ -22663,34 +23127,34 @@ INSERT INTO parametro_entidad VALUES (31, '892000146', 'Cofrem', '2016-08-24', 4
 
 --
 -- TOC entry 4387 (class 0 OID 0)
--- Dependencies: 247
--- Name: parametro_entidad_id_seq; Type: SEQUENCE SET; Schema: core; Owner: -
+-- Dependencies: 333
+-- Name: parametro_entidad_id_seq; Type: SEQUENCE SET; Schema: core; Owner: postgres
 --
 
 SELECT pg_catalog.setval('parametro_entidad_id_seq', 31, true);
 
 
 --
--- TOC entry 3577 (class 0 OID 36245)
--- Dependencies: 248
--- Data for Name: tipo_documento; Type: TABLE DATA; Schema: core; Owner: -
+-- TOC entry 3663 (class 0 OID 40590)
+-- Dependencies: 334
+-- Data for Name: tipo_documento; Type: TABLE DATA; Schema: core; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4388 (class 0 OID 0)
--- Dependencies: 249
--- Name: tipo_documento_id_seq; Type: SEQUENCE SET; Schema: core; Owner: -
+-- Dependencies: 335
+-- Name: tipo_documento_id_seq; Type: SEQUENCE SET; Schema: core; Owner: postgres
 --
 
 SELECT pg_catalog.setval('tipo_documento_id_seq', 1, false);
 
 
 --
--- TOC entry 3579 (class 0 OID 36250)
--- Dependencies: 250
--- Data for Name: tipo_entidad; Type: TABLE DATA; Schema: core; Owner: -
+-- TOC entry 3665 (class 0 OID 40595)
+-- Dependencies: 336
+-- Data for Name: tipo_entidad; Type: TABLE DATA; Schema: core; Owner: postgres
 --
 
 INSERT INTO tipo_entidad VALUES (1, 'EPS', '2016-08-24', '2016-08-24');
@@ -22701,8 +23165,8 @@ INSERT INTO tipo_entidad VALUES (4, 'Caja de Compens', '2016-08-24', '2016-08-24
 
 --
 -- TOC entry 4389 (class 0 OID 0)
--- Dependencies: 251
--- Name: tipo_entidad_id_seq; Type: SEQUENCE SET; Schema: core; Owner: -
+-- Dependencies: 337
+-- Name: tipo_entidad_id_seq; Type: SEQUENCE SET; Schema: core; Owner: postgres
 --
 
 SELECT pg_catalog.setval('tipo_entidad_id_seq', 1, false);
@@ -22711,26 +23175,26 @@ SELECT pg_catalog.setval('tipo_entidad_id_seq', 1, false);
 SET search_path = nix, pg_catalog;
 
 --
--- TOC entry 3581 (class 0 OID 36257)
--- Dependencies: 252
--- Data for Name: entidad; Type: TABLE DATA; Schema: nix; Owner: -
+-- TOC entry 3667 (class 0 OID 40602)
+-- Dependencies: 338
+-- Data for Name: entidad; Type: TABLE DATA; Schema: nix; Owner: postgres
 --
 
 INSERT INTO entidad VALUES (1, 'udistrital', '230');
 
 
 --
--- TOC entry 3582 (class 0 OID 36260)
--- Dependencies: 253
--- Data for Name: entidad_homologacion; Type: TABLE DATA; Schema: nix; Owner: -
+-- TOC entry 3668 (class 0 OID 40605)
+-- Dependencies: 339
+-- Data for Name: entidad_homologacion; Type: TABLE DATA; Schema: nix; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4390 (class 0 OID 0)
--- Dependencies: 254
--- Name: entidad_homologacion_id_seq; Type: SEQUENCE SET; Schema: nix; Owner: -
+-- Dependencies: 340
+-- Name: entidad_homologacion_id_seq; Type: SEQUENCE SET; Schema: nix; Owner: postgres
 --
 
 SELECT pg_catalog.setval('entidad_homologacion_id_seq', 1, false);
@@ -22738,8 +23202,8 @@ SELECT pg_catalog.setval('entidad_homologacion_id_seq', 1, false);
 
 --
 -- TOC entry 4391 (class 0 OID 0)
--- Dependencies: 255
--- Name: entidad_id_seq; Type: SEQUENCE SET; Schema: nix; Owner: -
+-- Dependencies: 341
+-- Name: entidad_id_seq; Type: SEQUENCE SET; Schema: nix; Owner: postgres
 --
 
 SELECT pg_catalog.setval('entidad_id_seq', 2, true);
@@ -22748,26 +23212,26 @@ SELECT pg_catalog.setval('entidad_id_seq', 2, true);
 SET search_path = nix_presupuesto, pg_catalog;
 
 --
--- TOC entry 3585 (class 0 OID 36267)
--- Dependencies: 256
--- Data for Name: anulacion_reserva; Type: TABLE DATA; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3671 (class 0 OID 40612)
+-- Dependencies: 342
+-- Data for Name: anulacion_reserva; Type: TABLE DATA; Schema: nix_presupuesto; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4392 (class 0 OID 0)
--- Dependencies: 257
--- Name: anulacion_reserva_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 343
+-- Name: anulacion_reserva_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: postgres
 --
 
 SELECT pg_catalog.setval('anulacion_reserva_id_seq', 1, false);
 
 
 --
--- TOC entry 3587 (class 0 OID 36272)
--- Dependencies: 258
--- Data for Name: apropiacion; Type: TABLE DATA; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3673 (class 0 OID 40617)
+-- Dependencies: 344
+-- Data for Name: apropiacion; Type: TABLE DATA; Schema: nix_presupuesto; Owner: postgres
 --
 
 INSERT INTO apropiacion VALUES (4, 2016, 35324, 1, 0.00, 0.00, NULL, NULL, NULL, 1);
@@ -23089,68 +23553,68 @@ INSERT INTO apropiacion VALUES (2, 2016, 35322, 1, 0.00, 0.00, '', '', NULL, 1);
 
 --
 -- TOC entry 4393 (class 0 OID 0)
--- Dependencies: 259
--- Name: apropiacion_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 345
+-- Name: apropiacion_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: postgres
 --
 
 SELECT pg_catalog.setval('apropiacion_id_seq', 311, true);
 
 
 --
--- TOC entry 3589 (class 0 OID 36278)
--- Dependencies: 260
--- Data for Name: concepto; Type: TABLE DATA; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3675 (class 0 OID 40623)
+-- Dependencies: 346
+-- Data for Name: concepto; Type: TABLE DATA; Schema: nix_presupuesto; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4394 (class 0 OID 0)
--- Dependencies: 261
--- Name: concepto_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 347
+-- Name: concepto_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: postgres
 --
 
 SELECT pg_catalog.setval('concepto_id_seq', 1, false);
 
 
 --
--- TOC entry 3591 (class 0 OID 36283)
--- Dependencies: 262
--- Data for Name: desagregacion_ingreso; Type: TABLE DATA; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3677 (class 0 OID 40628)
+-- Dependencies: 348
+-- Data for Name: desagregacion_ingreso; Type: TABLE DATA; Schema: nix_presupuesto; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4395 (class 0 OID 0)
--- Dependencies: 263
--- Name: desagregacion_ingreso_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 349
+-- Name: desagregacion_ingreso_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: postgres
 --
 
 SELECT pg_catalog.setval('desagregacion_ingreso_id_seq', 1, false);
 
 
 --
--- TOC entry 3593 (class 0 OID 36288)
--- Dependencies: 264
--- Data for Name: destino_disponibilidad; Type: TABLE DATA; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3679 (class 0 OID 40633)
+-- Dependencies: 350
+-- Data for Name: destino_disponibilidad; Type: TABLE DATA; Schema: nix_presupuesto; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4396 (class 0 OID 0)
--- Dependencies: 265
--- Name: destino_disponibilidad_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 351
+-- Name: destino_disponibilidad_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: postgres
 --
 
 SELECT pg_catalog.setval('destino_disponibilidad_id_seq', 1, false);
 
 
 --
--- TOC entry 3595 (class 0 OID 36293)
--- Dependencies: 266
--- Data for Name: disponibilidad; Type: TABLE DATA; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3681 (class 0 OID 40638)
+-- Dependencies: 352
+-- Data for Name: disponibilidad; Type: TABLE DATA; Schema: nix_presupuesto; Owner: postgres
 --
 
 INSERT INTO disponibilidad VALUES (1, 1, 1, 2016, 548, 168, 18, '2016-01-25', NULL, NULL, NULL, NULL, '505', 'GARANTIZAR EL PAGO DE LA CONTRATACIÓN DE PROFESORES HORA CATEDRA DE VINCULACIÓN ESPECIAL DE LA FACULTAD DE INGENIERÍA PARA EL AÑO 2016', NULL, NULL);
@@ -23164,17 +23628,17 @@ INSERT INTO disponibilidad VALUES (7, 1, 1, 2016, 1338, 168, 153, '2016-03-18', 
 
 --
 -- TOC entry 4397 (class 0 OID 0)
--- Dependencies: 267
--- Name: disponibilidad_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 353
+-- Name: disponibilidad_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: postgres
 --
 
 SELECT pg_catalog.setval('disponibilidad_id_seq', 1, false);
 
 
 --
--- TOC entry 3597 (class 0 OID 36301)
--- Dependencies: 268
--- Data for Name: disponibilidad_rubro; Type: TABLE DATA; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3683 (class 0 OID 40646)
+-- Dependencies: 354
+-- Data for Name: disponibilidad_rubro; Type: TABLE DATA; Schema: nix_presupuesto; Owner: postgres
 --
 
 INSERT INTO disponibilidad_rubro VALUES (1, 2016, 35084, 1, 5489932000.00);
@@ -23188,17 +23652,17 @@ INSERT INTO disponibilidad_rubro VALUES (7, 2016, 466, 7, 10000000.00);
 
 --
 -- TOC entry 4398 (class 0 OID 0)
--- Dependencies: 269
--- Name: disponibilidad_rubro_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 355
+-- Name: disponibilidad_rubro_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: postgres
 --
 
 SELECT pg_catalog.setval('disponibilidad_rubro_id_seq', 1, false);
 
 
 --
--- TOC entry 3599 (class 0 OID 36306)
--- Dependencies: 270
--- Data for Name: estado_apropiacion; Type: TABLE DATA; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3685 (class 0 OID 40651)
+-- Dependencies: 356
+-- Data for Name: estado_apropiacion; Type: TABLE DATA; Schema: nix_presupuesto; Owner: postgres
 --
 
 INSERT INTO estado_apropiacion VALUES (1, 'Planeado', 'Presupuesto planeado en inicio de vigencia');
@@ -23206,26 +23670,26 @@ INSERT INTO estado_apropiacion VALUES (2, 'Aprobado', 'Presupuesto aprobado por 
 
 
 --
--- TOC entry 3600 (class 0 OID 36309)
--- Dependencies: 271
--- Data for Name: estado_disponibilidad; Type: TABLE DATA; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3686 (class 0 OID 40654)
+-- Dependencies: 357
+-- Data for Name: estado_disponibilidad; Type: TABLE DATA; Schema: nix_presupuesto; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4399 (class 0 OID 0)
--- Dependencies: 272
--- Name: estado_disponibilidad_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 358
+-- Name: estado_disponibilidad_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: postgres
 --
 
 SELECT pg_catalog.setval('estado_disponibilidad_id_seq', 1, false);
 
 
 --
--- TOC entry 3602 (class 0 OID 36314)
--- Dependencies: 273
--- Data for Name: estado_registro_presupuestal; Type: TABLE DATA; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3688 (class 0 OID 40659)
+-- Dependencies: 359
+-- Data for Name: estado_registro_presupuestal; Type: TABLE DATA; Schema: nix_presupuesto; Owner: postgres
 --
 
 INSERT INTO estado_registro_presupuestal VALUES (1, 'VIGENTE', 'VIGENTE');
@@ -23233,50 +23697,50 @@ INSERT INTO estado_registro_presupuestal VALUES (1, 'VIGENTE', 'VIGENTE');
 
 --
 -- TOC entry 4400 (class 0 OID 0)
--- Dependencies: 274
--- Name: estado_registro_presupuestal_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 360
+-- Name: estado_registro_presupuestal_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: postgres
 --
 
 SELECT pg_catalog.setval('estado_registro_presupuestal_id_seq', 1, false);
 
 
 --
--- TOC entry 3604 (class 0 OID 36319)
--- Dependencies: 275
--- Data for Name: estado_reserva_presupuestal; Type: TABLE DATA; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3690 (class 0 OID 40664)
+-- Dependencies: 361
+-- Data for Name: estado_reserva_presupuestal; Type: TABLE DATA; Schema: nix_presupuesto; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4401 (class 0 OID 0)
--- Dependencies: 276
--- Name: estado_reserva_presupuestal_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 362
+-- Name: estado_reserva_presupuestal_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: postgres
 --
 
 SELECT pg_catalog.setval('estado_reserva_presupuestal_id_seq', 1, false);
 
 
 --
--- TOC entry 3606 (class 0 OID 36324)
--- Dependencies: 277
--- Data for Name: fuente_financiacion; Type: TABLE DATA; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3692 (class 0 OID 40669)
+-- Dependencies: 363
+-- Data for Name: fuente_financiacion; Type: TABLE DATA; Schema: nix_presupuesto; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3607 (class 0 OID 36330)
--- Dependencies: 278
--- Data for Name: fuente_financiacion_entidad; Type: TABLE DATA; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3693 (class 0 OID 40675)
+-- Dependencies: 364
+-- Data for Name: fuente_financiacion_entidad; Type: TABLE DATA; Schema: nix_presupuesto; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4402 (class 0 OID 0)
--- Dependencies: 279
--- Name: fuente_financiacion_entidad_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 365
+-- Name: fuente_financiacion_entidad_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: postgres
 --
 
 SELECT pg_catalog.setval('fuente_financiacion_entidad_id_seq', 1, false);
@@ -23284,51 +23748,51 @@ SELECT pg_catalog.setval('fuente_financiacion_entidad_id_seq', 1, false);
 
 --
 -- TOC entry 4403 (class 0 OID 0)
--- Dependencies: 280
--- Name: fuente_financiacion_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 366
+-- Name: fuente_financiacion_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: postgres
 --
 
 SELECT pg_catalog.setval('fuente_financiacion_id_seq', 1, false);
 
 
 --
--- TOC entry 3610 (class 0 OID 36337)
--- Dependencies: 281
--- Data for Name: ingreso; Type: TABLE DATA; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3696 (class 0 OID 40682)
+-- Dependencies: 367
+-- Data for Name: ingreso; Type: TABLE DATA; Schema: nix_presupuesto; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4404 (class 0 OID 0)
--- Dependencies: 282
--- Name: ingreso_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 368
+-- Name: ingreso_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: postgres
 --
 
 SELECT pg_catalog.setval('ingreso_id_seq', 1, false);
 
 
 --
--- TOC entry 3612 (class 0 OID 36342)
--- Dependencies: 283
--- Data for Name: modificacion_presupuestal; Type: TABLE DATA; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3698 (class 0 OID 40687)
+-- Dependencies: 369
+-- Data for Name: modificacion_presupuestal; Type: TABLE DATA; Schema: nix_presupuesto; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4405 (class 0 OID 0)
--- Dependencies: 284
--- Name: modificacion_presupuestal_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 370
+-- Name: modificacion_presupuestal_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: postgres
 --
 
 SELECT pg_catalog.setval('modificacion_presupuestal_id_seq', 1, false);
 
 
 --
--- TOC entry 3614 (class 0 OID 36347)
--- Dependencies: 285
--- Data for Name: registo_presupuestal; Type: TABLE DATA; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3700 (class 0 OID 40692)
+-- Dependencies: 371
+-- Data for Name: registo_presupuestal; Type: TABLE DATA; Schema: nix_presupuesto; Owner: postgres
 --
 
 INSERT INTO registo_presupuestal VALUES (1, 1, 2016, NULL, NULL, 1, 468, 4858272.00, 3, 711, 17153299);
@@ -23754,51 +24218,51 @@ INSERT INTO registo_presupuestal VALUES (419, 1, 2016, NULL, NULL, 1, 465, 10755
 
 --
 -- TOC entry 4406 (class 0 OID 0)
--- Dependencies: 286
--- Name: registo_presupuestal_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 372
+-- Name: registo_presupuestal_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: postgres
 --
 
 SELECT pg_catalog.setval('registo_presupuestal_id_seq', 1, false);
 
 
 --
--- TOC entry 3616 (class 0 OID 36352)
--- Dependencies: 287
--- Data for Name: registro_presupuestal_disponibilidad; Type: TABLE DATA; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3702 (class 0 OID 40697)
+-- Dependencies: 373
+-- Data for Name: registro_presupuestal_disponibilidad; Type: TABLE DATA; Schema: nix_presupuesto; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4407 (class 0 OID 0)
--- Dependencies: 288
--- Name: registro_presupuestal_disponibilidad_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 374
+-- Name: registro_presupuestal_disponibilidad_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: postgres
 --
 
 SELECT pg_catalog.setval('registro_presupuestal_disponibilidad_id_seq', 1, false);
 
 
 --
--- TOC entry 3618 (class 0 OID 36357)
--- Dependencies: 289
--- Data for Name: reserva_presupuestal; Type: TABLE DATA; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3704 (class 0 OID 40702)
+-- Dependencies: 375
+-- Data for Name: reserva_presupuestal; Type: TABLE DATA; Schema: nix_presupuesto; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4408 (class 0 OID 0)
--- Dependencies: 290
--- Name: reserva_presupuestal_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 376
+-- Name: reserva_presupuestal_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: postgres
 --
 
 SELECT pg_catalog.setval('reserva_presupuestal_id_seq', 1, false);
 
 
 --
--- TOC entry 3620 (class 0 OID 36362)
--- Dependencies: 291
--- Data for Name: rubro; Type: TABLE DATA; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3706 (class 0 OID 40707)
+-- Dependencies: 377
+-- Data for Name: rubro; Type: TABLE DATA; Schema: nix_presupuesto; Owner: postgres
 --
 
 INSERT INTO rubro VALUES (35417, 1, '3-3-002-28', 2016, 'CREACION 24', 1, NULL, 1);
@@ -26364,17 +26828,17 @@ INSERT INTO rubro VALUES (35319, 1, '3-4', 2016, 'GASTOS EN PENSIONES UD', 1, NU
 
 
 --
--- TOC entry 3621 (class 0 OID 36369)
--- Dependencies: 292
--- Data for Name: rubro_homologado; Type: TABLE DATA; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3707 (class 0 OID 40714)
+-- Dependencies: 378
+-- Data for Name: rubro_homologado; Type: TABLE DATA; Schema: nix_presupuesto; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4409 (class 0 OID 0)
--- Dependencies: 293
--- Name: rubro_homologado_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 379
+-- Name: rubro_homologado_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: postgres
 --
 
 SELECT pg_catalog.setval('rubro_homologado_id_seq', 1, false);
@@ -26382,17 +26846,17 @@ SELECT pg_catalog.setval('rubro_homologado_id_seq', 1, false);
 
 --
 -- TOC entry 4410 (class 0 OID 0)
--- Dependencies: 294
--- Name: rubro_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 380
+-- Name: rubro_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: postgres
 --
 
 SELECT pg_catalog.setval('rubro_id_seq', 35416, true);
 
 
 --
--- TOC entry 3624 (class 0 OID 36376)
--- Dependencies: 295
--- Data for Name: rubro_rubro; Type: TABLE DATA; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3710 (class 0 OID 40721)
+-- Dependencies: 381
+-- Data for Name: rubro_rubro; Type: TABLE DATA; Schema: nix_presupuesto; Owner: postgres
 --
 
 INSERT INTO rubro_rubro VALUES (1, 35389, 35417);
@@ -26796,17 +27260,17 @@ INSERT INTO rubro_rubro VALUES (397, 35322, 35319);
 
 --
 -- TOC entry 4411 (class 0 OID 0)
--- Dependencies: 296
--- Name: rubro_rubro_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: -
+-- Dependencies: 382
+-- Name: rubro_rubro_id_seq; Type: SEQUENCE SET; Schema: nix_presupuesto; Owner: postgres
 --
 
 SELECT pg_catalog.setval('rubro_rubro_id_seq', 1, false);
 
 
 --
--- TOC entry 3626 (class 0 OID 36381)
--- Dependencies: 297
--- Data for Name: unidad_ejecutora; Type: TABLE DATA; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3712 (class 0 OID 40726)
+-- Dependencies: 383
+-- Data for Name: unidad_ejecutora; Type: TABLE DATA; Schema: nix_presupuesto; Owner: postgres
 --
 
 INSERT INTO unidad_ejecutora VALUES (1, 'Rector', 'Unidad ejecutora sede administrativa, abora las dependencias de juridica y compras  que realizan la ejecucion de contratos');
@@ -26816,9 +27280,9 @@ INSERT INTO unidad_ejecutora VALUES (2, 'Convenios', 'Unidad ejecutora idexud, l
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 3627 (class 0 OID 36387)
--- Dependencies: 298
--- Data for Name: schema_version; Type: TABLE DATA; Schema: public; Owner: -
+-- TOC entry 3713 (class 0 OID 40732)
+-- Dependencies: 384
+-- Data for Name: schema_version; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 INSERT INTO schema_version VALUES (1, '1', '<< Flyway Baseline >>', 'BASELINE', '<< Flyway Baseline >>', NULL, 'postgres', '2016-09-27 15:03:46.960167', 0, true);
@@ -26827,9 +27291,9 @@ INSERT INTO schema_version VALUES (1, '1', '<< Flyway Baseline >>', 'BASELINE', 
 SET search_path = ruler, pg_catalog;
 
 --
--- TOC entry 3628 (class 0 OID 36394)
--- Dependencies: 299
--- Data for Name: dominio; Type: TABLE DATA; Schema: ruler; Owner: -
+-- TOC entry 3714 (class 0 OID 40739)
+-- Dependencies: 385
+-- Data for Name: dominio; Type: TABLE DATA; Schema: ruler; Owner: postgres
 --
 
 INSERT INTO dominio VALUES (1, 'NominaHC', 'Dominio para las liquidaciones de Nomina de HC');
@@ -26837,17 +27301,17 @@ INSERT INTO dominio VALUES (1, 'NominaHC', 'Dominio para las liquidaciones de No
 
 --
 -- TOC entry 4412 (class 0 OID 0)
--- Dependencies: 300
--- Name: dominio_id_seq; Type: SEQUENCE SET; Schema: ruler; Owner: -
+-- Dependencies: 386
+-- Name: dominio_id_seq; Type: SEQUENCE SET; Schema: ruler; Owner: postgres
 --
 
 SELECT pg_catalog.setval('dominio_id_seq', 1, false);
 
 
 --
--- TOC entry 3630 (class 0 OID 36399)
--- Dependencies: 301
--- Data for Name: predicado; Type: TABLE DATA; Schema: ruler; Owner: -
+-- TOC entry 3716 (class 0 OID 40744)
+-- Dependencies: 387
+-- Data for Name: predicado; Type: TABLE DATA; Schema: ruler; Owner: postgres
 --
 
 INSERT INTO predicado VALUES (2, 1, 'valor_uvt(29753,2016).', 'Valor uvt por periodo', 1);
@@ -26968,17 +27432,17 @@ INSERT INTO predicado VALUES (135, 1, 'factor(prueba, descuento, porcentaje, sal
 
 --
 -- TOC entry 4413 (class 0 OID 0)
--- Dependencies: 302
--- Name: predicado_id_seq; Type: SEQUENCE SET; Schema: ruler; Owner: -
+-- Dependencies: 388
+-- Name: predicado_id_seq; Type: SEQUENCE SET; Schema: ruler; Owner: postgres
 --
 
 SELECT pg_catalog.setval('predicado_id_seq', 135, true);
 
 
 --
--- TOC entry 3632 (class 0 OID 36404)
--- Dependencies: 303
--- Data for Name: tipo_predicado; Type: TABLE DATA; Schema: ruler; Owner: -
+-- TOC entry 3718 (class 0 OID 40749)
+-- Dependencies: 389
+-- Data for Name: tipo_predicado; Type: TABLE DATA; Schema: ruler; Owner: postgres
 --
 
 INSERT INTO tipo_predicado VALUES (1, 'predicado');
@@ -26987,8 +27451,8 @@ INSERT INTO tipo_predicado VALUES (2, 'regla');
 
 --
 -- TOC entry 4414 (class 0 OID 0)
--- Dependencies: 304
--- Name: tipo_predicado_id_seq; Type: SEQUENCE SET; Schema: ruler; Owner: -
+-- Dependencies: 390
+-- Name: tipo_predicado_id_seq; Type: SEQUENCE SET; Schema: ruler; Owner: postgres
 --
 
 SELECT pg_catalog.setval('tipo_predicado_id_seq', 1, false);
@@ -26997,3061 +27461,127 @@ SELECT pg_catalog.setval('tipo_predicado_id_seq', 1, false);
 SET search_path = titan, pg_catalog;
 
 --
--- TOC entry 3634 (class 0 OID 36409)
--- Dependencies: 305
--- Data for Name: categoria_novedad; Type: TABLE DATA; Schema: titan; Owner: -
+-- TOC entry 3720 (class 0 OID 40754)
+-- Dependencies: 391
+-- Data for Name: categoria_novedad; Type: TABLE DATA; Schema: titan; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4415 (class 0 OID 0)
--- Dependencies: 306
--- Name: categoria_novedad_id_seq; Type: SEQUENCE SET; Schema: titan; Owner: -
+-- Dependencies: 392
+-- Name: categoria_novedad_id_seq; Type: SEQUENCE SET; Schema: titan; Owner: postgres
 --
 
 SELECT pg_catalog.setval('categoria_novedad_id_seq', 1, false);
 
 
 --
--- TOC entry 3636 (class 0 OID 36418)
--- Dependencies: 307
--- Data for Name: categoria_parametro; Type: TABLE DATA; Schema: titan; Owner: -
+-- TOC entry 3722 (class 0 OID 40763)
+-- Dependencies: 393
+-- Data for Name: categoria_parametro; Type: TABLE DATA; Schema: titan; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4416 (class 0 OID 0)
--- Dependencies: 308
--- Name: categoria_parametro_id_seq; Type: SEQUENCE SET; Schema: titan; Owner: -
+-- Dependencies: 394
+-- Name: categoria_parametro_id_seq; Type: SEQUENCE SET; Schema: titan; Owner: postgres
 --
 
 SELECT pg_catalog.setval('categoria_parametro_id_seq', 1, false);
 
 
 --
--- TOC entry 3638 (class 0 OID 36426)
--- Dependencies: 309
--- Data for Name: descuentos; Type: TABLE DATA; Schema: titan; Owner: -
+-- TOC entry 3724 (class 0 OID 40771)
+-- Dependencies: 395
+-- Data for Name: descuentos; Type: TABLE DATA; Schema: titan; Owner: postgres
 --
 
-INSERT INTO descuentos VALUES (2, 'rete383', 809712, 0, 2);
-INSERT INTO descuentos VALUES (3, 'reteIca', 809712, 7822, 2);
-INSERT INTO descuentos VALUES (4, 'estampillaUD', 809712, 8097, 2);
-INSERT INTO descuentos VALUES (5, 'proCultura', 809712, 4049, 2);
-INSERT INTO descuentos VALUES (6, 'adultoMayor', 809712, 4049, 2);
-INSERT INTO descuentos VALUES (7, 'rete384', 1079616, 0, 2);
-INSERT INTO descuentos VALUES (8, 'rete383', 1011201, 0, 3);
-INSERT INTO descuentos VALUES (9, 'reteIca', 1011201, 9768, 3);
-INSERT INTO descuentos VALUES (10, 'estampillaUD', 1011201, 10112, 3);
-INSERT INTO descuentos VALUES (11, 'proCultura', 1011201, 5056, 3);
-INSERT INTO descuentos VALUES (12, 'adultoMayor', 1011201, 5056, 3);
-INSERT INTO descuentos VALUES (13, 'rete384', 1348268, 0, 3);
-INSERT INTO descuentos VALUES (14, 'rete383', 404856, 0, 4);
-INSERT INTO descuentos VALUES (15, 'reteIca', 404856, 3911, 4);
-INSERT INTO descuentos VALUES (16, 'estampillaUD', 404856, 4049, 4);
-INSERT INTO descuentos VALUES (17, 'proCultura', 404856, 2024, 4);
-INSERT INTO descuentos VALUES (18, 'adultoMayor', 404856, 2024, 4);
-INSERT INTO descuentos VALUES (19, 'rete384', 539808, 0, 4);
-INSERT INTO descuentos VALUES (20, 'rete383', 387987, 0, 5);
-INSERT INTO descuentos VALUES (21, 'reteIca', 387987, 3748, 5);
-INSERT INTO descuentos VALUES (22, 'estampillaUD', 387987, 3880, 5);
-INSERT INTO descuentos VALUES (23, 'proCultura', 387987, 1940, 5);
-INSERT INTO descuentos VALUES (24, 'adultoMayor', 387987, 1940, 5);
-INSERT INTO descuentos VALUES (25, 'rete384', 517316, 0, 5);
-INSERT INTO descuentos VALUES (26, 'rete383', 607284, 0, 6);
-INSERT INTO descuentos VALUES (27, 'reteIca', 607284, 5866, 6);
-INSERT INTO descuentos VALUES (28, 'estampillaUD', 607284, 6073, 6);
-INSERT INTO descuentos VALUES (29, 'proCultura', 607284, 3036, 6);
-INSERT INTO descuentos VALUES (30, 'adultoMayor', 607284, 3036, 6);
-INSERT INTO descuentos VALUES (31, 'rete384', 809712, 0, 6);
-INSERT INTO descuentos VALUES (32, 'rete383', 485827, 0, 7);
-INSERT INTO descuentos VALUES (33, 'reteIca', 485827, 4693, 7);
-INSERT INTO descuentos VALUES (34, 'estampillaUD', 485827, 4858, 7);
-INSERT INTO descuentos VALUES (35, 'proCultura', 485827, 2429, 7);
-INSERT INTO descuentos VALUES (36, 'adultoMayor', 485827, 2429, 7);
-INSERT INTO descuentos VALUES (37, 'rete384', 647770, 0, 7);
-INSERT INTO descuentos VALUES (38, 'rete383', 465584, 0, 8);
-INSERT INTO descuentos VALUES (39, 'reteIca', 465584, 4498, 8);
-INSERT INTO descuentos VALUES (40, 'estampillaUD', 465584, 4656, 8);
-INSERT INTO descuentos VALUES (41, 'proCultura', 465584, 2328, 8);
-INSERT INTO descuentos VALUES (42, 'adultoMayor', 465584, 2328, 8);
-INSERT INTO descuentos VALUES (43, 'rete384', 620779, 0, 8);
-INSERT INTO descuentos VALUES (44, 'rete383', 620779, 0, 9);
-INSERT INTO descuentos VALUES (45, 'reteIca', 620779, 5997, 9);
-INSERT INTO descuentos VALUES (46, 'estampillaUD', 620779, 6208, 9);
-INSERT INTO descuentos VALUES (47, 'proCultura', 620779, 3104, 9);
-INSERT INTO descuentos VALUES (48, 'adultoMayor', 620779, 3104, 9);
-INSERT INTO descuentos VALUES (49, 'rete384', 827706, 0, 9);
-INSERT INTO descuentos VALUES (50, 'rete383', 485827, 0, 10);
-INSERT INTO descuentos VALUES (51, 'reteIca', 485827, 4693, 10);
-INSERT INTO descuentos VALUES (52, 'estampillaUD', 485827, 4858, 10);
-INSERT INTO descuentos VALUES (53, 'proCultura', 485827, 2429, 10);
-INSERT INTO descuentos VALUES (54, 'adultoMayor', 485827, 2429, 10);
-INSERT INTO descuentos VALUES (55, 'rete384', 647770, 0, 10);
-INSERT INTO descuentos VALUES (56, 'rete383', 2095943, 0, 11);
-INSERT INTO descuentos VALUES (57, 'reteIca', 2095943, 20247, 11);
-INSERT INTO descuentos VALUES (58, 'estampillaUD', 2095943, 20959, 11);
-INSERT INTO descuentos VALUES (59, 'proCultura', 2095943, 10480, 11);
-INSERT INTO descuentos VALUES (60, 'adultoMayor', 2095943, 10480, 11);
-INSERT INTO descuentos VALUES (61, 'rete384', 2794591, 0, 11);
-INSERT INTO descuentos VALUES (62, 'rete383', 1397296, 0, 12);
-INSERT INTO descuentos VALUES (63, 'reteIca', 1397296, 13498, 12);
-INSERT INTO descuentos VALUES (64, 'estampillaUD', 1397296, 13973, 12);
-INSERT INTO descuentos VALUES (65, 'proCultura', 1397296, 6986, 12);
-INSERT INTO descuentos VALUES (66, 'adultoMayor', 1397296, 6986, 12);
-INSERT INTO descuentos VALUES (67, 'rete384', 1863061, 0, 12);
-INSERT INTO descuentos VALUES (68, 'rete383', 620779, 0, 13);
-INSERT INTO descuentos VALUES (69, 'reteIca', 620779, 5997, 13);
-INSERT INTO descuentos VALUES (70, 'estampillaUD', 620779, 6208, 13);
-INSERT INTO descuentos VALUES (71, 'proCultura', 620779, 3104, 13);
-INSERT INTO descuentos VALUES (72, 'adultoMayor', 620779, 3104, 13);
-INSERT INTO descuentos VALUES (73, 'rete384', 827706, 0, 13);
-INSERT INTO descuentos VALUES (74, 'rete383', 1195055, 0, 14);
-INSERT INTO descuentos VALUES (75, 'reteIca', 1195055, 11544, 14);
-INSERT INTO descuentos VALUES (76, 'estampillaUD', 1195055, 11951, 14);
-INSERT INTO descuentos VALUES (77, 'proCultura', 1195055, 5975, 14);
-INSERT INTO descuentos VALUES (78, 'adultoMayor', 1195055, 5975, 14);
-INSERT INTO descuentos VALUES (79, 'rete384', 1593407, 0, 14);
-INSERT INTO descuentos VALUES (80, 'rete383', 573546, 0, 15);
-INSERT INTO descuentos VALUES (81, 'reteIca', 573546, 5540, 15);
-INSERT INTO descuentos VALUES (82, 'estampillaUD', 573546, 5735, 15);
-INSERT INTO descuentos VALUES (83, 'proCultura', 573546, 2868, 15);
-INSERT INTO descuentos VALUES (84, 'adultoMayor', 573546, 2868, 15);
-INSERT INTO descuentos VALUES (85, 'rete384', 764728, 0, 15);
-INSERT INTO descuentos VALUES (86, 'rete383', 485827, 0, 16);
-INSERT INTO descuentos VALUES (87, 'reteIca', 485827, 4693, 16);
-INSERT INTO descuentos VALUES (88, 'estampillaUD', 485827, 4858, 16);
-INSERT INTO descuentos VALUES (89, 'proCultura', 485827, 2429, 16);
-INSERT INTO descuentos VALUES (90, 'adultoMayor', 485827, 2429, 16);
-INSERT INTO descuentos VALUES (91, 'rete384', 647770, 0, 16);
-INSERT INTO descuentos VALUES (92, 'rete383', 2357936, 0, 17);
-INSERT INTO descuentos VALUES (93, 'reteIca', 2357936, 22778, 17);
-INSERT INTO descuentos VALUES (94, 'estampillaUD', 2357936, 23579, 17);
-INSERT INTO descuentos VALUES (95, 'proCultura', 2357936, 11790, 17);
-INSERT INTO descuentos VALUES (96, 'adultoMayor', 2357936, 11790, 17);
-INSERT INTO descuentos VALUES (97, 'rete384', 3143915, 0, 17);
-INSERT INTO descuentos VALUES (98, 'rete383', 1654692, 0, 18);
-INSERT INTO descuentos VALUES (99, 'reteIca', 1654692, 15984, 18);
-INSERT INTO descuentos VALUES (100, 'estampillaUD', 1654692, 16547, 18);
-INSERT INTO descuentos VALUES (101, 'proCultura', 1654692, 8273, 18);
-INSERT INTO descuentos VALUES (102, 'adultoMayor', 1654692, 8273, 18);
-INSERT INTO descuentos VALUES (103, 'rete384', 2206256, 0, 18);
-INSERT INTO descuentos VALUES (104, 'rete383', 2426881, 0, 19);
-INSERT INTO descuentos VALUES (105, 'reteIca', 2426881, 23444, 19);
-INSERT INTO descuentos VALUES (106, 'estampillaUD', 2426881, 24269, 19);
-INSERT INTO descuentos VALUES (107, 'proCultura', 2426881, 12134, 19);
-INSERT INTO descuentos VALUES (108, 'adultoMayor', 2426881, 12134, 19);
-INSERT INTO descuentos VALUES (109, 'rete384', 3235842, 0, 19);
-INSERT INTO descuentos VALUES (110, 'rete383', 446749, 0, 20);
-INSERT INTO descuentos VALUES (111, 'reteIca', 446749, 4316, 20);
-INSERT INTO descuentos VALUES (112, 'estampillaUD', 446749, 4467, 20);
-INSERT INTO descuentos VALUES (113, 'proCultura', 446749, 2234, 20);
-INSERT INTO descuentos VALUES (114, 'adultoMayor', 446749, 2234, 20);
-INSERT INTO descuentos VALUES (115, 'rete384', 595666, 0, 20);
-INSERT INTO descuentos VALUES (116, 'rete383', 1176670, 0, 21);
-INSERT INTO descuentos VALUES (117, 'reteIca', 1176670, 11367, 21);
-INSERT INTO descuentos VALUES (118, 'estampillaUD', 1176670, 11767, 21);
-INSERT INTO descuentos VALUES (119, 'proCultura', 1176670, 5883, 21);
-INSERT INTO descuentos VALUES (120, 'adultoMayor', 1176670, 5883, 21);
-INSERT INTO descuentos VALUES (121, 'rete384', 1568893, 0, 21);
-INSERT INTO descuentos VALUES (122, 'rete383', 2812976, 0, 22);
-INSERT INTO descuentos VALUES (123, 'reteIca', 2812976, 27173, 22);
-INSERT INTO descuentos VALUES (124, 'estampillaUD', 2812976, 28130, 22);
-INSERT INTO descuentos VALUES (125, 'proCultura', 2812976, 14065, 22);
-INSERT INTO descuentos VALUES (126, 'adultoMayor', 2812976, 14065, 22);
-INSERT INTO descuentos VALUES (127, 'rete384', 3750635, 0, 22);
-INSERT INTO descuentos VALUES (128, 'rete383', 620779, 0, 23);
-INSERT INTO descuentos VALUES (129, 'reteIca', 620779, 5997, 23);
-INSERT INTO descuentos VALUES (130, 'estampillaUD', 620779, 6208, 23);
-INSERT INTO descuentos VALUES (131, 'proCultura', 620779, 3104, 23);
-INSERT INTO descuentos VALUES (132, 'adultoMayor', 620779, 3104, 23);
-INSERT INTO descuentos VALUES (133, 'rete384', 827706, 0, 23);
-INSERT INTO descuentos VALUES (134, 'rete383', 728740, 0, 24);
-INSERT INTO descuentos VALUES (135, 'reteIca', 728740, 7040, 24);
-INSERT INTO descuentos VALUES (136, 'estampillaUD', 728740, 7287, 24);
-INSERT INTO descuentos VALUES (137, 'proCultura', 728740, 3644, 24);
-INSERT INTO descuentos VALUES (138, 'adultoMayor', 728740, 3644, 24);
-INSERT INTO descuentos VALUES (139, 'rete384', 971654, 0, 24);
-INSERT INTO descuentos VALUES (140, 'rete383', 2187871, 0, 25);
-INSERT INTO descuentos VALUES (141, 'reteIca', 2187871, 21135, 25);
-INSERT INTO descuentos VALUES (142, 'estampillaUD', 2187871, 21879, 25);
-INSERT INTO descuentos VALUES (143, 'proCultura', 2187871, 10939, 25);
-INSERT INTO descuentos VALUES (144, 'adultoMayor', 2187871, 10939, 25);
-INSERT INTO descuentos VALUES (145, 'rete384', 2917161, 0, 25);
-INSERT INTO descuentos VALUES (146, 'rete383', 485827, 0, 26);
-INSERT INTO descuentos VALUES (147, 'reteIca', 485827, 4693, 26);
-INSERT INTO descuentos VALUES (148, 'estampillaUD', 485827, 4858, 26);
-INSERT INTO descuentos VALUES (149, 'proCultura', 485827, 2429, 26);
-INSERT INTO descuentos VALUES (150, 'adultoMayor', 485827, 2429, 26);
-INSERT INTO descuentos VALUES (151, 'rete384', 647770, 0, 26);
-INSERT INTO descuentos VALUES (152, 'rete383', 606720, 0, 27);
-INSERT INTO descuentos VALUES (153, 'reteIca', 606720, 5861, 27);
-INSERT INTO descuentos VALUES (154, 'estampillaUD', 606720, 6067, 27);
-INSERT INTO descuentos VALUES (155, 'proCultura', 606720, 3034, 27);
-INSERT INTO descuentos VALUES (156, 'adultoMayor', 606720, 3034, 27);
-INSERT INTO descuentos VALUES (157, 'rete384', 808960, 0, 27);
-INSERT INTO descuentos VALUES (158, 'rete383', 808960, 0, 28);
-INSERT INTO descuentos VALUES (159, 'reteIca', 808960, 7815, 28);
-INSERT INTO descuentos VALUES (160, 'estampillaUD', 808960, 8090, 28);
-INSERT INTO descuentos VALUES (161, 'proCultura', 808960, 4045, 28);
-INSERT INTO descuentos VALUES (162, 'adultoMayor', 808960, 4045, 28);
-INSERT INTO descuentos VALUES (163, 'rete384', 1078614, 0, 28);
-INSERT INTO descuentos VALUES (164, 'rete383', 2357936, 0, 29);
-INSERT INTO descuentos VALUES (165, 'reteIca', 2357936, 22778, 29);
-INSERT INTO descuentos VALUES (166, 'estampillaUD', 2357936, 23579, 29);
-INSERT INTO descuentos VALUES (167, 'proCultura', 2357936, 11790, 29);
-INSERT INTO descuentos VALUES (168, 'adultoMayor', 2357936, 11790, 29);
-INSERT INTO descuentos VALUES (169, 'rete384', 3143915, 0, 29);
-INSERT INTO descuentos VALUES (170, 'rete383', 242914, 0, 30);
-INSERT INTO descuentos VALUES (171, 'reteIca', 242914, 2347, 30);
-INSERT INTO descuentos VALUES (172, 'estampillaUD', 242914, 2429, 30);
-INSERT INTO descuentos VALUES (173, 'proCultura', 242914, 1215, 30);
-INSERT INTO descuentos VALUES (174, 'adultoMayor', 242914, 1215, 30);
-INSERT INTO descuentos VALUES (175, 'rete384', 323885, 0, 30);
-INSERT INTO descuentos VALUES (176, 'rete383', 551803, 0, 31);
-INSERT INTO descuentos VALUES (177, 'reteIca', 551803, 5330, 31);
-INSERT INTO descuentos VALUES (178, 'estampillaUD', 551803, 5518, 31);
-INSERT INTO descuentos VALUES (179, 'proCultura', 551803, 2759, 31);
-INSERT INTO descuentos VALUES (180, 'adultoMayor', 551803, 2759, 31);
-INSERT INTO descuentos VALUES (181, 'rete384', 735738, 0, 31);
-INSERT INTO descuentos VALUES (182, 'rete383', 717033, 0, 32);
-INSERT INTO descuentos VALUES (183, 'reteIca', 717033, 6927, 32);
-INSERT INTO descuentos VALUES (184, 'estampillaUD', 717033, 7170, 32);
-INSERT INTO descuentos VALUES (185, 'proCultura', 717033, 3585, 32);
-INSERT INTO descuentos VALUES (186, 'adultoMayor', 717033, 3585, 32);
-INSERT INTO descuentos VALUES (187, 'rete384', 956044, 0, 32);
-INSERT INTO descuentos VALUES (188, 'rete383', 2151100, 0, 33);
-INSERT INTO descuentos VALUES (189, 'reteIca', 2151100, 20780, 33);
-INSERT INTO descuentos VALUES (190, 'estampillaUD', 2151100, 21511, 33);
-INSERT INTO descuentos VALUES (191, 'proCultura', 2151100, 10756, 33);
-INSERT INTO descuentos VALUES (192, 'adultoMayor', 2151100, 10756, 33);
-INSERT INTO descuentos VALUES (193, 'rete384', 2868133, 0, 33);
-INSERT INTO descuentos VALUES (194, 'rete383', 1875318, 0, 34);
-INSERT INTO descuentos VALUES (195, 'reteIca', 1875318, 18116, 34);
-INSERT INTO descuentos VALUES (196, 'estampillaUD', 1875318, 18753, 34);
-INSERT INTO descuentos VALUES (197, 'proCultura', 1875318, 9377, 34);
-INSERT INTO descuentos VALUES (198, 'adultoMayor', 1875318, 9377, 34);
-INSERT INTO descuentos VALUES (199, 'rete384', 2500424, 0, 34);
-INSERT INTO descuentos VALUES (200, 'rete383', 620779, 0, 35);
-INSERT INTO descuentos VALUES (201, 'reteIca', 620779, 5997, 35);
-INSERT INTO descuentos VALUES (202, 'estampillaUD', 620779, 6208, 35);
-INSERT INTO descuentos VALUES (203, 'proCultura', 620779, 3104, 35);
-INSERT INTO descuentos VALUES (204, 'adultoMayor', 620779, 3104, 35);
-INSERT INTO descuentos VALUES (205, 'rete384', 827706, 0, 35);
-INSERT INTO descuentos VALUES (206, 'rete383', 620779, 0, 36);
-INSERT INTO descuentos VALUES (207, 'reteIca', 620779, 5997, 36);
-INSERT INTO descuentos VALUES (208, 'estampillaUD', 620779, 6208, 36);
-INSERT INTO descuentos VALUES (209, 'proCultura', 620779, 3104, 36);
-INSERT INTO descuentos VALUES (210, 'adultoMayor', 620779, 3104, 36);
-INSERT INTO descuentos VALUES (211, 'rete384', 827706, 0, 36);
-INSERT INTO descuentos VALUES (212, 'rete383', 1470837, 0, 37);
-INSERT INTO descuentos VALUES (213, 'reteIca', 1470837, 14208, 37);
-INSERT INTO descuentos VALUES (214, 'estampillaUD', 1470837, 14708, 37);
-INSERT INTO descuentos VALUES (215, 'proCultura', 1470837, 7354, 37);
-INSERT INTO descuentos VALUES (216, 'adultoMayor', 1470837, 7354, 37);
-INSERT INTO descuentos VALUES (217, 'rete384', 1961116, 0, 37);
-INSERT INTO descuentos VALUES (218, 'rete383', 735418, 0, 38);
-INSERT INTO descuentos VALUES (219, 'reteIca', 735418, 7104, 38);
-INSERT INTO descuentos VALUES (220, 'estampillaUD', 735418, 7354, 38);
-INSERT INTO descuentos VALUES (221, 'proCultura', 735418, 3677, 38);
-INSERT INTO descuentos VALUES (222, 'adultoMayor', 735418, 3677, 38);
-INSERT INTO descuentos VALUES (223, 'rete384', 980558, 0, 38);
-INSERT INTO descuentos VALUES (224, 'rete383', 620779, 0, 39);
-INSERT INTO descuentos VALUES (225, 'reteIca', 620779, 5997, 39);
-INSERT INTO descuentos VALUES (226, 'estampillaUD', 620779, 6208, 39);
-INSERT INTO descuentos VALUES (227, 'proCultura', 620779, 3104, 39);
-INSERT INTO descuentos VALUES (228, 'adultoMayor', 620779, 3104, 39);
-INSERT INTO descuentos VALUES (229, 'rete384', 827706, 0, 39);
-INSERT INTO descuentos VALUES (230, 'rete383', 485827, 0, 40);
-INSERT INTO descuentos VALUES (231, 'reteIca', 485827, 4693, 40);
-INSERT INTO descuentos VALUES (232, 'estampillaUD', 485827, 4858, 40);
-INSERT INTO descuentos VALUES (233, 'proCultura', 485827, 2429, 40);
-INSERT INTO descuentos VALUES (234, 'adultoMayor', 485827, 2429, 40);
-INSERT INTO descuentos VALUES (235, 'rete384', 647770, 0, 40);
-INSERT INTO descuentos VALUES (236, 'rete383', 809712, 0, 41);
-INSERT INTO descuentos VALUES (237, 'reteIca', 809712, 7822, 41);
-INSERT INTO descuentos VALUES (238, 'estampillaUD', 809712, 8097, 41);
-INSERT INTO descuentos VALUES (239, 'proCultura', 809712, 4049, 41);
-INSERT INTO descuentos VALUES (240, 'adultoMayor', 809712, 4049, 41);
-INSERT INTO descuentos VALUES (241, 'rete384', 1079616, 0, 41);
-INSERT INTO descuentos VALUES (242, 'rete383', 359872, 0, 42);
-INSERT INTO descuentos VALUES (243, 'reteIca', 359872, 3476, 42);
-INSERT INTO descuentos VALUES (244, 'estampillaUD', 359872, 3599, 42);
-INSERT INTO descuentos VALUES (245, 'proCultura', 359872, 1799, 42);
-INSERT INTO descuentos VALUES (246, 'adultoMayor', 359872, 1799, 42);
-INSERT INTO descuentos VALUES (247, 'rete384', 479829, 0, 42);
-INSERT INTO descuentos VALUES (248, 'rete383', 620779, 0, 43);
-INSERT INTO descuentos VALUES (249, 'reteIca', 620779, 5997, 43);
-INSERT INTO descuentos VALUES (250, 'estampillaUD', 620779, 6208, 43);
-INSERT INTO descuentos VALUES (251, 'proCultura', 620779, 3104, 43);
-INSERT INTO descuentos VALUES (252, 'adultoMayor', 620779, 3104, 43);
-INSERT INTO descuentos VALUES (253, 'rete384', 827706, 0, 43);
-INSERT INTO descuentos VALUES (254, 'rete383', 809712, 0, 44);
-INSERT INTO descuentos VALUES (255, 'reteIca', 809712, 7822, 44);
-INSERT INTO descuentos VALUES (256, 'estampillaUD', 809712, 8097, 44);
-INSERT INTO descuentos VALUES (257, 'proCultura', 809712, 4049, 44);
-INSERT INTO descuentos VALUES (258, 'adultoMayor', 809712, 4049, 44);
-INSERT INTO descuentos VALUES (259, 'rete384', 1079616, 0, 44);
-INSERT INTO descuentos VALUES (260, 'rete383', 551803, 0, 45);
-INSERT INTO descuentos VALUES (261, 'reteIca', 551803, 5330, 45);
-INSERT INTO descuentos VALUES (262, 'estampillaUD', 551803, 5518, 45);
-INSERT INTO descuentos VALUES (263, 'proCultura', 551803, 2759, 45);
-INSERT INTO descuentos VALUES (264, 'adultoMayor', 551803, 2759, 45);
-INSERT INTO descuentos VALUES (265, 'rete384', 735738, 0, 45);
-INSERT INTO descuentos VALUES (266, 'rete383', 1470837, 0, 46);
-INSERT INTO descuentos VALUES (267, 'reteIca', 1470837, 14208, 46);
-INSERT INTO descuentos VALUES (268, 'estampillaUD', 1470837, 14708, 46);
-INSERT INTO descuentos VALUES (269, 'proCultura', 1470837, 7354, 46);
-INSERT INTO descuentos VALUES (270, 'adultoMayor', 1470837, 7354, 46);
-INSERT INTO descuentos VALUES (271, 'rete384', 1961116, 0, 46);
-INSERT INTO descuentos VALUES (272, 'rete383', 242914, 0, 47);
-INSERT INTO descuentos VALUES (273, 'reteIca', 242914, 2347, 47);
-INSERT INTO descuentos VALUES (274, 'estampillaUD', 242914, 2429, 47);
-INSERT INTO descuentos VALUES (275, 'proCultura', 242914, 1215, 47);
-INSERT INTO descuentos VALUES (276, 'adultoMayor', 242914, 1215, 47);
-INSERT INTO descuentos VALUES (277, 'rete384', 323885, 0, 47);
-INSERT INTO descuentos VALUES (278, 'rete383', 506070, 0, 48);
-INSERT INTO descuentos VALUES (279, 'reteIca', 506070, 4889, 48);
-INSERT INTO descuentos VALUES (280, 'estampillaUD', 506070, 5061, 48);
-INSERT INTO descuentos VALUES (281, 'proCultura', 506070, 2530, 48);
-INSERT INTO descuentos VALUES (282, 'adultoMayor', 506070, 2530, 48);
-INSERT INTO descuentos VALUES (283, 'rete384', 674760, 0, 48);
-INSERT INTO descuentos VALUES (284, 'rete383', 620779, 0, 49);
-INSERT INTO descuentos VALUES (285, 'reteIca', 620779, 5997, 49);
-INSERT INTO descuentos VALUES (286, 'estampillaUD', 620779, 6208, 49);
-INSERT INTO descuentos VALUES (287, 'proCultura', 620779, 3104, 49);
-INSERT INTO descuentos VALUES (288, 'adultoMayor', 620779, 3104, 49);
-INSERT INTO descuentos VALUES (289, 'rete384', 827706, 0, 49);
-INSERT INTO descuentos VALUES (290, 'rete383', 2482038, 0, 50);
-INSERT INTO descuentos VALUES (291, 'reteIca', 2482038, 23976, 50);
-INSERT INTO descuentos VALUES (292, 'estampillaUD', 2482038, 24820, 50);
-INSERT INTO descuentos VALUES (293, 'proCultura', 2482038, 12410, 50);
-INSERT INTO descuentos VALUES (294, 'adultoMayor', 2482038, 12410, 50);
-INSERT INTO descuentos VALUES (295, 'rete384', 3309384, 0, 50);
-INSERT INTO descuentos VALUES (296, 'rete383', 364370, 0, 51);
-INSERT INTO descuentos VALUES (297, 'reteIca', 364370, 3520, 51);
-INSERT INTO descuentos VALUES (298, 'estampillaUD', 364370, 3644, 51);
-INSERT INTO descuentos VALUES (299, 'proCultura', 364370, 1822, 51);
-INSERT INTO descuentos VALUES (300, 'adultoMayor', 364370, 1822, 51);
-INSERT INTO descuentos VALUES (301, 'rete384', 485827, 0, 51);
-INSERT INTO descuentos VALUES (302, 'rete383', 620779, 0, 52);
-INSERT INTO descuentos VALUES (303, 'reteIca', 620779, 5997, 52);
-INSERT INTO descuentos VALUES (304, 'estampillaUD', 620779, 6208, 52);
-INSERT INTO descuentos VALUES (305, 'proCultura', 620779, 3104, 52);
-INSERT INTO descuentos VALUES (306, 'adultoMayor', 620779, 3104, 52);
-INSERT INTO descuentos VALUES (307, 'rete384', 827706, 0, 52);
-INSERT INTO descuentos VALUES (308, 'rete383', 1103128, 0, 53);
-INSERT INTO descuentos VALUES (309, 'reteIca', 1103128, 10656, 53);
-INSERT INTO descuentos VALUES (310, 'estampillaUD', 1103128, 11031, 53);
-INSERT INTO descuentos VALUES (311, 'proCultura', 1103128, 5516, 53);
-INSERT INTO descuentos VALUES (312, 'adultoMayor', 1103128, 5516, 53);
-INSERT INTO descuentos VALUES (313, 'rete384', 1470837, 0, 53);
-INSERT INTO descuentos VALUES (314, 'rete383', 809712, 0, 54);
-INSERT INTO descuentos VALUES (315, 'reteIca', 809712, 7822, 54);
-INSERT INTO descuentos VALUES (316, 'estampillaUD', 809712, 8097, 54);
-INSERT INTO descuentos VALUES (317, 'proCultura', 809712, 4049, 54);
-INSERT INTO descuentos VALUES (318, 'adultoMayor', 809712, 4049, 54);
-INSERT INTO descuentos VALUES (319, 'rete384', 1079616, 0, 54);
-INSERT INTO descuentos VALUES (320, 'rete383', 620779, 0, 55);
-INSERT INTO descuentos VALUES (321, 'reteIca', 620779, 5997, 55);
-INSERT INTO descuentos VALUES (322, 'estampillaUD', 620779, 6208, 55);
-INSERT INTO descuentos VALUES (323, 'proCultura', 620779, 3104, 55);
-INSERT INTO descuentos VALUES (324, 'adultoMayor', 620779, 3104, 55);
-INSERT INTO descuentos VALUES (325, 'rete384', 827706, 0, 55);
-INSERT INTO descuentos VALUES (326, 'rete383', 1838547, 0, 56);
-INSERT INTO descuentos VALUES (327, 'reteIca', 1838547, 17760, 56);
-INSERT INTO descuentos VALUES (328, 'estampillaUD', 1838547, 18385, 56);
-INSERT INTO descuentos VALUES (329, 'proCultura', 1838547, 9193, 56);
-INSERT INTO descuentos VALUES (330, 'adultoMayor', 1838547, 9193, 56);
-INSERT INTO descuentos VALUES (331, 'rete384', 2451396, 0, 56);
-INSERT INTO descuentos VALUES (332, 'rete383', 620779, 0, 57);
-INSERT INTO descuentos VALUES (333, 'reteIca', 620779, 5997, 57);
-INSERT INTO descuentos VALUES (334, 'estampillaUD', 620779, 6208, 57);
-INSERT INTO descuentos VALUES (335, 'proCultura', 620779, 3104, 57);
-INSERT INTO descuentos VALUES (336, 'adultoMayor', 620779, 3104, 57);
-INSERT INTO descuentos VALUES (337, 'rete384', 827706, 0, 57);
-INSERT INTO descuentos VALUES (338, 'rete383', 620779, 0, 58);
-INSERT INTO descuentos VALUES (339, 'reteIca', 620779, 5997, 58);
-INSERT INTO descuentos VALUES (340, 'estampillaUD', 620779, 6208, 58);
-INSERT INTO descuentos VALUES (341, 'proCultura', 620779, 3104, 58);
-INSERT INTO descuentos VALUES (342, 'adultoMayor', 620779, 3104, 58);
-INSERT INTO descuentos VALUES (343, 'rete384', 827706, 0, 58);
-INSERT INTO descuentos VALUES (344, 'rete383', 809712, 0, 59);
-INSERT INTO descuentos VALUES (345, 'reteIca', 809712, 7822, 59);
-INSERT INTO descuentos VALUES (346, 'estampillaUD', 809712, 8097, 59);
-INSERT INTO descuentos VALUES (347, 'proCultura', 809712, 4049, 59);
-INSERT INTO descuentos VALUES (348, 'adultoMayor', 809712, 4049, 59);
-INSERT INTO descuentos VALUES (349, 'rete384', 1079616, 0, 59);
-INSERT INTO descuentos VALUES (350, 'rete383', 458836, 0, 60);
-INSERT INTO descuentos VALUES (351, 'reteIca', 458836, 4432, 60);
-INSERT INTO descuentos VALUES (352, 'estampillaUD', 458836, 4588, 60);
-INSERT INTO descuentos VALUES (353, 'proCultura', 458836, 2294, 60);
-INSERT INTO descuentos VALUES (354, 'adultoMayor', 458836, 2294, 60);
-INSERT INTO descuentos VALUES (355, 'rete384', 611782, 0, 60);
-INSERT INTO descuentos VALUES (356, 'rete383', 387987, 0, 61);
-INSERT INTO descuentos VALUES (357, 'reteIca', 387987, 3748, 61);
-INSERT INTO descuentos VALUES (358, 'estampillaUD', 387987, 3880, 61);
-INSERT INTO descuentos VALUES (359, 'proCultura', 387987, 1940, 61);
-INSERT INTO descuentos VALUES (360, 'adultoMayor', 387987, 1940, 61);
-INSERT INTO descuentos VALUES (361, 'rete384', 517316, 0, 61);
-INSERT INTO descuentos VALUES (362, 'rete383', 478022, 0, 62);
-INSERT INTO descuentos VALUES (363, 'reteIca', 478022, 4618, 62);
-INSERT INTO descuentos VALUES (364, 'estampillaUD', 478022, 4780, 62);
-INSERT INTO descuentos VALUES (365, 'proCultura', 478022, 2390, 62);
-INSERT INTO descuentos VALUES (366, 'adultoMayor', 478022, 2390, 62);
-INSERT INTO descuentos VALUES (367, 'rete384', 637363, 0, 62);
-INSERT INTO descuentos VALUES (368, 'rete383', 294167, 0, 63);
-INSERT INTO descuentos VALUES (369, 'reteIca', 294167, 2842, 63);
-INSERT INTO descuentos VALUES (370, 'estampillaUD', 294167, 2942, 63);
-INSERT INTO descuentos VALUES (371, 'proCultura', 294167, 1471, 63);
-INSERT INTO descuentos VALUES (372, 'adultoMayor', 294167, 1471, 63);
-INSERT INTO descuentos VALUES (373, 'rete384', 392223, 0, 63);
-INSERT INTO descuentos VALUES (374, 'rete383', 607284, 0, 64);
-INSERT INTO descuentos VALUES (375, 'reteIca', 607284, 5866, 64);
-INSERT INTO descuentos VALUES (376, 'estampillaUD', 607284, 6073, 64);
-INSERT INTO descuentos VALUES (377, 'proCultura', 607284, 3036, 64);
-INSERT INTO descuentos VALUES (378, 'adultoMayor', 607284, 3036, 64);
-INSERT INTO descuentos VALUES (379, 'rete384', 809712, 0, 64);
-INSERT INTO descuentos VALUES (380, 'rete383', 1765005, 0, 65);
-INSERT INTO descuentos VALUES (381, 'reteIca', 1765005, 17050, 65);
-INSERT INTO descuentos VALUES (382, 'estampillaUD', 1765005, 17650, 65);
-INSERT INTO descuentos VALUES (383, 'proCultura', 1765005, 8825, 65);
-INSERT INTO descuentos VALUES (384, 'adultoMayor', 1765005, 8825, 65);
-INSERT INTO descuentos VALUES (385, 'rete384', 2353340, 0, 65);
-INSERT INTO descuentos VALUES (386, 'rete383', 809712, 0, 66);
-INSERT INTO descuentos VALUES (387, 'reteIca', 809712, 7822, 66);
-INSERT INTO descuentos VALUES (388, 'estampillaUD', 809712, 8097, 66);
-INSERT INTO descuentos VALUES (389, 'proCultura', 809712, 4049, 66);
-INSERT INTO descuentos VALUES (390, 'adultoMayor', 809712, 4049, 66);
-INSERT INTO descuentos VALUES (391, 'rete384', 1079616, 0, 66);
-INSERT INTO descuentos VALUES (392, 'rete383', 620779, 0, 67);
-INSERT INTO descuentos VALUES (393, 'reteIca', 620779, 5997, 67);
-INSERT INTO descuentos VALUES (394, 'estampillaUD', 620779, 6208, 67);
-INSERT INTO descuentos VALUES (395, 'proCultura', 620779, 3104, 67);
-INSERT INTO descuentos VALUES (396, 'adultoMayor', 620779, 3104, 67);
-INSERT INTO descuentos VALUES (397, 'rete384', 827706, 0, 67);
-INSERT INTO descuentos VALUES (398, 'rete383', 620779, 0, 68);
-INSERT INTO descuentos VALUES (399, 'reteIca', 620779, 5997, 68);
-INSERT INTO descuentos VALUES (400, 'estampillaUD', 620779, 6208, 68);
-INSERT INTO descuentos VALUES (401, 'proCultura', 620779, 3104, 68);
-INSERT INTO descuentos VALUES (402, 'adultoMayor', 620779, 3104, 68);
-INSERT INTO descuentos VALUES (403, 'rete384', 827706, 0, 68);
-INSERT INTO descuentos VALUES (404, 'rete383', 364370, 0, 69);
-INSERT INTO descuentos VALUES (405, 'reteIca', 364370, 3520, 69);
-INSERT INTO descuentos VALUES (406, 'estampillaUD', 364370, 3644, 69);
-INSERT INTO descuentos VALUES (407, 'proCultura', 364370, 1822, 69);
-INSERT INTO descuentos VALUES (408, 'adultoMayor', 364370, 1822, 69);
-INSERT INTO descuentos VALUES (409, 'rete384', 485827, 0, 69);
-INSERT INTO descuentos VALUES (410, 'rete383', 620779, 0, 70);
-INSERT INTO descuentos VALUES (411, 'reteIca', 620779, 5997, 70);
-INSERT INTO descuentos VALUES (412, 'estampillaUD', 620779, 6208, 70);
-INSERT INTO descuentos VALUES (413, 'proCultura', 620779, 3104, 70);
-INSERT INTO descuentos VALUES (414, 'adultoMayor', 620779, 3104, 70);
-INSERT INTO descuentos VALUES (415, 'rete384', 827706, 0, 70);
-INSERT INTO descuentos VALUES (416, 'rete383', 404856, 0, 71);
-INSERT INTO descuentos VALUES (417, 'reteIca', 404856, 3911, 71);
-INSERT INTO descuentos VALUES (418, 'estampillaUD', 404856, 4049, 71);
-INSERT INTO descuentos VALUES (419, 'proCultura', 404856, 2024, 71);
-INSERT INTO descuentos VALUES (420, 'adultoMayor', 404856, 2024, 71);
-INSERT INTO descuentos VALUES (421, 'rete384', 539808, 0, 71);
-INSERT INTO descuentos VALUES (422, 'rete383', 1912088, 0, 72);
-INSERT INTO descuentos VALUES (423, 'reteIca', 1912088, 18471, 72);
-INSERT INTO descuentos VALUES (424, 'estampillaUD', 1912088, 19121, 72);
-INSERT INTO descuentos VALUES (425, 'proCultura', 1912088, 9560, 72);
-INSERT INTO descuentos VALUES (426, 'adultoMayor', 1912088, 9560, 72);
-INSERT INTO descuentos VALUES (427, 'rete384', 2549451, 0, 72);
-INSERT INTO descuentos VALUES (428, 'rete383', 808960, 0, 73);
-INSERT INTO descuentos VALUES (429, 'reteIca', 808960, 7815, 73);
-INSERT INTO descuentos VALUES (430, 'estampillaUD', 808960, 8090, 73);
-INSERT INTO descuentos VALUES (431, 'proCultura', 808960, 4045, 73);
-INSERT INTO descuentos VALUES (432, 'adultoMayor', 808960, 4045, 73);
-INSERT INTO descuentos VALUES (433, 'rete384', 1078614, 0, 73);
-INSERT INTO descuentos VALUES (434, 'rete383', 1213441, 0, 74);
-INSERT INTO descuentos VALUES (435, 'reteIca', 1213441, 11722, 74);
-INSERT INTO descuentos VALUES (436, 'estampillaUD', 1213441, 12134, 74);
-INSERT INTO descuentos VALUES (437, 'proCultura', 1213441, 6067, 74);
-INSERT INTO descuentos VALUES (438, 'adultoMayor', 1213441, 6067, 74);
-INSERT INTO descuentos VALUES (439, 'rete384', 1617921, 0, 74);
-INSERT INTO descuentos VALUES (440, 'rete383', 882502, 0, 75);
-INSERT INTO descuentos VALUES (441, 'reteIca', 882502, 8525, 75);
-INSERT INTO descuentos VALUES (442, 'estampillaUD', 882502, 8825, 75);
-INSERT INTO descuentos VALUES (443, 'proCultura', 882502, 4413, 75);
-INSERT INTO descuentos VALUES (444, 'adultoMayor', 882502, 4413, 75);
-INSERT INTO descuentos VALUES (445, 'rete384', 1176670, 0, 75);
-INSERT INTO descuentos VALUES (446, 'rete383', 1103128, 0, 76);
-INSERT INTO descuentos VALUES (447, 'reteIca', 1103128, 10656, 76);
-INSERT INTO descuentos VALUES (448, 'estampillaUD', 1103128, 11031, 76);
-INSERT INTO descuentos VALUES (449, 'proCultura', 1103128, 5516, 76);
-INSERT INTO descuentos VALUES (450, 'adultoMayor', 1103128, 5516, 76);
-INSERT INTO descuentos VALUES (451, 'rete384', 1470837, 0, 76);
-INSERT INTO descuentos VALUES (452, 'rete383', 2757820, 0, 77);
-INSERT INTO descuentos VALUES (453, 'reteIca', 2757820, 26641, 77);
-INSERT INTO descuentos VALUES (454, 'estampillaUD', 2757820, 27578, 77);
-INSERT INTO descuentos VALUES (455, 'proCultura', 2757820, 13789, 77);
-INSERT INTO descuentos VALUES (456, 'adultoMayor', 2757820, 13789, 77);
-INSERT INTO descuentos VALUES (457, 'rete384', 3677093, 0, 77);
-INSERT INTO descuentos VALUES (458, 'rete383', 1201866, 0, 78);
-INSERT INTO descuentos VALUES (459, 'reteIca', 1201866, 11610, 78);
-INSERT INTO descuentos VALUES (460, 'estampillaUD', 1201866, 12019, 78);
-INSERT INTO descuentos VALUES (461, 'proCultura', 1201866, 6009, 78);
-INSERT INTO descuentos VALUES (462, 'adultoMayor', 1201866, 6009, 78);
-INSERT INTO descuentos VALUES (463, 'rete384', 1602488, 0, 78);
-INSERT INTO descuentos VALUES (464, 'rete383', 910081, 0, 79);
-INSERT INTO descuentos VALUES (465, 'reteIca', 910081, 8791, 79);
-INSERT INTO descuentos VALUES (466, 'estampillaUD', 910081, 9101, 79);
-INSERT INTO descuentos VALUES (467, 'proCultura', 910081, 4550, 79);
-INSERT INTO descuentos VALUES (468, 'adultoMayor', 910081, 4550, 79);
-INSERT INTO descuentos VALUES (469, 'rete384', 1213441, 0, 79);
-INSERT INTO descuentos VALUES (470, 'rete383', 1820161, 0, 80);
-INSERT INTO descuentos VALUES (471, 'reteIca', 1820161, 17583, 80);
-INSERT INTO descuentos VALUES (472, 'estampillaUD', 1820161, 18202, 80);
-INSERT INTO descuentos VALUES (473, 'proCultura', 1820161, 9101, 80);
-INSERT INTO descuentos VALUES (474, 'adultoMayor', 1820161, 9101, 80);
-INSERT INTO descuentos VALUES (475, 'rete384', 2426882, 0, 80);
-INSERT INTO descuentos VALUES (476, 'rete383', 485827, 0, 81);
-INSERT INTO descuentos VALUES (477, 'reteIca', 485827, 4693, 81);
-INSERT INTO descuentos VALUES (478, 'estampillaUD', 485827, 4858, 81);
-INSERT INTO descuentos VALUES (479, 'proCultura', 485827, 2429, 81);
-INSERT INTO descuentos VALUES (480, 'adultoMayor', 485827, 2429, 81);
-INSERT INTO descuentos VALUES (481, 'rete384', 647770, 0, 81);
-INSERT INTO descuentos VALUES (482, 'rete383', 956044, 0, 82);
-INSERT INTO descuentos VALUES (483, 'reteIca', 956044, 9235, 82);
-INSERT INTO descuentos VALUES (484, 'estampillaUD', 956044, 9560, 82);
-INSERT INTO descuentos VALUES (485, 'proCultura', 956044, 4780, 82);
-INSERT INTO descuentos VALUES (486, 'adultoMayor', 956044, 4780, 82);
-INSERT INTO descuentos VALUES (487, 'rete384', 1274726, 0, 82);
-INSERT INTO descuentos VALUES (488, 'rete383', 465584, 0, 83);
-INSERT INTO descuentos VALUES (489, 'reteIca', 465584, 4498, 83);
-INSERT INTO descuentos VALUES (490, 'estampillaUD', 465584, 4656, 83);
-INSERT INTO descuentos VALUES (491, 'proCultura', 465584, 2328, 83);
-INSERT INTO descuentos VALUES (492, 'adultoMayor', 465584, 2328, 83);
-INSERT INTO descuentos VALUES (493, 'rete384', 620779, 0, 83);
-INSERT INTO descuentos VALUES (494, 'rete383', 1617921, 0, 84);
-INSERT INTO descuentos VALUES (495, 'reteIca', 1617921, 15629, 84);
-INSERT INTO descuentos VALUES (496, 'estampillaUD', 1617921, 16179, 84);
-INSERT INTO descuentos VALUES (497, 'proCultura', 1617921, 8090, 84);
-INSERT INTO descuentos VALUES (498, 'adultoMayor', 1617921, 8090, 84);
-INSERT INTO descuentos VALUES (499, 'rete384', 2157228, 0, 84);
-INSERT INTO descuentos VALUES (500, 'rete383', 809712, 0, 85);
-INSERT INTO descuentos VALUES (501, 'reteIca', 809712, 7822, 85);
-INSERT INTO descuentos VALUES (502, 'estampillaUD', 809712, 8097, 85);
-INSERT INTO descuentos VALUES (503, 'proCultura', 809712, 4049, 85);
-INSERT INTO descuentos VALUES (504, 'adultoMayor', 809712, 4049, 85);
-INSERT INTO descuentos VALUES (505, 'rete384', 1079616, 0, 85);
-INSERT INTO descuentos VALUES (506, 'rete383', 465584, 0, 86);
-INSERT INTO descuentos VALUES (507, 'reteIca', 465584, 4498, 86);
-INSERT INTO descuentos VALUES (508, 'estampillaUD', 465584, 4656, 86);
-INSERT INTO descuentos VALUES (509, 'proCultura', 465584, 2328, 86);
-INSERT INTO descuentos VALUES (510, 'adultoMayor', 465584, 2328, 86);
-INSERT INTO descuentos VALUES (511, 'rete384', 620779, 0, 86);
-INSERT INTO descuentos VALUES (512, 'rete383', 485827, 0, 87);
-INSERT INTO descuentos VALUES (513, 'reteIca', 485827, 4693, 87);
-INSERT INTO descuentos VALUES (514, 'estampillaUD', 485827, 4858, 87);
-INSERT INTO descuentos VALUES (515, 'proCultura', 485827, 2429, 87);
-INSERT INTO descuentos VALUES (516, 'adultoMayor', 485827, 2429, 87);
-INSERT INTO descuentos VALUES (517, 'rete384', 647770, 0, 87);
-INSERT INTO descuentos VALUES (518, 'rete383', 229418, 0, 88);
-INSERT INTO descuentos VALUES (519, 'reteIca', 229418, 2216, 88);
-INSERT INTO descuentos VALUES (520, 'estampillaUD', 229418, 2294, 88);
-INSERT INTO descuentos VALUES (521, 'proCultura', 229418, 1147, 88);
-INSERT INTO descuentos VALUES (522, 'adultoMayor', 229418, 1147, 88);
-INSERT INTO descuentos VALUES (523, 'rete384', 305891, 0, 88);
-INSERT INTO descuentos VALUES (524, 'rete383', 485827, 0, 89);
-INSERT INTO descuentos VALUES (525, 'reteIca', 485827, 4693, 89);
-INSERT INTO descuentos VALUES (526, 'estampillaUD', 485827, 4858, 89);
-INSERT INTO descuentos VALUES (527, 'proCultura', 485827, 2429, 89);
-INSERT INTO descuentos VALUES (528, 'adultoMayor', 485827, 2429, 89);
-INSERT INTO descuentos VALUES (529, 'rete384', 647770, 0, 89);
-INSERT INTO descuentos VALUES (530, 'rete383', 1047972, 0, 90);
-INSERT INTO descuentos VALUES (531, 'reteIca', 1047972, 10123, 90);
-INSERT INTO descuentos VALUES (532, 'estampillaUD', 1047972, 10480, 90);
-INSERT INTO descuentos VALUES (533, 'proCultura', 1047972, 5240, 90);
-INSERT INTO descuentos VALUES (534, 'adultoMayor', 1047972, 5240, 90);
-INSERT INTO descuentos VALUES (535, 'rete384', 1397296, 0, 90);
-INSERT INTO descuentos VALUES (536, 'rete383', 735418, 0, 91);
-INSERT INTO descuentos VALUES (537, 'reteIca', 735418, 7104, 91);
-INSERT INTO descuentos VALUES (538, 'estampillaUD', 735418, 7354, 91);
-INSERT INTO descuentos VALUES (539, 'proCultura', 735418, 3677, 91);
-INSERT INTO descuentos VALUES (540, 'adultoMayor', 735418, 3677, 91);
-INSERT INTO descuentos VALUES (541, 'rete384', 980558, 0, 91);
-INSERT INTO descuentos VALUES (542, 'rete383', 2482038, 0, 92);
-INSERT INTO descuentos VALUES (543, 'reteIca', 2482038, 23976, 92);
-INSERT INTO descuentos VALUES (544, 'estampillaUD', 2482038, 24820, 92);
-INSERT INTO descuentos VALUES (545, 'proCultura', 2482038, 12410, 92);
-INSERT INTO descuentos VALUES (546, 'adultoMayor', 2482038, 12410, 92);
-INSERT INTO descuentos VALUES (547, 'rete384', 3309384, 0, 92);
-INSERT INTO descuentos VALUES (548, 'rete383', 2325761, 0, 93);
-INSERT INTO descuentos VALUES (549, 'reteIca', 2325761, 22467, 93);
-INSERT INTO descuentos VALUES (550, 'estampillaUD', 2325761, 23258, 93);
-INSERT INTO descuentos VALUES (551, 'proCultura', 2325761, 11629, 93);
-INSERT INTO descuentos VALUES (552, 'adultoMayor', 2325761, 11629, 93);
-INSERT INTO descuentos VALUES (553, 'rete384', 3101015, 0, 93);
-INSERT INTO descuentos VALUES (554, 'rete383', 478022, 0, 94);
-INSERT INTO descuentos VALUES (555, 'reteIca', 478022, 4618, 94);
-INSERT INTO descuentos VALUES (556, 'estampillaUD', 478022, 4780, 94);
-INSERT INTO descuentos VALUES (557, 'proCultura', 478022, 2390, 94);
-INSERT INTO descuentos VALUES (558, 'adultoMayor', 478022, 2390, 94);
-INSERT INTO descuentos VALUES (559, 'rete384', 637363, 0, 94);
-INSERT INTO descuentos VALUES (560, 'rete383', 620779, 0, 95);
-INSERT INTO descuentos VALUES (561, 'reteIca', 620779, 5997, 95);
-INSERT INTO descuentos VALUES (562, 'estampillaUD', 620779, 6208, 95);
-INSERT INTO descuentos VALUES (563, 'proCultura', 620779, 3104, 95);
-INSERT INTO descuentos VALUES (564, 'adultoMayor', 620779, 3104, 95);
-INSERT INTO descuentos VALUES (565, 'rete384', 827706, 0, 95);
-INSERT INTO descuentos VALUES (566, 'rete383', 2151100, 0, 96);
-INSERT INTO descuentos VALUES (567, 'reteIca', 2151100, 20780, 96);
-INSERT INTO descuentos VALUES (568, 'estampillaUD', 2151100, 21511, 96);
-INSERT INTO descuentos VALUES (569, 'proCultura', 2151100, 10756, 96);
-INSERT INTO descuentos VALUES (570, 'adultoMayor', 2151100, 10756, 96);
-INSERT INTO descuentos VALUES (571, 'rete384', 2868133, 0, 96);
-INSERT INTO descuentos VALUES (572, 'rete383', 404856, 0, 97);
-INSERT INTO descuentos VALUES (573, 'reteIca', 404856, 3911, 97);
-INSERT INTO descuentos VALUES (574, 'estampillaUD', 404856, 4049, 97);
-INSERT INTO descuentos VALUES (575, 'proCultura', 404856, 2024, 97);
-INSERT INTO descuentos VALUES (576, 'adultoMayor', 404856, 2024, 97);
-INSERT INTO descuentos VALUES (577, 'rete384', 539808, 0, 97);
-INSERT INTO descuentos VALUES (578, 'rete383', 1103128, 0, 98);
-INSERT INTO descuentos VALUES (579, 'reteIca', 1103128, 10656, 98);
-INSERT INTO descuentos VALUES (580, 'estampillaUD', 1103128, 11031, 98);
-INSERT INTO descuentos VALUES (581, 'proCultura', 1103128, 5516, 98);
-INSERT INTO descuentos VALUES (582, 'adultoMayor', 1103128, 5516, 98);
-INSERT INTO descuentos VALUES (583, 'rete384', 1470837, 0, 98);
-INSERT INTO descuentos VALUES (584, 'rete383', 1613325, 0, 99);
-INSERT INTO descuentos VALUES (585, 'reteIca', 1613325, 15585, 99);
-INSERT INTO descuentos VALUES (586, 'estampillaUD', 1613325, 16133, 99);
-INSERT INTO descuentos VALUES (587, 'proCultura', 1613325, 8067, 99);
-INSERT INTO descuentos VALUES (588, 'adultoMayor', 1613325, 8067, 99);
-INSERT INTO descuentos VALUES (589, 'rete384', 2151100, 0, 99);
-INSERT INTO descuentos VALUES (590, 'rete383', 620779, 0, 100);
-INSERT INTO descuentos VALUES (591, 'reteIca', 620779, 5997, 100);
-INSERT INTO descuentos VALUES (592, 'estampillaUD', 620779, 6208, 100);
-INSERT INTO descuentos VALUES (593, 'proCultura', 620779, 3104, 100);
-INSERT INTO descuentos VALUES (594, 'adultoMayor', 620779, 3104, 100);
-INSERT INTO descuentos VALUES (595, 'rete384', 827706, 0, 100);
-INSERT INTO descuentos VALUES (596, 'rete383', 1176670, 0, 101);
-INSERT INTO descuentos VALUES (597, 'reteIca', 1176670, 11367, 101);
-INSERT INTO descuentos VALUES (598, 'estampillaUD', 1176670, 11767, 101);
-INSERT INTO descuentos VALUES (599, 'proCultura', 1176670, 5883, 101);
-INSERT INTO descuentos VALUES (600, 'adultoMayor', 1176670, 5883, 101);
-INSERT INTO descuentos VALUES (601, 'rete384', 1568893, 0, 101);
-INSERT INTO descuentos VALUES (602, 'rete383', 1617921, 0, 102);
-INSERT INTO descuentos VALUES (603, 'reteIca', 1617921, 15629, 102);
-INSERT INTO descuentos VALUES (604, 'estampillaUD', 1617921, 16179, 102);
-INSERT INTO descuentos VALUES (605, 'proCultura', 1617921, 8090, 102);
-INSERT INTO descuentos VALUES (606, 'adultoMayor', 1617921, 8090, 102);
-INSERT INTO descuentos VALUES (607, 'rete384', 2157228, 0, 102);
-INSERT INTO descuentos VALUES (608, 'rete383', 1011201, 0, 103);
-INSERT INTO descuentos VALUES (609, 'reteIca', 1011201, 9768, 103);
-INSERT INTO descuentos VALUES (610, 'estampillaUD', 1011201, 10112, 103);
-INSERT INTO descuentos VALUES (611, 'proCultura', 1011201, 5056, 103);
-INSERT INTO descuentos VALUES (612, 'adultoMayor', 1011201, 5056, 103);
-INSERT INTO descuentos VALUES (613, 'rete384', 1348268, 0, 103);
-INSERT INTO descuentos VALUES (614, 'rete383', 620779, 0, 104);
-INSERT INTO descuentos VALUES (615, 'reteIca', 620779, 5997, 104);
-INSERT INTO descuentos VALUES (616, 'estampillaUD', 620779, 6208, 104);
-INSERT INTO descuentos VALUES (617, 'proCultura', 620779, 3104, 104);
-INSERT INTO descuentos VALUES (618, 'adultoMayor', 620779, 3104, 104);
-INSERT INTO descuentos VALUES (619, 'rete384', 827706, 0, 104);
-INSERT INTO descuentos VALUES (620, 'rete383', 620779, 0, 105);
-INSERT INTO descuentos VALUES (621, 'reteIca', 620779, 5997, 105);
-INSERT INTO descuentos VALUES (622, 'estampillaUD', 620779, 6208, 105);
-INSERT INTO descuentos VALUES (623, 'proCultura', 620779, 3104, 105);
-INSERT INTO descuentos VALUES (624, 'adultoMayor', 620779, 3104, 105);
-INSERT INTO descuentos VALUES (625, 'rete384', 827706, 0, 105);
-INSERT INTO descuentos VALUES (626, 'rete383', 717033, 0, 106);
-INSERT INTO descuentos VALUES (627, 'reteIca', 717033, 6927, 106);
-INSERT INTO descuentos VALUES (628, 'estampillaUD', 717033, 7170, 106);
-INSERT INTO descuentos VALUES (629, 'proCultura', 717033, 3585, 106);
-INSERT INTO descuentos VALUES (630, 'adultoMayor', 717033, 3585, 106);
-INSERT INTO descuentos VALUES (631, 'rete384', 956044, 0, 106);
-INSERT INTO descuentos VALUES (632, 'rete383', 1820161, 0, 107);
-INSERT INTO descuentos VALUES (633, 'reteIca', 1820161, 17583, 107);
-INSERT INTO descuentos VALUES (634, 'estampillaUD', 1820161, 18202, 107);
-INSERT INTO descuentos VALUES (635, 'proCultura', 1820161, 9101, 107);
-INSERT INTO descuentos VALUES (636, 'adultoMayor', 1820161, 9101, 107);
-INSERT INTO descuentos VALUES (637, 'rete384', 2426882, 0, 107);
-INSERT INTO descuentos VALUES (638, 'rete383', 728740, 0, 108);
-INSERT INTO descuentos VALUES (639, 'reteIca', 728740, 7040, 108);
-INSERT INTO descuentos VALUES (640, 'estampillaUD', 728740, 7287, 108);
-INSERT INTO descuentos VALUES (641, 'proCultura', 728740, 3644, 108);
-INSERT INTO descuentos VALUES (642, 'adultoMayor', 728740, 3644, 108);
-INSERT INTO descuentos VALUES (643, 'rete384', 971654, 0, 108);
-INSERT INTO descuentos VALUES (644, 'rete383', 1617919, 0, 109);
-INSERT INTO descuentos VALUES (645, 'reteIca', 1617919, 15629, 109);
-INSERT INTO descuentos VALUES (646, 'estampillaUD', 1617919, 16179, 109);
-INSERT INTO descuentos VALUES (647, 'proCultura', 1617919, 8090, 109);
-INSERT INTO descuentos VALUES (648, 'adultoMayor', 1617919, 8090, 109);
-INSERT INTO descuentos VALUES (649, 'rete384', 2157225, 0, 109);
-INSERT INTO descuentos VALUES (650, 'rete383', 2730241, 0, 110);
-INSERT INTO descuentos VALUES (651, 'reteIca', 2730241, 26374, 110);
-INSERT INTO descuentos VALUES (652, 'estampillaUD', 2730241, 27302, 110);
-INSERT INTO descuentos VALUES (653, 'proCultura', 2730241, 13651, 110);
-INSERT INTO descuentos VALUES (654, 'adultoMayor', 2730241, 13651, 110);
-INSERT INTO descuentos VALUES (655, 'rete384', 3640322, 0, 110);
-INSERT INTO descuentos VALUES (656, 'rete383', 620779, 0, 111);
-INSERT INTO descuentos VALUES (657, 'reteIca', 620779, 5997, 111);
-INSERT INTO descuentos VALUES (658, 'estampillaUD', 620779, 6208, 111);
-INSERT INTO descuentos VALUES (659, 'proCultura', 620779, 3104, 111);
-INSERT INTO descuentos VALUES (660, 'adultoMayor', 620779, 3104, 111);
-INSERT INTO descuentos VALUES (661, 'rete384', 827706, 0, 111);
-INSERT INTO descuentos VALUES (662, 'rete383', 2730241, 0, 112);
-INSERT INTO descuentos VALUES (663, 'reteIca', 2730241, 26374, 112);
-INSERT INTO descuentos VALUES (664, 'estampillaUD', 2730241, 27302, 112);
-INSERT INTO descuentos VALUES (665, 'proCultura', 2730241, 13651, 112);
-INSERT INTO descuentos VALUES (666, 'adultoMayor', 2730241, 13651, 112);
-INSERT INTO descuentos VALUES (667, 'rete384', 3640322, 0, 112);
-INSERT INTO descuentos VALUES (668, 'rete383', 2095943, 0, 113);
-INSERT INTO descuentos VALUES (669, 'reteIca', 2095943, 20247, 113);
-INSERT INTO descuentos VALUES (670, 'estampillaUD', 2095943, 20959, 113);
-INSERT INTO descuentos VALUES (671, 'proCultura', 2095943, 10480, 113);
-INSERT INTO descuentos VALUES (672, 'adultoMayor', 2095943, 10480, 113);
-INSERT INTO descuentos VALUES (673, 'rete384', 2794591, 0, 113);
-INSERT INTO descuentos VALUES (674, 'rete383', 620779, 0, 114);
-INSERT INTO descuentos VALUES (675, 'reteIca', 620779, 5997, 114);
-INSERT INTO descuentos VALUES (676, 'estampillaUD', 620779, 6208, 114);
-INSERT INTO descuentos VALUES (677, 'proCultura', 620779, 3104, 114);
-INSERT INTO descuentos VALUES (678, 'adultoMayor', 620779, 3104, 114);
-INSERT INTO descuentos VALUES (679, 'rete384', 827706, 0, 114);
-INSERT INTO descuentos VALUES (680, 'rete383', 269904, 0, 115);
-INSERT INTO descuentos VALUES (681, 'reteIca', 269904, 2607, 115);
-INSERT INTO descuentos VALUES (682, 'estampillaUD', 269904, 2699, 115);
-INSERT INTO descuentos VALUES (683, 'proCultura', 269904, 1350, 115);
-INSERT INTO descuentos VALUES (684, 'adultoMayor', 269904, 1350, 115);
-INSERT INTO descuentos VALUES (685, 'rete384', 359872, 0, 115);
-INSERT INTO descuentos VALUES (686, 'rete383', 1852336, 0, 116);
-INSERT INTO descuentos VALUES (687, 'reteIca', 1852336, 17894, 116);
-INSERT INTO descuentos VALUES (688, 'estampillaUD', 1852336, 18523, 116);
-INSERT INTO descuentos VALUES (689, 'proCultura', 1852336, 9262, 116);
-INSERT INTO descuentos VALUES (690, 'adultoMayor', 1852336, 9262, 116);
-INSERT INTO descuentos VALUES (691, 'rete384', 2469781, 0, 116);
-INSERT INTO descuentos VALUES (692, 'rete383', 873310, 0, 117);
-INSERT INTO descuentos VALUES (693, 'reteIca', 873310, 8436, 117);
-INSERT INTO descuentos VALUES (694, 'estampillaUD', 873310, 8733, 117);
-INSERT INTO descuentos VALUES (695, 'proCultura', 873310, 4367, 117);
-INSERT INTO descuentos VALUES (696, 'adultoMayor', 873310, 4367, 117);
-INSERT INTO descuentos VALUES (697, 'rete384', 1164413, 0, 117);
-INSERT INTO descuentos VALUES (698, 'rete383', 485827, 0, 118);
-INSERT INTO descuentos VALUES (699, 'reteIca', 485827, 4693, 118);
-INSERT INTO descuentos VALUES (700, 'estampillaUD', 485827, 4858, 118);
-INSERT INTO descuentos VALUES (701, 'proCultura', 485827, 2429, 118);
-INSERT INTO descuentos VALUES (702, 'adultoMayor', 485827, 2429, 118);
-INSERT INTO descuentos VALUES (703, 'rete384', 647770, 0, 118);
-INSERT INTO descuentos VALUES (704, 'rete383', 2151100, 0, 119);
-INSERT INTO descuentos VALUES (705, 'reteIca', 2151100, 20780, 119);
-INSERT INTO descuentos VALUES (706, 'estampillaUD', 2151100, 21511, 119);
-INSERT INTO descuentos VALUES (707, 'proCultura', 2151100, 10756, 119);
-INSERT INTO descuentos VALUES (708, 'adultoMayor', 2151100, 10756, 119);
-INSERT INTO descuentos VALUES (709, 'rete384', 2868133, 0, 119);
-INSERT INTO descuentos VALUES (710, 'rete383', 1985630, 0, 120);
-INSERT INTO descuentos VALUES (711, 'reteIca', 1985630, 19181, 120);
-INSERT INTO descuentos VALUES (712, 'estampillaUD', 1985630, 19856, 120);
-INSERT INTO descuentos VALUES (713, 'proCultura', 1985630, 9928, 120);
-INSERT INTO descuentos VALUES (714, 'adultoMayor', 1985630, 9928, 120);
-INSERT INTO descuentos VALUES (715, 'rete384', 2647507, 0, 120);
-INSERT INTO descuentos VALUES (716, 'rete383', 465584, 0, 121);
-INSERT INTO descuentos VALUES (717, 'reteIca', 465584, 4498, 121);
-INSERT INTO descuentos VALUES (718, 'estampillaUD', 465584, 4656, 121);
-INSERT INTO descuentos VALUES (719, 'proCultura', 465584, 2328, 121);
-INSERT INTO descuentos VALUES (720, 'adultoMayor', 465584, 2328, 121);
-INSERT INTO descuentos VALUES (721, 'rete384', 620779, 0, 121);
-INSERT INTO descuentos VALUES (722, 'rete383', 687307, 0, 122);
-INSERT INTO descuentos VALUES (723, 'reteIca', 687307, 6639, 122);
-INSERT INTO descuentos VALUES (724, 'estampillaUD', 687307, 6873, 122);
-INSERT INTO descuentos VALUES (725, 'proCultura', 687307, 3437, 122);
-INSERT INTO descuentos VALUES (726, 'adultoMayor', 687307, 3437, 122);
-INSERT INTO descuentos VALUES (727, 'rete384', 916409, 0, 122);
-INSERT INTO descuentos VALUES (728, 'rete383', 465584, 0, 123);
-INSERT INTO descuentos VALUES (729, 'reteIca', 465584, 4498, 123);
-INSERT INTO descuentos VALUES (730, 'estampillaUD', 465584, 4656, 123);
-INSERT INTO descuentos VALUES (731, 'proCultura', 465584, 2328, 123);
-INSERT INTO descuentos VALUES (732, 'adultoMayor', 465584, 2328, 123);
-INSERT INTO descuentos VALUES (733, 'rete384', 620779, 0, 123);
-INSERT INTO descuentos VALUES (734, 'rete383', 2206256, 0, 124);
-INSERT INTO descuentos VALUES (735, 'reteIca', 2206256, 21312, 124);
-INSERT INTO descuentos VALUES (736, 'estampillaUD', 2206256, 22063, 124);
-INSERT INTO descuentos VALUES (737, 'proCultura', 2206256, 11031, 124);
-INSERT INTO descuentos VALUES (738, 'adultoMayor', 2206256, 11031, 124);
-INSERT INTO descuentos VALUES (739, 'rete384', 2941675, 0, 124);
-INSERT INTO descuentos VALUES (740, 'rete383', 468829, 0, 125);
-INSERT INTO descuentos VALUES (741, 'reteIca', 468829, 4529, 125);
-INSERT INTO descuentos VALUES (742, 'estampillaUD', 468829, 4688, 125);
-INSERT INTO descuentos VALUES (743, 'proCultura', 468829, 2344, 125);
-INSERT INTO descuentos VALUES (744, 'adultoMayor', 468829, 2344, 125);
-INSERT INTO descuentos VALUES (745, 'rete384', 625106, 0, 125);
-INSERT INTO descuentos VALUES (746, 'rete383', 1397296, 0, 126);
-INSERT INTO descuentos VALUES (747, 'reteIca', 1397296, 13498, 126);
-INSERT INTO descuentos VALUES (748, 'estampillaUD', 1397296, 13973, 126);
-INSERT INTO descuentos VALUES (749, 'proCultura', 1397296, 6986, 126);
-INSERT INTO descuentos VALUES (750, 'adultoMayor', 1397296, 6986, 126);
-INSERT INTO descuentos VALUES (751, 'rete384', 1863061, 0, 126);
-INSERT INTO descuentos VALUES (752, 'rete383', 937657, 0, 127);
-INSERT INTO descuentos VALUES (753, 'reteIca', 937657, 9058, 127);
-INSERT INTO descuentos VALUES (754, 'estampillaUD', 937657, 9377, 127);
-INSERT INTO descuentos VALUES (755, 'proCultura', 937657, 4688, 127);
-INSERT INTO descuentos VALUES (756, 'adultoMayor', 937657, 4688, 127);
-INSERT INTO descuentos VALUES (757, 'rete384', 1250210, 0, 127);
-INSERT INTO descuentos VALUES (758, 'rete383', 1250212, 0, 128);
-INSERT INTO descuentos VALUES (759, 'reteIca', 1250212, 12077, 128);
-INSERT INTO descuentos VALUES (760, 'estampillaUD', 1250212, 12502, 128);
-INSERT INTO descuentos VALUES (761, 'proCultura', 1250212, 6251, 128);
-INSERT INTO descuentos VALUES (762, 'adultoMayor', 1250212, 6251, 128);
-INSERT INTO descuentos VALUES (763, 'rete384', 1666949, 0, 128);
-INSERT INTO descuentos VALUES (764, 'rete383', 1250212, 0, 129);
-INSERT INTO descuentos VALUES (765, 'reteIca', 1250212, 12077, 129);
-INSERT INTO descuentos VALUES (766, 'estampillaUD', 1250212, 12502, 129);
-INSERT INTO descuentos VALUES (767, 'proCultura', 1250212, 6251, 129);
-INSERT INTO descuentos VALUES (768, 'adultoMayor', 1250212, 6251, 129);
-INSERT INTO descuentos VALUES (769, 'rete384', 1666949, 0, 129);
-INSERT INTO descuentos VALUES (770, 'rete383', 364370, 0, 130);
-INSERT INTO descuentos VALUES (771, 'reteIca', 364370, 3520, 130);
-INSERT INTO descuentos VALUES (772, 'estampillaUD', 364370, 3644, 130);
-INSERT INTO descuentos VALUES (773, 'proCultura', 364370, 1822, 130);
-INSERT INTO descuentos VALUES (774, 'adultoMayor', 364370, 1822, 130);
-INSERT INTO descuentos VALUES (775, 'rete384', 485827, 0, 130);
-INSERT INTO descuentos VALUES (776, 'rete383', 478022, 0, 131);
-INSERT INTO descuentos VALUES (777, 'reteIca', 478022, 4618, 131);
-INSERT INTO descuentos VALUES (778, 'estampillaUD', 478022, 4780, 131);
-INSERT INTO descuentos VALUES (779, 'proCultura', 478022, 2390, 131);
-INSERT INTO descuentos VALUES (780, 'adultoMayor', 478022, 2390, 131);
-INSERT INTO descuentos VALUES (781, 'rete384', 637363, 0, 131);
-INSERT INTO descuentos VALUES (782, 'rete383', 523986, 0, 132);
-INSERT INTO descuentos VALUES (783, 'reteIca', 523986, 5062, 132);
-INSERT INTO descuentos VALUES (784, 'estampillaUD', 523986, 5240, 132);
-INSERT INTO descuentos VALUES (785, 'proCultura', 523986, 2620, 132);
-INSERT INTO descuentos VALUES (786, 'adultoMayor', 523986, 2620, 132);
-INSERT INTO descuentos VALUES (787, 'rete384', 698648, 0, 132);
-INSERT INTO descuentos VALUES (788, 'rete383', 1011201, 0, 133);
-INSERT INTO descuentos VALUES (789, 'reteIca', 1011201, 9768, 133);
-INSERT INTO descuentos VALUES (790, 'estampillaUD', 1011201, 10112, 133);
-INSERT INTO descuentos VALUES (791, 'proCultura', 1011201, 5056, 133);
-INSERT INTO descuentos VALUES (792, 'adultoMayor', 1011201, 5056, 133);
-INSERT INTO descuentos VALUES (793, 'rete384', 1348268, 0, 133);
-INSERT INTO descuentos VALUES (794, 'rete383', 1213441, 0, 134);
-INSERT INTO descuentos VALUES (795, 'reteIca', 1213441, 11722, 134);
-INSERT INTO descuentos VALUES (796, 'estampillaUD', 1213441, 12134, 134);
-INSERT INTO descuentos VALUES (797, 'proCultura', 1213441, 6067, 134);
-INSERT INTO descuentos VALUES (798, 'adultoMayor', 1213441, 6067, 134);
-INSERT INTO descuentos VALUES (799, 'rete384', 1617921, 0, 134);
-INSERT INTO descuentos VALUES (800, 'rete383', 620779, 0, 135);
-INSERT INTO descuentos VALUES (801, 'reteIca', 620779, 5997, 135);
-INSERT INTO descuentos VALUES (802, 'estampillaUD', 620779, 6208, 135);
-INSERT INTO descuentos VALUES (803, 'proCultura', 620779, 3104, 135);
-INSERT INTO descuentos VALUES (804, 'adultoMayor', 620779, 3104, 135);
-INSERT INTO descuentos VALUES (805, 'rete384', 827706, 0, 135);
-INSERT INTO descuentos VALUES (806, 'rete383', 188932, 0, 136);
-INSERT INTO descuentos VALUES (807, 'reteIca', 188932, 1825, 136);
-INSERT INTO descuentos VALUES (808, 'estampillaUD', 188932, 1889, 136);
-INSERT INTO descuentos VALUES (809, 'proCultura', 188932, 945, 136);
-INSERT INTO descuentos VALUES (810, 'adultoMayor', 188932, 945, 136);
-INSERT INTO descuentos VALUES (811, 'rete384', 251910, 0, 136);
-INSERT INTO descuentos VALUES (812, 'rete383', 620779, 0, 137);
-INSERT INTO descuentos VALUES (813, 'reteIca', 620779, 5997, 137);
-INSERT INTO descuentos VALUES (814, 'estampillaUD', 620779, 6208, 137);
-INSERT INTO descuentos VALUES (815, 'proCultura', 620779, 3104, 137);
-INSERT INTO descuentos VALUES (816, 'adultoMayor', 620779, 3104, 137);
-INSERT INTO descuentos VALUES (817, 'rete384', 827706, 0, 137);
-INSERT INTO descuentos VALUES (818, 'rete383', 809712, 0, 138);
-INSERT INTO descuentos VALUES (819, 'reteIca', 809712, 7822, 138);
-INSERT INTO descuentos VALUES (820, 'estampillaUD', 809712, 8097, 138);
-INSERT INTO descuentos VALUES (821, 'proCultura', 809712, 4049, 138);
-INSERT INTO descuentos VALUES (822, 'adultoMayor', 809712, 4049, 138);
-INSERT INTO descuentos VALUES (823, 'rete384', 1079616, 0, 138);
-INSERT INTO descuentos VALUES (824, 'rete383', 620779, 0, 139);
-INSERT INTO descuentos VALUES (825, 'reteIca', 620779, 5997, 139);
-INSERT INTO descuentos VALUES (826, 'estampillaUD', 620779, 6208, 139);
-INSERT INTO descuentos VALUES (827, 'proCultura', 620779, 3104, 139);
-INSERT INTO descuentos VALUES (828, 'adultoMayor', 620779, 3104, 139);
-INSERT INTO descuentos VALUES (829, 'rete384', 827706, 0, 139);
-INSERT INTO descuentos VALUES (830, 'rete383', 2730241, 0, 140);
-INSERT INTO descuentos VALUES (831, 'reteIca', 2730241, 26374, 140);
-INSERT INTO descuentos VALUES (832, 'estampillaUD', 2730241, 27302, 140);
-INSERT INTO descuentos VALUES (833, 'proCultura', 2730241, 13651, 140);
-INSERT INTO descuentos VALUES (834, 'adultoMayor', 2730241, 13651, 140);
-INSERT INTO descuentos VALUES (835, 'rete384', 3640322, 0, 140);
-INSERT INTO descuentos VALUES (836, 'rete383', 1054866, 0, 141);
-INSERT INTO descuentos VALUES (837, 'reteIca', 1054866, 10190, 141);
-INSERT INTO descuentos VALUES (838, 'estampillaUD', 1054866, 10549, 141);
-INSERT INTO descuentos VALUES (839, 'proCultura', 1054866, 5274, 141);
-INSERT INTO descuentos VALUES (840, 'adultoMayor', 1054866, 5274, 141);
-INSERT INTO descuentos VALUES (841, 'rete384', 1406488, 0, 141);
-INSERT INTO descuentos VALUES (842, 'rete383', 1434066, 0, 142);
-INSERT INTO descuentos VALUES (843, 'reteIca', 1434066, 13853, 142);
-INSERT INTO descuentos VALUES (844, 'estampillaUD', 1434066, 14341, 142);
-INSERT INTO descuentos VALUES (845, 'proCultura', 1434066, 7170, 142);
-INSERT INTO descuentos VALUES (846, 'adultoMayor', 1434066, 7170, 142);
-INSERT INTO descuentos VALUES (847, 'rete384', 1912088, 0, 142);
-INSERT INTO descuentos VALUES (848, 'rete383', 2730241, 0, 143);
-INSERT INTO descuentos VALUES (849, 'reteIca', 2730241, 26374, 143);
-INSERT INTO descuentos VALUES (850, 'estampillaUD', 2730241, 27302, 143);
-INSERT INTO descuentos VALUES (851, 'proCultura', 2730241, 13651, 143);
-INSERT INTO descuentos VALUES (852, 'adultoMayor', 2730241, 13651, 143);
-INSERT INTO descuentos VALUES (853, 'rete384', 3640322, 0, 143);
-INSERT INTO descuentos VALUES (854, 'rete383', 2068365, 0, 144);
-INSERT INTO descuentos VALUES (855, 'reteIca', 2068365, 19980, 144);
-INSERT INTO descuentos VALUES (856, 'estampillaUD', 2068365, 20684, 144);
-INSERT INTO descuentos VALUES (857, 'proCultura', 2068365, 10342, 144);
-INSERT INTO descuentos VALUES (858, 'adultoMayor', 2068365, 10342, 144);
-INSERT INTO descuentos VALUES (859, 'rete384', 2757820, 0, 144);
-INSERT INTO descuentos VALUES (860, 'rete383', 708498, 0, 145);
-INSERT INTO descuentos VALUES (861, 'reteIca', 708498, 6844, 145);
-INSERT INTO descuentos VALUES (862, 'estampillaUD', 708498, 7085, 145);
-INSERT INTO descuentos VALUES (863, 'proCultura', 708498, 3542, 145);
-INSERT INTO descuentos VALUES (864, 'adultoMayor', 708498, 3542, 145);
-INSERT INTO descuentos VALUES (865, 'rete384', 944664, 0, 145);
-INSERT INTO descuentos VALUES (866, 'rete383', 1765005, 0, 146);
-INSERT INTO descuentos VALUES (867, 'reteIca', 1765005, 17050, 146);
-INSERT INTO descuentos VALUES (868, 'estampillaUD', 1765005, 17650, 146);
-INSERT INTO descuentos VALUES (869, 'proCultura', 1765005, 8825, 146);
-INSERT INTO descuentos VALUES (870, 'adultoMayor', 1765005, 8825, 146);
-INSERT INTO descuentos VALUES (871, 'rete384', 2353340, 0, 146);
-INSERT INTO descuentos VALUES (872, 'rete383', 1654692, 0, 147);
-INSERT INTO descuentos VALUES (873, 'reteIca', 1654692, 15984, 147);
-INSERT INTO descuentos VALUES (874, 'estampillaUD', 1654692, 16547, 147);
-INSERT INTO descuentos VALUES (875, 'proCultura', 1654692, 8273, 147);
-INSERT INTO descuentos VALUES (876, 'adultoMayor', 1654692, 8273, 147);
-INSERT INTO descuentos VALUES (877, 'rete384', 2206256, 0, 147);
-INSERT INTO descuentos VALUES (878, 'rete383', 620779, 0, 148);
-INSERT INTO descuentos VALUES (879, 'reteIca', 620779, 5997, 148);
-INSERT INTO descuentos VALUES (880, 'estampillaUD', 620779, 6208, 148);
-INSERT INTO descuentos VALUES (881, 'proCultura', 620779, 3104, 148);
-INSERT INTO descuentos VALUES (882, 'adultoMayor', 620779, 3104, 148);
-INSERT INTO descuentos VALUES (883, 'rete384', 827706, 0, 148);
-INSERT INTO descuentos VALUES (884, 'rete383', 1047972, 0, 149);
-INSERT INTO descuentos VALUES (885, 'reteIca', 1047972, 10123, 149);
-INSERT INTO descuentos VALUES (886, 'estampillaUD', 1047972, 10480, 149);
-INSERT INTO descuentos VALUES (887, 'proCultura', 1047972, 5240, 149);
-INSERT INTO descuentos VALUES (888, 'adultoMayor', 1047972, 5240, 149);
-INSERT INTO descuentos VALUES (889, 'rete384', 1397296, 0, 149);
-INSERT INTO descuentos VALUES (890, 'rete383', 620779, 0, 150);
-INSERT INTO descuentos VALUES (891, 'reteIca', 620779, 5997, 150);
-INSERT INTO descuentos VALUES (892, 'estampillaUD', 620779, 6208, 150);
-INSERT INTO descuentos VALUES (893, 'proCultura', 620779, 3104, 150);
-INSERT INTO descuentos VALUES (894, 'adultoMayor', 620779, 3104, 150);
-INSERT INTO descuentos VALUES (895, 'rete384', 827706, 0, 150);
-INSERT INTO descuentos VALUES (896, 'rete383', 2206256, 0, 151);
-INSERT INTO descuentos VALUES (897, 'reteIca', 2206256, 21312, 151);
-INSERT INTO descuentos VALUES (898, 'estampillaUD', 2206256, 22063, 151);
-INSERT INTO descuentos VALUES (899, 'proCultura', 2206256, 11031, 151);
-INSERT INTO descuentos VALUES (900, 'adultoMayor', 2206256, 11031, 151);
-INSERT INTO descuentos VALUES (901, 'rete384', 2941675, 0, 151);
-INSERT INTO descuentos VALUES (902, 'rete383', 2357936, 0, 152);
-INSERT INTO descuentos VALUES (903, 'reteIca', 2357936, 22778, 152);
-INSERT INTO descuentos VALUES (904, 'estampillaUD', 2357936, 23579, 152);
-INSERT INTO descuentos VALUES (905, 'proCultura', 2357936, 11790, 152);
-INSERT INTO descuentos VALUES (906, 'adultoMayor', 2357936, 11790, 152);
-INSERT INTO descuentos VALUES (907, 'rete384', 3143915, 0, 152);
-INSERT INTO descuentos VALUES (908, 'rete383', 1047972, 0, 153);
-INSERT INTO descuentos VALUES (909, 'reteIca', 1047972, 10123, 153);
-INSERT INTO descuentos VALUES (910, 'estampillaUD', 1047972, 10480, 153);
-INSERT INTO descuentos VALUES (911, 'proCultura', 1047972, 5240, 153);
-INSERT INTO descuentos VALUES (912, 'adultoMayor', 1047972, 5240, 153);
-INSERT INTO descuentos VALUES (913, 'rete384', 1397296, 0, 153);
-INSERT INTO descuentos VALUES (914, 'rete383', 1047972, 0, 154);
-INSERT INTO descuentos VALUES (915, 'reteIca', 1047972, 10123, 154);
-INSERT INTO descuentos VALUES (916, 'estampillaUD', 1047972, 10480, 154);
-INSERT INTO descuentos VALUES (917, 'proCultura', 1047972, 5240, 154);
-INSERT INTO descuentos VALUES (918, 'adultoMayor', 1047972, 5240, 154);
-INSERT INTO descuentos VALUES (919, 'rete384', 1397296, 0, 154);
-INSERT INTO descuentos VALUES (920, 'rete383', 620779, 0, 155);
-INSERT INTO descuentos VALUES (921, 'reteIca', 620779, 5997, 155);
-INSERT INTO descuentos VALUES (922, 'estampillaUD', 620779, 6208, 155);
-INSERT INTO descuentos VALUES (923, 'proCultura', 620779, 3104, 155);
-INSERT INTO descuentos VALUES (924, 'adultoMayor', 620779, 3104, 155);
-INSERT INTO descuentos VALUES (925, 'rete384', 827706, 0, 155);
-INSERT INTO descuentos VALUES (926, 'rete383', 809712, 0, 156);
-INSERT INTO descuentos VALUES (927, 'reteIca', 809712, 7822, 156);
-INSERT INTO descuentos VALUES (928, 'estampillaUD', 809712, 8097, 156);
-INSERT INTO descuentos VALUES (929, 'proCultura', 809712, 4049, 156);
-INSERT INTO descuentos VALUES (930, 'adultoMayor', 809712, 4049, 156);
-INSERT INTO descuentos VALUES (931, 'rete384', 1079616, 0, 156);
-INSERT INTO descuentos VALUES (932, 'rete383', 728740, 0, 157);
-INSERT INTO descuentos VALUES (933, 'reteIca', 728740, 7040, 157);
-INSERT INTO descuentos VALUES (934, 'estampillaUD', 728740, 7287, 157);
-INSERT INTO descuentos VALUES (935, 'proCultura', 728740, 3644, 157);
-INSERT INTO descuentos VALUES (936, 'adultoMayor', 728740, 3644, 157);
-INSERT INTO descuentos VALUES (937, 'rete384', 971654, 0, 157);
-INSERT INTO descuentos VALUES (938, 'rete383', 809712, 0, 158);
-INSERT INTO descuentos VALUES (939, 'reteIca', 809712, 7822, 158);
-INSERT INTO descuentos VALUES (940, 'estampillaUD', 809712, 8097, 158);
-INSERT INTO descuentos VALUES (941, 'proCultura', 809712, 4049, 158);
-INSERT INTO descuentos VALUES (942, 'adultoMayor', 809712, 4049, 158);
-INSERT INTO descuentos VALUES (943, 'rete384', 1079616, 0, 158);
-INSERT INTO descuentos VALUES (944, 'rete383', 485827, 0, 159);
-INSERT INTO descuentos VALUES (945, 'reteIca', 485827, 4693, 159);
-INSERT INTO descuentos VALUES (946, 'estampillaUD', 485827, 4858, 159);
-INSERT INTO descuentos VALUES (947, 'proCultura', 485827, 2429, 159);
-INSERT INTO descuentos VALUES (948, 'adultoMayor', 485827, 2429, 159);
-INSERT INTO descuentos VALUES (949, 'rete384', 647770, 0, 159);
-INSERT INTO descuentos VALUES (950, 'rete383', 620779, 0, 160);
-INSERT INTO descuentos VALUES (951, 'reteIca', 620779, 5997, 160);
-INSERT INTO descuentos VALUES (952, 'estampillaUD', 620779, 6208, 160);
-INSERT INTO descuentos VALUES (953, 'proCultura', 620779, 3104, 160);
-INSERT INTO descuentos VALUES (954, 'adultoMayor', 620779, 3104, 160);
-INSERT INTO descuentos VALUES (955, 'rete384', 827706, 0, 160);
-INSERT INTO descuentos VALUES (956, 'rete383', 620779, 0, 161);
-INSERT INTO descuentos VALUES (957, 'reteIca', 620779, 5997, 161);
-INSERT INTO descuentos VALUES (958, 'estampillaUD', 620779, 6208, 161);
-INSERT INTO descuentos VALUES (959, 'proCultura', 620779, 3104, 161);
-INSERT INTO descuentos VALUES (960, 'adultoMayor', 620779, 3104, 161);
-INSERT INTO descuentos VALUES (961, 'rete384', 827706, 0, 161);
-INSERT INTO descuentos VALUES (962, 'rete383', 239011, 0, 162);
-INSERT INTO descuentos VALUES (963, 'reteIca', 239011, 2309, 162);
-INSERT INTO descuentos VALUES (964, 'estampillaUD', 239011, 2390, 162);
-INSERT INTO descuentos VALUES (965, 'proCultura', 239011, 1195, 162);
-INSERT INTO descuentos VALUES (966, 'adultoMayor', 239011, 1195, 162);
-INSERT INTO descuentos VALUES (967, 'rete384', 318681, 0, 162);
-INSERT INTO descuentos VALUES (968, 'rete383', 620779, 0, 163);
-INSERT INTO descuentos VALUES (969, 'reteIca', 620779, 5997, 163);
-INSERT INTO descuentos VALUES (970, 'estampillaUD', 620779, 6208, 163);
-INSERT INTO descuentos VALUES (971, 'proCultura', 620779, 3104, 163);
-INSERT INTO descuentos VALUES (972, 'adultoMayor', 620779, 3104, 163);
-INSERT INTO descuentos VALUES (973, 'rete384', 827706, 0, 163);
-INSERT INTO descuentos VALUES (974, 'rete383', 809712, 0, 164);
-INSERT INTO descuentos VALUES (975, 'reteIca', 809712, 7822, 164);
-INSERT INTO descuentos VALUES (976, 'estampillaUD', 809712, 8097, 164);
-INSERT INTO descuentos VALUES (977, 'proCultura', 809712, 4049, 164);
-INSERT INTO descuentos VALUES (978, 'adultoMayor', 809712, 4049, 164);
-INSERT INTO descuentos VALUES (979, 'rete384', 1079616, 0, 164);
-INSERT INTO descuentos VALUES (980, 'rete383', 620779, 0, 165);
-INSERT INTO descuentos VALUES (981, 'reteIca', 620779, 5997, 165);
-INSERT INTO descuentos VALUES (982, 'estampillaUD', 620779, 6208, 165);
-INSERT INTO descuentos VALUES (983, 'proCultura', 620779, 3104, 165);
-INSERT INTO descuentos VALUES (984, 'adultoMayor', 620779, 3104, 165);
-INSERT INTO descuentos VALUES (985, 'rete384', 827706, 0, 165);
-INSERT INTO descuentos VALUES (986, 'rete383', 1654692, 0, 166);
-INSERT INTO descuentos VALUES (987, 'reteIca', 1654692, 15984, 166);
-INSERT INTO descuentos VALUES (988, 'estampillaUD', 1654692, 16547, 166);
-INSERT INTO descuentos VALUES (989, 'proCultura', 1654692, 8273, 166);
-INSERT INTO descuentos VALUES (990, 'adultoMayor', 1654692, 8273, 166);
-INSERT INTO descuentos VALUES (991, 'rete384', 2206256, 0, 166);
-INSERT INTO descuentos VALUES (992, 'rete383', 314888, 0, 167);
-INSERT INTO descuentos VALUES (993, 'reteIca', 314888, 3042, 167);
-INSERT INTO descuentos VALUES (994, 'estampillaUD', 314888, 3149, 167);
-INSERT INTO descuentos VALUES (995, 'proCultura', 314888, 1574, 167);
-INSERT INTO descuentos VALUES (996, 'adultoMayor', 314888, 1574, 167);
-INSERT INTO descuentos VALUES (997, 'rete384', 419851, 0, 167);
-INSERT INTO descuentos VALUES (998, 'rete383', 1195054, 0, 168);
-INSERT INTO descuentos VALUES (999, 'reteIca', 1195054, 11544, 168);
-INSERT INTO descuentos VALUES (1000, 'estampillaUD', 1195054, 11951, 168);
-INSERT INTO descuentos VALUES (1001, 'proCultura', 1195054, 5975, 168);
-INSERT INTO descuentos VALUES (1002, 'adultoMayor', 1195054, 5975, 168);
-INSERT INTO descuentos VALUES (1003, 'rete384', 1593405, 0, 168);
-INSERT INTO descuentos VALUES (1004, 'rete383', 358516, 0, 169);
-INSERT INTO descuentos VALUES (1005, 'reteIca', 358516, 3463, 169);
-INSERT INTO descuentos VALUES (1006, 'estampillaUD', 358516, 3585, 169);
-INSERT INTO descuentos VALUES (1007, 'proCultura', 358516, 1793, 169);
-INSERT INTO descuentos VALUES (1008, 'adultoMayor', 358516, 1793, 169);
-INSERT INTO descuentos VALUES (1009, 'rete384', 478022, 0, 169);
-INSERT INTO descuentos VALUES (1010, 'rete383', 2426881, 0, 170);
-INSERT INTO descuentos VALUES (1011, 'reteIca', 2426881, 23444, 170);
-INSERT INTO descuentos VALUES (1012, 'estampillaUD', 2426881, 24269, 170);
-INSERT INTO descuentos VALUES (1013, 'proCultura', 2426881, 12134, 170);
-INSERT INTO descuentos VALUES (1014, 'adultoMayor', 2426881, 12134, 170);
-INSERT INTO descuentos VALUES (1015, 'rete384', 3235842, 0, 170);
-INSERT INTO descuentos VALUES (1016, 'rete383', 728740, 0, 171);
-INSERT INTO descuentos VALUES (1017, 'reteIca', 728740, 7040, 171);
-INSERT INTO descuentos VALUES (1018, 'estampillaUD', 728740, 7287, 171);
-INSERT INTO descuentos VALUES (1019, 'proCultura', 728740, 3644, 171);
-INSERT INTO descuentos VALUES (1020, 'adultoMayor', 728740, 3644, 171);
-INSERT INTO descuentos VALUES (1021, 'rete384', 971654, 0, 171);
-INSERT INTO descuentos VALUES (1022, 'rete383', 465584, 0, 172);
-INSERT INTO descuentos VALUES (1023, 'reteIca', 465584, 4498, 172);
-INSERT INTO descuentos VALUES (1024, 'estampillaUD', 465584, 4656, 172);
-INSERT INTO descuentos VALUES (1025, 'proCultura', 465584, 2328, 172);
-INSERT INTO descuentos VALUES (1026, 'adultoMayor', 465584, 2328, 172);
-INSERT INTO descuentos VALUES (1027, 'rete384', 620779, 0, 172);
-INSERT INTO descuentos VALUES (1028, 'rete383', 620779, 0, 173);
-INSERT INTO descuentos VALUES (1029, 'reteIca', 620779, 5997, 173);
-INSERT INTO descuentos VALUES (1030, 'estampillaUD', 620779, 6208, 173);
-INSERT INTO descuentos VALUES (1031, 'proCultura', 620779, 3104, 173);
-INSERT INTO descuentos VALUES (1032, 'adultoMayor', 620779, 3104, 173);
-INSERT INTO descuentos VALUES (1033, 'rete384', 827706, 0, 173);
-INSERT INTO descuentos VALUES (1034, 'rete383', 809712, 0, 174);
-INSERT INTO descuentos VALUES (1035, 'reteIca', 809712, 7822, 174);
-INSERT INTO descuentos VALUES (1036, 'estampillaUD', 809712, 8097, 174);
-INSERT INTO descuentos VALUES (1037, 'proCultura', 809712, 4049, 174);
-INSERT INTO descuentos VALUES (1038, 'adultoMayor', 809712, 4049, 174);
-INSERT INTO descuentos VALUES (1039, 'rete384', 1079616, 0, 174);
-INSERT INTO descuentos VALUES (1040, 'rete383', 1654692, 0, 175);
-INSERT INTO descuentos VALUES (1041, 'reteIca', 1654692, 15984, 175);
-INSERT INTO descuentos VALUES (1042, 'estampillaUD', 1654692, 16547, 175);
-INSERT INTO descuentos VALUES (1043, 'proCultura', 1654692, 8273, 175);
-INSERT INTO descuentos VALUES (1044, 'adultoMayor', 1654692, 8273, 175);
-INSERT INTO descuentos VALUES (1045, 'rete384', 2206256, 0, 175);
-INSERT INTO descuentos VALUES (1046, 'rete383', 809712, 0, 176);
-INSERT INTO descuentos VALUES (1047, 'reteIca', 809712, 7822, 176);
-INSERT INTO descuentos VALUES (1048, 'estampillaUD', 809712, 8097, 176);
-INSERT INTO descuentos VALUES (1049, 'proCultura', 809712, 4049, 176);
-INSERT INTO descuentos VALUES (1050, 'adultoMayor', 809712, 4049, 176);
-INSERT INTO descuentos VALUES (1051, 'rete384', 1079616, 0, 176);
-INSERT INTO descuentos VALUES (1052, 'rete383', 1176670, 0, 177);
-INSERT INTO descuentos VALUES (1053, 'reteIca', 1176670, 11367, 177);
-INSERT INTO descuentos VALUES (1054, 'estampillaUD', 1176670, 11767, 177);
-INSERT INTO descuentos VALUES (1055, 'proCultura', 1176670, 5883, 177);
-INSERT INTO descuentos VALUES (1056, 'adultoMayor', 1176670, 5883, 177);
-INSERT INTO descuentos VALUES (1057, 'rete384', 1568893, 0, 177);
-INSERT INTO descuentos VALUES (1058, 'rete383', 728740, 0, 178);
-INSERT INTO descuentos VALUES (1059, 'reteIca', 728740, 7040, 178);
-INSERT INTO descuentos VALUES (1060, 'estampillaUD', 728740, 7287, 178);
-INSERT INTO descuentos VALUES (1061, 'proCultura', 728740, 3644, 178);
-INSERT INTO descuentos VALUES (1062, 'adultoMayor', 728740, 3644, 178);
-INSERT INTO descuentos VALUES (1063, 'rete384', 971654, 0, 178);
-INSERT INTO descuentos VALUES (1064, 'rete383', 698647, 0, 179);
-INSERT INTO descuentos VALUES (1065, 'reteIca', 698647, 6749, 179);
-INSERT INTO descuentos VALUES (1066, 'estampillaUD', 698647, 6986, 179);
-INSERT INTO descuentos VALUES (1067, 'proCultura', 698647, 3493, 179);
-INSERT INTO descuentos VALUES (1068, 'adultoMayor', 698647, 3493, 179);
-INSERT INTO descuentos VALUES (1069, 'rete384', 931530, 0, 179);
-INSERT INTO descuentos VALUES (1070, 'rete383', 1047972, 0, 180);
-INSERT INTO descuentos VALUES (1071, 'reteIca', 1047972, 10123, 180);
-INSERT INTO descuentos VALUES (1072, 'estampillaUD', 1047972, 10480, 180);
-INSERT INTO descuentos VALUES (1073, 'proCultura', 1047972, 5240, 180);
-INSERT INTO descuentos VALUES (1074, 'adultoMayor', 1047972, 5240, 180);
-INSERT INTO descuentos VALUES (1075, 'rete384', 1397296, 0, 180);
-INSERT INTO descuentos VALUES (1076, 'rete383', 465584, 0, 181);
-INSERT INTO descuentos VALUES (1077, 'reteIca', 465584, 4498, 181);
-INSERT INTO descuentos VALUES (1078, 'estampillaUD', 465584, 4656, 181);
-INSERT INTO descuentos VALUES (1079, 'proCultura', 465584, 2328, 181);
-INSERT INTO descuentos VALUES (1080, 'adultoMayor', 465584, 2328, 181);
-INSERT INTO descuentos VALUES (1081, 'rete384', 620779, 0, 181);
-INSERT INTO descuentos VALUES (1082, 'rete383', 1397296, 0, 182);
-INSERT INTO descuentos VALUES (1083, 'reteIca', 1397296, 13498, 182);
-INSERT INTO descuentos VALUES (1084, 'estampillaUD', 1397296, 13973, 182);
-INSERT INTO descuentos VALUES (1085, 'proCultura', 1397296, 6986, 182);
-INSERT INTO descuentos VALUES (1086, 'adultoMayor', 1397296, 6986, 182);
-INSERT INTO descuentos VALUES (1087, 'rete384', 1863061, 0, 182);
-INSERT INTO descuentos VALUES (1088, 'rete383', 620779, 0, 183);
-INSERT INTO descuentos VALUES (1089, 'reteIca', 620779, 5997, 183);
-INSERT INTO descuentos VALUES (1090, 'estampillaUD', 620779, 6208, 183);
-INSERT INTO descuentos VALUES (1091, 'proCultura', 620779, 3104, 183);
-INSERT INTO descuentos VALUES (1092, 'adultoMayor', 620779, 3104, 183);
-INSERT INTO descuentos VALUES (1093, 'rete384', 827706, 0, 183);
-INSERT INTO descuentos VALUES (1094, 'rete383', 956043, 0, 184);
-INSERT INTO descuentos VALUES (1095, 'reteIca', 956043, 9235, 184);
-INSERT INTO descuentos VALUES (1096, 'estampillaUD', 956043, 9560, 184);
-INSERT INTO descuentos VALUES (1097, 'proCultura', 956043, 4780, 184);
-INSERT INTO descuentos VALUES (1098, 'adultoMayor', 956043, 4780, 184);
-INSERT INTO descuentos VALUES (1099, 'rete384', 1274724, 0, 184);
-INSERT INTO descuentos VALUES (1100, 'rete383', 1213441, 0, 185);
-INSERT INTO descuentos VALUES (1101, 'reteIca', 1213441, 11722, 185);
-INSERT INTO descuentos VALUES (1102, 'estampillaUD', 1213441, 12134, 185);
-INSERT INTO descuentos VALUES (1103, 'proCultura', 1213441, 6067, 185);
-INSERT INTO descuentos VALUES (1104, 'adultoMayor', 1213441, 6067, 185);
-INSERT INTO descuentos VALUES (1105, 'rete384', 1617921, 0, 185);
-INSERT INTO descuentos VALUES (1106, 'rete383', 1516801, 0, 186);
-INSERT INTO descuentos VALUES (1107, 'reteIca', 1516801, 14652, 186);
-INSERT INTO descuentos VALUES (1108, 'estampillaUD', 1516801, 15168, 186);
-INSERT INTO descuentos VALUES (1109, 'proCultura', 1516801, 7584, 186);
-INSERT INTO descuentos VALUES (1110, 'adultoMayor', 1516801, 7584, 186);
-INSERT INTO descuentos VALUES (1111, 'rete384', 2022401, 0, 186);
-INSERT INTO descuentos VALUES (1112, 'rete383', 728740, 0, 187);
-INSERT INTO descuentos VALUES (1113, 'reteIca', 728740, 7040, 187);
-INSERT INTO descuentos VALUES (1114, 'estampillaUD', 728740, 7287, 187);
-INSERT INTO descuentos VALUES (1115, 'proCultura', 728740, 3644, 187);
-INSERT INTO descuentos VALUES (1116, 'adultoMayor', 728740, 3644, 187);
-INSERT INTO descuentos VALUES (1117, 'rete384', 971654, 0, 187);
-INSERT INTO descuentos VALUES (1118, 'rete383', 882502, 0, 188);
-INSERT INTO descuentos VALUES (1119, 'reteIca', 882502, 8525, 188);
-INSERT INTO descuentos VALUES (1120, 'estampillaUD', 882502, 8825, 188);
-INSERT INTO descuentos VALUES (1121, 'proCultura', 882502, 4413, 188);
-INSERT INTO descuentos VALUES (1122, 'adultoMayor', 882502, 4413, 188);
-INSERT INTO descuentos VALUES (1123, 'rete384', 1176670, 0, 188);
-INSERT INTO descuentos VALUES (1124, 'rete383', 620779, 0, 189);
-INSERT INTO descuentos VALUES (1125, 'reteIca', 620779, 5997, 189);
-INSERT INTO descuentos VALUES (1126, 'estampillaUD', 620779, 6208, 189);
-INSERT INTO descuentos VALUES (1127, 'proCultura', 620779, 3104, 189);
-INSERT INTO descuentos VALUES (1128, 'adultoMayor', 620779, 3104, 189);
-INSERT INTO descuentos VALUES (1129, 'rete384', 827706, 0, 189);
-INSERT INTO descuentos VALUES (1130, 'rete383', 2095943, 0, 190);
-INSERT INTO descuentos VALUES (1131, 'reteIca', 2095943, 20247, 190);
-INSERT INTO descuentos VALUES (1132, 'estampillaUD', 2095943, 20959, 190);
-INSERT INTO descuentos VALUES (1133, 'proCultura', 2095943, 10480, 190);
-INSERT INTO descuentos VALUES (1134, 'adultoMayor', 2095943, 10480, 190);
-INSERT INTO descuentos VALUES (1135, 'rete384', 2794591, 0, 190);
-INSERT INTO descuentos VALUES (1136, 'rete383', 2151100, 0, 191);
-INSERT INTO descuentos VALUES (1137, 'reteIca', 2151100, 20780, 191);
-INSERT INTO descuentos VALUES (1138, 'estampillaUD', 2151100, 21511, 191);
-INSERT INTO descuentos VALUES (1139, 'proCultura', 2151100, 10756, 191);
-INSERT INTO descuentos VALUES (1140, 'adultoMayor', 2151100, 10756, 191);
-INSERT INTO descuentos VALUES (1141, 'rete384', 2868133, 0, 191);
-INSERT INTO descuentos VALUES (1142, 'rete383', 2812976, 0, 192);
-INSERT INTO descuentos VALUES (1143, 'reteIca', 2812976, 27173, 192);
-INSERT INTO descuentos VALUES (1144, 'estampillaUD', 2812976, 28130, 192);
-INSERT INTO descuentos VALUES (1145, 'proCultura', 2812976, 14065, 192);
-INSERT INTO descuentos VALUES (1146, 'adultoMayor', 2812976, 14065, 192);
-INSERT INTO descuentos VALUES (1147, 'rete384', 3750635, 0, 192);
-INSERT INTO descuentos VALUES (1148, 'rete383', 382364, 0, 193);
-INSERT INTO descuentos VALUES (1149, 'reteIca', 382364, 3694, 193);
-INSERT INTO descuentos VALUES (1150, 'estampillaUD', 382364, 3824, 193);
-INSERT INTO descuentos VALUES (1151, 'proCultura', 382364, 1912, 193);
-INSERT INTO descuentos VALUES (1152, 'adultoMayor', 382364, 1912, 193);
-INSERT INTO descuentos VALUES (1153, 'rete384', 509819, 0, 193);
-INSERT INTO descuentos VALUES (1154, 'rete383', 620779, 0, 194);
-INSERT INTO descuentos VALUES (1155, 'reteIca', 620779, 5997, 194);
-INSERT INTO descuentos VALUES (1156, 'estampillaUD', 620779, 6208, 194);
-INSERT INTO descuentos VALUES (1157, 'proCultura', 620779, 3104, 194);
-INSERT INTO descuentos VALUES (1158, 'adultoMayor', 620779, 3104, 194);
-INSERT INTO descuentos VALUES (1159, 'rete384', 827706, 0, 194);
-INSERT INTO descuentos VALUES (1160, 'rete383', 1985630, 0, 195);
-INSERT INTO descuentos VALUES (1161, 'reteIca', 1985630, 19181, 195);
-INSERT INTO descuentos VALUES (1162, 'estampillaUD', 1985630, 19856, 195);
-INSERT INTO descuentos VALUES (1163, 'proCultura', 1985630, 9928, 195);
-INSERT INTO descuentos VALUES (1164, 'adultoMayor', 1985630, 9928, 195);
-INSERT INTO descuentos VALUES (1165, 'rete384', 2647507, 0, 195);
-INSERT INTO descuentos VALUES (1166, 'rete383', 2095943, 0, 196);
-INSERT INTO descuentos VALUES (1167, 'reteIca', 2095943, 20247, 196);
-INSERT INTO descuentos VALUES (1168, 'estampillaUD', 2095943, 20959, 196);
-INSERT INTO descuentos VALUES (1169, 'proCultura', 2095943, 10480, 196);
-INSERT INTO descuentos VALUES (1170, 'adultoMayor', 2095943, 10480, 196);
-INSERT INTO descuentos VALUES (1171, 'rete384', 2794591, 0, 196);
-INSERT INTO descuentos VALUES (1172, 'rete383', 809712, 0, 197);
-INSERT INTO descuentos VALUES (1173, 'reteIca', 809712, 7822, 197);
-INSERT INTO descuentos VALUES (1174, 'estampillaUD', 809712, 8097, 197);
-INSERT INTO descuentos VALUES (1175, 'proCultura', 809712, 4049, 197);
-INSERT INTO descuentos VALUES (1176, 'adultoMayor', 809712, 4049, 197);
-INSERT INTO descuentos VALUES (1177, 'rete384', 1079616, 0, 197);
-INSERT INTO descuentos VALUES (1178, 'rete383', 478022, 0, 198);
-INSERT INTO descuentos VALUES (1179, 'reteIca', 478022, 4618, 198);
-INSERT INTO descuentos VALUES (1180, 'estampillaUD', 478022, 4780, 198);
-INSERT INTO descuentos VALUES (1181, 'proCultura', 478022, 2390, 198);
-INSERT INTO descuentos VALUES (1182, 'adultoMayor', 478022, 2390, 198);
-INSERT INTO descuentos VALUES (1183, 'rete384', 637363, 0, 198);
-INSERT INTO descuentos VALUES (1184, 'rete383', 809712, 0, 199);
-INSERT INTO descuentos VALUES (1185, 'reteIca', 809712, 7822, 199);
-INSERT INTO descuentos VALUES (1186, 'estampillaUD', 809712, 8097, 199);
-INSERT INTO descuentos VALUES (1187, 'proCultura', 809712, 4049, 199);
-INSERT INTO descuentos VALUES (1188, 'adultoMayor', 809712, 4049, 199);
-INSERT INTO descuentos VALUES (1189, 'rete384', 1079616, 0, 199);
-INSERT INTO descuentos VALUES (1190, 'rete383', 882502, 0, 200);
-INSERT INTO descuentos VALUES (1191, 'reteIca', 882502, 8525, 200);
-INSERT INTO descuentos VALUES (1192, 'estampillaUD', 882502, 8825, 200);
-INSERT INTO descuentos VALUES (1193, 'proCultura', 882502, 4413, 200);
-INSERT INTO descuentos VALUES (1194, 'adultoMayor', 882502, 4413, 200);
-INSERT INTO descuentos VALUES (1195, 'rete384', 1176670, 0, 200);
-INSERT INTO descuentos VALUES (1196, 'rete383', 586291, 0, 201);
-INSERT INTO descuentos VALUES (1197, 'reteIca', 586291, 5664, 201);
-INSERT INTO descuentos VALUES (1198, 'estampillaUD', 586291, 5863, 201);
-INSERT INTO descuentos VALUES (1199, 'proCultura', 586291, 2931, 201);
-INSERT INTO descuentos VALUES (1200, 'adultoMayor', 586291, 2931, 201);
-INSERT INTO descuentos VALUES (1201, 'rete384', 781722, 0, 201);
-INSERT INTO descuentos VALUES (1202, 'rete383', 708498, 0, 202);
-INSERT INTO descuentos VALUES (1203, 'reteIca', 708498, 6844, 202);
-INSERT INTO descuentos VALUES (1204, 'estampillaUD', 708498, 7085, 202);
-INSERT INTO descuentos VALUES (1205, 'proCultura', 708498, 3542, 202);
-INSERT INTO descuentos VALUES (1206, 'adultoMayor', 708498, 3542, 202);
-INSERT INTO descuentos VALUES (1207, 'rete384', 944664, 0, 202);
-INSERT INTO descuentos VALUES (1208, 'rete383', 1875315, 0, 203);
-INSERT INTO descuentos VALUES (1209, 'reteIca', 1875315, 18116, 203);
-INSERT INTO descuentos VALUES (1210, 'estampillaUD', 1875315, 18753, 203);
-INSERT INTO descuentos VALUES (1211, 'proCultura', 1875315, 9377, 203);
-INSERT INTO descuentos VALUES (1212, 'adultoMayor', 1875315, 9377, 203);
-INSERT INTO descuentos VALUES (1213, 'rete384', 2500420, 0, 203);
-INSERT INTO descuentos VALUES (1214, 'rete383', 485827, 0, 204);
-INSERT INTO descuentos VALUES (1215, 'reteIca', 485827, 4693, 204);
-INSERT INTO descuentos VALUES (1216, 'estampillaUD', 485827, 4858, 204);
-INSERT INTO descuentos VALUES (1217, 'proCultura', 485827, 2429, 204);
-INSERT INTO descuentos VALUES (1218, 'adultoMayor', 485827, 2429, 204);
-INSERT INTO descuentos VALUES (1219, 'rete384', 647770, 0, 204);
-INSERT INTO descuentos VALUES (1220, 'rete383', 728740, 0, 205);
-INSERT INTO descuentos VALUES (1221, 'reteIca', 728740, 7040, 205);
-INSERT INTO descuentos VALUES (1222, 'estampillaUD', 728740, 7287, 205);
-INSERT INTO descuentos VALUES (1223, 'proCultura', 728740, 3644, 205);
-INSERT INTO descuentos VALUES (1224, 'adultoMayor', 728740, 3644, 205);
-INSERT INTO descuentos VALUES (1225, 'rete384', 971654, 0, 205);
-INSERT INTO descuentos VALUES (1226, 'rete383', 239011, 0, 206);
-INSERT INTO descuentos VALUES (1227, 'reteIca', 239011, 2309, 206);
-INSERT INTO descuentos VALUES (1228, 'estampillaUD', 239011, 2390, 206);
-INSERT INTO descuentos VALUES (1229, 'proCultura', 239011, 1195, 206);
-INSERT INTO descuentos VALUES (1230, 'adultoMayor', 239011, 1195, 206);
-INSERT INTO descuentos VALUES (1231, 'rete384', 318681, 0, 206);
-INSERT INTO descuentos VALUES (1232, 'rete383', 465584, 0, 207);
-INSERT INTO descuentos VALUES (1233, 'reteIca', 465584, 4498, 207);
-INSERT INTO descuentos VALUES (1234, 'estampillaUD', 465584, 4656, 207);
-INSERT INTO descuentos VALUES (1235, 'proCultura', 465584, 2328, 207);
-INSERT INTO descuentos VALUES (1236, 'adultoMayor', 465584, 2328, 207);
-INSERT INTO descuentos VALUES (1237, 'rete384', 620779, 0, 207);
-INSERT INTO descuentos VALUES (1238, 'rete383', 620779, 0, 208);
-INSERT INTO descuentos VALUES (1239, 'reteIca', 620779, 5997, 208);
-INSERT INTO descuentos VALUES (1240, 'estampillaUD', 620779, 6208, 208);
-INSERT INTO descuentos VALUES (1241, 'proCultura', 620779, 3104, 208);
-INSERT INTO descuentos VALUES (1242, 'adultoMayor', 620779, 3104, 208);
-INSERT INTO descuentos VALUES (1243, 'rete384', 827706, 0, 208);
-INSERT INTO descuentos VALUES (1244, 'rete383', 1047972, 0, 209);
-INSERT INTO descuentos VALUES (1245, 'reteIca', 1047972, 10123, 209);
-INSERT INTO descuentos VALUES (1246, 'estampillaUD', 1047972, 10480, 209);
-INSERT INTO descuentos VALUES (1247, 'proCultura', 1047972, 5240, 209);
-INSERT INTO descuentos VALUES (1248, 'adultoMayor', 1047972, 5240, 209);
-INSERT INTO descuentos VALUES (1249, 'rete384', 1397296, 0, 209);
-INSERT INTO descuentos VALUES (1250, 'rete383', 269904, 0, 210);
-INSERT INTO descuentos VALUES (1251, 'reteIca', 269904, 2607, 210);
-INSERT INTO descuentos VALUES (1252, 'estampillaUD', 269904, 2699, 210);
-INSERT INTO descuentos VALUES (1253, 'proCultura', 269904, 1350, 210);
-INSERT INTO descuentos VALUES (1254, 'adultoMayor', 269904, 1350, 210);
-INSERT INTO descuentos VALUES (1255, 'rete384', 359872, 0, 210);
-INSERT INTO descuentos VALUES (1256, 'rete383', 620779, 0, 211);
-INSERT INTO descuentos VALUES (1257, 'reteIca', 620779, 5997, 211);
-INSERT INTO descuentos VALUES (1258, 'estampillaUD', 620779, 6208, 211);
-INSERT INTO descuentos VALUES (1259, 'proCultura', 620779, 3104, 211);
-INSERT INTO descuentos VALUES (1260, 'adultoMayor', 620779, 3104, 211);
-INSERT INTO descuentos VALUES (1261, 'rete384', 827706, 0, 211);
-INSERT INTO descuentos VALUES (1262, 'rete383', 882502, 0, 212);
-INSERT INTO descuentos VALUES (1263, 'reteIca', 882502, 8525, 212);
-INSERT INTO descuentos VALUES (1264, 'estampillaUD', 882502, 8825, 212);
-INSERT INTO descuentos VALUES (1265, 'proCultura', 882502, 4413, 212);
-INSERT INTO descuentos VALUES (1266, 'adultoMayor', 882502, 4413, 212);
-INSERT INTO descuentos VALUES (1267, 'rete384', 1176670, 0, 212);
-INSERT INTO descuentos VALUES (1268, 'rete383', 620779, 0, 213);
-INSERT INTO descuentos VALUES (1269, 'reteIca', 620779, 5997, 213);
-INSERT INTO descuentos VALUES (1270, 'estampillaUD', 620779, 6208, 213);
-INSERT INTO descuentos VALUES (1271, 'proCultura', 620779, 3104, 213);
-INSERT INTO descuentos VALUES (1272, 'adultoMayor', 620779, 3104, 213);
-INSERT INTO descuentos VALUES (1273, 'rete384', 827706, 0, 213);
-INSERT INTO descuentos VALUES (1274, 'rete383', 620779, 0, 214);
-INSERT INTO descuentos VALUES (1275, 'reteIca', 620779, 5997, 214);
-INSERT INTO descuentos VALUES (1276, 'estampillaUD', 620779, 6208, 214);
-INSERT INTO descuentos VALUES (1277, 'proCultura', 620779, 3104, 214);
-INSERT INTO descuentos VALUES (1278, 'adultoMayor', 620779, 3104, 214);
-INSERT INTO descuentos VALUES (1279, 'rete384', 827706, 0, 214);
-INSERT INTO descuentos VALUES (1280, 'rete383', 310390, 0, 215);
-INSERT INTO descuentos VALUES (1281, 'reteIca', 310390, 2998, 215);
-INSERT INTO descuentos VALUES (1282, 'estampillaUD', 310390, 3104, 215);
-INSERT INTO descuentos VALUES (1283, 'proCultura', 310390, 1552, 215);
-INSERT INTO descuentos VALUES (1284, 'adultoMayor', 310390, 1552, 215);
-INSERT INTO descuentos VALUES (1285, 'rete384', 413853, 0, 215);
-INSERT INTO descuentos VALUES (1286, 'rete383', 607284, 0, 216);
-INSERT INTO descuentos VALUES (1287, 'reteIca', 607284, 5866, 216);
-INSERT INTO descuentos VALUES (1288, 'estampillaUD', 607284, 6073, 216);
-INSERT INTO descuentos VALUES (1289, 'proCultura', 607284, 3036, 216);
-INSERT INTO descuentos VALUES (1290, 'adultoMayor', 607284, 3036, 216);
-INSERT INTO descuentos VALUES (1291, 'rete384', 809712, 0, 216);
-INSERT INTO descuentos VALUES (1292, 'rete383', 310390, 0, 217);
-INSERT INTO descuentos VALUES (1293, 'reteIca', 310390, 2998, 217);
-INSERT INTO descuentos VALUES (1294, 'estampillaUD', 310390, 3104, 217);
-INSERT INTO descuentos VALUES (1295, 'proCultura', 310390, 1552, 217);
-INSERT INTO descuentos VALUES (1296, 'adultoMayor', 310390, 1552, 217);
-INSERT INTO descuentos VALUES (1297, 'rete384', 413853, 0, 217);
-INSERT INTO descuentos VALUES (1298, 'rete383', 2426881, 0, 218);
-INSERT INTO descuentos VALUES (1299, 'reteIca', 2426881, 23444, 218);
-INSERT INTO descuentos VALUES (1300, 'estampillaUD', 2426881, 24269, 218);
-INSERT INTO descuentos VALUES (1301, 'proCultura', 2426881, 12134, 218);
-INSERT INTO descuentos VALUES (1302, 'adultoMayor', 2426881, 12134, 218);
-INSERT INTO descuentos VALUES (1303, 'rete384', 3235842, 0, 218);
-INSERT INTO descuentos VALUES (1304, 'rete383', 465584, 0, 219);
-INSERT INTO descuentos VALUES (1305, 'reteIca', 465584, 4498, 219);
-INSERT INTO descuentos VALUES (1306, 'estampillaUD', 465584, 4656, 219);
-INSERT INTO descuentos VALUES (1307, 'proCultura', 465584, 2328, 219);
-INSERT INTO descuentos VALUES (1308, 'adultoMayor', 465584, 2328, 219);
-INSERT INTO descuentos VALUES (1309, 'rete384', 620779, 0, 219);
-INSERT INTO descuentos VALUES (1310, 'rete383', 2500423, 0, 220);
-INSERT INTO descuentos VALUES (1311, 'reteIca', 2500423, 24154, 220);
-INSERT INTO descuentos VALUES (1312, 'estampillaUD', 2500423, 25004, 220);
-INSERT INTO descuentos VALUES (1313, 'proCultura', 2500423, 12502, 220);
-INSERT INTO descuentos VALUES (1314, 'adultoMayor', 2500423, 12502, 220);
-INSERT INTO descuentos VALUES (1315, 'rete384', 3333898, 0, 220);
-INSERT INTO descuentos VALUES (1316, 'rete383', 620779, 0, 221);
-INSERT INTO descuentos VALUES (1317, 'reteIca', 620779, 5997, 221);
-INSERT INTO descuentos VALUES (1318, 'estampillaUD', 620779, 6208, 221);
-INSERT INTO descuentos VALUES (1319, 'proCultura', 620779, 3104, 221);
-INSERT INTO descuentos VALUES (1320, 'adultoMayor', 620779, 3104, 221);
-INSERT INTO descuentos VALUES (1321, 'rete384', 827706, 0, 221);
-INSERT INTO descuentos VALUES (1322, 'rete383', 937659, 0, 222);
-INSERT INTO descuentos VALUES (1323, 'reteIca', 937659, 9058, 222);
-INSERT INTO descuentos VALUES (1324, 'estampillaUD', 937659, 9377, 222);
-INSERT INTO descuentos VALUES (1325, 'proCultura', 937659, 4688, 222);
-INSERT INTO descuentos VALUES (1326, 'adultoMayor', 937659, 4688, 222);
-INSERT INTO descuentos VALUES (1327, 'rete384', 1250212, 0, 222);
-INSERT INTO descuentos VALUES (1328, 'rete383', 387987, 0, 223);
-INSERT INTO descuentos VALUES (1329, 'reteIca', 387987, 3748, 223);
-INSERT INTO descuentos VALUES (1330, 'estampillaUD', 387987, 3880, 223);
-INSERT INTO descuentos VALUES (1331, 'proCultura', 387987, 1940, 223);
-INSERT INTO descuentos VALUES (1332, 'adultoMayor', 387987, 1940, 223);
-INSERT INTO descuentos VALUES (1333, 'rete384', 517316, 0, 223);
-INSERT INTO descuentos VALUES (1334, 'rete383', 310390, 0, 224);
-INSERT INTO descuentos VALUES (1335, 'reteIca', 310390, 2998, 224);
-INSERT INTO descuentos VALUES (1336, 'estampillaUD', 310390, 3104, 224);
-INSERT INTO descuentos VALUES (1337, 'proCultura', 310390, 1552, 224);
-INSERT INTO descuentos VALUES (1338, 'adultoMayor', 310390, 1552, 224);
-INSERT INTO descuentos VALUES (1339, 'rete384', 413853, 0, 224);
-INSERT INTO descuentos VALUES (1340, 'rete383', 129329, 0, 225);
-INSERT INTO descuentos VALUES (1341, 'reteIca', 129329, 1249, 225);
-INSERT INTO descuentos VALUES (1342, 'estampillaUD', 129329, 1293, 225);
-INSERT INTO descuentos VALUES (1343, 'proCultura', 129329, 647, 225);
-INSERT INTO descuentos VALUES (1344, 'adultoMayor', 129329, 647, 225);
-INSERT INTO descuentos VALUES (1345, 'rete384', 172439, 0, 225);
-INSERT INTO descuentos VALUES (1346, 'rete383', 1309964, 0, 226);
-INSERT INTO descuentos VALUES (1347, 'reteIca', 1309964, 12654, 226);
-INSERT INTO descuentos VALUES (1348, 'estampillaUD', 1309964, 13100, 226);
-INSERT INTO descuentos VALUES (1349, 'proCultura', 1309964, 6550, 226);
-INSERT INTO descuentos VALUES (1350, 'adultoMayor', 1309964, 6550, 226);
-INSERT INTO descuentos VALUES (1351, 'rete384', 1746619, 0, 226);
-INSERT INTO descuentos VALUES (1352, 'rete383', 785979, 0, 227);
-INSERT INTO descuentos VALUES (1353, 'reteIca', 785979, 7593, 227);
-INSERT INTO descuentos VALUES (1354, 'estampillaUD', 785979, 7860, 227);
-INSERT INTO descuentos VALUES (1355, 'proCultura', 785979, 3930, 227);
-INSERT INTO descuentos VALUES (1356, 'adultoMayor', 785979, 3930, 227);
-INSERT INTO descuentos VALUES (1357, 'rete384', 1047972, 0, 227);
-INSERT INTO descuentos VALUES (1358, 'rete383', 1323754, 0, 228);
-INSERT INTO descuentos VALUES (1359, 'reteIca', 1323754, 12787, 228);
-INSERT INTO descuentos VALUES (1360, 'estampillaUD', 1323754, 13238, 228);
-INSERT INTO descuentos VALUES (1361, 'proCultura', 1323754, 6619, 228);
-INSERT INTO descuentos VALUES (1362, 'adultoMayor', 1323754, 6619, 228);
-INSERT INTO descuentos VALUES (1363, 'rete384', 1765005, 0, 228);
-INSERT INTO descuentos VALUES (1364, 'rete383', 735418, 0, 229);
-INSERT INTO descuentos VALUES (1365, 'reteIca', 735418, 7104, 229);
-INSERT INTO descuentos VALUES (1366, 'estampillaUD', 735418, 7354, 229);
-INSERT INTO descuentos VALUES (1367, 'proCultura', 735418, 3677, 229);
-INSERT INTO descuentos VALUES (1368, 'adultoMayor', 735418, 3677, 229);
-INSERT INTO descuentos VALUES (1369, 'rete384', 980558, 0, 229);
-INSERT INTO descuentos VALUES (1370, 'rete383', 717033, 0, 230);
-INSERT INTO descuentos VALUES (1371, 'reteIca', 717033, 6927, 230);
-INSERT INTO descuentos VALUES (1372, 'estampillaUD', 717033, 7170, 230);
-INSERT INTO descuentos VALUES (1373, 'proCultura', 717033, 3585, 230);
-INSERT INTO descuentos VALUES (1374, 'adultoMayor', 717033, 3585, 230);
-INSERT INTO descuentos VALUES (1375, 'rete384', 956044, 0, 230);
-INSERT INTO descuentos VALUES (1376, 'rete383', 728740, 0, 231);
-INSERT INTO descuentos VALUES (1377, 'reteIca', 728740, 7040, 231);
-INSERT INTO descuentos VALUES (1378, 'estampillaUD', 728740, 7287, 231);
-INSERT INTO descuentos VALUES (1379, 'proCultura', 728740, 3644, 231);
-INSERT INTO descuentos VALUES (1380, 'adultoMayor', 728740, 3644, 231);
-INSERT INTO descuentos VALUES (1381, 'rete384', 971654, 0, 231);
-INSERT INTO descuentos VALUES (1382, 'rete383', 239011, 0, 232);
-INSERT INTO descuentos VALUES (1383, 'reteIca', 239011, 2309, 232);
-INSERT INTO descuentos VALUES (1384, 'estampillaUD', 239011, 2390, 232);
-INSERT INTO descuentos VALUES (1385, 'proCultura', 239011, 1195, 232);
-INSERT INTO descuentos VALUES (1386, 'adultoMayor', 239011, 1195, 232);
-INSERT INTO descuentos VALUES (1387, 'rete384', 318681, 0, 232);
-INSERT INTO descuentos VALUES (1388, 'rete383', 620779, 0, 233);
-INSERT INTO descuentos VALUES (1389, 'reteIca', 620779, 5997, 233);
-INSERT INTO descuentos VALUES (1390, 'estampillaUD', 620779, 6208, 233);
-INSERT INTO descuentos VALUES (1391, 'proCultura', 620779, 3104, 233);
-INSERT INTO descuentos VALUES (1392, 'adultoMayor', 620779, 3104, 233);
-INSERT INTO descuentos VALUES (1393, 'rete384', 827706, 0, 233);
-INSERT INTO descuentos VALUES (1394, 'rete383', 239011, 0, 234);
-INSERT INTO descuentos VALUES (1395, 'reteIca', 239011, 2309, 234);
-INSERT INTO descuentos VALUES (1396, 'estampillaUD', 239011, 2390, 234);
-INSERT INTO descuentos VALUES (1397, 'proCultura', 239011, 1195, 234);
-INSERT INTO descuentos VALUES (1398, 'adultoMayor', 239011, 1195, 234);
-INSERT INTO descuentos VALUES (1399, 'rete384', 318681, 0, 234);
-INSERT INTO descuentos VALUES (1400, 'rete383', 465584, 0, 235);
-INSERT INTO descuentos VALUES (1401, 'reteIca', 465584, 4498, 235);
-INSERT INTO descuentos VALUES (1402, 'estampillaUD', 465584, 4656, 235);
-INSERT INTO descuentos VALUES (1403, 'proCultura', 465584, 2328, 235);
-INSERT INTO descuentos VALUES (1404, 'adultoMayor', 465584, 2328, 235);
-INSERT INTO descuentos VALUES (1405, 'rete384', 620779, 0, 235);
-INSERT INTO descuentos VALUES (1406, 'rete383', 1544379, 0, 236);
-INSERT INTO descuentos VALUES (1407, 'reteIca', 1544379, 14919, 236);
-INSERT INTO descuentos VALUES (1408, 'estampillaUD', 1544379, 15444, 236);
-INSERT INTO descuentos VALUES (1409, 'proCultura', 1544379, 7722, 236);
-INSERT INTO descuentos VALUES (1410, 'adultoMayor', 1544379, 7722, 236);
-INSERT INTO descuentos VALUES (1411, 'rete384', 2059172, 0, 236);
-INSERT INTO descuentos VALUES (1412, 'rete383', 289571, 0, 237);
-INSERT INTO descuentos VALUES (1413, 'reteIca', 289571, 2797, 237);
-INSERT INTO descuentos VALUES (1414, 'estampillaUD', 289571, 2896, 237);
-INSERT INTO descuentos VALUES (1415, 'proCultura', 289571, 1448, 237);
-INSERT INTO descuentos VALUES (1416, 'adultoMayor', 289571, 1448, 237);
-INSERT INTO descuentos VALUES (1417, 'rete384', 386095, 0, 237);
-INSERT INTO descuentos VALUES (1418, 'rete383', 485827, 0, 238);
-INSERT INTO descuentos VALUES (1419, 'reteIca', 485827, 4693, 238);
-INSERT INTO descuentos VALUES (1420, 'estampillaUD', 485827, 4858, 238);
-INSERT INTO descuentos VALUES (1421, 'proCultura', 485827, 2429, 238);
-INSERT INTO descuentos VALUES (1422, 'adultoMayor', 485827, 2429, 238);
-INSERT INTO descuentos VALUES (1423, 'rete384', 647770, 0, 238);
-INSERT INTO descuentos VALUES (1424, 'rete383', 809712, 0, 239);
-INSERT INTO descuentos VALUES (1425, 'reteIca', 809712, 7822, 239);
-INSERT INTO descuentos VALUES (1426, 'estampillaUD', 809712, 8097, 239);
-INSERT INTO descuentos VALUES (1427, 'proCultura', 809712, 4049, 239);
-INSERT INTO descuentos VALUES (1428, 'adultoMayor', 809712, 4049, 239);
-INSERT INTO descuentos VALUES (1429, 'rete384', 1079616, 0, 239);
-INSERT INTO descuentos VALUES (1430, 'rete383', 620779, 0, 240);
-INSERT INTO descuentos VALUES (1431, 'reteIca', 620779, 5997, 240);
-INSERT INTO descuentos VALUES (1432, 'estampillaUD', 620779, 6208, 240);
-INSERT INTO descuentos VALUES (1433, 'proCultura', 620779, 3104, 240);
-INSERT INTO descuentos VALUES (1434, 'adultoMayor', 620779, 3104, 240);
-INSERT INTO descuentos VALUES (1435, 'rete384', 827706, 0, 240);
-INSERT INTO descuentos VALUES (1436, 'rete383', 485827, 0, 241);
-INSERT INTO descuentos VALUES (1437, 'reteIca', 485827, 4693, 241);
-INSERT INTO descuentos VALUES (1438, 'estampillaUD', 485827, 4858, 241);
-INSERT INTO descuentos VALUES (1439, 'proCultura', 485827, 2429, 241);
-INSERT INTO descuentos VALUES (1440, 'adultoMayor', 485827, 2429, 241);
-INSERT INTO descuentos VALUES (1441, 'rete384', 647770, 0, 241);
-INSERT INTO descuentos VALUES (1442, 'rete383', 1912088, 0, 242);
-INSERT INTO descuentos VALUES (1443, 'reteIca', 1912088, 18471, 242);
-INSERT INTO descuentos VALUES (1444, 'estampillaUD', 1912088, 19121, 242);
-INSERT INTO descuentos VALUES (1445, 'proCultura', 1912088, 9560, 242);
-INSERT INTO descuentos VALUES (1446, 'adultoMayor', 1912088, 9560, 242);
-INSERT INTO descuentos VALUES (1447, 'rete384', 2549451, 0, 242);
-INSERT INTO descuentos VALUES (1448, 'rete383', 620779, 0, 243);
-INSERT INTO descuentos VALUES (1449, 'reteIca', 620779, 5997, 243);
-INSERT INTO descuentos VALUES (1450, 'estampillaUD', 620779, 6208, 243);
-INSERT INTO descuentos VALUES (1451, 'proCultura', 620779, 3104, 243);
-INSERT INTO descuentos VALUES (1452, 'adultoMayor', 620779, 3104, 243);
-INSERT INTO descuentos VALUES (1453, 'rete384', 827706, 0, 243);
-INSERT INTO descuentos VALUES (1454, 'rete383', 465584, 0, 244);
-INSERT INTO descuentos VALUES (1455, 'reteIca', 465584, 4498, 244);
-INSERT INTO descuentos VALUES (1456, 'estampillaUD', 465584, 4656, 244);
-INSERT INTO descuentos VALUES (1457, 'proCultura', 465584, 2328, 244);
-INSERT INTO descuentos VALUES (1458, 'adultoMayor', 465584, 2328, 244);
-INSERT INTO descuentos VALUES (1459, 'rete384', 620779, 0, 244);
-INSERT INTO descuentos VALUES (1460, 'rete383', 179258, 0, 245);
-INSERT INTO descuentos VALUES (1461, 'reteIca', 179258, 1732, 245);
-INSERT INTO descuentos VALUES (1462, 'estampillaUD', 179258, 1793, 245);
-INSERT INTO descuentos VALUES (1463, 'proCultura', 179258, 896, 245);
-INSERT INTO descuentos VALUES (1464, 'adultoMayor', 179258, 896, 245);
-INSERT INTO descuentos VALUES (1465, 'rete384', 239011, 0, 245);
-INSERT INTO descuentos VALUES (1466, 'rete383', 551803, 0, 246);
-INSERT INTO descuentos VALUES (1467, 'reteIca', 551803, 5330, 246);
-INSERT INTO descuentos VALUES (1468, 'estampillaUD', 551803, 5518, 246);
-INSERT INTO descuentos VALUES (1469, 'proCultura', 551803, 2759, 246);
-INSERT INTO descuentos VALUES (1470, 'adultoMayor', 551803, 2759, 246);
-INSERT INTO descuentos VALUES (1471, 'rete384', 735738, 0, 246);
-INSERT INTO descuentos VALUES (1472, 'rete383', 620779, 0, 247);
-INSERT INTO descuentos VALUES (1473, 'reteIca', 620779, 5997, 247);
-INSERT INTO descuentos VALUES (1474, 'estampillaUD', 620779, 6208, 247);
-INSERT INTO descuentos VALUES (1475, 'proCultura', 620779, 3104, 247);
-INSERT INTO descuentos VALUES (1476, 'adultoMayor', 620779, 3104, 247);
-INSERT INTO descuentos VALUES (1477, 'rete384', 827706, 0, 247);
-INSERT INTO descuentos VALUES (1478, 'rete383', 827346, 0, 248);
-INSERT INTO descuentos VALUES (1479, 'reteIca', 827346, 7992, 248);
-INSERT INTO descuentos VALUES (1480, 'estampillaUD', 827346, 8273, 248);
-INSERT INTO descuentos VALUES (1481, 'proCultura', 827346, 4137, 248);
-INSERT INTO descuentos VALUES (1482, 'adultoMayor', 827346, 4137, 248);
-INSERT INTO descuentos VALUES (1483, 'rete384', 1103128, 0, 248);
-INSERT INTO descuentos VALUES (1484, 'rete383', 620779, 0, 249);
-INSERT INTO descuentos VALUES (1485, 'reteIca', 620779, 5997, 249);
-INSERT INTO descuentos VALUES (1486, 'estampillaUD', 620779, 6208, 249);
-INSERT INTO descuentos VALUES (1487, 'proCultura', 620779, 3104, 249);
-INSERT INTO descuentos VALUES (1488, 'adultoMayor', 620779, 3104, 249);
-INSERT INTO descuentos VALUES (1489, 'rete384', 827706, 0, 249);
-INSERT INTO descuentos VALUES (1490, 'rete383', 937659, 0, 250);
-INSERT INTO descuentos VALUES (1491, 'reteIca', 937659, 9058, 250);
-INSERT INTO descuentos VALUES (1492, 'estampillaUD', 937659, 9377, 250);
-INSERT INTO descuentos VALUES (1493, 'proCultura', 937659, 4688, 250);
-INSERT INTO descuentos VALUES (1494, 'adultoMayor', 937659, 4688, 250);
-INSERT INTO descuentos VALUES (1495, 'rete384', 1250212, 0, 250);
-INSERT INTO descuentos VALUES (1496, 'rete383', 620779, 0, 251);
-INSERT INTO descuentos VALUES (1497, 'reteIca', 620779, 5997, 251);
-INSERT INTO descuentos VALUES (1498, 'estampillaUD', 620779, 6208, 251);
-INSERT INTO descuentos VALUES (1499, 'proCultura', 620779, 3104, 251);
-INSERT INTO descuentos VALUES (1500, 'adultoMayor', 620779, 3104, 251);
-INSERT INTO descuentos VALUES (1501, 'rete384', 827706, 0, 251);
-INSERT INTO descuentos VALUES (1502, 'rete383', 1374313, 0, 252);
-INSERT INTO descuentos VALUES (1503, 'reteIca', 1374313, 13276, 252);
-INSERT INTO descuentos VALUES (1504, 'estampillaUD', 1374313, 13743, 252);
-INSERT INTO descuentos VALUES (1505, 'proCultura', 1374313, 6872, 252);
-INSERT INTO descuentos VALUES (1506, 'adultoMayor', 1374313, 6872, 252);
-INSERT INTO descuentos VALUES (1507, 'rete384', 1832418, 0, 252);
-INSERT INTO descuentos VALUES (1508, 'rete383', 1746619, 0, 253);
-INSERT INTO descuentos VALUES (1509, 'reteIca', 1746619, 16872, 253);
-INSERT INTO descuentos VALUES (1510, 'estampillaUD', 1746619, 17466, 253);
-INSERT INTO descuentos VALUES (1511, 'proCultura', 1746619, 8733, 253);
-INSERT INTO descuentos VALUES (1512, 'adultoMayor', 1746619, 8733, 253);
-INSERT INTO descuentos VALUES (1513, 'rete384', 2328826, 0, 253);
-INSERT INTO descuentos VALUES (1514, 'rete383', 523986, 0, 254);
-INSERT INTO descuentos VALUES (1515, 'reteIca', 523986, 5062, 254);
-INSERT INTO descuentos VALUES (1516, 'estampillaUD', 523986, 5240, 254);
-INSERT INTO descuentos VALUES (1517, 'proCultura', 523986, 2620, 254);
-INSERT INTO descuentos VALUES (1518, 'adultoMayor', 523986, 2620, 254);
-INSERT INTO descuentos VALUES (1519, 'rete384', 698648, 0, 254);
-INSERT INTO descuentos VALUES (1520, 'rete383', 1047972, 0, 255);
-INSERT INTO descuentos VALUES (1521, 'reteIca', 1047972, 10123, 255);
-INSERT INTO descuentos VALUES (1522, 'estampillaUD', 1047972, 10480, 255);
-INSERT INTO descuentos VALUES (1523, 'proCultura', 1047972, 5240, 255);
-INSERT INTO descuentos VALUES (1524, 'adultoMayor', 1047972, 5240, 255);
-INSERT INTO descuentos VALUES (1525, 'rete384', 1397296, 0, 255);
-INSERT INTO descuentos VALUES (1526, 'rete383', 1309964, 0, 256);
-INSERT INTO descuentos VALUES (1527, 'reteIca', 1309964, 12654, 256);
-INSERT INTO descuentos VALUES (1528, 'estampillaUD', 1309964, 13100, 256);
-INSERT INTO descuentos VALUES (1529, 'proCultura', 1309964, 6550, 256);
-INSERT INTO descuentos VALUES (1530, 'adultoMayor', 1309964, 6550, 256);
-INSERT INTO descuentos VALUES (1531, 'rete384', 1746619, 0, 256);
-INSERT INTO descuentos VALUES (1532, 'rete383', 485827, 0, 257);
-INSERT INTO descuentos VALUES (1533, 'reteIca', 485827, 4693, 257);
-INSERT INTO descuentos VALUES (1534, 'estampillaUD', 485827, 4858, 257);
-INSERT INTO descuentos VALUES (1535, 'proCultura', 485827, 2429, 257);
-INSERT INTO descuentos VALUES (1536, 'adultoMayor', 485827, 2429, 257);
-INSERT INTO descuentos VALUES (1537, 'rete384', 647770, 0, 257);
-INSERT INTO descuentos VALUES (1538, 'rete383', 2482038, 0, 258);
-INSERT INTO descuentos VALUES (1539, 'reteIca', 2482038, 23976, 258);
-INSERT INTO descuentos VALUES (1540, 'estampillaUD', 2482038, 24820, 258);
-INSERT INTO descuentos VALUES (1541, 'proCultura', 2482038, 12410, 258);
-INSERT INTO descuentos VALUES (1542, 'adultoMayor', 2482038, 12410, 258);
-INSERT INTO descuentos VALUES (1543, 'rete384', 3309384, 0, 258);
-INSERT INTO descuentos VALUES (1544, 'rete383', 956044, 0, 259);
-INSERT INTO descuentos VALUES (1545, 'reteIca', 956044, 9235, 259);
-INSERT INTO descuentos VALUES (1546, 'estampillaUD', 956044, 9560, 259);
-INSERT INTO descuentos VALUES (1547, 'proCultura', 956044, 4780, 259);
-INSERT INTO descuentos VALUES (1548, 'adultoMayor', 956044, 4780, 259);
-INSERT INTO descuentos VALUES (1549, 'rete384', 1274726, 0, 259);
-INSERT INTO descuentos VALUES (1550, 'rete383', 620779, 0, 260);
-INSERT INTO descuentos VALUES (1551, 'reteIca', 620779, 5997, 260);
-INSERT INTO descuentos VALUES (1552, 'estampillaUD', 620779, 6208, 260);
-INSERT INTO descuentos VALUES (1553, 'proCultura', 620779, 3104, 260);
-INSERT INTO descuentos VALUES (1554, 'adultoMayor', 620779, 3104, 260);
-INSERT INTO descuentos VALUES (1555, 'rete384', 827706, 0, 260);
-INSERT INTO descuentos VALUES (1556, 'rete383', 809712, 0, 261);
-INSERT INTO descuentos VALUES (1557, 'reteIca', 809712, 7822, 261);
-INSERT INTO descuentos VALUES (1558, 'estampillaUD', 809712, 8097, 261);
-INSERT INTO descuentos VALUES (1559, 'proCultura', 809712, 4049, 261);
-INSERT INTO descuentos VALUES (1560, 'adultoMayor', 809712, 4049, 261);
-INSERT INTO descuentos VALUES (1561, 'rete384', 1079616, 0, 261);
-INSERT INTO descuentos VALUES (1562, 'rete383', 465584, 0, 262);
-INSERT INTO descuentos VALUES (1563, 'reteIca', 465584, 4498, 262);
-INSERT INTO descuentos VALUES (1564, 'estampillaUD', 465584, 4656, 262);
-INSERT INTO descuentos VALUES (1565, 'proCultura', 465584, 2328, 262);
-INSERT INTO descuentos VALUES (1566, 'adultoMayor', 465584, 2328, 262);
-INSERT INTO descuentos VALUES (1567, 'rete384', 620779, 0, 262);
-INSERT INTO descuentos VALUES (1568, 'rete383', 310390, 0, 263);
-INSERT INTO descuentos VALUES (1569, 'reteIca', 310390, 2998, 263);
-INSERT INTO descuentos VALUES (1570, 'estampillaUD', 310390, 3104, 263);
-INSERT INTO descuentos VALUES (1571, 'proCultura', 310390, 1552, 263);
-INSERT INTO descuentos VALUES (1572, 'adultoMayor', 310390, 1552, 263);
-INSERT INTO descuentos VALUES (1573, 'rete384', 413853, 0, 263);
-INSERT INTO descuentos VALUES (1574, 'rete383', 485827, 0, 264);
-INSERT INTO descuentos VALUES (1575, 'reteIca', 485827, 4693, 264);
-INSERT INTO descuentos VALUES (1576, 'estampillaUD', 485827, 4858, 264);
-INSERT INTO descuentos VALUES (1577, 'proCultura', 485827, 2429, 264);
-INSERT INTO descuentos VALUES (1578, 'adultoMayor', 485827, 2429, 264);
-INSERT INTO descuentos VALUES (1579, 'rete384', 647770, 0, 264);
-INSERT INTO descuentos VALUES (1580, 'rete383', 620779, 0, 265);
-INSERT INTO descuentos VALUES (1581, 'reteIca', 620779, 5997, 265);
-INSERT INTO descuentos VALUES (1582, 'estampillaUD', 620779, 6208, 265);
-INSERT INTO descuentos VALUES (1583, 'proCultura', 620779, 3104, 265);
-INSERT INTO descuentos VALUES (1584, 'adultoMayor', 620779, 3104, 265);
-INSERT INTO descuentos VALUES (1585, 'rete384', 827706, 0, 265);
-INSERT INTO descuentos VALUES (1586, 'rete383', 698647, 0, 266);
-INSERT INTO descuentos VALUES (1587, 'reteIca', 698647, 6749, 266);
-INSERT INTO descuentos VALUES (1588, 'estampillaUD', 698647, 6986, 266);
-INSERT INTO descuentos VALUES (1589, 'proCultura', 698647, 3493, 266);
-INSERT INTO descuentos VALUES (1590, 'adultoMayor', 698647, 3493, 266);
-INSERT INTO descuentos VALUES (1591, 'rete384', 931530, 0, 266);
-INSERT INTO descuentos VALUES (1592, 'rete383', 620779, 0, 267);
-INSERT INTO descuentos VALUES (1593, 'reteIca', 620779, 5997, 267);
-INSERT INTO descuentos VALUES (1594, 'estampillaUD', 620779, 6208, 267);
-INSERT INTO descuentos VALUES (1595, 'proCultura', 620779, 3104, 267);
-INSERT INTO descuentos VALUES (1596, 'adultoMayor', 620779, 3104, 267);
-INSERT INTO descuentos VALUES (1597, 'rete384', 827706, 0, 267);
-INSERT INTO descuentos VALUES (1598, 'rete383', 2095943, 0, 268);
-INSERT INTO descuentos VALUES (1599, 'reteIca', 2095943, 20247, 268);
-INSERT INTO descuentos VALUES (1600, 'estampillaUD', 2095943, 20959, 268);
-INSERT INTO descuentos VALUES (1601, 'proCultura', 2095943, 10480, 268);
-INSERT INTO descuentos VALUES (1602, 'adultoMayor', 2095943, 10480, 268);
-INSERT INTO descuentos VALUES (1603, 'rete384', 2794591, 0, 268);
-INSERT INTO descuentos VALUES (1604, 'rete383', 1765005, 0, 269);
-INSERT INTO descuentos VALUES (1605, 'reteIca', 1765005, 17050, 269);
-INSERT INTO descuentos VALUES (1606, 'estampillaUD', 1765005, 17650, 269);
-INSERT INTO descuentos VALUES (1607, 'proCultura', 1765005, 8825, 269);
-INSERT INTO descuentos VALUES (1608, 'adultoMayor', 1765005, 8825, 269);
-INSERT INTO descuentos VALUES (1609, 'rete384', 2353340, 0, 269);
-INSERT INTO descuentos VALUES (1610, 'rete383', 620779, 0, 270);
-INSERT INTO descuentos VALUES (1611, 'reteIca', 620779, 5997, 270);
-INSERT INTO descuentos VALUES (1612, 'estampillaUD', 620779, 6208, 270);
-INSERT INTO descuentos VALUES (1613, 'proCultura', 620779, 3104, 270);
-INSERT INTO descuentos VALUES (1614, 'adultoMayor', 620779, 3104, 270);
-INSERT INTO descuentos VALUES (1615, 'rete384', 827706, 0, 270);
-INSERT INTO descuentos VALUES (1616, 'rete383', 620779, 0, 271);
-INSERT INTO descuentos VALUES (1617, 'reteIca', 620779, 5997, 271);
-INSERT INTO descuentos VALUES (1618, 'estampillaUD', 620779, 6208, 271);
-INSERT INTO descuentos VALUES (1619, 'proCultura', 620779, 3104, 271);
-INSERT INTO descuentos VALUES (1620, 'adultoMayor', 620779, 3104, 271);
-INSERT INTO descuentos VALUES (1621, 'rete384', 827706, 0, 271);
-INSERT INTO descuentos VALUES (1622, 'rete383', 620779, 0, 272);
-INSERT INTO descuentos VALUES (1623, 'reteIca', 620779, 5997, 272);
-INSERT INTO descuentos VALUES (1624, 'estampillaUD', 620779, 6208, 272);
-INSERT INTO descuentos VALUES (1625, 'proCultura', 620779, 3104, 272);
-INSERT INTO descuentos VALUES (1626, 'adultoMayor', 620779, 3104, 272);
-INSERT INTO descuentos VALUES (1627, 'rete384', 827706, 0, 272);
-INSERT INTO descuentos VALUES (1628, 'rete383', 465584, 0, 273);
-INSERT INTO descuentos VALUES (1629, 'reteIca', 465584, 4498, 273);
-INSERT INTO descuentos VALUES (1630, 'estampillaUD', 465584, 4656, 273);
-INSERT INTO descuentos VALUES (1631, 'proCultura', 465584, 2328, 273);
-INSERT INTO descuentos VALUES (1632, 'adultoMayor', 465584, 2328, 273);
-INSERT INTO descuentos VALUES (1633, 'rete384', 620779, 0, 273);
-INSERT INTO descuentos VALUES (1634, 'rete383', 1964947, 0, 274);
-INSERT INTO descuentos VALUES (1635, 'reteIca', 1964947, 18981, 274);
-INSERT INTO descuentos VALUES (1636, 'estampillaUD', 1964947, 19649, 274);
-INSERT INTO descuentos VALUES (1637, 'proCultura', 1964947, 9825, 274);
-INSERT INTO descuentos VALUES (1638, 'adultoMayor', 1964947, 9825, 274);
-INSERT INTO descuentos VALUES (1639, 'rete384', 2619929, 0, 274);
-INSERT INTO descuentos VALUES (1640, 'rete383', 1047972, 0, 275);
-INSERT INTO descuentos VALUES (1641, 'reteIca', 1047972, 10123, 275);
-INSERT INTO descuentos VALUES (1642, 'estampillaUD', 1047972, 10480, 275);
-INSERT INTO descuentos VALUES (1643, 'proCultura', 1047972, 5240, 275);
-INSERT INTO descuentos VALUES (1644, 'adultoMayor', 1047972, 5240, 275);
-INSERT INTO descuentos VALUES (1645, 'rete384', 1397296, 0, 275);
-INSERT INTO descuentos VALUES (1646, 'rete383', 1176670, 0, 276);
-INSERT INTO descuentos VALUES (1647, 'reteIca', 1176670, 11367, 276);
-INSERT INTO descuentos VALUES (1648, 'estampillaUD', 1176670, 11767, 276);
-INSERT INTO descuentos VALUES (1649, 'proCultura', 1176670, 5883, 276);
-INSERT INTO descuentos VALUES (1650, 'adultoMayor', 1176670, 5883, 276);
-INSERT INTO descuentos VALUES (1651, 'rete384', 1568893, 0, 276);
-INSERT INTO descuentos VALUES (1652, 'rete383', 808960, 0, 277);
-INSERT INTO descuentos VALUES (1653, 'reteIca', 808960, 7815, 277);
-INSERT INTO descuentos VALUES (1654, 'estampillaUD', 808960, 8090, 277);
-INSERT INTO descuentos VALUES (1655, 'proCultura', 808960, 4045, 277);
-INSERT INTO descuentos VALUES (1656, 'adultoMayor', 808960, 4045, 277);
-INSERT INTO descuentos VALUES (1657, 'rete384', 1078614, 0, 277);
-INSERT INTO descuentos VALUES (1658, 'rete383', 2426881, 0, 278);
-INSERT INTO descuentos VALUES (1659, 'reteIca', 2426881, 23444, 278);
-INSERT INTO descuentos VALUES (1660, 'estampillaUD', 2426881, 24269, 278);
-INSERT INTO descuentos VALUES (1661, 'proCultura', 2426881, 12134, 278);
-INSERT INTO descuentos VALUES (1662, 'adultoMayor', 2426881, 12134, 278);
-INSERT INTO descuentos VALUES (1663, 'rete384', 3235842, 0, 278);
-INSERT INTO descuentos VALUES (1664, 'rete383', 620779, 0, 279);
-INSERT INTO descuentos VALUES (1665, 'reteIca', 620779, 5997, 279);
-INSERT INTO descuentos VALUES (1666, 'estampillaUD', 620779, 6208, 279);
-INSERT INTO descuentos VALUES (1667, 'proCultura', 620779, 3104, 279);
-INSERT INTO descuentos VALUES (1668, 'adultoMayor', 620779, 3104, 279);
-INSERT INTO descuentos VALUES (1669, 'rete384', 827706, 0, 279);
-INSERT INTO descuentos VALUES (1670, 'rete383', 465584, 0, 280);
-INSERT INTO descuentos VALUES (1671, 'reteIca', 465584, 4498, 280);
-INSERT INTO descuentos VALUES (1672, 'estampillaUD', 465584, 4656, 280);
-INSERT INTO descuentos VALUES (1673, 'proCultura', 465584, 2328, 280);
-INSERT INTO descuentos VALUES (1674, 'adultoMayor', 465584, 2328, 280);
-INSERT INTO descuentos VALUES (1675, 'rete384', 620779, 0, 280);
-INSERT INTO descuentos VALUES (1676, 'rete383', 620779, 0, 281);
-INSERT INTO descuentos VALUES (1677, 'reteIca', 620779, 5997, 281);
-INSERT INTO descuentos VALUES (1678, 'estampillaUD', 620779, 6208, 281);
-INSERT INTO descuentos VALUES (1679, 'proCultura', 620779, 3104, 281);
-INSERT INTO descuentos VALUES (1680, 'adultoMayor', 620779, 3104, 281);
-INSERT INTO descuentos VALUES (1681, 'rete384', 827706, 0, 281);
-INSERT INTO descuentos VALUES (1682, 'rete383', 620779, 0, 282);
-INSERT INTO descuentos VALUES (1683, 'reteIca', 620779, 5997, 282);
-INSERT INTO descuentos VALUES (1684, 'estampillaUD', 620779, 6208, 282);
-INSERT INTO descuentos VALUES (1685, 'proCultura', 620779, 3104, 282);
-INSERT INTO descuentos VALUES (1686, 'adultoMayor', 620779, 3104, 282);
-INSERT INTO descuentos VALUES (1687, 'rete384', 827706, 0, 282);
-INSERT INTO descuentos VALUES (1688, 'rete383', 620779, 0, 283);
-INSERT INTO descuentos VALUES (1689, 'reteIca', 620779, 5997, 283);
-INSERT INTO descuentos VALUES (1690, 'estampillaUD', 620779, 6208, 283);
-INSERT INTO descuentos VALUES (1691, 'proCultura', 620779, 3104, 283);
-INSERT INTO descuentos VALUES (1692, 'adultoMayor', 620779, 3104, 283);
-INSERT INTO descuentos VALUES (1693, 'rete384', 827706, 0, 283);
-INSERT INTO descuentos VALUES (1694, 'rete383', 1176670, 0, 284);
-INSERT INTO descuentos VALUES (1695, 'reteIca', 1176670, 11367, 284);
-INSERT INTO descuentos VALUES (1696, 'estampillaUD', 1176670, 11767, 284);
-INSERT INTO descuentos VALUES (1697, 'proCultura', 1176670, 5883, 284);
-INSERT INTO descuentos VALUES (1698, 'adultoMayor', 1176670, 5883, 284);
-INSERT INTO descuentos VALUES (1699, 'rete384', 1568893, 0, 284);
-INSERT INTO descuentos VALUES (1700, 'rete383', 367709, 0, 285);
-INSERT INTO descuentos VALUES (1701, 'reteIca', 367709, 3552, 285);
-INSERT INTO descuentos VALUES (1702, 'estampillaUD', 367709, 3677, 285);
-INSERT INTO descuentos VALUES (1703, 'proCultura', 367709, 1839, 285);
-INSERT INTO descuentos VALUES (1704, 'adultoMayor', 367709, 1839, 285);
-INSERT INTO descuentos VALUES (1705, 'rete384', 490279, 0, 285);
-INSERT INTO descuentos VALUES (1706, 'rete383', 523986, 0, 286);
-INSERT INTO descuentos VALUES (1707, 'reteIca', 523986, 5062, 286);
-INSERT INTO descuentos VALUES (1708, 'estampillaUD', 523986, 5240, 286);
-INSERT INTO descuentos VALUES (1709, 'proCultura', 523986, 2620, 286);
-INSERT INTO descuentos VALUES (1710, 'adultoMayor', 523986, 2620, 286);
-INSERT INTO descuentos VALUES (1711, 'rete384', 698648, 0, 286);
-INSERT INTO descuentos VALUES (1712, 'rete383', 439719, 0, 287);
-INSERT INTO descuentos VALUES (1713, 'reteIca', 439719, 4248, 287);
-INSERT INTO descuentos VALUES (1714, 'estampillaUD', 439719, 4397, 287);
-INSERT INTO descuentos VALUES (1715, 'proCultura', 439719, 2199, 287);
-INSERT INTO descuentos VALUES (1716, 'adultoMayor', 439719, 2199, 287);
-INSERT INTO descuentos VALUES (1717, 'rete384', 586292, 0, 287);
-INSERT INTO descuentos VALUES (1718, 'rete383', 809712, 0, 288);
-INSERT INTO descuentos VALUES (1719, 'reteIca', 809712, 7822, 288);
-INSERT INTO descuentos VALUES (1720, 'estampillaUD', 809712, 8097, 288);
-INSERT INTO descuentos VALUES (1721, 'proCultura', 809712, 4049, 288);
-INSERT INTO descuentos VALUES (1722, 'adultoMayor', 809712, 4049, 288);
-INSERT INTO descuentos VALUES (1723, 'rete384', 1079616, 0, 288);
-INSERT INTO descuentos VALUES (1724, 'rete383', 1875318, 0, 289);
-INSERT INTO descuentos VALUES (1725, 'reteIca', 1875318, 18116, 289);
-INSERT INTO descuentos VALUES (1726, 'estampillaUD', 1875318, 18753, 289);
-INSERT INTO descuentos VALUES (1727, 'proCultura', 1875318, 9377, 289);
-INSERT INTO descuentos VALUES (1728, 'adultoMayor', 1875318, 9377, 289);
-INSERT INTO descuentos VALUES (1729, 'rete384', 2500424, 0, 289);
-INSERT INTO descuentos VALUES (1730, 'rete383', 620779, 0, 290);
-INSERT INTO descuentos VALUES (1731, 'reteIca', 620779, 5997, 290);
-INSERT INTO descuentos VALUES (1732, 'estampillaUD', 620779, 6208, 290);
-INSERT INTO descuentos VALUES (1733, 'proCultura', 620779, 3104, 290);
-INSERT INTO descuentos VALUES (1734, 'adultoMayor', 620779, 3104, 290);
-INSERT INTO descuentos VALUES (1735, 'rete384', 827706, 0, 290);
-INSERT INTO descuentos VALUES (1736, 'rete383', 2095943, 0, 291);
-INSERT INTO descuentos VALUES (1737, 'reteIca', 2095943, 20247, 291);
-INSERT INTO descuentos VALUES (1738, 'estampillaUD', 2095943, 20959, 291);
-INSERT INTO descuentos VALUES (1739, 'proCultura', 2095943, 10480, 291);
-INSERT INTO descuentos VALUES (1740, 'adultoMayor', 2095943, 10480, 291);
-INSERT INTO descuentos VALUES (1741, 'rete384', 2794591, 0, 291);
-INSERT INTO descuentos VALUES (1742, 'rete383', 1176670, 0, 292);
-INSERT INTO descuentos VALUES (1743, 'reteIca', 1176670, 11367, 292);
-INSERT INTO descuentos VALUES (1744, 'estampillaUD', 1176670, 11767, 292);
-INSERT INTO descuentos VALUES (1745, 'proCultura', 1176670, 5883, 292);
-INSERT INTO descuentos VALUES (1746, 'adultoMayor', 1176670, 5883, 292);
-INSERT INTO descuentos VALUES (1747, 'rete384', 1568893, 0, 292);
-INSERT INTO descuentos VALUES (1748, 'rete383', 661876, 0, 293);
-INSERT INTO descuentos VALUES (1749, 'reteIca', 661876, 6394, 293);
-INSERT INTO descuentos VALUES (1750, 'estampillaUD', 661876, 6619, 293);
-INSERT INTO descuentos VALUES (1751, 'proCultura', 661876, 3309, 293);
-INSERT INTO descuentos VALUES (1752, 'adultoMayor', 661876, 3309, 293);
-INSERT INTO descuentos VALUES (1753, 'rete384', 882502, 0, 293);
-INSERT INTO descuentos VALUES (1754, 'rete383', 620779, 0, 294);
-INSERT INTO descuentos VALUES (1755, 'reteIca', 620779, 5997, 294);
-INSERT INTO descuentos VALUES (1756, 'estampillaUD', 620779, 6208, 294);
-INSERT INTO descuentos VALUES (1757, 'proCultura', 620779, 3104, 294);
-INSERT INTO descuentos VALUES (1758, 'adultoMayor', 620779, 3104, 294);
-INSERT INTO descuentos VALUES (1759, 'rete384', 827706, 0, 294);
-INSERT INTO descuentos VALUES (1760, 'rete383', 485827, 0, 295);
-INSERT INTO descuentos VALUES (1761, 'reteIca', 485827, 4693, 295);
-INSERT INTO descuentos VALUES (1762, 'estampillaUD', 485827, 4858, 295);
-INSERT INTO descuentos VALUES (1763, 'proCultura', 485827, 2429, 295);
-INSERT INTO descuentos VALUES (1764, 'adultoMayor', 485827, 2429, 295);
-INSERT INTO descuentos VALUES (1765, 'rete384', 647770, 0, 295);
-INSERT INTO descuentos VALUES (1766, 'rete383', 620779, 0, 296);
-INSERT INTO descuentos VALUES (1767, 'reteIca', 620779, 5997, 296);
-INSERT INTO descuentos VALUES (1768, 'estampillaUD', 620779, 6208, 296);
-INSERT INTO descuentos VALUES (1769, 'proCultura', 620779, 3104, 296);
-INSERT INTO descuentos VALUES (1770, 'adultoMayor', 620779, 3104, 296);
-INSERT INTO descuentos VALUES (1771, 'rete384', 827706, 0, 296);
-INSERT INTO descuentos VALUES (1772, 'rete383', 551803, 0, 297);
-INSERT INTO descuentos VALUES (1773, 'reteIca', 551803, 5330, 297);
-INSERT INTO descuentos VALUES (1774, 'estampillaUD', 551803, 5518, 297);
-INSERT INTO descuentos VALUES (1775, 'proCultura', 551803, 2759, 297);
-INSERT INTO descuentos VALUES (1776, 'adultoMayor', 551803, 2759, 297);
-INSERT INTO descuentos VALUES (1777, 'rete384', 735738, 0, 297);
-INSERT INTO descuentos VALUES (1778, 'rete383', 620779, 0, 298);
-INSERT INTO descuentos VALUES (1779, 'reteIca', 620779, 5997, 298);
-INSERT INTO descuentos VALUES (1780, 'estampillaUD', 620779, 6208, 298);
-INSERT INTO descuentos VALUES (1781, 'proCultura', 620779, 3104, 298);
-INSERT INTO descuentos VALUES (1782, 'adultoMayor', 620779, 3104, 298);
-INSERT INTO descuentos VALUES (1783, 'rete384', 827706, 0, 298);
-INSERT INTO descuentos VALUES (1784, 'rete383', 478022, 0, 299);
-INSERT INTO descuentos VALUES (1785, 'reteIca', 478022, 4618, 299);
-INSERT INTO descuentos VALUES (1786, 'estampillaUD', 478022, 4780, 299);
-INSERT INTO descuentos VALUES (1787, 'proCultura', 478022, 2390, 299);
-INSERT INTO descuentos VALUES (1788, 'adultoMayor', 478022, 2390, 299);
-INSERT INTO descuentos VALUES (1789, 'rete384', 637363, 0, 299);
-INSERT INTO descuentos VALUES (1790, 'rete383', 2095943, 0, 300);
-INSERT INTO descuentos VALUES (1791, 'reteIca', 2095943, 20247, 300);
-INSERT INTO descuentos VALUES (1792, 'estampillaUD', 2095943, 20959, 300);
-INSERT INTO descuentos VALUES (1793, 'proCultura', 2095943, 10480, 300);
-INSERT INTO descuentos VALUES (1794, 'adultoMayor', 2095943, 10480, 300);
-INSERT INTO descuentos VALUES (1795, 'rete384', 2794591, 0, 300);
-INSERT INTO descuentos VALUES (1796, 'rete383', 465584, 0, 301);
-INSERT INTO descuentos VALUES (1797, 'reteIca', 465584, 4498, 301);
-INSERT INTO descuentos VALUES (1798, 'estampillaUD', 465584, 4656, 301);
-INSERT INTO descuentos VALUES (1799, 'proCultura', 465584, 2328, 301);
-INSERT INTO descuentos VALUES (1800, 'adultoMayor', 465584, 2328, 301);
-INSERT INTO descuentos VALUES (1801, 'rete384', 620779, 0, 301);
-INSERT INTO descuentos VALUES (1802, 'rete383', 1613325, 0, 302);
-INSERT INTO descuentos VALUES (1803, 'reteIca', 1613325, 15585, 302);
-INSERT INTO descuentos VALUES (1804, 'estampillaUD', 1613325, 16133, 302);
-INSERT INTO descuentos VALUES (1805, 'proCultura', 1613325, 8067, 302);
-INSERT INTO descuentos VALUES (1806, 'adultoMayor', 1613325, 8067, 302);
-INSERT INTO descuentos VALUES (1807, 'rete384', 2151100, 0, 302);
-INSERT INTO descuentos VALUES (1808, 'rete383', 620779, 0, 303);
-INSERT INTO descuentos VALUES (1809, 'reteIca', 620779, 5997, 303);
-INSERT INTO descuentos VALUES (1810, 'estampillaUD', 620779, 6208, 303);
-INSERT INTO descuentos VALUES (1811, 'proCultura', 620779, 3104, 303);
-INSERT INTO descuentos VALUES (1812, 'adultoMayor', 620779, 3104, 303);
-INSERT INTO descuentos VALUES (1813, 'rete384', 827706, 0, 303);
-INSERT INTO descuentos VALUES (1814, 'rete383', 620779, 0, 304);
-INSERT INTO descuentos VALUES (1815, 'reteIca', 620779, 5997, 304);
-INSERT INTO descuentos VALUES (1816, 'estampillaUD', 620779, 6208, 304);
-INSERT INTO descuentos VALUES (1817, 'proCultura', 620779, 3104, 304);
-INSERT INTO descuentos VALUES (1818, 'adultoMayor', 620779, 3104, 304);
-INSERT INTO descuentos VALUES (1819, 'rete384', 827706, 0, 304);
-INSERT INTO descuentos VALUES (1820, 'rete383', 2095943, 0, 305);
-INSERT INTO descuentos VALUES (1821, 'reteIca', 2095943, 20247, 305);
-INSERT INTO descuentos VALUES (1822, 'estampillaUD', 2095943, 20959, 305);
-INSERT INTO descuentos VALUES (1823, 'proCultura', 2095943, 10480, 305);
-INSERT INTO descuentos VALUES (1824, 'adultoMayor', 2095943, 10480, 305);
-INSERT INTO descuentos VALUES (1825, 'rete384', 2794591, 0, 305);
-INSERT INTO descuentos VALUES (1826, 'rete383', 620779, 0, 306);
-INSERT INTO descuentos VALUES (1827, 'reteIca', 620779, 5997, 306);
-INSERT INTO descuentos VALUES (1828, 'estampillaUD', 620779, 6208, 306);
-INSERT INTO descuentos VALUES (1829, 'proCultura', 620779, 3104, 306);
-INSERT INTO descuentos VALUES (1830, 'adultoMayor', 620779, 3104, 306);
-INSERT INTO descuentos VALUES (1831, 'rete384', 827706, 0, 306);
-INSERT INTO descuentos VALUES (1832, 'rete383', 239011, 0, 307);
-INSERT INTO descuentos VALUES (1833, 'reteIca', 239011, 2309, 307);
-INSERT INTO descuentos VALUES (1834, 'estampillaUD', 239011, 2390, 307);
-INSERT INTO descuentos VALUES (1835, 'proCultura', 239011, 1195, 307);
-INSERT INTO descuentos VALUES (1836, 'adultoMayor', 239011, 1195, 307);
-INSERT INTO descuentos VALUES (1837, 'rete384', 318681, 0, 307);
-INSERT INTO descuentos VALUES (1838, 'rete383', 584792, 0, 308);
-INSERT INTO descuentos VALUES (1839, 'reteIca', 584792, 5649, 308);
-INSERT INTO descuentos VALUES (1840, 'estampillaUD', 584792, 5848, 308);
-INSERT INTO descuentos VALUES (1841, 'proCultura', 584792, 2924, 308);
-INSERT INTO descuentos VALUES (1842, 'adultoMayor', 584792, 2924, 308);
-INSERT INTO descuentos VALUES (1843, 'rete384', 779723, 0, 308);
-INSERT INTO descuentos VALUES (1844, 'rete383', 478022, 0, 309);
-INSERT INTO descuentos VALUES (1845, 'reteIca', 478022, 4618, 309);
-INSERT INTO descuentos VALUES (1846, 'estampillaUD', 478022, 4780, 309);
-INSERT INTO descuentos VALUES (1847, 'proCultura', 478022, 2390, 309);
-INSERT INTO descuentos VALUES (1848, 'adultoMayor', 478022, 2390, 309);
-INSERT INTO descuentos VALUES (1849, 'rete384', 637363, 0, 309);
-INSERT INTO descuentos VALUES (1850, 'rete383', 1176670, 0, 310);
-INSERT INTO descuentos VALUES (1851, 'reteIca', 1176670, 11367, 310);
-INSERT INTO descuentos VALUES (1852, 'estampillaUD', 1176670, 11767, 310);
-INSERT INTO descuentos VALUES (1853, 'proCultura', 1176670, 5883, 310);
-INSERT INTO descuentos VALUES (1854, 'adultoMayor', 1176670, 5883, 310);
-INSERT INTO descuentos VALUES (1855, 'rete384', 1568893, 0, 310);
-INSERT INTO descuentos VALUES (1856, 'rete383', 2298183, 0, 311);
-INSERT INTO descuentos VALUES (1857, 'reteIca', 2298183, 22200, 311);
-INSERT INTO descuentos VALUES (1858, 'estampillaUD', 2298183, 22982, 311);
-INSERT INTO descuentos VALUES (1859, 'proCultura', 2298183, 11491, 311);
-INSERT INTO descuentos VALUES (1860, 'adultoMayor', 2298183, 11491, 311);
-INSERT INTO descuentos VALUES (1861, 'rete384', 3064244, 0, 311);
-INSERT INTO descuentos VALUES (1862, 'rete383', 1176670, 0, 312);
-INSERT INTO descuentos VALUES (1863, 'reteIca', 1176670, 11367, 312);
-INSERT INTO descuentos VALUES (1864, 'estampillaUD', 1176670, 11767, 312);
-INSERT INTO descuentos VALUES (1865, 'proCultura', 1176670, 5883, 312);
-INSERT INTO descuentos VALUES (1866, 'adultoMayor', 1176670, 5883, 312);
-INSERT INTO descuentos VALUES (1867, 'rete384', 1568893, 0, 312);
-INSERT INTO descuentos VALUES (1868, 'rete383', 431846, 0, 313);
-INSERT INTO descuentos VALUES (1869, 'reteIca', 431846, 4172, 313);
-INSERT INTO descuentos VALUES (1870, 'estampillaUD', 431846, 4318, 313);
-INSERT INTO descuentos VALUES (1871, 'proCultura', 431846, 2159, 313);
-INSERT INTO descuentos VALUES (1872, 'adultoMayor', 431846, 2159, 313);
-INSERT INTO descuentos VALUES (1873, 'rete384', 575795, 0, 313);
-INSERT INTO descuentos VALUES (1874, 'rete383', 465584, 0, 314);
-INSERT INTO descuentos VALUES (1875, 'reteIca', 465584, 4498, 314);
-INSERT INTO descuentos VALUES (1876, 'estampillaUD', 465584, 4656, 314);
-INSERT INTO descuentos VALUES (1877, 'proCultura', 465584, 2328, 314);
-INSERT INTO descuentos VALUES (1878, 'adultoMayor', 465584, 2328, 314);
-INSERT INTO descuentos VALUES (1879, 'rete384', 620779, 0, 314);
-INSERT INTO descuentos VALUES (1880, 'rete383', 882502, 0, 315);
-INSERT INTO descuentos VALUES (1881, 'reteIca', 882502, 8525, 315);
-INSERT INTO descuentos VALUES (1882, 'estampillaUD', 882502, 8825, 315);
-INSERT INTO descuentos VALUES (1883, 'proCultura', 882502, 4413, 315);
-INSERT INTO descuentos VALUES (1884, 'adultoMayor', 882502, 4413, 315);
-INSERT INTO descuentos VALUES (1885, 'rete384', 1176670, 0, 315);
-INSERT INTO descuentos VALUES (1886, 'rete383', 1985630, 0, 316);
-INSERT INTO descuentos VALUES (1887, 'reteIca', 1985630, 19181, 316);
-INSERT INTO descuentos VALUES (1888, 'estampillaUD', 1985630, 19856, 316);
-INSERT INTO descuentos VALUES (1889, 'proCultura', 1985630, 9928, 316);
-INSERT INTO descuentos VALUES (1890, 'adultoMayor', 1985630, 9928, 316);
-INSERT INTO descuentos VALUES (1891, 'rete384', 2647507, 0, 316);
-INSERT INTO descuentos VALUES (1892, 'rete383', 620779, 0, 317);
-INSERT INTO descuentos VALUES (1893, 'reteIca', 620779, 5997, 317);
-INSERT INTO descuentos VALUES (1894, 'estampillaUD', 620779, 6208, 317);
-INSERT INTO descuentos VALUES (1895, 'proCultura', 620779, 3104, 317);
-INSERT INTO descuentos VALUES (1896, 'adultoMayor', 620779, 3104, 317);
-INSERT INTO descuentos VALUES (1897, 'rete384', 827706, 0, 317);
-INSERT INTO descuentos VALUES (1898, 'rete383', 956044, 0, 318);
-INSERT INTO descuentos VALUES (1899, 'reteIca', 956044, 9235, 318);
-INSERT INTO descuentos VALUES (1900, 'estampillaUD', 956044, 9560, 318);
-INSERT INTO descuentos VALUES (1901, 'proCultura', 956044, 4780, 318);
-INSERT INTO descuentos VALUES (1902, 'adultoMayor', 956044, 4780, 318);
-INSERT INTO descuentos VALUES (1903, 'rete384', 1274726, 0, 318);
-INSERT INTO descuentos VALUES (1904, 'rete383', 465584, 0, 319);
-INSERT INTO descuentos VALUES (1905, 'reteIca', 465584, 4498, 319);
-INSERT INTO descuentos VALUES (1906, 'estampillaUD', 465584, 4656, 319);
-INSERT INTO descuentos VALUES (1907, 'proCultura', 465584, 2328, 319);
-INSERT INTO descuentos VALUES (1908, 'adultoMayor', 465584, 2328, 319);
-INSERT INTO descuentos VALUES (1909, 'rete384', 620779, 0, 319);
-INSERT INTO descuentos VALUES (1910, 'rete383', 2095943, 0, 320);
-INSERT INTO descuentos VALUES (1911, 'reteIca', 2095943, 20247, 320);
-INSERT INTO descuentos VALUES (1912, 'estampillaUD', 2095943, 20959, 320);
-INSERT INTO descuentos VALUES (1913, 'proCultura', 2095943, 10480, 320);
-INSERT INTO descuentos VALUES (1914, 'adultoMayor', 2095943, 10480, 320);
-INSERT INTO descuentos VALUES (1915, 'rete384', 2794591, 0, 320);
-INSERT INTO descuentos VALUES (1916, 'rete383', 1047972, 0, 321);
-INSERT INTO descuentos VALUES (1917, 'reteIca', 1047972, 10123, 321);
-INSERT INTO descuentos VALUES (1918, 'estampillaUD', 1047972, 10480, 321);
-INSERT INTO descuentos VALUES (1919, 'proCultura', 1047972, 5240, 321);
-INSERT INTO descuentos VALUES (1920, 'adultoMayor', 1047972, 5240, 321);
-INSERT INTO descuentos VALUES (1921, 'rete384', 1397296, 0, 321);
-INSERT INTO descuentos VALUES (1922, 'rete383', 1309964, 0, 322);
-INSERT INTO descuentos VALUES (1923, 'reteIca', 1309964, 12654, 322);
-INSERT INTO descuentos VALUES (1924, 'estampillaUD', 1309964, 13100, 322);
-INSERT INTO descuentos VALUES (1925, 'proCultura', 1309964, 6550, 322);
-INSERT INTO descuentos VALUES (1926, 'adultoMayor', 1309964, 6550, 322);
-INSERT INTO descuentos VALUES (1927, 'rete384', 1746619, 0, 322);
-INSERT INTO descuentos VALUES (1928, 'rete383', 620779, 0, 323);
-INSERT INTO descuentos VALUES (1929, 'reteIca', 620779, 5997, 323);
-INSERT INTO descuentos VALUES (1930, 'estampillaUD', 620779, 6208, 323);
-INSERT INTO descuentos VALUES (1931, 'proCultura', 620779, 3104, 323);
-INSERT INTO descuentos VALUES (1932, 'adultoMayor', 620779, 3104, 323);
-INSERT INTO descuentos VALUES (1933, 'rete384', 827706, 0, 323);
-INSERT INTO descuentos VALUES (1934, 'rete383', 956044, 0, 324);
-INSERT INTO descuentos VALUES (1935, 'reteIca', 956044, 9235, 324);
-INSERT INTO descuentos VALUES (1936, 'estampillaUD', 956044, 9560, 324);
-INSERT INTO descuentos VALUES (1937, 'proCultura', 956044, 4780, 324);
-INSERT INTO descuentos VALUES (1938, 'adultoMayor', 956044, 4780, 324);
-INSERT INTO descuentos VALUES (1939, 'rete384', 1274726, 0, 324);
-INSERT INTO descuentos VALUES (1940, 'rete383', 465584, 0, 325);
-INSERT INTO descuentos VALUES (1941, 'reteIca', 465584, 4498, 325);
-INSERT INTO descuentos VALUES (1942, 'estampillaUD', 465584, 4656, 325);
-INSERT INTO descuentos VALUES (1943, 'proCultura', 465584, 2328, 325);
-INSERT INTO descuentos VALUES (1944, 'adultoMayor', 465584, 2328, 325);
-INSERT INTO descuentos VALUES (1945, 'rete384', 620779, 0, 325);
-INSERT INTO descuentos VALUES (1946, 'rete383', 1176670, 0, 326);
-INSERT INTO descuentos VALUES (1947, 'reteIca', 1176670, 11367, 326);
-INSERT INTO descuentos VALUES (1948, 'estampillaUD', 1176670, 11767, 326);
-INSERT INTO descuentos VALUES (1949, 'proCultura', 1176670, 5883, 326);
-INSERT INTO descuentos VALUES (1950, 'adultoMayor', 1176670, 5883, 326);
-INSERT INTO descuentos VALUES (1951, 'rete384', 1568893, 0, 326);
-INSERT INTO descuentos VALUES (1952, 'rete383', 661876, 0, 327);
-INSERT INTO descuentos VALUES (1953, 'reteIca', 661876, 6394, 327);
-INSERT INTO descuentos VALUES (1954, 'estampillaUD', 661876, 6619, 327);
-INSERT INTO descuentos VALUES (1955, 'proCultura', 661876, 3309, 327);
-INSERT INTO descuentos VALUES (1956, 'adultoMayor', 661876, 3309, 327);
-INSERT INTO descuentos VALUES (1957, 'rete384', 882502, 0, 327);
-INSERT INTO descuentos VALUES (1958, 'rete383', 1176670, 0, 328);
-INSERT INTO descuentos VALUES (1959, 'reteIca', 1176670, 11367, 328);
-INSERT INTO descuentos VALUES (1960, 'estampillaUD', 1176670, 11767, 328);
-INSERT INTO descuentos VALUES (1961, 'proCultura', 1176670, 5883, 328);
-INSERT INTO descuentos VALUES (1962, 'adultoMayor', 1176670, 5883, 328);
-INSERT INTO descuentos VALUES (1963, 'rete384', 1568893, 0, 328);
-INSERT INTO descuentos VALUES (1964, 'rete383', 1213441, 0, 329);
-INSERT INTO descuentos VALUES (1965, 'reteIca', 1213441, 11722, 329);
-INSERT INTO descuentos VALUES (1966, 'estampillaUD', 1213441, 12134, 329);
-INSERT INTO descuentos VALUES (1967, 'proCultura', 1213441, 6067, 329);
-INSERT INTO descuentos VALUES (1968, 'adultoMayor', 1213441, 6067, 329);
-INSERT INTO descuentos VALUES (1969, 'rete384', 1617921, 0, 329);
-INSERT INTO descuentos VALUES (1970, 'rete383', 239011, 0, 330);
-INSERT INTO descuentos VALUES (1971, 'reteIca', 239011, 2309, 330);
-INSERT INTO descuentos VALUES (1972, 'estampillaUD', 239011, 2390, 330);
-INSERT INTO descuentos VALUES (1973, 'proCultura', 239011, 1195, 330);
-INSERT INTO descuentos VALUES (1974, 'adultoMayor', 239011, 1195, 330);
-INSERT INTO descuentos VALUES (1975, 'rete384', 318681, 0, 330);
-INSERT INTO descuentos VALUES (1976, 'rete383', 485827, 0, 331);
-INSERT INTO descuentos VALUES (1977, 'reteIca', 485827, 4693, 331);
-INSERT INTO descuentos VALUES (1978, 'estampillaUD', 485827, 4858, 331);
-INSERT INTO descuentos VALUES (1979, 'proCultura', 485827, 2429, 331);
-INSERT INTO descuentos VALUES (1980, 'adultoMayor', 485827, 2429, 331);
-INSERT INTO descuentos VALUES (1981, 'rete384', 647770, 0, 331);
-INSERT INTO descuentos VALUES (1982, 'rete383', 1323754, 0, 332);
-INSERT INTO descuentos VALUES (1983, 'reteIca', 1323754, 12787, 332);
-INSERT INTO descuentos VALUES (1984, 'estampillaUD', 1323754, 13238, 332);
-INSERT INTO descuentos VALUES (1985, 'proCultura', 1323754, 6619, 332);
-INSERT INTO descuentos VALUES (1986, 'adultoMayor', 1323754, 6619, 332);
-INSERT INTO descuentos VALUES (1987, 'rete384', 1765005, 0, 332);
-INSERT INTO descuentos VALUES (1988, 'rete383', 620779, 0, 333);
-INSERT INTO descuentos VALUES (1989, 'reteIca', 620779, 5997, 333);
-INSERT INTO descuentos VALUES (1990, 'estampillaUD', 620779, 6208, 333);
-INSERT INTO descuentos VALUES (1991, 'proCultura', 620779, 3104, 333);
-INSERT INTO descuentos VALUES (1992, 'adultoMayor', 620779, 3104, 333);
-INSERT INTO descuentos VALUES (1993, 'rete384', 827706, 0, 333);
-INSERT INTO descuentos VALUES (1994, 'rete383', 1103128, 0, 334);
-INSERT INTO descuentos VALUES (1995, 'reteIca', 1103128, 10656, 334);
-INSERT INTO descuentos VALUES (1996, 'estampillaUD', 1103128, 11031, 334);
-INSERT INTO descuentos VALUES (1997, 'proCultura', 1103128, 5516, 334);
-INSERT INTO descuentos VALUES (1998, 'adultoMayor', 1103128, 5516, 334);
-INSERT INTO descuentos VALUES (1999, 'rete384', 1470837, 0, 334);
-INSERT INTO descuentos VALUES (2000, 'rete383', 882502, 0, 335);
-INSERT INTO descuentos VALUES (2001, 'reteIca', 882502, 8525, 335);
-INSERT INTO descuentos VALUES (2002, 'estampillaUD', 882502, 8825, 335);
-INSERT INTO descuentos VALUES (2003, 'proCultura', 882502, 4413, 335);
-INSERT INTO descuentos VALUES (2004, 'adultoMayor', 882502, 4413, 335);
-INSERT INTO descuentos VALUES (2005, 'rete384', 1176670, 0, 335);
-INSERT INTO descuentos VALUES (2006, 'rete383', 2357936, 0, 336);
-INSERT INTO descuentos VALUES (2007, 'reteIca', 2357936, 22778, 336);
-INSERT INTO descuentos VALUES (2008, 'estampillaUD', 2357936, 23579, 336);
-INSERT INTO descuentos VALUES (2009, 'proCultura', 2357936, 11790, 336);
-INSERT INTO descuentos VALUES (2010, 'adultoMayor', 2357936, 11790, 336);
-INSERT INTO descuentos VALUES (2011, 'rete384', 3143915, 0, 336);
-INSERT INTO descuentos VALUES (2012, 'rete383', 372306, 0, 337);
-INSERT INTO descuentos VALUES (2013, 'reteIca', 372306, 3596, 337);
-INSERT INTO descuentos VALUES (2014, 'estampillaUD', 372306, 3723, 337);
-INSERT INTO descuentos VALUES (2015, 'proCultura', 372306, 1862, 337);
-INSERT INTO descuentos VALUES (2016, 'adultoMayor', 372306, 1862, 337);
-INSERT INTO descuentos VALUES (2017, 'rete384', 496408, 0, 337);
-INSERT INTO descuentos VALUES (2018, 'rete383', 364370, 0, 338);
-INSERT INTO descuentos VALUES (2019, 'reteIca', 364370, 3520, 338);
-INSERT INTO descuentos VALUES (2020, 'estampillaUD', 364370, 3644, 338);
-INSERT INTO descuentos VALUES (2021, 'proCultura', 364370, 1822, 338);
-INSERT INTO descuentos VALUES (2022, 'adultoMayor', 364370, 1822, 338);
-INSERT INTO descuentos VALUES (2023, 'rete384', 485827, 0, 338);
-INSERT INTO descuentos VALUES (2024, 'rete383', 620779, 0, 339);
-INSERT INTO descuentos VALUES (2025, 'reteIca', 620779, 5997, 339);
-INSERT INTO descuentos VALUES (2026, 'estampillaUD', 620779, 6208, 339);
-INSERT INTO descuentos VALUES (2027, 'proCultura', 620779, 3104, 339);
-INSERT INTO descuentos VALUES (2028, 'adultoMayor', 620779, 3104, 339);
-INSERT INTO descuentos VALUES (2029, 'rete384', 827706, 0, 339);
-INSERT INTO descuentos VALUES (2030, 'rete383', 620779, 0, 340);
-INSERT INTO descuentos VALUES (2031, 'reteIca', 620779, 5997, 340);
-INSERT INTO descuentos VALUES (2032, 'estampillaUD', 620779, 6208, 340);
-INSERT INTO descuentos VALUES (2033, 'proCultura', 620779, 3104, 340);
-INSERT INTO descuentos VALUES (2034, 'adultoMayor', 620779, 3104, 340);
-INSERT INTO descuentos VALUES (2035, 'rete384', 827706, 0, 340);
-INSERT INTO descuentos VALUES (2036, 'rete383', 485827, 0, 341);
-INSERT INTO descuentos VALUES (2037, 'reteIca', 485827, 4693, 341);
-INSERT INTO descuentos VALUES (2038, 'estampillaUD', 485827, 4858, 341);
-INSERT INTO descuentos VALUES (2039, 'proCultura', 485827, 2429, 341);
-INSERT INTO descuentos VALUES (2040, 'adultoMayor', 485827, 2429, 341);
-INSERT INTO descuentos VALUES (2041, 'rete384', 647770, 0, 341);
-INSERT INTO descuentos VALUES (2042, 'rete383', 620779, 0, 342);
-INSERT INTO descuentos VALUES (2043, 'reteIca', 620779, 5997, 342);
-INSERT INTO descuentos VALUES (2044, 'estampillaUD', 620779, 6208, 342);
-INSERT INTO descuentos VALUES (2045, 'proCultura', 620779, 3104, 342);
-INSERT INTO descuentos VALUES (2046, 'adultoMayor', 620779, 3104, 342);
-INSERT INTO descuentos VALUES (2047, 'rete384', 827706, 0, 342);
-INSERT INTO descuentos VALUES (2048, 'rete383', 387987, 0, 343);
-INSERT INTO descuentos VALUES (2049, 'reteIca', 387987, 3748, 343);
-INSERT INTO descuentos VALUES (2050, 'estampillaUD', 387987, 3880, 343);
-INSERT INTO descuentos VALUES (2051, 'proCultura', 387987, 1940, 343);
-INSERT INTO descuentos VALUES (2052, 'adultoMayor', 387987, 1940, 343);
-INSERT INTO descuentos VALUES (2053, 'rete384', 517316, 0, 343);
-INSERT INTO descuentos VALUES (2054, 'rete383', 1434066, 0, 344);
-INSERT INTO descuentos VALUES (2055, 'reteIca', 1434066, 13853, 344);
-INSERT INTO descuentos VALUES (2056, 'estampillaUD', 1434066, 14341, 344);
-INSERT INTO descuentos VALUES (2057, 'proCultura', 1434066, 7170, 344);
-INSERT INTO descuentos VALUES (2058, 'adultoMayor', 1434066, 7170, 344);
-INSERT INTO descuentos VALUES (2059, 'rete384', 1912088, 0, 344);
-INSERT INTO descuentos VALUES (2060, 'rete383', 1029586, 0, 345);
-INSERT INTO descuentos VALUES (2061, 'reteIca', 1029586, 9946, 345);
-INSERT INTO descuentos VALUES (2062, 'estampillaUD', 1029586, 10296, 345);
-INSERT INTO descuentos VALUES (2063, 'proCultura', 1029586, 5148, 345);
-INSERT INTO descuentos VALUES (2064, 'adultoMayor', 1029586, 5148, 345);
-INSERT INTO descuentos VALUES (2065, 'rete384', 1372782, 0, 345);
-INSERT INTO descuentos VALUES (2066, 'rete383', 873310, 0, 346);
-INSERT INTO descuentos VALUES (2067, 'reteIca', 873310, 8436, 346);
-INSERT INTO descuentos VALUES (2068, 'estampillaUD', 873310, 8733, 346);
-INSERT INTO descuentos VALUES (2069, 'proCultura', 873310, 4367, 346);
-INSERT INTO descuentos VALUES (2070, 'adultoMayor', 873310, 4367, 346);
-INSERT INTO descuentos VALUES (2071, 'rete384', 1164413, 0, 346);
-INSERT INTO descuentos VALUES (2072, 'rete383', 1397296, 0, 347);
-INSERT INTO descuentos VALUES (2073, 'reteIca', 1397296, 13498, 347);
-INSERT INTO descuentos VALUES (2074, 'estampillaUD', 1397296, 13973, 347);
-INSERT INTO descuentos VALUES (2075, 'proCultura', 1397296, 6986, 347);
-INSERT INTO descuentos VALUES (2076, 'adultoMayor', 1397296, 6986, 347);
-INSERT INTO descuentos VALUES (2077, 'rete384', 1863061, 0, 347);
-INSERT INTO descuentos VALUES (2078, 'rete383', 620779, 0, 348);
-INSERT INTO descuentos VALUES (2079, 'reteIca', 620779, 5997, 348);
-INSERT INTO descuentos VALUES (2080, 'estampillaUD', 620779, 6208, 348);
-INSERT INTO descuentos VALUES (2081, 'proCultura', 620779, 3104, 348);
-INSERT INTO descuentos VALUES (2082, 'adultoMayor', 620779, 3104, 348);
-INSERT INTO descuentos VALUES (2083, 'rete384', 827706, 0, 348);
-INSERT INTO descuentos VALUES (2084, 'rete383', 1176670, 0, 349);
-INSERT INTO descuentos VALUES (2085, 'reteIca', 1176670, 11367, 349);
-INSERT INTO descuentos VALUES (2086, 'estampillaUD', 1176670, 11767, 349);
-INSERT INTO descuentos VALUES (2087, 'proCultura', 1176670, 5883, 349);
-INSERT INTO descuentos VALUES (2088, 'adultoMayor', 1176670, 5883, 349);
-INSERT INTO descuentos VALUES (2089, 'rete384', 1568893, 0, 349);
-INSERT INTO descuentos VALUES (2090, 'rete383', 620779, 0, 350);
-INSERT INTO descuentos VALUES (2091, 'reteIca', 620779, 5997, 350);
-INSERT INTO descuentos VALUES (2092, 'estampillaUD', 620779, 6208, 350);
-INSERT INTO descuentos VALUES (2093, 'proCultura', 620779, 3104, 350);
-INSERT INTO descuentos VALUES (2094, 'adultoMayor', 620779, 3104, 350);
-INSERT INTO descuentos VALUES (2095, 'rete384', 827706, 0, 350);
-INSERT INTO descuentos VALUES (2096, 'rete383', 1176670, 0, 351);
-INSERT INTO descuentos VALUES (2097, 'reteIca', 1176670, 11367, 351);
-INSERT INTO descuentos VALUES (2098, 'estampillaUD', 1176670, 11767, 351);
-INSERT INTO descuentos VALUES (2099, 'proCultura', 1176670, 5883, 351);
-INSERT INTO descuentos VALUES (2100, 'adultoMayor', 1176670, 5883, 351);
-INSERT INTO descuentos VALUES (2101, 'rete384', 1568893, 0, 351);
-INSERT INTO descuentos VALUES (2102, 'rete383', 1176670, 0, 352);
-INSERT INTO descuentos VALUES (2103, 'reteIca', 1176670, 11367, 352);
-INSERT INTO descuentos VALUES (2104, 'estampillaUD', 1176670, 11767, 352);
-INSERT INTO descuentos VALUES (2105, 'proCultura', 1176670, 5883, 352);
-INSERT INTO descuentos VALUES (2106, 'adultoMayor', 1176670, 5883, 352);
-INSERT INTO descuentos VALUES (2107, 'rete384', 1568893, 0, 352);
-INSERT INTO descuentos VALUES (2108, 'rete383', 465584, 0, 353);
-INSERT INTO descuentos VALUES (2109, 'reteIca', 465584, 4498, 353);
-INSERT INTO descuentos VALUES (2110, 'estampillaUD', 465584, 4656, 353);
-INSERT INTO descuentos VALUES (2111, 'proCultura', 465584, 2328, 353);
-INSERT INTO descuentos VALUES (2112, 'adultoMayor', 465584, 2328, 353);
-INSERT INTO descuentos VALUES (2113, 'rete384', 620779, 0, 353);
-INSERT INTO descuentos VALUES (2114, 'rete383', 728740, 0, 354);
-INSERT INTO descuentos VALUES (2115, 'reteIca', 728740, 7040, 354);
-INSERT INTO descuentos VALUES (2116, 'estampillaUD', 728740, 7287, 354);
-INSERT INTO descuentos VALUES (2117, 'proCultura', 728740, 3644, 354);
-INSERT INTO descuentos VALUES (2118, 'adultoMayor', 728740, 3644, 354);
-INSERT INTO descuentos VALUES (2119, 'rete384', 971654, 0, 354);
-INSERT INTO descuentos VALUES (2120, 'rete383', 620779, 0, 355);
-INSERT INTO descuentos VALUES (2121, 'reteIca', 620779, 5997, 355);
-INSERT INTO descuentos VALUES (2122, 'estampillaUD', 620779, 6208, 355);
-INSERT INTO descuentos VALUES (2123, 'proCultura', 620779, 3104, 355);
-INSERT INTO descuentos VALUES (2124, 'adultoMayor', 620779, 3104, 355);
-INSERT INTO descuentos VALUES (2125, 'rete384', 827706, 0, 355);
-INSERT INTO descuentos VALUES (2126, 'rete383', 956044, 0, 356);
-INSERT INTO descuentos VALUES (2127, 'reteIca', 956044, 9235, 356);
-INSERT INTO descuentos VALUES (2128, 'estampillaUD', 956044, 9560, 356);
-INSERT INTO descuentos VALUES (2129, 'proCultura', 956044, 4780, 356);
-INSERT INTO descuentos VALUES (2130, 'adultoMayor', 956044, 4780, 356);
-INSERT INTO descuentos VALUES (2131, 'rete384', 1274726, 0, 356);
-INSERT INTO descuentos VALUES (2132, 'rete383', 478022, 0, 357);
-INSERT INTO descuentos VALUES (2133, 'reteIca', 478022, 4618, 357);
-INSERT INTO descuentos VALUES (2134, 'estampillaUD', 478022, 4780, 357);
-INSERT INTO descuentos VALUES (2135, 'proCultura', 478022, 2390, 357);
-INSERT INTO descuentos VALUES (2136, 'adultoMayor', 478022, 2390, 357);
-INSERT INTO descuentos VALUES (2137, 'rete384', 637363, 0, 357);
-INSERT INTO descuentos VALUES (2138, 'rete383', 364370, 0, 358);
-INSERT INTO descuentos VALUES (2139, 'reteIca', 364370, 3520, 358);
-INSERT INTO descuentos VALUES (2140, 'estampillaUD', 364370, 3644, 358);
-INSERT INTO descuentos VALUES (2141, 'proCultura', 364370, 1822, 358);
-INSERT INTO descuentos VALUES (2142, 'adultoMayor', 364370, 1822, 358);
-INSERT INTO descuentos VALUES (2143, 'rete384', 485827, 0, 358);
-INSERT INTO descuentos VALUES (2144, 'rete383', 620779, 0, 359);
-INSERT INTO descuentos VALUES (2145, 'reteIca', 620779, 5997, 359);
-INSERT INTO descuentos VALUES (2146, 'estampillaUD', 620779, 6208, 359);
-INSERT INTO descuentos VALUES (2147, 'proCultura', 620779, 3104, 359);
-INSERT INTO descuentos VALUES (2148, 'adultoMayor', 620779, 3104, 359);
-INSERT INTO descuentos VALUES (2149, 'rete384', 827706, 0, 359);
-INSERT INTO descuentos VALUES (2150, 'rete383', 620779, 0, 360);
-INSERT INTO descuentos VALUES (2151, 'reteIca', 620779, 5997, 360);
-INSERT INTO descuentos VALUES (2152, 'estampillaUD', 620779, 6208, 360);
-INSERT INTO descuentos VALUES (2153, 'proCultura', 620779, 3104, 360);
-INSERT INTO descuentos VALUES (2154, 'adultoMayor', 620779, 3104, 360);
-INSERT INTO descuentos VALUES (2155, 'rete384', 827706, 0, 360);
-INSERT INTO descuentos VALUES (2156, 'rete383', 620779, 0, 361);
-INSERT INTO descuentos VALUES (2157, 'reteIca', 620779, 5997, 361);
-INSERT INTO descuentos VALUES (2158, 'estampillaUD', 620779, 6208, 361);
-INSERT INTO descuentos VALUES (2159, 'proCultura', 620779, 3104, 361);
-INSERT INTO descuentos VALUES (2160, 'adultoMayor', 620779, 3104, 361);
-INSERT INTO descuentos VALUES (2161, 'rete384', 827706, 0, 361);
-INSERT INTO descuentos VALUES (2162, 'rete383', 485827, 0, 362);
-INSERT INTO descuentos VALUES (2163, 'reteIca', 485827, 4693, 362);
-INSERT INTO descuentos VALUES (2164, 'estampillaUD', 485827, 4858, 362);
-INSERT INTO descuentos VALUES (2165, 'proCultura', 485827, 2429, 362);
-INSERT INTO descuentos VALUES (2166, 'adultoMayor', 485827, 2429, 362);
-INSERT INTO descuentos VALUES (2167, 'rete384', 647770, 0, 362);
-INSERT INTO descuentos VALUES (2168, 'rete383', 620779, 0, 363);
-INSERT INTO descuentos VALUES (2169, 'reteIca', 620779, 5997, 363);
-INSERT INTO descuentos VALUES (2170, 'estampillaUD', 620779, 6208, 363);
-INSERT INTO descuentos VALUES (2171, 'proCultura', 620779, 3104, 363);
-INSERT INTO descuentos VALUES (2172, 'adultoMayor', 620779, 3104, 363);
-INSERT INTO descuentos VALUES (2173, 'rete384', 827706, 0, 363);
-INSERT INTO descuentos VALUES (2174, 'rete383', 937659, 0, 364);
-INSERT INTO descuentos VALUES (2175, 'reteIca', 937659, 9058, 364);
-INSERT INTO descuentos VALUES (2176, 'estampillaUD', 937659, 9377, 364);
-INSERT INTO descuentos VALUES (2177, 'proCultura', 937659, 4688, 364);
-INSERT INTO descuentos VALUES (2178, 'adultoMayor', 937659, 4688, 364);
-INSERT INTO descuentos VALUES (2179, 'rete384', 1250212, 0, 364);
-INSERT INTO descuentos VALUES (2180, 'rete383', 310390, 0, 365);
-INSERT INTO descuentos VALUES (2181, 'reteIca', 310390, 2998, 365);
-INSERT INTO descuentos VALUES (2182, 'estampillaUD', 310390, 3104, 365);
-INSERT INTO descuentos VALUES (2183, 'proCultura', 310390, 1552, 365);
-INSERT INTO descuentos VALUES (2184, 'adultoMayor', 310390, 1552, 365);
-INSERT INTO descuentos VALUES (2185, 'rete384', 413853, 0, 365);
-INSERT INTO descuentos VALUES (2186, 'rete383', 293146, 0, 366);
-INSERT INTO descuentos VALUES (2187, 'reteIca', 293146, 2832, 366);
-INSERT INTO descuentos VALUES (2188, 'estampillaUD', 293146, 2931, 366);
-INSERT INTO descuentos VALUES (2189, 'proCultura', 293146, 1466, 366);
-INSERT INTO descuentos VALUES (2190, 'adultoMayor', 293146, 1466, 366);
-INSERT INTO descuentos VALUES (2191, 'rete384', 390861, 0, 366);
-INSERT INTO descuentos VALUES (2192, 'rete383', 364370, 0, 367);
-INSERT INTO descuentos VALUES (2193, 'reteIca', 364370, 3520, 367);
-INSERT INTO descuentos VALUES (2194, 'estampillaUD', 364370, 3644, 367);
-INSERT INTO descuentos VALUES (2195, 'proCultura', 364370, 1822, 367);
-INSERT INTO descuentos VALUES (2196, 'adultoMayor', 364370, 1822, 367);
-INSERT INTO descuentos VALUES (2197, 'rete384', 485827, 0, 367);
-INSERT INTO descuentos VALUES (2198, 'rete383', 523986, 0, 368);
-INSERT INTO descuentos VALUES (2199, 'reteIca', 523986, 5062, 368);
-INSERT INTO descuentos VALUES (2200, 'estampillaUD', 523986, 5240, 368);
-INSERT INTO descuentos VALUES (2201, 'proCultura', 523986, 2620, 368);
-INSERT INTO descuentos VALUES (2202, 'adultoMayor', 523986, 2620, 368);
-INSERT INTO descuentos VALUES (2203, 'rete384', 698648, 0, 368);
-INSERT INTO descuentos VALUES (2204, 'rete383', 1176670, 0, 369);
-INSERT INTO descuentos VALUES (2205, 'reteIca', 1176670, 11367, 369);
-INSERT INTO descuentos VALUES (2206, 'estampillaUD', 1176670, 11767, 369);
-INSERT INTO descuentos VALUES (2207, 'proCultura', 1176670, 5883, 369);
-INSERT INTO descuentos VALUES (2208, 'adultoMayor', 1176670, 5883, 369);
-INSERT INTO descuentos VALUES (2209, 'rete384', 1568893, 0, 369);
-INSERT INTO descuentos VALUES (2210, 'rete383', 2151100, 0, 370);
-INSERT INTO descuentos VALUES (2211, 'reteIca', 2151100, 20780, 370);
-INSERT INTO descuentos VALUES (2212, 'estampillaUD', 2151100, 21511, 370);
-INSERT INTO descuentos VALUES (2213, 'proCultura', 2151100, 10756, 370);
-INSERT INTO descuentos VALUES (2214, 'adultoMayor', 2151100, 10756, 370);
-INSERT INTO descuentos VALUES (2215, 'rete384', 2868133, 0, 370);
-INSERT INTO descuentos VALUES (2216, 'rete383', 310390, 0, 371);
-INSERT INTO descuentos VALUES (2217, 'reteIca', 310390, 2998, 371);
-INSERT INTO descuentos VALUES (2218, 'estampillaUD', 310390, 3104, 371);
-INSERT INTO descuentos VALUES (2219, 'proCultura', 310390, 1552, 371);
-INSERT INTO descuentos VALUES (2220, 'adultoMayor', 310390, 1552, 371);
-INSERT INTO descuentos VALUES (2221, 'rete384', 413853, 0, 371);
-INSERT INTO descuentos VALUES (2222, 'rete383', 293146, 0, 372);
-INSERT INTO descuentos VALUES (2223, 'reteIca', 293146, 2832, 372);
-INSERT INTO descuentos VALUES (2224, 'estampillaUD', 293146, 2931, 372);
-INSERT INTO descuentos VALUES (2225, 'proCultura', 293146, 1466, 372);
-INSERT INTO descuentos VALUES (2226, 'adultoMayor', 293146, 1466, 372);
-INSERT INTO descuentos VALUES (2227, 'rete384', 390861, 0, 372);
-INSERT INTO descuentos VALUES (2228, 'rete383', 293146, 0, 373);
-INSERT INTO descuentos VALUES (2229, 'reteIca', 293146, 2832, 373);
-INSERT INTO descuentos VALUES (2230, 'estampillaUD', 293146, 2931, 373);
-INSERT INTO descuentos VALUES (2231, 'proCultura', 293146, 1466, 373);
-INSERT INTO descuentos VALUES (2232, 'adultoMayor', 293146, 1466, 373);
-INSERT INTO descuentos VALUES (2233, 'rete384', 390861, 0, 373);
-INSERT INTO descuentos VALUES (2234, 'rete383', 1029586, 0, 374);
-INSERT INTO descuentos VALUES (2235, 'reteIca', 1029586, 9946, 374);
-INSERT INTO descuentos VALUES (2236, 'estampillaUD', 1029586, 10296, 374);
-INSERT INTO descuentos VALUES (2237, 'proCultura', 1029586, 5148, 374);
-INSERT INTO descuentos VALUES (2238, 'adultoMayor', 1029586, 5148, 374);
-INSERT INTO descuentos VALUES (2239, 'rete384', 1372782, 0, 374);
-INSERT INTO descuentos VALUES (2240, 'rete383', 956044, 0, 375);
-INSERT INTO descuentos VALUES (2241, 'reteIca', 956044, 9235, 375);
-INSERT INTO descuentos VALUES (2242, 'estampillaUD', 956044, 9560, 375);
-INSERT INTO descuentos VALUES (2243, 'proCultura', 956044, 4780, 375);
-INSERT INTO descuentos VALUES (2244, 'adultoMayor', 956044, 4780, 375);
-INSERT INTO descuentos VALUES (2245, 'rete384', 1274726, 0, 375);
-INSERT INTO descuentos VALUES (2246, 'rete383', 1176670, 0, 376);
-INSERT INTO descuentos VALUES (2247, 'reteIca', 1176670, 11367, 376);
-INSERT INTO descuentos VALUES (2248, 'estampillaUD', 1176670, 11767, 376);
-INSERT INTO descuentos VALUES (2249, 'proCultura', 1176670, 5883, 376);
-INSERT INTO descuentos VALUES (2250, 'adultoMayor', 1176670, 5883, 376);
-INSERT INTO descuentos VALUES (2251, 'rete384', 1568893, 0, 376);
-INSERT INTO descuentos VALUES (2252, 'rete383', 364370, 0, 377);
-INSERT INTO descuentos VALUES (2253, 'reteIca', 364370, 3520, 377);
-INSERT INTO descuentos VALUES (2254, 'estampillaUD', 364370, 3644, 377);
-INSERT INTO descuentos VALUES (2255, 'proCultura', 364370, 1822, 377);
-INSERT INTO descuentos VALUES (2256, 'adultoMayor', 364370, 1822, 377);
-INSERT INTO descuentos VALUES (2257, 'rete384', 485827, 0, 377);
-INSERT INTO descuentos VALUES (2258, 'rete383', 465584, 0, 378);
-INSERT INTO descuentos VALUES (2259, 'reteIca', 465584, 4498, 378);
-INSERT INTO descuentos VALUES (2260, 'estampillaUD', 465584, 4656, 378);
-INSERT INTO descuentos VALUES (2261, 'proCultura', 465584, 2328, 378);
-INSERT INTO descuentos VALUES (2262, 'adultoMayor', 465584, 2328, 378);
-INSERT INTO descuentos VALUES (2263, 'rete384', 620779, 0, 378);
-INSERT INTO descuentos VALUES (2264, 'rete383', 465584, 0, 379);
-INSERT INTO descuentos VALUES (2265, 'reteIca', 465584, 4498, 379);
-INSERT INTO descuentos VALUES (2266, 'estampillaUD', 465584, 4656, 379);
-INSERT INTO descuentos VALUES (2267, 'proCultura', 465584, 2328, 379);
-INSERT INTO descuentos VALUES (2268, 'adultoMayor', 465584, 2328, 379);
-INSERT INTO descuentos VALUES (2269, 'rete384', 620779, 0, 379);
-INSERT INTO descuentos VALUES (2270, 'rete383', 728740, 0, 380);
-INSERT INTO descuentos VALUES (2271, 'reteIca', 728740, 7040, 380);
-INSERT INTO descuentos VALUES (2272, 'estampillaUD', 728740, 7287, 380);
-INSERT INTO descuentos VALUES (2273, 'proCultura', 728740, 3644, 380);
-INSERT INTO descuentos VALUES (2274, 'adultoMayor', 728740, 3644, 380);
-INSERT INTO descuentos VALUES (2275, 'rete384', 971654, 0, 380);
-INSERT INTO descuentos VALUES (2276, 'rete383', 364370, 0, 381);
-INSERT INTO descuentos VALUES (2277, 'reteIca', 364370, 3520, 381);
-INSERT INTO descuentos VALUES (2278, 'estampillaUD', 364370, 3644, 381);
-INSERT INTO descuentos VALUES (2279, 'proCultura', 364370, 1822, 381);
-INSERT INTO descuentos VALUES (2280, 'adultoMayor', 364370, 1822, 381);
-INSERT INTO descuentos VALUES (2281, 'rete384', 485827, 0, 381);
-INSERT INTO descuentos VALUES (2282, 'rete383', 620779, 0, 382);
-INSERT INTO descuentos VALUES (2283, 'reteIca', 620779, 5997, 382);
-INSERT INTO descuentos VALUES (2284, 'estampillaUD', 620779, 6208, 382);
-INSERT INTO descuentos VALUES (2285, 'proCultura', 620779, 3104, 382);
-INSERT INTO descuentos VALUES (2286, 'adultoMayor', 620779, 3104, 382);
-INSERT INTO descuentos VALUES (2287, 'rete384', 827706, 0, 382);
-INSERT INTO descuentos VALUES (2288, 'rete383', 364370, 0, 383);
-INSERT INTO descuentos VALUES (2289, 'reteIca', 364370, 3520, 383);
-INSERT INTO descuentos VALUES (2290, 'estampillaUD', 364370, 3644, 383);
-INSERT INTO descuentos VALUES (2291, 'proCultura', 364370, 1822, 383);
-INSERT INTO descuentos VALUES (2292, 'adultoMayor', 364370, 1822, 383);
-INSERT INTO descuentos VALUES (2293, 'rete384', 485827, 0, 383);
-INSERT INTO descuentos VALUES (2294, 'rete383', 549811, 0, 384);
-INSERT INTO descuentos VALUES (2295, 'reteIca', 549811, 5311, 384);
-INSERT INTO descuentos VALUES (2296, 'estampillaUD', 549811, 5498, 384);
-INSERT INTO descuentos VALUES (2297, 'proCultura', 549811, 2749, 384);
-INSERT INTO descuentos VALUES (2298, 'adultoMayor', 549811, 2749, 384);
-INSERT INTO descuentos VALUES (2299, 'rete384', 733082, 0, 384);
-INSERT INTO descuentos VALUES (2300, 'rete383', 485827, 0, 385);
-INSERT INTO descuentos VALUES (2301, 'reteIca', 485827, 4693, 385);
-INSERT INTO descuentos VALUES (2302, 'estampillaUD', 485827, 4858, 385);
-INSERT INTO descuentos VALUES (2303, 'proCultura', 485827, 2429, 385);
-INSERT INTO descuentos VALUES (2304, 'adultoMayor', 485827, 2429, 385);
-INSERT INTO descuentos VALUES (2305, 'rete384', 647770, 0, 385);
-INSERT INTO descuentos VALUES (2306, 'rete383', 485827, 0, 386);
-INSERT INTO descuentos VALUES (2307, 'reteIca', 485827, 4693, 386);
-INSERT INTO descuentos VALUES (2308, 'estampillaUD', 485827, 4858, 386);
-INSERT INTO descuentos VALUES (2309, 'proCultura', 485827, 2429, 386);
-INSERT INTO descuentos VALUES (2310, 'adultoMayor', 485827, 2429, 386);
-INSERT INTO descuentos VALUES (2311, 'rete384', 647770, 0, 386);
-INSERT INTO descuentos VALUES (2312, 'rete383', 364370, 0, 387);
-INSERT INTO descuentos VALUES (2313, 'reteIca', 364370, 3520, 387);
-INSERT INTO descuentos VALUES (2314, 'estampillaUD', 364370, 3644, 387);
-INSERT INTO descuentos VALUES (2315, 'proCultura', 364370, 1822, 387);
-INSERT INTO descuentos VALUES (2316, 'adultoMayor', 364370, 1822, 387);
-INSERT INTO descuentos VALUES (2317, 'rete384', 485827, 0, 387);
-INSERT INTO descuentos VALUES (2318, 'rete383', 485827, 0, 388);
-INSERT INTO descuentos VALUES (2319, 'reteIca', 485827, 4693, 388);
-INSERT INTO descuentos VALUES (2320, 'estampillaUD', 485827, 4858, 388);
-INSERT INTO descuentos VALUES (2321, 'proCultura', 485827, 2429, 388);
-INSERT INTO descuentos VALUES (2322, 'adultoMayor', 485827, 2429, 388);
-INSERT INTO descuentos VALUES (2323, 'rete384', 647770, 0, 388);
-INSERT INTO descuentos VALUES (2324, 'rete383', 465584, 0, 389);
-INSERT INTO descuentos VALUES (2325, 'reteIca', 465584, 4498, 389);
-INSERT INTO descuentos VALUES (2326, 'estampillaUD', 465584, 4656, 389);
-INSERT INTO descuentos VALUES (2327, 'proCultura', 465584, 2328, 389);
-INSERT INTO descuentos VALUES (2328, 'adultoMayor', 465584, 2328, 389);
-INSERT INTO descuentos VALUES (2329, 'rete384', 620779, 0, 389);
-INSERT INTO descuentos VALUES (2330, 'rete383', 364370, 0, 390);
-INSERT INTO descuentos VALUES (2331, 'reteIca', 364370, 3520, 390);
-INSERT INTO descuentos VALUES (2332, 'estampillaUD', 364370, 3644, 390);
-INSERT INTO descuentos VALUES (2333, 'proCultura', 364370, 1822, 390);
-INSERT INTO descuentos VALUES (2334, 'adultoMayor', 364370, 1822, 390);
-INSERT INTO descuentos VALUES (2335, 'rete384', 485827, 0, 390);
-INSERT INTO descuentos VALUES (2336, 'rete383', 439719, 0, 391);
-INSERT INTO descuentos VALUES (2337, 'reteIca', 439719, 4248, 391);
-INSERT INTO descuentos VALUES (2338, 'estampillaUD', 439719, 4397, 391);
-INSERT INTO descuentos VALUES (2339, 'proCultura', 439719, 2199, 391);
-INSERT INTO descuentos VALUES (2340, 'adultoMayor', 439719, 2199, 391);
-INSERT INTO descuentos VALUES (2341, 'rete384', 586292, 0, 391);
-INSERT INTO descuentos VALUES (2342, 'rete383', 1765005, 0, 392);
-INSERT INTO descuentos VALUES (2343, 'reteIca', 1765005, 17050, 392);
-INSERT INTO descuentos VALUES (2344, 'estampillaUD', 1765005, 17650, 392);
-INSERT INTO descuentos VALUES (2345, 'proCultura', 1765005, 8825, 392);
-INSERT INTO descuentos VALUES (2346, 'adultoMayor', 1765005, 8825, 392);
-INSERT INTO descuentos VALUES (2347, 'rete384', 2353340, 0, 392);
-INSERT INTO descuentos VALUES (2348, 'rete383', 1176670, 0, 393);
-INSERT INTO descuentos VALUES (2349, 'reteIca', 1176670, 11367, 393);
-INSERT INTO descuentos VALUES (2350, 'estampillaUD', 1176670, 11767, 393);
-INSERT INTO descuentos VALUES (2351, 'proCultura', 1176670, 5883, 393);
-INSERT INTO descuentos VALUES (2352, 'adultoMayor', 1176670, 5883, 393);
-INSERT INTO descuentos VALUES (2353, 'rete384', 1568893, 0, 393);
-INSERT INTO descuentos VALUES (2354, 'rete383', 2095943, 0, 394);
-INSERT INTO descuentos VALUES (2355, 'reteIca', 2095943, 20247, 394);
-INSERT INTO descuentos VALUES (2356, 'estampillaUD', 2095943, 20959, 394);
-INSERT INTO descuentos VALUES (2357, 'proCultura', 2095943, 10480, 394);
-INSERT INTO descuentos VALUES (2358, 'adultoMayor', 2095943, 10480, 394);
-INSERT INTO descuentos VALUES (2359, 'rete384', 2794591, 0, 394);
-INSERT INTO descuentos VALUES (2360, 'rete383', 478022, 0, 395);
-INSERT INTO descuentos VALUES (2361, 'reteIca', 478022, 4618, 395);
-INSERT INTO descuentos VALUES (2362, 'estampillaUD', 478022, 4780, 395);
-INSERT INTO descuentos VALUES (2363, 'proCultura', 478022, 2390, 395);
-INSERT INTO descuentos VALUES (2364, 'adultoMayor', 478022, 2390, 395);
-INSERT INTO descuentos VALUES (2365, 'rete384', 637363, 0, 395);
-INSERT INTO descuentos VALUES (2366, 'rete383', 268888, 0, 396);
-INSERT INTO descuentos VALUES (2367, 'reteIca', 268888, 2597, 396);
-INSERT INTO descuentos VALUES (2368, 'estampillaUD', 268888, 2689, 396);
-INSERT INTO descuentos VALUES (2369, 'proCultura', 268888, 1344, 396);
-INSERT INTO descuentos VALUES (2370, 'adultoMayor', 268888, 1344, 396);
-INSERT INTO descuentos VALUES (2371, 'rete384', 358517, 0, 396);
-INSERT INTO descuentos VALUES (2372, 'rete383', 1397296, 0, 397);
-INSERT INTO descuentos VALUES (2373, 'reteIca', 1397296, 13498, 397);
-INSERT INTO descuentos VALUES (2374, 'estampillaUD', 1397296, 13973, 397);
-INSERT INTO descuentos VALUES (2375, 'proCultura', 1397296, 6986, 397);
-INSERT INTO descuentos VALUES (2376, 'adultoMayor', 1397296, 6986, 397);
-INSERT INTO descuentos VALUES (2377, 'rete384', 1863061, 0, 397);
-INSERT INTO descuentos VALUES (2378, 'rete383', 413853, 0, 398);
-INSERT INTO descuentos VALUES (2379, 'reteIca', 413853, 3998, 398);
-INSERT INTO descuentos VALUES (2380, 'estampillaUD', 413853, 4139, 398);
-INSERT INTO descuentos VALUES (2381, 'proCultura', 413853, 2069, 398);
-INSERT INTO descuentos VALUES (2382, 'adultoMayor', 413853, 2069, 398);
-INSERT INTO descuentos VALUES (2383, 'rete384', 551804, 0, 398);
-INSERT INTO descuentos VALUES (2384, 'rete383', 485827, 0, 399);
-INSERT INTO descuentos VALUES (2385, 'reteIca', 485827, 4693, 399);
-INSERT INTO descuentos VALUES (2386, 'estampillaUD', 485827, 4858, 399);
-INSERT INTO descuentos VALUES (2387, 'proCultura', 485827, 2429, 399);
-INSERT INTO descuentos VALUES (2388, 'adultoMayor', 485827, 2429, 399);
-INSERT INTO descuentos VALUES (2389, 'rete384', 647770, 0, 399);
-INSERT INTO descuentos VALUES (2390, 'rete383', 485827, 0, 400);
-INSERT INTO descuentos VALUES (2391, 'reteIca', 485827, 4693, 400);
-INSERT INTO descuentos VALUES (2392, 'estampillaUD', 485827, 4858, 400);
-INSERT INTO descuentos VALUES (2393, 'proCultura', 485827, 2429, 400);
-INSERT INTO descuentos VALUES (2394, 'adultoMayor', 485827, 2429, 400);
-INSERT INTO descuentos VALUES (2395, 'rete384', 647770, 0, 400);
-INSERT INTO descuentos VALUES (2396, 'rete383', 485827, 0, 401);
-INSERT INTO descuentos VALUES (2397, 'reteIca', 485827, 4693, 401);
-INSERT INTO descuentos VALUES (2398, 'estampillaUD', 485827, 4858, 401);
-INSERT INTO descuentos VALUES (2399, 'proCultura', 485827, 2429, 401);
-INSERT INTO descuentos VALUES (2400, 'adultoMayor', 485827, 2429, 401);
-INSERT INTO descuentos VALUES (2401, 'rete384', 647770, 0, 401);
-INSERT INTO descuentos VALUES (2402, 'rete383', 364370, 0, 402);
-INSERT INTO descuentos VALUES (2403, 'reteIca', 364370, 3520, 402);
-INSERT INTO descuentos VALUES (2404, 'estampillaUD', 364370, 3644, 402);
-INSERT INTO descuentos VALUES (2405, 'proCultura', 364370, 1822, 402);
-INSERT INTO descuentos VALUES (2406, 'adultoMayor', 364370, 1822, 402);
-INSERT INTO descuentos VALUES (2407, 'rete384', 485827, 0, 402);
-INSERT INTO descuentos VALUES (2408, 'rete383', 809712, 0, 403);
-INSERT INTO descuentos VALUES (2409, 'reteIca', 809712, 7822, 403);
-INSERT INTO descuentos VALUES (2410, 'estampillaUD', 809712, 8097, 403);
-INSERT INTO descuentos VALUES (2411, 'proCultura', 809712, 4049, 403);
-INSERT INTO descuentos VALUES (2412, 'adultoMayor', 809712, 4049, 403);
-INSERT INTO descuentos VALUES (2413, 'rete384', 1079616, 0, 403);
-INSERT INTO descuentos VALUES (2414, 'rete383', 1470837, 0, 404);
-INSERT INTO descuentos VALUES (2415, 'reteIca', 1470837, 14208, 404);
-INSERT INTO descuentos VALUES (2416, 'estampillaUD', 1470837, 14708, 404);
-INSERT INTO descuentos VALUES (2417, 'proCultura', 1470837, 7354, 404);
-INSERT INTO descuentos VALUES (2418, 'adultoMayor', 1470837, 7354, 404);
-INSERT INTO descuentos VALUES (2419, 'rete384', 1961116, 0, 404);
-INSERT INTO descuentos VALUES (2420, 'rete383', 2730241, 0, 405);
-INSERT INTO descuentos VALUES (2421, 'reteIca', 2730241, 26374, 405);
-INSERT INTO descuentos VALUES (2422, 'estampillaUD', 2730241, 27302, 405);
-INSERT INTO descuentos VALUES (2423, 'proCultura', 2730241, 13651, 405);
-INSERT INTO descuentos VALUES (2424, 'adultoMayor', 2730241, 13651, 405);
-INSERT INTO descuentos VALUES (2425, 'rete384', 3640322, 0, 405);
-INSERT INTO descuentos VALUES (2426, 'rete383', 2357936, 0, 406);
-INSERT INTO descuentos VALUES (2427, 'reteIca', 2357936, 22778, 406);
-INSERT INTO descuentos VALUES (2428, 'estampillaUD', 2357936, 23579, 406);
-INSERT INTO descuentos VALUES (2429, 'proCultura', 2357936, 11790, 406);
-INSERT INTO descuentos VALUES (2430, 'adultoMayor', 2357936, 11790, 406);
-INSERT INTO descuentos VALUES (2431, 'rete384', 3143915, 0, 406);
-INSERT INTO descuentos VALUES (2432, 'rete383', 809712, 0, 407);
-INSERT INTO descuentos VALUES (2433, 'reteIca', 809712, 7822, 407);
-INSERT INTO descuentos VALUES (2434, 'estampillaUD', 809712, 8097, 407);
-INSERT INTO descuentos VALUES (2435, 'proCultura', 809712, 4049, 407);
-INSERT INTO descuentos VALUES (2436, 'adultoMayor', 809712, 4049, 407);
-INSERT INTO descuentos VALUES (2437, 'rete384', 1079616, 0, 407);
-INSERT INTO descuentos VALUES (2438, 'rete383', 551803, 0, 408);
-INSERT INTO descuentos VALUES (2439, 'reteIca', 551803, 5330, 408);
-INSERT INTO descuentos VALUES (2440, 'estampillaUD', 551803, 5518, 408);
-INSERT INTO descuentos VALUES (2441, 'proCultura', 551803, 2759, 408);
-INSERT INTO descuentos VALUES (2442, 'adultoMayor', 551803, 2759, 408);
-INSERT INTO descuentos VALUES (2443, 'rete384', 735738, 0, 408);
-INSERT INTO descuentos VALUES (2444, 'rete383', 1470837, 0, 409);
-INSERT INTO descuentos VALUES (2445, 'reteIca', 1470837, 14208, 409);
-INSERT INTO descuentos VALUES (2446, 'estampillaUD', 1470837, 14708, 409);
-INSERT INTO descuentos VALUES (2447, 'proCultura', 1470837, 7354, 409);
-INSERT INTO descuentos VALUES (2448, 'adultoMayor', 1470837, 7354, 409);
-INSERT INTO descuentos VALUES (2449, 'rete384', 1961116, 0, 409);
-INSERT INTO descuentos VALUES (2450, 'rete383', 1838547, 0, 410);
-INSERT INTO descuentos VALUES (2451, 'reteIca', 1838547, 17760, 410);
-INSERT INTO descuentos VALUES (2452, 'estampillaUD', 1838547, 18385, 410);
-INSERT INTO descuentos VALUES (2453, 'proCultura', 1838547, 9193, 410);
-INSERT INTO descuentos VALUES (2454, 'adultoMayor', 1838547, 9193, 410);
-INSERT INTO descuentos VALUES (2455, 'rete384', 2451396, 0, 410);
-INSERT INTO descuentos VALUES (2456, 'rete383', 2482038, 0, 411);
-INSERT INTO descuentos VALUES (2457, 'reteIca', 2482038, 23976, 411);
-INSERT INTO descuentos VALUES (2458, 'estampillaUD', 2482038, 24820, 411);
-INSERT INTO descuentos VALUES (2459, 'proCultura', 2482038, 12410, 411);
-INSERT INTO descuentos VALUES (2460, 'adultoMayor', 2482038, 12410, 411);
-INSERT INTO descuentos VALUES (2461, 'rete384', 3309384, 0, 411);
-INSERT INTO descuentos VALUES (2462, 'rete383', 2573962, 0, 412);
-INSERT INTO descuentos VALUES (2463, 'reteIca', 2573962, 24864, 412);
-INSERT INTO descuentos VALUES (2464, 'estampillaUD', 2573962, 25740, 412);
-INSERT INTO descuentos VALUES (2465, 'proCultura', 2573962, 12870, 412);
-INSERT INTO descuentos VALUES (2466, 'adultoMayor', 2573962, 12870, 412);
-INSERT INTO descuentos VALUES (2467, 'rete384', 3431949, 0, 412);
-INSERT INTO descuentos VALUES (2468, 'rete383', 698647, 0, 413);
-INSERT INTO descuentos VALUES (2469, 'reteIca', 698647, 6749, 413);
-INSERT INTO descuentos VALUES (2470, 'estampillaUD', 698647, 6986, 413);
-INSERT INTO descuentos VALUES (2471, 'proCultura', 698647, 3493, 413);
-INSERT INTO descuentos VALUES (2472, 'adultoMayor', 698647, 3493, 413);
-INSERT INTO descuentos VALUES (2473, 'rete384', 931530, 0, 413);
-INSERT INTO descuentos VALUES (2474, 'rete383', 698647, 0, 414);
-INSERT INTO descuentos VALUES (2475, 'reteIca', 698647, 6749, 414);
-INSERT INTO descuentos VALUES (2476, 'estampillaUD', 698647, 6986, 414);
-INSERT INTO descuentos VALUES (2477, 'proCultura', 698647, 3493, 414);
-INSERT INTO descuentos VALUES (2478, 'adultoMayor', 698647, 3493, 414);
-INSERT INTO descuentos VALUES (2479, 'rete384', 931530, 0, 414);
-INSERT INTO descuentos VALUES (2480, 'rete383', 110313, 0, 415);
-INSERT INTO descuentos VALUES (2481, 'reteIca', 110313, 1066, 415);
-INSERT INTO descuentos VALUES (2482, 'estampillaUD', 110313, 1103, 415);
-INSERT INTO descuentos VALUES (2483, 'proCultura', 110313, 552, 415);
-INSERT INTO descuentos VALUES (2484, 'adultoMayor', 110313, 552, 415);
-INSERT INTO descuentos VALUES (2485, 'rete384', 147084, 0, 415);
-INSERT INTO descuentos VALUES (2486, 'rete383', 1047972, 0, 416);
-INSERT INTO descuentos VALUES (2487, 'reteIca', 1047972, 10123, 416);
-INSERT INTO descuentos VALUES (2488, 'estampillaUD', 1047972, 10480, 416);
-INSERT INTO descuentos VALUES (2489, 'proCultura', 1047972, 5240, 416);
-INSERT INTO descuentos VALUES (2490, 'adultoMayor', 1047972, 5240, 416);
-INSERT INTO descuentos VALUES (2491, 'rete384', 1397296, 0, 416);
-INSERT INTO descuentos VALUES (2492, 'rete383', 165469, 0, 417);
-INSERT INTO descuentos VALUES (2493, 'reteIca', 165469, 1598, 417);
-INSERT INTO descuentos VALUES (2494, 'estampillaUD', 165469, 1655, 417);
-INSERT INTO descuentos VALUES (2495, 'proCultura', 165469, 827, 417);
-INSERT INTO descuentos VALUES (2496, 'adultoMayor', 165469, 827, 417);
-INSERT INTO descuentos VALUES (2497, 'rete384', 220626, 0, 417);
-INSERT INTO descuentos VALUES (2498, 'rete383', 873310, 0, 418);
-INSERT INTO descuentos VALUES (2499, 'reteIca', 873310, 8436, 418);
-INSERT INTO descuentos VALUES (2500, 'estampillaUD', 873310, 8733, 418);
-INSERT INTO descuentos VALUES (2501, 'proCultura', 873310, 4367, 418);
-INSERT INTO descuentos VALUES (2502, 'adultoMayor', 873310, 4367, 418);
-INSERT INTO descuentos VALUES (2503, 'rete384', 1164413, 0, 418);
-INSERT INTO descuentos VALUES (2504, 'rete383', 698647, 0, 419);
-INSERT INTO descuentos VALUES (2505, 'reteIca', 698647, 6749, 419);
-INSERT INTO descuentos VALUES (2506, 'estampillaUD', 698647, 6986, 419);
-INSERT INTO descuentos VALUES (2507, 'proCultura', 698647, 3493, 419);
-INSERT INTO descuentos VALUES (2508, 'adultoMayor', 698647, 3493, 419);
-INSERT INTO descuentos VALUES (2509, 'rete384', 931530, 0, 419);
-INSERT INTO descuentos VALUES (2510, 'rete383', 698647, 0, 420);
-INSERT INTO descuentos VALUES (2511, 'reteIca', 698647, 6749, 420);
-INSERT INTO descuentos VALUES (2512, 'estampillaUD', 698647, 6986, 420);
-INSERT INTO descuentos VALUES (2513, 'proCultura', 698647, 3493, 420);
-INSERT INTO descuentos VALUES (2514, 'adultoMayor', 698647, 3493, 420);
-INSERT INTO descuentos VALUES (2515, 'rete384', 931530, 0, 420);
 
 
 --
 -- TOC entry 4417 (class 0 OID 0)
--- Dependencies: 310
--- Name: descuentos_id_seq; Type: SEQUENCE SET; Schema: titan; Owner: -
+-- Dependencies: 396
+-- Name: descuentos_id_seq; Type: SEQUENCE SET; Schema: titan; Owner: postgres
 --
 
-SELECT pg_catalog.setval('descuentos_id_seq', 2515, true);
+SELECT pg_catalog.setval('descuentos_id_seq', 1, true);
 
 
 --
--- TOC entry 3640 (class 0 OID 36431)
--- Dependencies: 311
--- Data for Name: detalle_novedad; Type: TABLE DATA; Schema: titan; Owner: -
+-- TOC entry 3726 (class 0 OID 40776)
+-- Dependencies: 397
+-- Data for Name: detalle_novedad; Type: TABLE DATA; Schema: titan; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4418 (class 0 OID 0)
--- Dependencies: 312
--- Name: detalle_novedad_id_seq; Type: SEQUENCE SET; Schema: titan; Owner: -
+-- Dependencies: 398
+-- Name: detalle_novedad_id_seq; Type: SEQUENCE SET; Schema: titan; Owner: postgres
 --
 
 SELECT pg_catalog.setval('detalle_novedad_id_seq', 1, false);
 
 
 --
--- TOC entry 3642 (class 0 OID 36436)
--- Dependencies: 313
--- Data for Name: detalle_preliquidacion; Type: TABLE DATA; Schema: titan; Owner: -
+-- TOC entry 3728 (class 0 OID 40781)
+-- Dependencies: 399
+-- Data for Name: detalle_preliquidacion; Type: TABLE DATA; Schema: titan; Owner: postgres
 --
 
-INSERT INTO detalle_preliquidacion VALUES (1, 3039094, 1055599, NULL, 2, 1079616);
-INSERT INTO detalle_preliquidacion VALUES (1, 4242702, 1318276, NULL, 3, 1348268);
-INSERT INTO detalle_preliquidacion VALUES (1, 4242800, 527800, NULL, 4, 539808);
-INSERT INTO detalle_preliquidacion VALUES (1, 4826443, 505808, NULL, 5, 517316);
-INSERT INTO detalle_preliquidacion VALUES (1, 4903772, 791701, NULL, 6, 809712);
-INSERT INTO detalle_preliquidacion VALUES (1, 4976790, 633361, NULL, 7, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 5478045, 606969, NULL, 8, 620779);
-INSERT INTO detalle_preliquidacion VALUES (1, 6743887, 809293, NULL, 9, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 6808947, 633361, NULL, 10, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 6816778, 2732425, NULL, 11, 2794591);
-INSERT INTO detalle_preliquidacion VALUES (1, 7165116, 1821618, NULL, 12, 1863061);
-INSERT INTO detalle_preliquidacion VALUES (1, 7300821, 809293, NULL, 13, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 7315605, 1557962, NULL, 14, 1593407);
-INSERT INTO detalle_preliquidacion VALUES (1, 7332704, 747717, NULL, 15, 764728);
-INSERT INTO detalle_preliquidacion VALUES (1, 7473774, 633361, NULL, 16, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 7724669, 3073978, NULL, 17, 3143915);
-INSERT INTO detalle_preliquidacion VALUES (1, 8277260, 2157179, NULL, 18, 2206256);
-INSERT INTO detalle_preliquidacion VALUES (1, 8682227, 3163861, NULL, 19, 3235842);
-INSERT INTO detalle_preliquidacion VALUES (1, 8724617, 582415, NULL, 20, 595666);
-INSERT INTO detalle_preliquidacion VALUES (1, 8724617, 1533993, NULL, 21, 1568893);
-INSERT INTO detalle_preliquidacion VALUES (1, 9653710, 3667202, NULL, 22, 3750635);
-INSERT INTO detalle_preliquidacion VALUES (1, 10528969, 809293, NULL, 23, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 11188860, 950039, NULL, 24, 971654);
-INSERT INTO detalle_preliquidacion VALUES (1, 11252361, 2852269, NULL, 25, 2917161);
-INSERT INTO detalle_preliquidacion VALUES (1, 11275900, 633361, NULL, 26, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 12226037, 790964, NULL, 27, 808960);
-INSERT INTO detalle_preliquidacion VALUES (1, 12226037, 1054619, NULL, 28, 1078614);
-INSERT INTO detalle_preliquidacion VALUES (1, 12237136, 3073978, NULL, 29, 3143915);
-INSERT INTO detalle_preliquidacion VALUES (1, 12960080, 316679, NULL, 30, 323885);
-INSERT INTO detalle_preliquidacion VALUES (1, 12982474, 719372, NULL, 31, 735738);
-INSERT INTO detalle_preliquidacion VALUES (1, 14223932, 934777, NULL, 32, 956044);
-INSERT INTO detalle_preliquidacion VALUES (1, 14266660, 2804330, NULL, 33, 2868133);
-INSERT INTO detalle_preliquidacion VALUES (1, 14964012, 2444801, NULL, 34, 2500424);
-INSERT INTO detalle_preliquidacion VALUES (1, 15174216, 809293, NULL, 35, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 16253544, 809293, NULL, 36, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 17013465, 1917492, NULL, 37, 1961116);
-INSERT INTO detalle_preliquidacion VALUES (1, 17035813, 958746, NULL, 38, 980558);
-INSERT INTO detalle_preliquidacion VALUES (1, 17052047, 809293, NULL, 39, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 17057198, 633361, NULL, 40, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 17092970, 1055599, NULL, 41, 1079616);
-INSERT INTO detalle_preliquidacion VALUES (1, 17124178, 469156, NULL, 42, 479829);
-INSERT INTO detalle_preliquidacion VALUES (1, 17150118, 809293, NULL, 43, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 17153299, 1055599, NULL, 44, 1079616);
-INSERT INTO detalle_preliquidacion VALUES (1, 17168498, 719372, NULL, 45, 735738);
-INSERT INTO detalle_preliquidacion VALUES (1, 17192344, 1917492, NULL, 46, 1961116);
-INSERT INTO detalle_preliquidacion VALUES (1, 17220554, 316679, NULL, 47, 323885);
-INSERT INTO detalle_preliquidacion VALUES (1, 19051562, 659750, NULL, 48, 674760);
-INSERT INTO detalle_preliquidacion VALUES (1, 19053960, 809293, NULL, 49, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 19055461, 3235768, NULL, 50, 3309384);
-INSERT INTO detalle_preliquidacion VALUES (1, 19061190, 475019, NULL, 51, 485827);
-INSERT INTO detalle_preliquidacion VALUES (1, 19071485, 809293, NULL, 52, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 19071851, 1438118, NULL, 53, 1470837);
-INSERT INTO detalle_preliquidacion VALUES (1, 19077882, 1055599, NULL, 54, 1079616);
-INSERT INTO detalle_preliquidacion VALUES (1, 19078554, 809293, NULL, 55, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 19086283, 2396865, NULL, 56, 2451396);
-INSERT INTO detalle_preliquidacion VALUES (1, 19088407, 809293, NULL, 57, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 19091996, 809293, NULL, 58, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 19097454, 1055599, NULL, 59, 1079616);
-INSERT INTO detalle_preliquidacion VALUES (1, 19099699, 598174, NULL, 60, 611782);
-INSERT INTO detalle_preliquidacion VALUES (1, 19099917, 505808, NULL, 61, 517316);
-INSERT INTO detalle_preliquidacion VALUES (1, 19099917, 623185, NULL, 62, 637363);
-INSERT INTO detalle_preliquidacion VALUES (1, 19110045, 383497, NULL, 63, 392223);
-INSERT INTO detalle_preliquidacion VALUES (1, 19114493, 791701, NULL, 64, 809712);
-INSERT INTO detalle_preliquidacion VALUES (1, 19118168, 2300990, NULL, 65, 2353340);
-INSERT INTO detalle_preliquidacion VALUES (1, 19118872, 1055599, NULL, 66, 1079616);
-INSERT INTO detalle_preliquidacion VALUES (1, 19122261, 809293, NULL, 67, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 19140405, 809293, NULL, 68, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 19145527, 475019, NULL, 69, 485827);
-INSERT INTO detalle_preliquidacion VALUES (1, 19154997, 809293, NULL, 70, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 19155276, 527800, NULL, 71, 539808);
-INSERT INTO detalle_preliquidacion VALUES (1, 19156713, 2492739, NULL, 72, 2549451);
-INSERT INTO detalle_preliquidacion VALUES (1, 19158790, 1054619, NULL, 73, 1078614);
-INSERT INTO detalle_preliquidacion VALUES (1, 19158790, 1581931, NULL, 74, 1617921);
-INSERT INTO detalle_preliquidacion VALUES (1, 19165408, 1150494, NULL, 75, 1176670);
-INSERT INTO detalle_preliquidacion VALUES (1, 19165408, 1438118, NULL, 76, 1470837);
-INSERT INTO detalle_preliquidacion VALUES (1, 19175509, 3595296, NULL, 77, 3677093);
-INSERT INTO detalle_preliquidacion VALUES (1, 19179717, 1566841, NULL, 78, 1602488);
-INSERT INTO detalle_preliquidacion VALUES (1, 19183946, 1186449, NULL, 79, 1213441);
-INSERT INTO detalle_preliquidacion VALUES (1, 19183946, 2372895, NULL, 80, 2426882);
-INSERT INTO detalle_preliquidacion VALUES (1, 19188722, 633361, NULL, 81, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 19191803, 1246371, NULL, 82, 1274726);
-INSERT INTO detalle_preliquidacion VALUES (1, 19194633, 606969, NULL, 83, 620779);
-INSERT INTO detalle_preliquidacion VALUES (1, 19196428, 2109240, NULL, 84, 2157228);
-INSERT INTO detalle_preliquidacion VALUES (1, 19201678, 1055599, NULL, 85, 1079616);
-INSERT INTO detalle_preliquidacion VALUES (1, 19205012, 606969, NULL, 86, 620779);
-INSERT INTO detalle_preliquidacion VALUES (1, 19214047, 633361, NULL, 87, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 19221283, 299087, NULL, 88, 305891);
-INSERT INTO detalle_preliquidacion VALUES (1, 19238867, 633361, NULL, 89, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 19241728, 1366213, NULL, 90, 1397296);
-INSERT INTO detalle_preliquidacion VALUES (1, 19255446, 958746, NULL, 91, 980558);
-INSERT INTO detalle_preliquidacion VALUES (1, 19255446, 3235768, NULL, 92, 3309384);
-INSERT INTO detalle_preliquidacion VALUES (1, 19257731, 3032032, NULL, 93, 3101015);
-INSERT INTO detalle_preliquidacion VALUES (1, 19260753, 623185, NULL, 94, 637363);
-INSERT INTO detalle_preliquidacion VALUES (1, 19270232, 809293, NULL, 95, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 19277586, 2804330, NULL, 96, 2868133);
-INSERT INTO detalle_preliquidacion VALUES (1, 19289331, 527800, NULL, 97, 539808);
-INSERT INTO detalle_preliquidacion VALUES (1, 19289331, 1438118, NULL, 98, 1470837);
-INSERT INTO detalle_preliquidacion VALUES (1, 19293953, 2103248, NULL, 99, 2151100);
-INSERT INTO detalle_preliquidacion VALUES (1, 19297861, 809293, NULL, 100, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 19306909, 1533993, NULL, 101, 1568893);
-INSERT INTO detalle_preliquidacion VALUES (1, 19315280, 2109240, NULL, 102, 2157228);
-INSERT INTO detalle_preliquidacion VALUES (1, 19315280, 1318276, NULL, 103, 1348268);
-INSERT INTO detalle_preliquidacion VALUES (1, 19324569, 809293, NULL, 104, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 19325426, 809293, NULL, 105, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 19327316, 934777, NULL, 106, 956044);
-INSERT INTO detalle_preliquidacion VALUES (1, 19331673, 2372895, NULL, 107, 2426882);
-INSERT INTO detalle_preliquidacion VALUES (1, 19334916, 950039, NULL, 108, 971654);
-INSERT INTO detalle_preliquidacion VALUES (1, 19346572, 2109237, NULL, 109, 2157225);
-INSERT INTO detalle_preliquidacion VALUES (1, 19350861, 3559344, NULL, 110, 3640322);
-INSERT INTO detalle_preliquidacion VALUES (1, 19351620, 809293, NULL, 111, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 19378504, 3559344, NULL, 112, 3640322);
-INSERT INTO detalle_preliquidacion VALUES (1, 19393150, 2732425, NULL, 113, 2794591);
-INSERT INTO detalle_preliquidacion VALUES (1, 19394669, 809293, NULL, 114, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 19402255, 351866, NULL, 115, 359872);
-INSERT INTO detalle_preliquidacion VALUES (1, 19405238, 2414840, NULL, 116, 2469781);
-INSERT INTO detalle_preliquidacion VALUES (1, 19417230, 1138510, NULL, 117, 1164413);
-INSERT INTO detalle_preliquidacion VALUES (1, 19418093, 633361, NULL, 118, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 19421245, 2804330, NULL, 119, 2868133);
-INSERT INTO detalle_preliquidacion VALUES (1, 19422121, 2588614, NULL, 120, 2647507);
-INSERT INTO detalle_preliquidacion VALUES (1, 19423079, 606969, NULL, 121, 620779);
-INSERT INTO detalle_preliquidacion VALUES (1, 19433505, 896023, NULL, 122, 916409);
-INSERT INTO detalle_preliquidacion VALUES (1, 19437710, 606969, NULL, 123, 620779);
-INSERT INTO detalle_preliquidacion VALUES (1, 19437937, 2876238, NULL, 124, 2941675);
-INSERT INTO detalle_preliquidacion VALUES (1, 19442835, 611201, NULL, 125, 625106);
-INSERT INTO detalle_preliquidacion VALUES (1, 19461648, 1821618, NULL, 126, 1863061);
-INSERT INTO detalle_preliquidacion VALUES (1, 19466738, 1222399, NULL, 127, 1250210);
-INSERT INTO detalle_preliquidacion VALUES (1, 19467661, 1629868, NULL, 128, 1666949);
-INSERT INTO detalle_preliquidacion VALUES (1, 19467661, 1629868, NULL, 129, 1666949);
-INSERT INTO detalle_preliquidacion VALUES (1, 19467661, 475019, NULL, 130, 485827);
-INSERT INTO detalle_preliquidacion VALUES (1, 19470264, 623185, NULL, 131, 637363);
-INSERT INTO detalle_preliquidacion VALUES (1, 19473974, 683106, NULL, 132, 698648);
-INSERT INTO detalle_preliquidacion VALUES (1, 19483959, 1318276, NULL, 133, 1348268);
-INSERT INTO detalle_preliquidacion VALUES (1, 19483959, 1581931, NULL, 134, 1617921);
-INSERT INTO detalle_preliquidacion VALUES (1, 19491488, 809293, NULL, 135, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 19492129, 246306, NULL, 136, 251910);
-INSERT INTO detalle_preliquidacion VALUES (1, 19493899, 809293, NULL, 137, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 20525254, 1055599, NULL, 138, 1079616);
-INSERT INTO detalle_preliquidacion VALUES (1, 21112709, 809293, NULL, 139, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 23350114, 3559344, NULL, 140, 3640322);
-INSERT INTO detalle_preliquidacion VALUES (1, 23495318, 1375201, NULL, 141, 1406488);
-INSERT INTO detalle_preliquidacion VALUES (1, 23551266, 1869554, NULL, 142, 1912088);
-INSERT INTO detalle_preliquidacion VALUES (1, 23554403, 3559344, NULL, 143, 3640322);
-INSERT INTO detalle_preliquidacion VALUES (1, 30206629, 2696472, NULL, 144, 2757820);
-INSERT INTO detalle_preliquidacion VALUES (1, 37831737, 923651, NULL, 145, 944664);
-INSERT INTO detalle_preliquidacion VALUES (1, 38240308, 2300990, NULL, 146, 2353340);
-INSERT INTO detalle_preliquidacion VALUES (1, 38252071, 2157179, NULL, 147, 2206256);
-INSERT INTO detalle_preliquidacion VALUES (1, 39525241, 809293, NULL, 148, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 39534107, 1366213, NULL, 149, 1397296);
-INSERT INTO detalle_preliquidacion VALUES (1, 39650817, 809293, NULL, 150, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 39689918, 2876238, NULL, 151, 2941675);
-INSERT INTO detalle_preliquidacion VALUES (1, 39717991, 3073978, NULL, 152, 3143915);
-INSERT INTO detalle_preliquidacion VALUES (1, 39761555, 1366213, NULL, 153, 1397296);
-INSERT INTO detalle_preliquidacion VALUES (1, 40370518, 1366213, NULL, 154, 1397296);
-INSERT INTO detalle_preliquidacion VALUES (1, 40402718, 809293, NULL, 155, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 40760191, 1055599, NULL, 156, 1079616);
-INSERT INTO detalle_preliquidacion VALUES (1, 41323883, 950039, NULL, 157, 971654);
-INSERT INTO detalle_preliquidacion VALUES (1, 41389639, 1055599, NULL, 158, 1079616);
-INSERT INTO detalle_preliquidacion VALUES (1, 41410118, 633361, NULL, 159, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 41508866, 809293, NULL, 160, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 41521187, 809293, NULL, 161, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 41551174, 311592, NULL, 162, 318681);
-INSERT INTO detalle_preliquidacion VALUES (1, 41595931, 809293, NULL, 163, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 41600835, 1055599, NULL, 164, 1079616);
-INSERT INTO detalle_preliquidacion VALUES (1, 41607387, 809293, NULL, 165, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 41628111, 2157179, NULL, 166, 2206256);
-INSERT INTO detalle_preliquidacion VALUES (1, 41632229, 410512, NULL, 167, 419851);
-INSERT INTO detalle_preliquidacion VALUES (1, 41636318, 1557960, NULL, 168, 1593405);
-INSERT INTO detalle_preliquidacion VALUES (1, 41671195, 467388, NULL, 169, 478022);
-INSERT INTO detalle_preliquidacion VALUES (1, 41672059, 3163861, NULL, 170, 3235842);
-INSERT INTO detalle_preliquidacion VALUES (1, 41695707, 950039, NULL, 171, 971654);
-INSERT INTO detalle_preliquidacion VALUES (1, 41728690, 606969, NULL, 172, 620779);
-INSERT INTO detalle_preliquidacion VALUES (1, 41766203, 809293, NULL, 173, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 41782864, 1055599, NULL, 174, 1079616);
-INSERT INTO detalle_preliquidacion VALUES (1, 41785555, 2157179, NULL, 175, 2206256);
-INSERT INTO detalle_preliquidacion VALUES (1, 41785808, 1055599, NULL, 176, 1079616);
-INSERT INTO detalle_preliquidacion VALUES (1, 45455721, 1533993, NULL, 177, 1568893);
-INSERT INTO detalle_preliquidacion VALUES (1, 51553280, 950039, NULL, 178, 971654);
-INSERT INTO detalle_preliquidacion VALUES (1, 51581998, 910809, NULL, 179, 931530);
-INSERT INTO detalle_preliquidacion VALUES (1, 51581998, 1366213, NULL, 180, 1397296);
-INSERT INTO detalle_preliquidacion VALUES (1, 51610505, 606969, NULL, 181, 620779);
-INSERT INTO detalle_preliquidacion VALUES (1, 51610577, 1821618, NULL, 182, 1863061);
-INSERT INTO detalle_preliquidacion VALUES (1, 51610837, 809293, NULL, 183, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 51680658, 1246369, NULL, 184, 1274724);
-INSERT INTO detalle_preliquidacion VALUES (1, 51703985, 1581931, NULL, 185, 1617921);
-INSERT INTO detalle_preliquidacion VALUES (1, 51703985, 1977413, NULL, 186, 2022401);
-INSERT INTO detalle_preliquidacion VALUES (1, 51708754, 950039, NULL, 187, 971654);
-INSERT INTO detalle_preliquidacion VALUES (1, 51713373, 1150494, NULL, 188, 1176670);
-INSERT INTO detalle_preliquidacion VALUES (1, 51740468, 809293, NULL, 189, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 51740903, 2732425, NULL, 190, 2794591);
-INSERT INTO detalle_preliquidacion VALUES (1, 51764897, 2804330, NULL, 191, 2868133);
-INSERT INTO detalle_preliquidacion VALUES (1, 51802617, 3667202, NULL, 192, 3750635);
-INSERT INTO detalle_preliquidacion VALUES (1, 51807811, 498477, NULL, 193, 509819);
-INSERT INTO detalle_preliquidacion VALUES (1, 51819160, 809293, NULL, 194, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 51822635, 2588614, NULL, 195, 2647507);
-INSERT INTO detalle_preliquidacion VALUES (1, 51838555, 2732425, NULL, 196, 2794591);
-INSERT INTO detalle_preliquidacion VALUES (1, 51876506, 1055599, NULL, 197, 1079616);
-INSERT INTO detalle_preliquidacion VALUES (1, 51898896, 623185, NULL, 198, 637363);
-INSERT INTO detalle_preliquidacion VALUES (1, 51905334, 1055599, NULL, 199, 1079616);
-INSERT INTO detalle_preliquidacion VALUES (1, 51952467, 1150494, NULL, 200, 1176670);
-INSERT INTO detalle_preliquidacion VALUES (1, 51960414, 764333, NULL, 201, 781722);
-INSERT INTO detalle_preliquidacion VALUES (1, 51961909, 923651, NULL, 202, 944664);
-INSERT INTO detalle_preliquidacion VALUES (1, 51968215, 2444797, NULL, 203, 2500420);
-INSERT INTO detalle_preliquidacion VALUES (1, 51971002, 633361, NULL, 204, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 51975576, 950039, NULL, 205, 971654);
-INSERT INTO detalle_preliquidacion VALUES (1, 51982893, 311592, NULL, 206, 318681);
-INSERT INTO detalle_preliquidacion VALUES (1, 51983444, 606969, NULL, 207, 620779);
-INSERT INTO detalle_preliquidacion VALUES (1, 52017024, 809293, NULL, 208, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 52032337, 1366213, NULL, 209, 1397296);
-INSERT INTO detalle_preliquidacion VALUES (1, 52082221, 351866, NULL, 210, 359872);
-INSERT INTO detalle_preliquidacion VALUES (1, 52082587, 809293, NULL, 211, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 52108111, 1150494, NULL, 212, 1176670);
-INSERT INTO detalle_preliquidacion VALUES (1, 52109218, 809293, NULL, 213, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 52113879, 809293, NULL, 214, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 52114561, 404647, NULL, 215, 413853);
-INSERT INTO detalle_preliquidacion VALUES (1, 52116364, 791701, NULL, 216, 809712);
-INSERT INTO detalle_preliquidacion VALUES (1, 52147349, 404647, NULL, 217, 413853);
-INSERT INTO detalle_preliquidacion VALUES (1, 52154118, 3163861, NULL, 218, 3235842);
-INSERT INTO detalle_preliquidacion VALUES (1, 52163872, 606969, NULL, 219, 620779);
-INSERT INTO detalle_preliquidacion VALUES (1, 52188269, 3259736, NULL, 220, 3333898);
-INSERT INTO detalle_preliquidacion VALUES (1, 52201858, 809293, NULL, 221, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 52205419, 1222401, NULL, 222, 1250212);
-INSERT INTO detalle_preliquidacion VALUES (1, 52271068, 505808, NULL, 223, 517316);
-INSERT INTO detalle_preliquidacion VALUES (1, 52297833, 404647, NULL, 224, 413853);
-INSERT INTO detalle_preliquidacion VALUES (1, 52297833, 168603, NULL, 225, 172439);
-INSERT INTO detalle_preliquidacion VALUES (1, 52310001, 1707765, NULL, 226, 1746619);
-INSERT INTO detalle_preliquidacion VALUES (1, 52310001, 1024659, NULL, 227, 1047972);
-INSERT INTO detalle_preliquidacion VALUES (1, 52376700, 1725742, NULL, 228, 1765005);
-INSERT INTO detalle_preliquidacion VALUES (1, 52379603, 958746, NULL, 229, 980558);
-INSERT INTO detalle_preliquidacion VALUES (1, 52410996, 934777, NULL, 230, 956044);
-INSERT INTO detalle_preliquidacion VALUES (1, 52426307, 950039, NULL, 231, 971654);
-INSERT INTO detalle_preliquidacion VALUES (1, 52443628, 311592, NULL, 232, 318681);
-INSERT INTO detalle_preliquidacion VALUES (1, 52457778, 809293, NULL, 233, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 52469447, 311592, NULL, 234, 318681);
-INSERT INTO detalle_preliquidacion VALUES (1, 52500030, 606969, NULL, 235, 620779);
-INSERT INTO detalle_preliquidacion VALUES (1, 52532855, 2013365, NULL, 236, 2059172);
-INSERT INTO detalle_preliquidacion VALUES (1, 52532855, 377506, NULL, 237, 386095);
-INSERT INTO detalle_preliquidacion VALUES (1, 52536233, 633361, NULL, 238, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 52581534, 1055599, NULL, 239, 1079616);
-INSERT INTO detalle_preliquidacion VALUES (1, 52729271, 809293, NULL, 240, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 52757222, 633361, NULL, 241, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 52788136, 2492739, NULL, 242, 2549451);
-INSERT INTO detalle_preliquidacion VALUES (1, 52816242, 809293, NULL, 243, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 52888442, 606969, NULL, 244, 620779);
-INSERT INTO detalle_preliquidacion VALUES (1, 52888442, 233694, NULL, 245, 239011);
-INSERT INTO detalle_preliquidacion VALUES (1, 52972886, 719372, NULL, 246, 735738);
-INSERT INTO detalle_preliquidacion VALUES (1, 53016205, 809293, NULL, 247, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 65497138, 1078589, NULL, 248, 1103128);
-INSERT INTO detalle_preliquidacion VALUES (1, 65760563, 809293, NULL, 249, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 71790230, 1222401, NULL, 250, 1250212);
-INSERT INTO detalle_preliquidacion VALUES (1, 74300107, 809293, NULL, 251, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 74302657, 1791655, NULL, 252, 1832418);
-INSERT INTO detalle_preliquidacion VALUES (1, 74371532, 2277022, NULL, 253, 2328826);
-INSERT INTO detalle_preliquidacion VALUES (1, 74371532, 683106, NULL, 254, 698648);
-INSERT INTO detalle_preliquidacion VALUES (1, 74373175, 1366213, NULL, 255, 1397296);
-INSERT INTO detalle_preliquidacion VALUES (1, 74373175, 1707765, NULL, 256, 1746619);
-INSERT INTO detalle_preliquidacion VALUES (1, 75072308, 633361, NULL, 257, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 77033291, 3235768, NULL, 258, 3309384);
-INSERT INTO detalle_preliquidacion VALUES (1, 79045552, 1246371, NULL, 259, 1274726);
-INSERT INTO detalle_preliquidacion VALUES (1, 79047416, 809293, NULL, 260, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79052848, 1055599, NULL, 261, 1079616);
-INSERT INTO detalle_preliquidacion VALUES (1, 79102435, 606969, NULL, 262, 620779);
-INSERT INTO detalle_preliquidacion VALUES (1, 79105612, 404647, NULL, 263, 413853);
-INSERT INTO detalle_preliquidacion VALUES (1, 79105866, 633361, NULL, 264, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 79117615, 809293, NULL, 265, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79148264, 910809, NULL, 266, 931530);
-INSERT INTO detalle_preliquidacion VALUES (1, 79152329, 809293, NULL, 267, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79207497, 2732425, NULL, 268, 2794591);
-INSERT INTO detalle_preliquidacion VALUES (1, 79243024, 2300990, NULL, 269, 2353340);
-INSERT INTO detalle_preliquidacion VALUES (1, 79243824, 809293, NULL, 270, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79261697, 809293, NULL, 271, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79264664, 809293, NULL, 272, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79269121, 606969, NULL, 273, 620779);
-INSERT INTO detalle_preliquidacion VALUES (1, 79270174, 2561649, NULL, 274, 2619929);
-INSERT INTO detalle_preliquidacion VALUES (1, 79276643, 1366213, NULL, 275, 1397296);
-INSERT INTO detalle_preliquidacion VALUES (1, 79293930, 1533993, NULL, 276, 1568893);
-INSERT INTO detalle_preliquidacion VALUES (1, 79293930, 1054619, NULL, 277, 1078614);
-INSERT INTO detalle_preliquidacion VALUES (1, 79297396, 3163861, NULL, 278, 3235842);
-INSERT INTO detalle_preliquidacion VALUES (1, 79301793, 809293, NULL, 279, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79308547, 606969, NULL, 280, 620779);
-INSERT INTO detalle_preliquidacion VALUES (1, 79318031, 809293, NULL, 281, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79318391, 809293, NULL, 282, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79327451, 809293, NULL, 283, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79327682, 1533993, NULL, 284, 1568893);
-INSERT INTO detalle_preliquidacion VALUES (1, 79327682, 479372, NULL, 285, 490279);
-INSERT INTO detalle_preliquidacion VALUES (1, 79339447, 683106, NULL, 286, 698648);
-INSERT INTO detalle_preliquidacion VALUES (1, 79344421, 573249, NULL, 287, 586292);
-INSERT INTO detalle_preliquidacion VALUES (1, 79346220, 1055599, NULL, 288, 1079616);
-INSERT INTO detalle_preliquidacion VALUES (1, 79353782, 2444801, NULL, 289, 2500424);
-INSERT INTO detalle_preliquidacion VALUES (1, 79356549, 809293, NULL, 290, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79365714, 2732425, NULL, 291, 2794591);
-INSERT INTO detalle_preliquidacion VALUES (1, 79382488, 1533993, NULL, 292, 1568893);
-INSERT INTO detalle_preliquidacion VALUES (1, 79382488, 862871, NULL, 293, 882502);
-INSERT INTO detalle_preliquidacion VALUES (1, 79384890, 809293, NULL, 294, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79391436, 633361, NULL, 295, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 79399925, 809293, NULL, 296, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79401058, 719372, NULL, 297, 735738);
-INSERT INTO detalle_preliquidacion VALUES (1, 79405513, 809293, NULL, 298, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79411609, 623185, NULL, 299, 637363);
-INSERT INTO detalle_preliquidacion VALUES (1, 79411667, 2732425, NULL, 300, 2794591);
-INSERT INTO detalle_preliquidacion VALUES (1, 79418869, 606969, NULL, 301, 620779);
-INSERT INTO detalle_preliquidacion VALUES (1, 79419029, 2103248, NULL, 302, 2151100);
-INSERT INTO detalle_preliquidacion VALUES (1, 79420694, 809293, NULL, 303, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79420851, 809293, NULL, 304, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79432645, 2732425, NULL, 305, 2794591);
-INSERT INTO detalle_preliquidacion VALUES (1, 79436614, 809293, NULL, 306, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79453999, 311592, NULL, 307, 318681);
-INSERT INTO detalle_preliquidacion VALUES (1, 79458115, 762378, NULL, 308, 779723);
-INSERT INTO detalle_preliquidacion VALUES (1, 79460401, 623185, NULL, 309, 637363);
-INSERT INTO detalle_preliquidacion VALUES (1, 79461906, 1533993, NULL, 310, 1568893);
-INSERT INTO detalle_preliquidacion VALUES (1, 79469642, 2996080, NULL, 311, 3064244);
-INSERT INTO detalle_preliquidacion VALUES (1, 79471198, 1533993, NULL, 312, 1568893);
-INSERT INTO detalle_preliquidacion VALUES (1, 79483930, 562987, NULL, 313, 575795);
-INSERT INTO detalle_preliquidacion VALUES (1, 79484926, 606969, NULL, 314, 620779);
-INSERT INTO detalle_preliquidacion VALUES (1, 79490190, 1150494, NULL, 315, 1176670);
-INSERT INTO detalle_preliquidacion VALUES (1, 79493825, 2588614, NULL, 316, 2647507);
-INSERT INTO detalle_preliquidacion VALUES (1, 79494008, 809293, NULL, 317, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79500608, 1246371, NULL, 318, 1274726);
-INSERT INTO detalle_preliquidacion VALUES (1, 79500808, 606969, NULL, 319, 620779);
-INSERT INTO detalle_preliquidacion VALUES (1, 79505180, 2732425, NULL, 320, 2794591);
-INSERT INTO detalle_preliquidacion VALUES (1, 79508767, 1366213, NULL, 321, 1397296);
-INSERT INTO detalle_preliquidacion VALUES (1, 79508767, 1707765, NULL, 322, 1746619);
-INSERT INTO detalle_preliquidacion VALUES (1, 79510681, 809293, NULL, 323, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79513808, 1246371, NULL, 324, 1274726);
-INSERT INTO detalle_preliquidacion VALUES (1, 79516983, 606969, NULL, 325, 620779);
-INSERT INTO detalle_preliquidacion VALUES (1, 79533899, 1533993, NULL, 326, 1568893);
-INSERT INTO detalle_preliquidacion VALUES (1, 79537607, 862871, NULL, 327, 882502);
-INSERT INTO detalle_preliquidacion VALUES (1, 79537607, 1533993, NULL, 328, 1568893);
-INSERT INTO detalle_preliquidacion VALUES (1, 79546301, 1581931, NULL, 329, 1617921);
-INSERT INTO detalle_preliquidacion VALUES (1, 79548029, 311592, NULL, 330, 318681);
-INSERT INTO detalle_preliquidacion VALUES (1, 79557627, 633361, NULL, 331, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 79560853, 1725742, NULL, 332, 1765005);
-INSERT INTO detalle_preliquidacion VALUES (1, 79565067, 809293, NULL, 333, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79571941, 1438118, NULL, 334, 1470837);
-INSERT INTO detalle_preliquidacion VALUES (1, 79571941, 1150494, NULL, 335, 1176670);
-INSERT INTO detalle_preliquidacion VALUES (1, 79572003, 3073978, NULL, 336, 3143915);
-INSERT INTO detalle_preliquidacion VALUES (1, 79572003, 485365, NULL, 337, 496408);
-INSERT INTO detalle_preliquidacion VALUES (1, 79574820, 475019, NULL, 338, 485827);
-INSERT INTO detalle_preliquidacion VALUES (1, 79579669, 809293, NULL, 339, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79581297, 809293, NULL, 340, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79597187, 633361, NULL, 341, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 79606811, 809293, NULL, 342, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79621940, 505808, NULL, 343, 517316);
-INSERT INTO detalle_preliquidacion VALUES (1, 79628115, 1869554, NULL, 344, 1912088);
-INSERT INTO detalle_preliquidacion VALUES (1, 79655614, 1342244, NULL, 345, 1372782);
-INSERT INTO detalle_preliquidacion VALUES (1, 79657603, 1138510, NULL, 346, 1164413);
-INSERT INTO detalle_preliquidacion VALUES (1, 79657603, 1821618, NULL, 347, 1863061);
-INSERT INTO detalle_preliquidacion VALUES (1, 79667857, 809293, NULL, 348, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79671115, 1533993, NULL, 349, 1568893);
-INSERT INTO detalle_preliquidacion VALUES (1, 79695071, 809293, NULL, 350, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79702248, 1533993, NULL, 351, 1568893);
-INSERT INTO detalle_preliquidacion VALUES (1, 79708124, 1533993, NULL, 352, 1568893);
-INSERT INTO detalle_preliquidacion VALUES (1, 79709887, 606969, NULL, 353, 620779);
-INSERT INTO detalle_preliquidacion VALUES (1, 79722438, 950039, NULL, 354, 971654);
-INSERT INTO detalle_preliquidacion VALUES (1, 79743094, 809293, NULL, 355, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79777053, 1246371, NULL, 356, 1274726);
-INSERT INTO detalle_preliquidacion VALUES (1, 79777053, 623185, NULL, 357, 637363);
-INSERT INTO detalle_preliquidacion VALUES (1, 79800847, 475019, NULL, 358, 485827);
-INSERT INTO detalle_preliquidacion VALUES (1, 79804578, 809293, NULL, 359, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79821918, 809293, NULL, 360, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79843820, 809293, NULL, 361, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79855440, 633361, NULL, 362, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 79859179, 809293, NULL, 363, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 79860285, 1222401, NULL, 364, 1250212);
-INSERT INTO detalle_preliquidacion VALUES (1, 79871384, 404647, NULL, 365, 413853);
-INSERT INTO detalle_preliquidacion VALUES (1, 79871384, 382166, NULL, 366, 390861);
-INSERT INTO detalle_preliquidacion VALUES (1, 79884956, 475019, NULL, 367, 485827);
-INSERT INTO detalle_preliquidacion VALUES (1, 79942070, 683106, NULL, 368, 698648);
-INSERT INTO detalle_preliquidacion VALUES (1, 79943556, 1533993, NULL, 369, 1568893);
-INSERT INTO detalle_preliquidacion VALUES (1, 79959928, 2804330, NULL, 370, 2868133);
-INSERT INTO detalle_preliquidacion VALUES (1, 79962511, 404647, NULL, 371, 413853);
-INSERT INTO detalle_preliquidacion VALUES (1, 79962511, 382166, NULL, 372, 390861);
-INSERT INTO detalle_preliquidacion VALUES (1, 79963021, 382166, NULL, 373, 390861);
-INSERT INTO detalle_preliquidacion VALUES (1, 79973967, 1342244, NULL, 374, 1372782);
-INSERT INTO detalle_preliquidacion VALUES (1, 80006490, 1246371, NULL, 375, 1274726);
-INSERT INTO detalle_preliquidacion VALUES (1, 80033827, 1533993, NULL, 376, 1568893);
-INSERT INTO detalle_preliquidacion VALUES (1, 80037717, 475019, NULL, 377, 485827);
-INSERT INTO detalle_preliquidacion VALUES (1, 80070859, 606969, NULL, 378, 620779);
-INSERT INTO detalle_preliquidacion VALUES (1, 80100689, 606969, NULL, 379, 620779);
-INSERT INTO detalle_preliquidacion VALUES (1, 80123268, 950039, NULL, 380, 971654);
-INSERT INTO detalle_preliquidacion VALUES (1, 80153178, 475019, NULL, 381, 485827);
-INSERT INTO detalle_preliquidacion VALUES (1, 80182018, 809293, NULL, 382, 827706);
-INSERT INTO detalle_preliquidacion VALUES (1, 80191774, 475019, NULL, 383, 485827);
-INSERT INTO detalle_preliquidacion VALUES (1, 80235330, 716775, NULL, 384, 733082);
-INSERT INTO detalle_preliquidacion VALUES (1, 80250272, 633361, NULL, 385, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 80360244, 633361, NULL, 386, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 80372346, 475019, NULL, 387, 485827);
-INSERT INTO detalle_preliquidacion VALUES (1, 80373299, 633361, NULL, 388, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 80770063, 606969, NULL, 389, 620779);
-INSERT INTO detalle_preliquidacion VALUES (1, 80778628, 475019, NULL, 390, 485827);
-INSERT INTO detalle_preliquidacion VALUES (1, 80821025, 573249, NULL, 391, 586292);
-INSERT INTO detalle_preliquidacion VALUES (1, 86039591, 2300990, NULL, 392, 2353340);
-INSERT INTO detalle_preliquidacion VALUES (1, 86052448, 1533993, NULL, 393, 1568893);
-INSERT INTO detalle_preliquidacion VALUES (1, 88139621, 2732425, NULL, 394, 2794591);
-INSERT INTO detalle_preliquidacion VALUES (1, 88139879, 623185, NULL, 395, 637363);
-INSERT INTO detalle_preliquidacion VALUES (1, 93373537, 350543, NULL, 396, 358517);
-INSERT INTO detalle_preliquidacion VALUES (1, 93401117, 1821618, NULL, 397, 1863061);
-INSERT INTO detalle_preliquidacion VALUES (1, 1010171865, 539529, NULL, 398, 551804);
-INSERT INTO detalle_preliquidacion VALUES (1, 1023868613, 633361, NULL, 399, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 1024500079, 633361, NULL, 400, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 1026257638, 633361, NULL, 401, 647770);
-INSERT INTO detalle_preliquidacion VALUES (1, 1030546628, 475019, NULL, 402, 485827);
-INSERT INTO detalle_preliquidacion VALUES (1, 114753, 1055599, NULL, 403, 1079616);
-INSERT INTO detalle_preliquidacion VALUES (1, 193535, 1917492, NULL, 404, 1961116);
-INSERT INTO detalle_preliquidacion VALUES (1, 197019, 3559344, NULL, 405, 3640322);
-INSERT INTO detalle_preliquidacion VALUES (1, 268856, 3073978, NULL, 406, 3143915);
-INSERT INTO detalle_preliquidacion VALUES (1, 273795, 1055599, NULL, 407, 1079616);
-INSERT INTO detalle_preliquidacion VALUES (1, 282028, 719372, NULL, 408, 735738);
-INSERT INTO detalle_preliquidacion VALUES (1, 328963, 1917492, NULL, 409, 1961116);
-INSERT INTO detalle_preliquidacion VALUES (1, 328963, 2396865, NULL, 410, 2451396);
-INSERT INTO detalle_preliquidacion VALUES (1, 364014, 3235768, NULL, 411, 3309384);
-INSERT INTO detalle_preliquidacion VALUES (1, 367547, 3355605, NULL, 412, 3431949);
-INSERT INTO detalle_preliquidacion VALUES (1, 88233355, 910809, NULL, 413, 931530);
-INSERT INTO detalle_preliquidacion VALUES (1, 91157701, 910809, NULL, 414, 931530);
-INSERT INTO detalle_preliquidacion VALUES (1, 91157701, 143811, NULL, 415, 147084);
-INSERT INTO detalle_preliquidacion VALUES (1, 91157701, 1366213, NULL, 416, 1397296);
-INSERT INTO detalle_preliquidacion VALUES (1, 91157701, 215719, NULL, 417, 220626);
-INSERT INTO detalle_preliquidacion VALUES (1, 91291766, 1138510, NULL, 418, 1164413);
-INSERT INTO detalle_preliquidacion VALUES (1, 91291766, 910809, NULL, 419, 931530);
-INSERT INTO detalle_preliquidacion VALUES (1, 93360324, 910809, NULL, 420, 931530);
 
 
 --
 -- TOC entry 4419 (class 0 OID 0)
--- Dependencies: 314
--- Name: detalle_preliquidacion_id_seq; Type: SEQUENCE SET; Schema: titan; Owner: -
+-- Dependencies: 400
+-- Name: detalle_preliquidacion_id_seq; Type: SEQUENCE SET; Schema: titan; Owner: postgres
 --
 
-SELECT pg_catalog.setval('detalle_preliquidacion_id_seq', 420, true);
+SELECT pg_catalog.setval('detalle_preliquidacion_id_seq', 1, true);
 
 
 --
--- TOC entry 3644 (class 0 OID 36441)
--- Dependencies: 315
--- Data for Name: nomina; Type: TABLE DATA; Schema: titan; Owner: -
+-- TOC entry 3730 (class 0 OID 40786)
+-- Dependencies: 401
+-- Data for Name: nomina; Type: TABLE DATA; Schema: titan; Owner: postgres
 --
 
-INSERT INTO nomina VALUES (1, 1, 'prueba', 'prueba', 'Periodica', 'Activo', '2016');
 
 
 --
 -- TOC entry 4420 (class 0 OID 0)
--- Dependencies: 316
--- Name: nomina_id_seq; Type: SEQUENCE SET; Schema: titan; Owner: -
+-- Dependencies: 402
+-- Name: nomina_id_seq; Type: SEQUENCE SET; Schema: titan; Owner: postgres
 --
 
 SELECT pg_catalog.setval('nomina_id_seq', 1, true);
 
 
 --
--- TOC entry 3646 (class 0 OID 36448)
--- Dependencies: 317
--- Data for Name: novedad; Type: TABLE DATA; Schema: titan; Owner: -
+-- TOC entry 3732 (class 0 OID 40793)
+-- Dependencies: 403
+-- Data for Name: novedad; Type: TABLE DATA; Schema: titan; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3647 (class 0 OID 36457)
--- Dependencies: 318
--- Data for Name: novedad_aplicada; Type: TABLE DATA; Schema: titan; Owner: -
+-- TOC entry 3733 (class 0 OID 40802)
+-- Dependencies: 404
+-- Data for Name: novedad_aplicada; Type: TABLE DATA; Schema: titan; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4421 (class 0 OID 0)
--- Dependencies: 319
--- Name: novedad_aplicada_id_seq; Type: SEQUENCE SET; Schema: titan; Owner: -
+-- Dependencies: 405
+-- Name: novedad_aplicada_id_seq; Type: SEQUENCE SET; Schema: titan; Owner: postgres
 --
 
 SELECT pg_catalog.setval('novedad_aplicada_id_seq', 1, false);
@@ -30059,60 +27589,59 @@ SELECT pg_catalog.setval('novedad_aplicada_id_seq', 1, false);
 
 --
 -- TOC entry 4422 (class 0 OID 0)
--- Dependencies: 320
--- Name: novedad_id_seq; Type: SEQUENCE SET; Schema: titan; Owner: -
+-- Dependencies: 406
+-- Name: novedad_id_seq; Type: SEQUENCE SET; Schema: titan; Owner: postgres
 --
 
 SELECT pg_catalog.setval('novedad_id_seq', 1, false);
 
 
 --
--- TOC entry 3650 (class 0 OID 36464)
--- Dependencies: 321
--- Data for Name: parametro_liquidacion; Type: TABLE DATA; Schema: titan; Owner: -
+-- TOC entry 3736 (class 0 OID 40809)
+-- Dependencies: 407
+-- Data for Name: parametro_liquidacion; Type: TABLE DATA; Schema: titan; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4423 (class 0 OID 0)
--- Dependencies: 322
--- Name: parametro_liquidacion_id_seq; Type: SEQUENCE SET; Schema: titan; Owner: -
+-- Dependencies: 408
+-- Name: parametro_liquidacion_id_seq; Type: SEQUENCE SET; Schema: titan; Owner: postgres
 --
 
 SELECT pg_catalog.setval('parametro_liquidacion_id_seq', 1, false);
 
 
 --
--- TOC entry 3652 (class 0 OID 36472)
--- Dependencies: 323
--- Data for Name: preliquidacion; Type: TABLE DATA; Schema: titan; Owner: -
+-- TOC entry 3738 (class 0 OID 40817)
+-- Dependencies: 409
+-- Data for Name: preliquidacion; Type: TABLE DATA; Schema: titan; Owner: postgres
 --
 
-INSERT INTO preliquidacion VALUES (1, 'Prueba', 1, 1, 'Activo', '2016-08-01', 'prueba', '2016-09-01', '2016-09-30');
 
 
 --
 -- TOC entry 4424 (class 0 OID 0)
--- Dependencies: 324
--- Name: preliquidacion_id_seq; Type: SEQUENCE SET; Schema: titan; Owner: -
+-- Dependencies: 410
+-- Name: preliquidacion_id_seq; Type: SEQUENCE SET; Schema: titan; Owner: postgres
 --
 
 SELECT pg_catalog.setval('preliquidacion_id_seq', 1, true);
 
 
 --
--- TOC entry 3654 (class 0 OID 36481)
--- Dependencies: 325
--- Data for Name: variable; Type: TABLE DATA; Schema: titan; Owner: -
+-- TOC entry 3740 (class 0 OID 40826)
+-- Dependencies: 411
+-- Data for Name: variable; Type: TABLE DATA; Schema: titan; Owner: postgres
 --
 
 
 
 --
 -- TOC entry 4425 (class 0 OID 0)
--- Dependencies: 326
--- Name: variable_id_seq; Type: SEQUENCE SET; Schema: titan; Owner: -
+-- Dependencies: 412
+-- Name: variable_id_seq; Type: SEQUENCE SET; Schema: titan; Owner: postgres
 --
 
 SELECT pg_catalog.setval('variable_id_seq', 1, false);
@@ -30121,8 +27650,8 @@ SELECT pg_catalog.setval('variable_id_seq', 1, false);
 SET search_path = agora, pg_catalog;
 
 --
--- TOC entry 2969 (class 2606 OID 36532)
--- Name: id_codigo_validacion; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 2969 (class 2606 OID 40905)
+-- Name: id_codigo_validacion; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY codigo_validacion
@@ -30130,8 +27659,8 @@ ALTER TABLE ONLY codigo_validacion
 
 
 --
--- TOC entry 2974 (class 2606 OID 36534)
--- Name: id_cotrato; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 2974 (class 2606 OID 40907)
+-- Name: id_cotrato; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato
@@ -30139,8 +27668,8 @@ ALTER TABLE ONLY contrato
 
 
 --
--- TOC entry 2976 (class 2606 OID 36536)
--- Name: id_dependencia; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 2976 (class 2606 OID 40909)
+-- Name: id_dependencia; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY dependencia
@@ -30148,8 +27677,8 @@ ALTER TABLE ONLY dependencia
 
 
 --
--- TOC entry 2979 (class 2606 OID 36538)
--- Name: id_evaluacion; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 2979 (class 2606 OID 40911)
+-- Name: id_evaluacion; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY evaluacion
@@ -30157,8 +27686,8 @@ ALTER TABLE ONLY evaluacion
 
 
 --
--- TOC entry 2997 (class 2606 OID 36540)
--- Name: id_inhabilidad; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 2997 (class 2606 OID 40913)
+-- Name: id_inhabilidad; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY inhabilidad
@@ -30166,8 +27695,8 @@ ALTER TABLE ONLY inhabilidad
 
 
 --
--- TOC entry 2999 (class 2606 OID 36542)
--- Name: id_menu; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 2999 (class 2606 OID 40915)
+-- Name: id_menu; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY menu
@@ -30175,8 +27704,8 @@ ALTER TABLE ONLY menu
 
 
 --
--- TOC entry 3006 (class 2606 OID 36544)
--- Name: id_objeto; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3006 (class 2606 OID 40917)
+-- Name: id_objeto; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY objeto_contratar
@@ -30184,8 +27713,8 @@ ALTER TABLE ONLY objeto_contratar
 
 
 --
--- TOC entry 3008 (class 2606 OID 36546)
--- Name: id_ordenador; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3008 (class 2606 OID 40919)
+-- Name: id_ordenador; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY ordenador_gasto
@@ -30193,8 +27722,8 @@ ALTER TABLE ONLY ordenador_gasto
 
 
 --
--- TOC entry 3033 (class 2606 OID 36548)
--- Name: id_solicitud; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3033 (class 2606 OID 40921)
+-- Name: id_solicitud; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY solicitud_cotizacion
@@ -30202,8 +27731,8 @@ ALTER TABLE ONLY solicitud_cotizacion
 
 
 --
--- TOC entry 3036 (class 2606 OID 36550)
--- Name: id_supervisor; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3036 (class 2606 OID 40923)
+-- Name: id_supervisor; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY supervisor
@@ -30211,8 +27740,8 @@ ALTER TABLE ONLY supervisor
 
 
 --
--- TOC entry 3042 (class 2606 OID 36552)
--- Name: id_unidad; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3042 (class 2606 OID 40925)
+-- Name: id_unidad; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY unidad
@@ -30220,8 +27749,8 @@ ALTER TABLE ONLY unidad
 
 
 --
--- TOC entry 3010 (class 2606 OID 36554)
--- Name: pk_idParametro; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3010 (class 2606 OID 40927)
+-- Name: pk_idParametro; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY parametro_estandar
@@ -30229,8 +27758,8 @@ ALTER TABLE ONLY parametro_estandar
 
 
 --
--- TOC entry 3038 (class 2606 OID 36556)
--- Name: pk_idTelefono; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3038 (class 2606 OID 40929)
+-- Name: pk_idTelefono; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY telefono
@@ -30238,8 +27767,8 @@ ALTER TABLE ONLY telefono
 
 
 --
--- TOC entry 2959 (class 2606 OID 36558)
--- Name: pki_idClase; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 2959 (class 2606 OID 40931)
+-- Name: pki_idClase; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY ciiu_clase
@@ -30247,8 +27776,8 @@ ALTER TABLE ONLY ciiu_clase
 
 
 --
--- TOC entry 2962 (class 2606 OID 36560)
--- Name: pki_idDivision; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 2962 (class 2606 OID 40933)
+-- Name: pki_idDivision; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY ciiu_division
@@ -30256,8 +27785,8 @@ ALTER TABLE ONLY ciiu_division
 
 
 --
--- TOC entry 3024 (class 2606 OID 36562)
--- Name: pki_idEspecialidad; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3024 (class 2606 OID 40935)
+-- Name: pki_idEspecialidad; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY rup_especialidad
@@ -30265,8 +27794,8 @@ ALTER TABLE ONLY rup_especialidad
 
 
 --
--- TOC entry 3027 (class 2606 OID 36564)
--- Name: pki_idGrupo; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3027 (class 2606 OID 40937)
+-- Name: pki_idGrupo; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY rup_grupo
@@ -30274,8 +27803,8 @@ ALTER TABLE ONLY rup_grupo
 
 
 --
--- TOC entry 2988 (class 2606 OID 36566)
--- Name: pki_idPersona; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 2988 (class 2606 OID 40939)
+-- Name: pki_idPersona; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY informacion_persona_natural
@@ -30283,8 +27812,8 @@ ALTER TABLE ONLY informacion_persona_natural
 
 
 --
--- TOC entry 2965 (class 2606 OID 36568)
--- Name: pki_idSubclase; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 2965 (class 2606 OID 40941)
+-- Name: pki_idSubclase; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY ciiu_subclase
@@ -30292,8 +27821,8 @@ ALTER TABLE ONLY ciiu_subclase
 
 
 --
--- TOC entry 2967 (class 2606 OID 36570)
--- Name: pki_idTipo; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 2967 (class 2606 OID 40943)
+-- Name: pki_idTipo; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY ciiu_tipo
@@ -30301,8 +27830,8 @@ ALTER TABLE ONLY ciiu_tipo
 
 
 --
--- TOC entry 3040 (class 2606 OID 36572)
--- Name: pki_id_conformacion; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3040 (class 2606 OID 40945)
+-- Name: pki_id_conformacion; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY tipo_conformacion
@@ -30310,8 +27839,8 @@ ALTER TABLE ONLY tipo_conformacion
 
 
 --
--- TOC entry 3001 (class 2606 OID 36574)
--- Name: pki_id_nomenclatura; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3001 (class 2606 OID 40947)
+-- Name: pki_id_nomenclatura; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY nomenclatura_dian
@@ -30319,8 +27848,8 @@ ALTER TABLE ONLY nomenclatura_dian
 
 
 --
--- TOC entry 2983 (class 2606 OID 36576)
--- Name: pki_id_num_nit; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 2983 (class 2606 OID 40949)
+-- Name: pki_id_num_nit; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY informacion_persona_juridica
@@ -30328,8 +27857,8 @@ ALTER TABLE ONLY informacion_persona_juridica
 
 
 --
--- TOC entry 3029 (class 2606 OID 36578)
--- Name: pki_id_tipo; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3029 (class 2606 OID 40951)
+-- Name: pki_id_tipo; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY rup_tipo
@@ -30337,8 +27866,8 @@ ALTER TABLE ONLY rup_tipo
 
 
 --
--- TOC entry 3014 (class 2606 OID 36580)
--- Name: pki_proveedor_actividad; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3014 (class 2606 OID 40953)
+-- Name: pki_proveedor_actividad; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY proveedor_actividad_ciiu
@@ -30346,8 +27875,8 @@ ALTER TABLE ONLY proveedor_actividad_ciiu
 
 
 --
--- TOC entry 3017 (class 2606 OID 36582)
--- Name: pki_relacionNxN; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3017 (class 2606 OID 40955)
+-- Name: pki_relacionNxN; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY proveedor_representante_legal
@@ -30355,8 +27884,8 @@ ALTER TABLE ONLY proveedor_representante_legal
 
 
 --
--- TOC entry 3021 (class 2606 OID 36584)
--- Name: pki_telefono_proveedor; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3021 (class 2606 OID 40957)
+-- Name: pki_telefono_proveedor; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY proveedor_telefono
@@ -30364,8 +27893,8 @@ ALTER TABLE ONLY proveedor_telefono
 
 
 --
--- TOC entry 2992 (class 2606 OID 36586)
--- Name: prov_proveedor_info_pk; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 2992 (class 2606 OID 40959)
+-- Name: prov_proveedor_info_pk; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY informacion_proveedor
@@ -30373,8 +27902,8 @@ ALTER TABLE ONLY informacion_proveedor
 
 
 --
--- TOC entry 2994 (class 2606 OID 36588)
--- Name: unique_documento; Type: CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 2994 (class 2606 OID 40961)
+-- Name: unique_documento; Type: CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY informacion_proveedor
@@ -30384,8 +27913,8 @@ ALTER TABLE ONLY informacion_proveedor
 SET search_path = argo, pg_catalog;
 
 --
--- TOC entry 3222 (class 2606 OID 37739)
--- Name: arka_espaciosfisicos_pkey; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3104 (class 2606 OID 40963)
+-- Name: arka_espaciosfisicos_pkey; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY "espaciosfisicos_SIC"
@@ -30393,8 +27922,8 @@ ALTER TABLE ONLY "espaciosfisicos_SIC"
 
 
 --
--- TOC entry 3263 (class 2606 OID 37741)
--- Name: arka_sedes_pkey; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3145 (class 2606 OID 40965)
+-- Name: arka_sedes_pkey; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY "sedes_SIC"
@@ -30402,8 +27931,8 @@ ALTER TABLE ONLY "sedes_SIC"
 
 
 --
--- TOC entry 3162 (class 2606 OID 37743)
--- Name: pk_acta_inicio; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3044 (class 2606 OID 40967)
+-- Name: pk_acta_inicio; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY acta_inicio
@@ -30412,16 +27941,16 @@ ALTER TABLE ONLY acta_inicio
 
 --
 -- TOC entry 4426 (class 0 OID 0)
--- Dependencies: 3162
--- Name: CONSTRAINT pk_acta_inicio ON acta_inicio; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3044
+-- Name: CONSTRAINT pk_acta_inicio ON acta_inicio; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_acta_inicio ON acta_inicio IS 'llave primaria de la tabla de acta inicio';
 
 
 --
--- TOC entry 3166 (class 2606 OID 37745)
--- Name: pk_actividad_economica_necesidad; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3048 (class 2606 OID 40969)
+-- Name: pk_actividad_economica_necesidad; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY actividad_economica_necesidad
@@ -30430,16 +27959,16 @@ ALTER TABLE ONLY actividad_economica_necesidad
 
 --
 -- TOC entry 4427 (class 0 OID 0)
--- Dependencies: 3166
--- Name: CONSTRAINT pk_actividad_economica_necesidad ON actividad_economica_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3048
+-- Name: CONSTRAINT pk_actividad_economica_necesidad ON actividad_economica_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_actividad_economica_necesidad ON actividad_economica_necesidad IS 'Llave primaria de la tabla de rompimiento entre las actividades economicas y solicitud de necesidad';
 
 
 --
--- TOC entry 3170 (class 2606 OID 37747)
--- Name: pk_actividad_solicitud_necesidad; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3052 (class 2606 OID 40971)
+-- Name: pk_actividad_solicitud_necesidad; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY actividad_solicitud_necesidad
@@ -30448,16 +27977,16 @@ ALTER TABLE ONLY actividad_solicitud_necesidad
 
 --
 -- TOC entry 4428 (class 0 OID 0)
--- Dependencies: 3170
--- Name: CONSTRAINT pk_actividad_solicitud_necesidad ON actividad_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3052
+-- Name: CONSTRAINT pk_actividad_solicitud_necesidad ON actividad_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_actividad_solicitud_necesidad ON actividad_solicitud_necesidad IS 'Llave primaria de la actividad de solicitud de necesidad';
 
 
 --
--- TOC entry 3174 (class 2606 OID 37749)
--- Name: pk_actividades_centro_costos; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3056 (class 2606 OID 40973)
+-- Name: pk_actividades_centro_costos; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY actividades_centro_costos
@@ -30466,16 +27995,16 @@ ALTER TABLE ONLY actividades_centro_costos
 
 --
 -- TOC entry 4429 (class 0 OID 0)
--- Dependencies: 3174
--- Name: CONSTRAINT pk_actividades_centro_costos ON actividades_centro_costos; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3056
+-- Name: CONSTRAINT pk_actividades_centro_costos ON actividades_centro_costos; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_actividades_centro_costos ON actividades_centro_costos IS 'Llave primaria de actividades_centro_costos';
 
 
 --
--- TOC entry 3178 (class 2606 OID 37751)
--- Name: pk_adicion; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3060 (class 2606 OID 40975)
+-- Name: pk_adicion; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY adicion
@@ -30484,16 +28013,16 @@ ALTER TABLE ONLY adicion
 
 --
 -- TOC entry 4430 (class 0 OID 0)
--- Dependencies: 3178
--- Name: CONSTRAINT pk_adicion ON adicion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3060
+-- Name: CONSTRAINT pk_adicion ON adicion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_adicion ON adicion IS 'identificador primario de la tabla adicion';
 
 
 --
--- TOC entry 3181 (class 2606 OID 37753)
--- Name: pk_anulacion; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3063 (class 2606 OID 40977)
+-- Name: pk_anulacion; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY anulacion
@@ -30502,16 +28031,16 @@ ALTER TABLE ONLY anulacion
 
 --
 -- TOC entry 4431 (class 0 OID 0)
--- Dependencies: 3181
--- Name: CONSTRAINT pk_anulacion ON anulacion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3063
+-- Name: CONSTRAINT pk_anulacion ON anulacion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_anulacion ON anulacion IS 'identificador primario de la tabla cesion';
 
 
 --
--- TOC entry 3185 (class 2606 OID 37755)
--- Name: pk_cambio_supervisor; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3067 (class 2606 OID 40979)
+-- Name: pk_cambio_supervisor; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY cambio_supervisor
@@ -30520,16 +28049,16 @@ ALTER TABLE ONLY cambio_supervisor
 
 --
 -- TOC entry 4432 (class 0 OID 0)
--- Dependencies: 3185
--- Name: CONSTRAINT pk_cambio_supervisor ON cambio_supervisor; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3067
+-- Name: CONSTRAINT pk_cambio_supervisor ON cambio_supervisor; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_cambio_supervisor ON cambio_supervisor IS 'identificador primario de la tabla';
 
 
 --
--- TOC entry 3187 (class 2606 OID 37757)
--- Name: pk_centro_costos; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3069 (class 2606 OID 40981)
+-- Name: pk_centro_costos; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY centro_costos
@@ -30538,16 +28067,16 @@ ALTER TABLE ONLY centro_costos
 
 --
 -- TOC entry 4433 (class 0 OID 0)
--- Dependencies: 3187
--- Name: CONSTRAINT pk_centro_costos ON centro_costos; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3069
+-- Name: CONSTRAINT pk_centro_costos ON centro_costos; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_centro_costos ON centro_costos IS 'Llave primaria del centro de costos';
 
 
 --
--- TOC entry 3189 (class 2606 OID 37759)
--- Name: pk_cesion; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3071 (class 2606 OID 40983)
+-- Name: pk_cesion; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY cesion
@@ -30556,16 +28085,16 @@ ALTER TABLE ONLY cesion
 
 --
 -- TOC entry 4434 (class 0 OID 0)
--- Dependencies: 3189
--- Name: CONSTRAINT pk_cesion ON cesion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3071
+-- Name: CONSTRAINT pk_cesion ON cesion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_cesion ON cesion IS 'identificador primario de la tabla cesion';
 
 
 --
--- TOC entry 3192 (class 2606 OID 37761)
--- Name: pk_contrato; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3074 (class 2606 OID 40985)
+-- Name: pk_contrato; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato
@@ -30573,8 +28102,8 @@ ALTER TABLE ONLY contrato
 
 
 --
--- TOC entry 3212 (class 2606 OID 37763)
--- Name: pk_contrato_aprobado; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3094 (class 2606 OID 40987)
+-- Name: pk_contrato_aprobado; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato_suscrito
@@ -30583,16 +28112,16 @@ ALTER TABLE ONLY contrato_suscrito
 
 --
 -- TOC entry 4435 (class 0 OID 0)
--- Dependencies: 3212
--- Name: CONSTRAINT pk_contrato_aprobado ON contrato_suscrito; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3094
+-- Name: CONSTRAINT pk_contrato_aprobado ON contrato_suscrito; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_contrato_aprobado ON contrato_suscrito IS 'llame primaria de la tabla, el consecutivo del contrato debe ser unico y por ello sera la clave primaria de esta tabla.';
 
 
 --
--- TOC entry 3194 (class 2606 OID 37765)
--- Name: pk_contrato_cancelado; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3076 (class 2606 OID 40989)
+-- Name: pk_contrato_cancelado; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato_cancelado
@@ -30601,16 +28130,16 @@ ALTER TABLE ONLY contrato_cancelado
 
 --
 -- TOC entry 4436 (class 0 OID 0)
--- Dependencies: 3194
--- Name: CONSTRAINT pk_contrato_cancelado ON contrato_cancelado; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3076
+-- Name: CONSTRAINT pk_contrato_cancelado ON contrato_cancelado; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_contrato_cancelado ON contrato_cancelado IS 'llame primaria de la tabla, identificador unico de los registros de contratos cancelados.';
 
 
 --
--- TOC entry 3198 (class 2606 OID 37767)
--- Name: pk_contrato_estado; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3080 (class 2606 OID 40991)
+-- Name: pk_contrato_estado; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato_estado
@@ -30619,16 +28148,16 @@ ALTER TABLE ONLY contrato_estado
 
 --
 -- TOC entry 4437 (class 0 OID 0)
--- Dependencies: 3198
--- Name: CONSTRAINT pk_contrato_estado ON contrato_estado; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3080
+-- Name: CONSTRAINT pk_contrato_estado ON contrato_estado; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_contrato_estado ON contrato_estado IS 'llave primaria de la tabla contrato_estado es una secuencia.';
 
 
 --
--- TOC entry 3206 (class 2606 OID 37769)
--- Name: pk_contrato_general; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3088 (class 2606 OID 40993)
+-- Name: pk_contrato_general; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato_general
@@ -30636,8 +28165,8 @@ ALTER TABLE ONLY contrato_general
 
 
 --
--- TOC entry 3209 (class 2606 OID 37771)
--- Name: pk_contrato_poliza; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3091 (class 2606 OID 40995)
+-- Name: pk_contrato_poliza; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato_poliza
@@ -30646,16 +28175,16 @@ ALTER TABLE ONLY contrato_poliza
 
 --
 -- TOC entry 4438 (class 0 OID 0)
--- Dependencies: 3209
--- Name: CONSTRAINT pk_contrato_poliza ON contrato_poliza; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3091
+-- Name: CONSTRAINT pk_contrato_poliza ON contrato_poliza; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_contrato_poliza ON contrato_poliza IS 'retriccion de llave primaria de la tabla contrato_poliza';
 
 
 --
--- TOC entry 3216 (class 2606 OID 37773)
--- Name: pk_convenio; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3098 (class 2606 OID 40997)
+-- Name: pk_convenio; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY convenio
@@ -30664,16 +28193,16 @@ ALTER TABLE ONLY convenio
 
 --
 -- TOC entry 4439 (class 0 OID 0)
--- Dependencies: 3216
--- Name: CONSTRAINT pk_convenio ON convenio; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3098
+-- Name: CONSTRAINT pk_convenio ON convenio; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_convenio ON convenio IS 'llave primaria de la tabla convenio';
 
 
 --
--- TOC entry 3218 (class 2606 OID 37775)
--- Name: pk_dependencia; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3100 (class 2606 OID 40999)
+-- Name: pk_dependencia; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY "dependencia_SIC"
@@ -30682,16 +28211,16 @@ ALTER TABLE ONLY "dependencia_SIC"
 
 --
 -- TOC entry 4440 (class 0 OID 0)
--- Dependencies: 3218
--- Name: CONSTRAINT pk_dependencia ON "dependencia_SIC"; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3100
+-- Name: CONSTRAINT pk_dependencia ON "dependencia_SIC"; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_dependencia ON "dependencia_SIC" IS 'llave primaria necesaria para la integridad de datos';
 
 
 --
--- TOC entry 3224 (class 2606 OID 37777)
--- Name: pk_especificacion_tecnica; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3106 (class 2606 OID 41001)
+-- Name: pk_especificacion_tecnica; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY especificacion_tecnica
@@ -30700,16 +28229,16 @@ ALTER TABLE ONLY especificacion_tecnica
 
 --
 -- TOC entry 4441 (class 0 OID 0)
--- Dependencies: 3224
--- Name: CONSTRAINT pk_especificacion_tecnica ON especificacion_tecnica; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3106
+-- Name: CONSTRAINT pk_especificacion_tecnica ON especificacion_tecnica; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_especificacion_tecnica ON especificacion_tecnica IS 'Llave primaria de la especificación técnica de solicitud de necesidad';
 
 
 --
--- TOC entry 3228 (class 2606 OID 37779)
--- Name: pk_estado_contrato; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3110 (class 2606 OID 41003)
+-- Name: pk_estado_contrato; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY estado_contrato
@@ -30718,16 +28247,16 @@ ALTER TABLE ONLY estado_contrato
 
 --
 -- TOC entry 4442 (class 0 OID 0)
--- Dependencies: 3228
--- Name: CONSTRAINT pk_estado_contrato ON estado_contrato; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3110
+-- Name: CONSTRAINT pk_estado_contrato ON estado_contrato; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_estado_contrato ON estado_contrato IS 'llave primaria de la tabla estado contrato';
 
 
 --
--- TOC entry 3230 (class 2606 OID 37781)
--- Name: pk_estado_solicitud_necesidad; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3112 (class 2606 OID 41005)
+-- Name: pk_estado_solicitud_necesidad; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY estado_solicitud_necesidad
@@ -30736,16 +28265,16 @@ ALTER TABLE ONLY estado_solicitud_necesidad
 
 --
 -- TOC entry 4443 (class 0 OID 0)
--- Dependencies: 3230
--- Name: CONSTRAINT pk_estado_solicitud_necesidad ON estado_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3112
+-- Name: CONSTRAINT pk_estado_solicitud_necesidad ON estado_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_estado_solicitud_necesidad ON estado_solicitud_necesidad IS 'Llave primaria del estado de solicitud de necesidad';
 
 
 --
--- TOC entry 3232 (class 2606 OID 37783)
--- Name: pk_fuente_financiacion_rubro_necesidad; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3114 (class 2606 OID 41007)
+-- Name: pk_fuente_financiacion_rubro_necesidad; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY fuente_financiacion_rubro_necesidad
@@ -30754,16 +28283,16 @@ ALTER TABLE ONLY fuente_financiacion_rubro_necesidad
 
 --
 -- TOC entry 4444 (class 0 OID 0)
--- Dependencies: 3232
--- Name: CONSTRAINT pk_fuente_financiacion_rubro_necesidad ON fuente_financiacion_rubro_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3114
+-- Name: CONSTRAINT pk_fuente_financiacion_rubro_necesidad ON fuente_financiacion_rubro_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_fuente_financiacion_rubro_necesidad ON fuente_financiacion_rubro_necesidad IS 'Llave primaria de la fuente de financiación del rubro para la solicitud de necesidad';
 
 
 --
--- TOC entry 3220 (class 2606 OID 37785)
--- Name: pk_id_elemento_acta; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3102 (class 2606 OID 41009)
+-- Name: pk_id_elemento_acta; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY elemento_acta_recibido
@@ -30771,8 +28300,8 @@ ALTER TABLE ONLY elemento_acta_recibido
 
 
 --
--- TOC entry 3251 (class 2606 OID 37787)
--- Name: pk_id_parametros_pr; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3133 (class 2606 OID 41011)
+-- Name: pk_id_parametros_pr; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY parametros
@@ -30780,8 +28309,8 @@ ALTER TABLE ONLY parametros
 
 
 --
--- TOC entry 3183 (class 2606 OID 37789)
--- Name: pk_identificador_unico_ordenador; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3065 (class 2606 OID 41013)
+-- Name: pk_identificador_unico_ordenador; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY argo_ordenadores
@@ -30790,16 +28319,16 @@ ALTER TABLE ONLY argo_ordenadores
 
 --
 -- TOC entry 4445 (class 0 OID 0)
--- Dependencies: 3183
--- Name: CONSTRAINT pk_identificador_unico_ordenador ON argo_ordenadores; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3065
+-- Name: CONSTRAINT pk_identificador_unico_ordenador ON argo_ordenadores; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_identificador_unico_ordenador ON argo_ordenadores IS 'llave primaria de la tabla ordenador del gasto';
 
 
 --
--- TOC entry 3238 (class 2606 OID 37791)
--- Name: pk_marco_legal; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3120 (class 2606 OID 41015)
+-- Name: pk_marco_legal; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY marco_legal
@@ -30808,16 +28337,16 @@ ALTER TABLE ONLY marco_legal
 
 --
 -- TOC entry 4446 (class 0 OID 0)
--- Dependencies: 3238
--- Name: CONSTRAINT pk_marco_legal ON marco_legal; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3120
+-- Name: CONSTRAINT pk_marco_legal ON marco_legal; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_marco_legal ON marco_legal IS 'LLave primaria del marco legal de solicitud de necesidad';
 
 
 --
--- TOC entry 3240 (class 2606 OID 37793)
--- Name: pk_marco_legal_necesidad; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3122 (class 2606 OID 41017)
+-- Name: pk_marco_legal_necesidad; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY marco_legal_necesidad
@@ -30826,16 +28355,16 @@ ALTER TABLE ONLY marco_legal_necesidad
 
 --
 -- TOC entry 4447 (class 0 OID 0)
--- Dependencies: 3240
--- Name: CONSTRAINT pk_marco_legal_necesidad ON marco_legal_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3122
+-- Name: CONSTRAINT pk_marco_legal_necesidad ON marco_legal_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_marco_legal_necesidad ON marco_legal_necesidad IS 'Llave primaria de la tabla de rompimiento entre marco legal y solicitud de necesidad';
 
 
 --
--- TOC entry 3244 (class 2606 OID 37795)
--- Name: pk_modalidad_seleccion; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3126 (class 2606 OID 41019)
+-- Name: pk_modalidad_seleccion; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY modalidad_seleccion
@@ -30844,16 +28373,16 @@ ALTER TABLE ONLY modalidad_seleccion
 
 --
 -- TOC entry 4448 (class 0 OID 0)
--- Dependencies: 3244
--- Name: CONSTRAINT pk_modalidad_seleccion ON modalidad_seleccion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3126
+-- Name: CONSTRAINT pk_modalidad_seleccion ON modalidad_seleccion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_modalidad_seleccion ON modalidad_seleccion IS 'Llave primaria de la modalidad de selección de solicitud de necesidad';
 
 
 --
--- TOC entry 3247 (class 2606 OID 37797)
--- Name: pk_novedad_contractual; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3129 (class 2606 OID 41021)
+-- Name: pk_novedad_contractual; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY novedad_contractual
@@ -30862,16 +28391,16 @@ ALTER TABLE ONLY novedad_contractual
 
 --
 -- TOC entry 4449 (class 0 OID 0)
--- Dependencies: 3247
--- Name: CONSTRAINT pk_novedad_contractual ON novedad_contractual; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3129
+-- Name: CONSTRAINT pk_novedad_contractual ON novedad_contractual; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_novedad_contractual ON novedad_contractual IS 'identificador primario de la tabla de novedad contractual';
 
 
 --
--- TOC entry 3249 (class 2606 OID 37799)
--- Name: pk_orden; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3131 (class 2606 OID 41023)
+-- Name: pk_orden; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY orden
@@ -30879,8 +28408,8 @@ ALTER TABLE ONLY orden
 
 
 --
--- TOC entry 3253 (class 2606 OID 37801)
--- Name: pk_poliza; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3135 (class 2606 OID 41025)
+-- Name: pk_poliza; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY poliza
@@ -30889,16 +28418,16 @@ ALTER TABLE ONLY poliza
 
 --
 -- TOC entry 4450 (class 0 OID 0)
--- Dependencies: 3253
--- Name: CONSTRAINT pk_poliza ON poliza; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3135
+-- Name: CONSTRAINT pk_poliza ON poliza; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_poliza ON poliza IS 'llave primaria tabla poliza';
 
 
 --
--- TOC entry 3255 (class 2606 OID 37803)
--- Name: pk_relacion_parametro; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3137 (class 2606 OID 41027)
+-- Name: pk_relacion_parametro; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY relacion_parametro
@@ -30906,8 +28435,8 @@ ALTER TABLE ONLY relacion_parametro
 
 
 --
--- TOC entry 3257 (class 2606 OID 37805)
--- Name: pk_requisito_minimo; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3139 (class 2606 OID 41029)
+-- Name: pk_requisito_minimo; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY requisito_minimo
@@ -30916,16 +28445,16 @@ ALTER TABLE ONLY requisito_minimo
 
 --
 -- TOC entry 4451 (class 0 OID 0)
--- Dependencies: 3257
--- Name: CONSTRAINT pk_requisito_minimo ON requisito_minimo; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3139
+-- Name: CONSTRAINT pk_requisito_minimo ON requisito_minimo; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_requisito_minimo ON requisito_minimo IS 'Llave primaria del requisito mínimo de la especificación técnica para la solicitud de la necesidad';
 
 
 --
--- TOC entry 3259 (class 2606 OID 37807)
--- Name: pk_rubro_solicitud_necesidad; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3141 (class 2606 OID 41031)
+-- Name: pk_rubro_solicitud_necesidad; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY rubro_solicitud_necesidad
@@ -30934,16 +28463,16 @@ ALTER TABLE ONLY rubro_solicitud_necesidad
 
 --
 -- TOC entry 4452 (class 0 OID 0)
--- Dependencies: 3259
--- Name: CONSTRAINT pk_rubro_solicitud_necesidad ON rubro_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3141
+-- Name: CONSTRAINT pk_rubro_solicitud_necesidad ON rubro_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_rubro_solicitud_necesidad ON rubro_solicitud_necesidad IS 'Llave primaria del rubro de solicitud de necesidad';
 
 
 --
--- TOC entry 3265 (class 2606 OID 37809)
--- Name: pk_servicio_orden; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3147 (class 2606 OID 41033)
+-- Name: pk_servicio_orden; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY servicio_orden
@@ -30952,16 +28481,16 @@ ALTER TABLE ONLY servicio_orden
 
 --
 -- TOC entry 4453 (class 0 OID 0)
--- Dependencies: 3265
--- Name: CONSTRAINT pk_servicio_orden ON servicio_orden; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3147
+-- Name: CONSTRAINT pk_servicio_orden ON servicio_orden; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_servicio_orden ON servicio_orden IS 'restriccion foranea de la tabla servicio_orden';
 
 
 --
--- TOC entry 3271 (class 2606 OID 37811)
--- Name: pk_supervisor_contrato; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3153 (class 2606 OID 41035)
+-- Name: pk_supervisor_contrato; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY supervisor_contrato
@@ -30969,8 +28498,8 @@ ALTER TABLE ONLY supervisor_contrato
 
 
 --
--- TOC entry 3275 (class 2606 OID 37813)
--- Name: pk_supervisor_solicitud_necesidad; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3157 (class 2606 OID 41037)
+-- Name: pk_supervisor_solicitud_necesidad; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY supervisor_solicitud_necesidad
@@ -30979,16 +28508,16 @@ ALTER TABLE ONLY supervisor_solicitud_necesidad
 
 --
 -- TOC entry 4454 (class 0 OID 0)
--- Dependencies: 3275
--- Name: CONSTRAINT pk_supervisor_solicitud_necesidad ON supervisor_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3157
+-- Name: CONSTRAINT pk_supervisor_solicitud_necesidad ON supervisor_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_supervisor_solicitud_necesidad ON supervisor_solicitud_necesidad IS 'Llave primaria del supervisor de solicitud de necesidad';
 
 
 --
--- TOC entry 3279 (class 2606 OID 37815)
--- Name: pk_suspension; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3161 (class 2606 OID 41039)
+-- Name: pk_suspension; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY suspension
@@ -30997,16 +28526,16 @@ ALTER TABLE ONLY suspension
 
 --
 -- TOC entry 4455 (class 0 OID 0)
--- Dependencies: 3279
--- Name: CONSTRAINT pk_suspension ON suspension; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3161
+-- Name: CONSTRAINT pk_suspension ON suspension; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_suspension ON suspension IS 'identificador primario de la tabla cesion';
 
 
 --
--- TOC entry 3281 (class 2606 OID 37817)
--- Name: pk_tipo_contratacion; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3163 (class 2606 OID 41041)
+-- Name: pk_tipo_contratacion; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY tipo_contratacion
@@ -31015,16 +28544,16 @@ ALTER TABLE ONLY tipo_contratacion
 
 --
 -- TOC entry 4456 (class 0 OID 0)
--- Dependencies: 3281
--- Name: CONSTRAINT pk_tipo_contratacion ON tipo_contratacion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3163
+-- Name: CONSTRAINT pk_tipo_contratacion ON tipo_contratacion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT pk_tipo_contratacion ON tipo_contratacion IS 'Llave primaria del tipo de contratación de solicitud de necesidad';
 
 
 --
--- TOC entry 3283 (class 2606 OID 37819)
--- Name: pk_tipo_contrato; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3165 (class 2606 OID 41043)
+-- Name: pk_tipo_contrato; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY tipo_contrato
@@ -31032,8 +28561,8 @@ ALTER TABLE ONLY tipo_contrato
 
 
 --
--- TOC entry 3285 (class 2606 OID 37821)
--- Name: pk_unidad_ejecutora; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3167 (class 2606 OID 41045)
+-- Name: pk_unidad_ejecutora; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY unidad_ejecutora
@@ -31041,8 +28570,8 @@ ALTER TABLE ONLY unidad_ejecutora
 
 
 --
--- TOC entry 3236 (class 2606 OID 37823)
--- Name: pl_lugar_ejecucion; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3118 (class 2606 OID 41047)
+-- Name: pl_lugar_ejecucion; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY lugar_ejecucion
@@ -31050,8 +28579,8 @@ ALTER TABLE ONLY lugar_ejecucion
 
 
 --
--- TOC entry 3267 (class 2606 OID 37825)
--- Name: solicitud_necesidad_pk; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3149 (class 2606 OID 41049)
+-- Name: solicitud_necesidad_pk; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY solicitud_necesidad
@@ -31060,16 +28589,16 @@ ALTER TABLE ONLY solicitud_necesidad
 
 --
 -- TOC entry 4457 (class 0 OID 0)
--- Dependencies: 3267
--- Name: CONSTRAINT solicitud_necesidad_pk ON solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3149
+-- Name: CONSTRAINT solicitud_necesidad_pk ON solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT solicitud_necesidad_pk ON solicitud_necesidad IS 'Llave primaria de la solicitud de necesidad';
 
 
 --
--- TOC entry 3168 (class 2606 OID 37827)
--- Name: uk_actividad_economica_necesidad; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3050 (class 2606 OID 41051)
+-- Name: uk_actividad_economica_necesidad; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY actividad_economica_necesidad
@@ -31078,16 +28607,16 @@ ALTER TABLE ONLY actividad_economica_necesidad
 
 --
 -- TOC entry 4458 (class 0 OID 0)
--- Dependencies: 3168
--- Name: CONSTRAINT uk_actividad_economica_necesidad ON actividad_economica_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3050
+-- Name: CONSTRAINT uk_actividad_economica_necesidad ON actividad_economica_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT uk_actividad_economica_necesidad ON actividad_economica_necesidad IS 'Llaves únicas de la tabla de rompimiento actividad economica necesidad (necesidad y actividades economicas)';
 
 
 --
--- TOC entry 3172 (class 2606 OID 37829)
--- Name: uk_actividad_solicitud_necesidad; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3054 (class 2606 OID 41053)
+-- Name: uk_actividad_solicitud_necesidad; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY actividad_solicitud_necesidad
@@ -31096,16 +28625,16 @@ ALTER TABLE ONLY actividad_solicitud_necesidad
 
 --
 -- TOC entry 4459 (class 0 OID 0)
--- Dependencies: 3172
--- Name: CONSTRAINT uk_actividad_solicitud_necesidad ON actividad_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3054
+-- Name: CONSTRAINT uk_actividad_solicitud_necesidad ON actividad_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT uk_actividad_solicitud_necesidad ON actividad_solicitud_necesidad IS 'Llaves únicas de la tabla (actividad y solicitud de necesidad)';
 
 
 --
--- TOC entry 3226 (class 2606 OID 37831)
--- Name: uk_especificacion_tecnica; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3108 (class 2606 OID 41055)
+-- Name: uk_especificacion_tecnica; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY especificacion_tecnica
@@ -31114,16 +28643,16 @@ ALTER TABLE ONLY especificacion_tecnica
 
 --
 -- TOC entry 4460 (class 0 OID 0)
--- Dependencies: 3226
--- Name: CONSTRAINT uk_especificacion_tecnica ON especificacion_tecnica; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3108
+-- Name: CONSTRAINT uk_especificacion_tecnica ON especificacion_tecnica; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT uk_especificacion_tecnica ON especificacion_tecnica IS 'LLaves únicas de la tabla (plan único de cuentas, catálogo y solicitud de necesidad)';
 
 
 --
--- TOC entry 3234 (class 2606 OID 37833)
--- Name: uk_fuente_financiacion_rubro_necesidad; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3116 (class 2606 OID 41057)
+-- Name: uk_fuente_financiacion_rubro_necesidad; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY fuente_financiacion_rubro_necesidad
@@ -31132,16 +28661,16 @@ ALTER TABLE ONLY fuente_financiacion_rubro_necesidad
 
 --
 -- TOC entry 4461 (class 0 OID 0)
--- Dependencies: 3234
--- Name: CONSTRAINT uk_fuente_financiacion_rubro_necesidad ON fuente_financiacion_rubro_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3116
+-- Name: CONSTRAINT uk_fuente_financiacion_rubro_necesidad ON fuente_financiacion_rubro_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT uk_fuente_financiacion_rubro_necesidad ON fuente_financiacion_rubro_necesidad IS 'Llaves únicas de la tabla (fuente de financiación y rubro)';
 
 
 --
--- TOC entry 3242 (class 2606 OID 37835)
--- Name: uk_marco_legal_necesidad; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3124 (class 2606 OID 41059)
+-- Name: uk_marco_legal_necesidad; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY marco_legal_necesidad
@@ -31150,16 +28679,16 @@ ALTER TABLE ONLY marco_legal_necesidad
 
 --
 -- TOC entry 4462 (class 0 OID 0)
--- Dependencies: 3242
--- Name: CONSTRAINT uk_marco_legal_necesidad ON marco_legal_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3124
+-- Name: CONSTRAINT uk_marco_legal_necesidad ON marco_legal_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT uk_marco_legal_necesidad ON marco_legal_necesidad IS 'Llaves únicas de la tabla (marco legal y solicitud de necesidad)';
 
 
 --
--- TOC entry 3261 (class 2606 OID 37837)
--- Name: uk_rubro_solicitud_necesidad; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3143 (class 2606 OID 41061)
+-- Name: uk_rubro_solicitud_necesidad; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY rubro_solicitud_necesidad
@@ -31168,16 +28697,16 @@ ALTER TABLE ONLY rubro_solicitud_necesidad
 
 --
 -- TOC entry 4463 (class 0 OID 0)
--- Dependencies: 3261
--- Name: CONSTRAINT uk_rubro_solicitud_necesidad ON rubro_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3143
+-- Name: CONSTRAINT uk_rubro_solicitud_necesidad ON rubro_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT uk_rubro_solicitud_necesidad ON rubro_solicitud_necesidad IS 'Llaves únicas de la tabla (rubro y solicitud de necesidad)';
 
 
 --
--- TOC entry 3269 (class 2606 OID 37839)
--- Name: uk_solicitud_necesidad; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3151 (class 2606 OID 41063)
+-- Name: uk_solicitud_necesidad; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY solicitud_necesidad
@@ -31186,16 +28715,16 @@ ALTER TABLE ONLY solicitud_necesidad
 
 --
 -- TOC entry 4464 (class 0 OID 0)
--- Dependencies: 3269
--- Name: CONSTRAINT uk_solicitud_necesidad ON solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3151
+-- Name: CONSTRAINT uk_solicitud_necesidad ON solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT uk_solicitud_necesidad ON solicitud_necesidad IS 'Llavés únicas de la tabla de la solicitud de necesidad (número y vigencia)';
 
 
 --
--- TOC entry 3277 (class 2606 OID 37841)
--- Name: uk_supervisor_solicitud_necesidad; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3159 (class 2606 OID 41065)
+-- Name: uk_supervisor_solicitud_necesidad; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY supervisor_solicitud_necesidad
@@ -31204,16 +28733,16 @@ ALTER TABLE ONLY supervisor_solicitud_necesidad
 
 --
 -- TOC entry 4465 (class 0 OID 0)
--- Dependencies: 3277
--- Name: CONSTRAINT uk_supervisor_solicitud_necesidad ON supervisor_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3159
+-- Name: CONSTRAINT uk_supervisor_solicitud_necesidad ON supervisor_solicitud_necesidad; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT uk_supervisor_solicitud_necesidad ON supervisor_solicitud_necesidad IS 'Llaves únicas de la tabla del supervisor (solicitud de necesidad y funcionario)';
 
 
 --
--- TOC entry 3164 (class 2606 OID 37843)
--- Name: uq_contrato_acta_inicio; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3046 (class 2606 OID 41067)
+-- Name: uq_contrato_acta_inicio; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY acta_inicio
@@ -31222,16 +28751,16 @@ ALTER TABLE ONLY acta_inicio
 
 --
 -- TOC entry 4466 (class 0 OID 0)
--- Dependencies: 3164
--- Name: CONSTRAINT uq_contrato_acta_inicio ON acta_inicio; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3046
+-- Name: CONSTRAINT uq_contrato_acta_inicio ON acta_inicio; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT uq_contrato_acta_inicio ON acta_inicio IS 'restriccion de unicidad para el contrato al que se le registra el acta de inicio';
 
 
 --
--- TOC entry 3214 (class 2606 OID 37845)
--- Name: uq_contrato_suscrito; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3096 (class 2606 OID 41069)
+-- Name: uq_contrato_suscrito; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato_suscrito
@@ -31240,16 +28769,16 @@ ALTER TABLE ONLY contrato_suscrito
 
 --
 -- TOC entry 4467 (class 0 OID 0)
--- Dependencies: 3214
--- Name: CONSTRAINT uq_contrato_suscrito ON contrato_suscrito; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3096
+-- Name: CONSTRAINT uq_contrato_suscrito ON contrato_suscrito; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT uq_contrato_suscrito ON contrato_suscrito IS 'restriccion de unicidad para el tipo de contrato  se suscribe';
 
 
 --
--- TOC entry 3273 (class 2606 OID 37847)
--- Name: uq_documento; Type: CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3155 (class 2606 OID 41071)
+-- Name: uq_documento; Type: CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY supervisor_contrato
@@ -31258,8 +28787,8 @@ ALTER TABLE ONLY supervisor_contrato
 
 --
 -- TOC entry 4468 (class 0 OID 0)
--- Dependencies: 3273
--- Name: CONSTRAINT uq_documento ON supervisor_contrato; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3155
+-- Name: CONSTRAINT uq_documento ON supervisor_contrato; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT uq_documento ON supervisor_contrato IS 'restriccion de unicidad del documento del supervisor, este solo se debe presentar una vez dentro de la tabla';
@@ -31268,8 +28797,8 @@ COMMENT ON CONSTRAINT uq_documento ON supervisor_contrato IS 'restriccion de uni
 SET search_path = core, pg_catalog;
 
 --
--- TOC entry 3069 (class 2606 OID 36632)
--- Name: PK_tipoDocumento; Type: CONSTRAINT; Schema: core; Owner: -
+-- TOC entry 3194 (class 2606 OID 41073)
+-- Name: PK_tipoDocumento; Type: CONSTRAINT; Schema: core; Owner: postgres
 --
 
 ALTER TABLE ONLY tipo_documento
@@ -31277,8 +28806,8 @@ ALTER TABLE ONLY tipo_documento
 
 
 --
--- TOC entry 3046 (class 2606 OID 36634)
--- Name: bancos_pkey; Type: CONSTRAINT; Schema: core; Owner: -
+-- TOC entry 3171 (class 2606 OID 41075)
+-- Name: bancos_pkey; Type: CONSTRAINT; Schema: core; Owner: postgres
 --
 
 ALTER TABLE ONLY banco
@@ -31286,8 +28815,8 @@ ALTER TABLE ONLY banco
 
 
 --
--- TOC entry 3058 (class 2606 OID 36636)
--- Name: id_dato_contacto; Type: CONSTRAINT; Schema: core; Owner: -
+-- TOC entry 3183 (class 2606 OID 41077)
+-- Name: id_dato_contacto; Type: CONSTRAINT; Schema: core; Owner: postgres
 --
 
 ALTER TABLE ONLY info_entidad
@@ -31296,16 +28825,16 @@ ALTER TABLE ONLY info_entidad
 
 --
 -- TOC entry 4469 (class 0 OID 0)
--- Dependencies: 3058
--- Name: CONSTRAINT id_dato_contacto ON info_entidad; Type: COMMENT; Schema: core; Owner: -
+-- Dependencies: 3183
+-- Name: CONSTRAINT id_dato_contacto ON info_entidad; Type: COMMENT; Schema: core; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT id_dato_contacto ON info_entidad IS 'id del dato para el contacto';
 
 
 --
--- TOC entry 3065 (class 2606 OID 36638)
--- Name: id_entidad; Type: CONSTRAINT; Schema: core; Owner: -
+-- TOC entry 3190 (class 2606 OID 41079)
+-- Name: id_entidad; Type: CONSTRAINT; Schema: core; Owner: postgres
 --
 
 ALTER TABLE ONLY parametro_entidad
@@ -31314,16 +28843,16 @@ ALTER TABLE ONLY parametro_entidad
 
 --
 -- TOC entry 4470 (class 0 OID 0)
--- Dependencies: 3065
--- Name: CONSTRAINT id_entidad ON parametro_entidad; Type: COMMENT; Schema: core; Owner: -
+-- Dependencies: 3190
+-- Name: CONSTRAINT id_entidad ON parametro_entidad; Type: COMMENT; Schema: core; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT id_entidad ON parametro_entidad IS 'id de la entidad';
 
 
 --
--- TOC entry 3056 (class 2606 OID 36640)
--- Name: id_estado_pk; Type: CONSTRAINT; Schema: core; Owner: -
+-- TOC entry 3181 (class 2606 OID 41081)
+-- Name: id_estado_pk; Type: CONSTRAINT; Schema: core; Owner: postgres
 --
 
 ALTER TABLE ONLY estado
@@ -31332,16 +28861,16 @@ ALTER TABLE ONLY estado
 
 --
 -- TOC entry 4471 (class 0 OID 0)
--- Dependencies: 3056
--- Name: CONSTRAINT id_estado_pk ON estado; Type: COMMENT; Schema: core; Owner: -
+-- Dependencies: 3181
+-- Name: CONSTRAINT id_estado_pk ON estado; Type: COMMENT; Schema: core; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT id_estado_pk ON estado IS 'codigo del estado';
 
 
 --
--- TOC entry 3071 (class 2606 OID 36642)
--- Name: id_tipo_entidad; Type: CONSTRAINT; Schema: core; Owner: -
+-- TOC entry 3196 (class 2606 OID 41083)
+-- Name: id_tipo_entidad; Type: CONSTRAINT; Schema: core; Owner: postgres
 --
 
 ALTER TABLE ONLY tipo_entidad
@@ -31350,16 +28879,16 @@ ALTER TABLE ONLY tipo_entidad
 
 --
 -- TOC entry 4472 (class 0 OID 0)
--- Dependencies: 3071
--- Name: CONSTRAINT id_tipo_entidad ON tipo_entidad; Type: COMMENT; Schema: core; Owner: -
+-- Dependencies: 3196
+-- Name: CONSTRAINT id_tipo_entidad ON tipo_entidad; Type: COMMENT; Schema: core; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT id_tipo_entidad ON tipo_entidad IS 'id del tipo de entidad';
 
 
 --
--- TOC entry 3060 (class 2606 OID 36644)
--- Name: info_entidad_uq; Type: CONSTRAINT; Schema: core; Owner: -
+-- TOC entry 3185 (class 2606 OID 41085)
+-- Name: info_entidad_uq; Type: CONSTRAINT; Schema: core; Owner: postgres
 --
 
 ALTER TABLE ONLY info_entidad
@@ -31367,8 +28896,8 @@ ALTER TABLE ONLY info_entidad
 
 
 --
--- TOC entry 3067 (class 2606 OID 36646)
--- Name: parametro_entidad_nit_uq; Type: CONSTRAINT; Schema: core; Owner: -
+-- TOC entry 3192 (class 2606 OID 41087)
+-- Name: parametro_entidad_nit_uq; Type: CONSTRAINT; Schema: core; Owner: postgres
 --
 
 ALTER TABLE ONLY parametro_entidad
@@ -31376,8 +28905,8 @@ ALTER TABLE ONLY parametro_entidad
 
 
 --
--- TOC entry 3044 (class 2606 OID 36648)
--- Name: pk_actividades_economicas; Type: CONSTRAINT; Schema: core; Owner: -
+-- TOC entry 3169 (class 2606 OID 41089)
+-- Name: pk_actividades_economicas; Type: CONSTRAINT; Schema: core; Owner: postgres
 --
 
 ALTER TABLE ONLY actividad_economica
@@ -31385,8 +28914,8 @@ ALTER TABLE ONLY actividad_economica
 
 
 --
--- TOC entry 3050 (class 2606 OID 36650)
--- Name: pk_ciudad; Type: CONSTRAINT; Schema: core; Owner: -
+-- TOC entry 3175 (class 2606 OID 41091)
+-- Name: pk_ciudad; Type: CONSTRAINT; Schema: core; Owner: postgres
 --
 
 ALTER TABLE ONLY ciudad
@@ -31394,8 +28923,8 @@ ALTER TABLE ONLY ciudad
 
 
 --
--- TOC entry 3053 (class 2606 OID 36652)
--- Name: pk_departamento; Type: CONSTRAINT; Schema: core; Owner: -
+-- TOC entry 3178 (class 2606 OID 41093)
+-- Name: pk_departamento; Type: CONSTRAINT; Schema: core; Owner: postgres
 --
 
 ALTER TABLE ONLY departamento
@@ -31403,8 +28932,8 @@ ALTER TABLE ONLY departamento
 
 
 --
--- TOC entry 3063 (class 2606 OID 36654)
--- Name: pk_pais; Type: CONSTRAINT; Schema: core; Owner: -
+-- TOC entry 3188 (class 2606 OID 41095)
+-- Name: pk_pais; Type: CONSTRAINT; Schema: core; Owner: postgres
 --
 
 ALTER TABLE ONLY pais
@@ -31412,8 +28941,8 @@ ALTER TABLE ONLY pais
 
 
 --
--- TOC entry 3073 (class 2606 OID 36656)
--- Name: uq_tipo_entidad_nombre; Type: CONSTRAINT; Schema: core; Owner: -
+-- TOC entry 3198 (class 2606 OID 41097)
+-- Name: uq_tipo_entidad_nombre; Type: CONSTRAINT; Schema: core; Owner: postgres
 --
 
 ALTER TABLE ONLY tipo_entidad
@@ -31423,8 +28952,8 @@ ALTER TABLE ONLY tipo_entidad
 SET search_path = nix, pg_catalog;
 
 --
--- TOC entry 3075 (class 2606 OID 36658)
--- Name: pk_entidad; Type: CONSTRAINT; Schema: nix; Owner: -
+-- TOC entry 3200 (class 2606 OID 41099)
+-- Name: pk_entidad; Type: CONSTRAINT; Schema: nix; Owner: postgres
 --
 
 ALTER TABLE ONLY entidad
@@ -31432,8 +28961,8 @@ ALTER TABLE ONLY entidad
 
 
 --
--- TOC entry 3077 (class 2606 OID 36660)
--- Name: pk_entidad_homologacion; Type: CONSTRAINT; Schema: nix; Owner: -
+-- TOC entry 3202 (class 2606 OID 41101)
+-- Name: pk_entidad_homologacion; Type: CONSTRAINT; Schema: nix; Owner: postgres
 --
 
 ALTER TABLE ONLY entidad_homologacion
@@ -31443,8 +28972,8 @@ ALTER TABLE ONLY entidad_homologacion
 SET search_path = nix_presupuesto, pg_catalog;
 
 --
--- TOC entry 3079 (class 2606 OID 36662)
--- Name: pk_anulacion; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3204 (class 2606 OID 41103)
+-- Name: pk_anulacion; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY anulacion_reserva
@@ -31452,8 +28981,8 @@ ALTER TABLE ONLY anulacion_reserva
 
 
 --
--- TOC entry 3081 (class 2606 OID 36664)
--- Name: pk_apropiacion; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3206 (class 2606 OID 41105)
+-- Name: pk_apropiacion; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY apropiacion
@@ -31461,8 +28990,8 @@ ALTER TABLE ONLY apropiacion
 
 
 --
--- TOC entry 3083 (class 2606 OID 36666)
--- Name: pk_concepto; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3208 (class 2606 OID 41107)
+-- Name: pk_concepto; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY concepto
@@ -31470,8 +28999,8 @@ ALTER TABLE ONLY concepto
 
 
 --
--- TOC entry 3085 (class 2606 OID 36668)
--- Name: pk_desagregacion_ingreso; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3210 (class 2606 OID 41109)
+-- Name: pk_desagregacion_ingreso; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY desagregacion_ingreso
@@ -31479,8 +29008,8 @@ ALTER TABLE ONLY desagregacion_ingreso
 
 
 --
--- TOC entry 3093 (class 2606 OID 36670)
--- Name: pk_disponibilidad_rubro; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3218 (class 2606 OID 41111)
+-- Name: pk_disponibilidad_rubro; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY disponibilidad_rubro
@@ -31488,8 +29017,8 @@ ALTER TABLE ONLY disponibilidad_rubro
 
 
 --
--- TOC entry 3103 (class 2606 OID 36672)
--- Name: pk_estado_reserva; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3228 (class 2606 OID 41113)
+-- Name: pk_estado_reserva; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY estado_reserva_presupuestal
@@ -31497,8 +29026,8 @@ ALTER TABLE ONLY estado_reserva_presupuestal
 
 
 --
--- TOC entry 3105 (class 2606 OID 36674)
--- Name: pk_fuente_financiacion; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3230 (class 2606 OID 41115)
+-- Name: pk_fuente_financiacion; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY fuente_financiacion
@@ -31506,8 +29035,8 @@ ALTER TABLE ONLY fuente_financiacion
 
 
 --
--- TOC entry 3107 (class 2606 OID 36676)
--- Name: pk_fuente_financiacion_entidad; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3232 (class 2606 OID 41117)
+-- Name: pk_fuente_financiacion_entidad; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY fuente_financiacion_entidad
@@ -31515,8 +29044,8 @@ ALTER TABLE ONLY fuente_financiacion_entidad
 
 
 --
--- TOC entry 3087 (class 2606 OID 36678)
--- Name: pk_id_destino_disponibilidad; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3212 (class 2606 OID 41119)
+-- Name: pk_id_destino_disponibilidad; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY destino_disponibilidad
@@ -31524,8 +29053,8 @@ ALTER TABLE ONLY destino_disponibilidad
 
 
 --
--- TOC entry 3089 (class 2606 OID 36680)
--- Name: pk_id_entidad; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3214 (class 2606 OID 41121)
+-- Name: pk_id_entidad; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY disponibilidad
@@ -31533,8 +29062,8 @@ ALTER TABLE ONLY disponibilidad
 
 
 --
--- TOC entry 3097 (class 2606 OID 36682)
--- Name: pk_id_estado_apropiacion; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3222 (class 2606 OID 41123)
+-- Name: pk_id_estado_apropiacion; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY estado_apropiacion
@@ -31542,8 +29071,8 @@ ALTER TABLE ONLY estado_apropiacion
 
 
 --
--- TOC entry 3099 (class 2606 OID 36684)
--- Name: pk_id_estado_disponibilidad; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3224 (class 2606 OID 41125)
+-- Name: pk_id_estado_disponibilidad; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY estado_disponibilidad
@@ -31551,8 +29080,8 @@ ALTER TABLE ONLY estado_disponibilidad
 
 
 --
--- TOC entry 3101 (class 2606 OID 36686)
--- Name: pk_id_estado_registro; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3226 (class 2606 OID 41127)
+-- Name: pk_id_estado_registro; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY estado_registro_presupuestal
@@ -31560,8 +29089,8 @@ ALTER TABLE ONLY estado_registro_presupuestal
 
 
 --
--- TOC entry 3109 (class 2606 OID 36688)
--- Name: pk_ingreso; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3234 (class 2606 OID 41129)
+-- Name: pk_ingreso; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY ingreso
@@ -31569,8 +29098,8 @@ ALTER TABLE ONLY ingreso
 
 
 --
--- TOC entry 3111 (class 2606 OID 36690)
--- Name: pk_modificacion_presupuestal; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3236 (class 2606 OID 41131)
+-- Name: pk_modificacion_presupuestal; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY modificacion_presupuestal
@@ -31578,8 +29107,8 @@ ALTER TABLE ONLY modificacion_presupuestal
 
 
 --
--- TOC entry 3113 (class 2606 OID 36692)
--- Name: pk_registro; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3238 (class 2606 OID 41133)
+-- Name: pk_registro; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY registo_presupuestal
@@ -31587,8 +29116,8 @@ ALTER TABLE ONLY registo_presupuestal
 
 
 --
--- TOC entry 3117 (class 2606 OID 36694)
--- Name: pk_registro_presupuestal_disponibilidad; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3242 (class 2606 OID 41135)
+-- Name: pk_registro_presupuestal_disponibilidad; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY registro_presupuestal_disponibilidad
@@ -31596,8 +29125,8 @@ ALTER TABLE ONLY registro_presupuestal_disponibilidad
 
 
 --
--- TOC entry 3119 (class 2606 OID 36696)
--- Name: pk_reserva_presupuestal; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3244 (class 2606 OID 41137)
+-- Name: pk_reserva_presupuestal; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY reserva_presupuestal
@@ -31605,8 +29134,8 @@ ALTER TABLE ONLY reserva_presupuestal
 
 
 --
--- TOC entry 3121 (class 2606 OID 36698)
--- Name: pk_rubro; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3246 (class 2606 OID 41139)
+-- Name: pk_rubro; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY rubro
@@ -31614,8 +29143,8 @@ ALTER TABLE ONLY rubro
 
 
 --
--- TOC entry 3125 (class 2606 OID 36700)
--- Name: pk_rubro_homologado; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3250 (class 2606 OID 41141)
+-- Name: pk_rubro_homologado; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY rubro_homologado
@@ -31623,8 +29152,8 @@ ALTER TABLE ONLY rubro_homologado
 
 
 --
--- TOC entry 3127 (class 2606 OID 36702)
--- Name: pk_rubro_rubro; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3252 (class 2606 OID 41143)
+-- Name: pk_rubro_rubro; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY rubro_rubro
@@ -31632,8 +29161,8 @@ ALTER TABLE ONLY rubro_rubro
 
 
 --
--- TOC entry 3129 (class 2606 OID 36704)
--- Name: pk_unidad_ejecutora; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3254 (class 2606 OID 41145)
+-- Name: pk_unidad_ejecutora; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY unidad_ejecutora
@@ -31641,8 +29170,8 @@ ALTER TABLE ONLY unidad_ejecutora
 
 
 --
--- TOC entry 3095 (class 2606 OID 36706)
--- Name: uq_disponibilidad_rubro_rubro_disponibilidad; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3220 (class 2606 OID 41147)
+-- Name: uq_disponibilidad_rubro_rubro_disponibilidad; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY disponibilidad_rubro
@@ -31650,8 +29179,8 @@ ALTER TABLE ONLY disponibilidad_rubro
 
 
 --
--- TOC entry 3091 (class 2606 OID 36708)
--- Name: uq_disponibilidad_vigencia_numero; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3216 (class 2606 OID 41149)
+-- Name: uq_disponibilidad_vigencia_numero; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY disponibilidad
@@ -31659,8 +29188,8 @@ ALTER TABLE ONLY disponibilidad
 
 
 --
--- TOC entry 3115 (class 2606 OID 36710)
--- Name: uq_registro_presupuestal_vigencia_numero; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3240 (class 2606 OID 41151)
+-- Name: uq_registro_presupuestal_vigencia_numero; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY registo_presupuestal
@@ -31668,8 +29197,8 @@ ALTER TABLE ONLY registo_presupuestal
 
 
 --
--- TOC entry 3123 (class 2606 OID 36712)
--- Name: uq_rubro_codigo_vigencia; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3248 (class 2606 OID 41153)
+-- Name: uq_rubro_codigo_vigencia; Type: CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY rubro
@@ -31679,8 +29208,8 @@ ALTER TABLE ONLY rubro
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 3131 (class 2606 OID 36714)
--- Name: schema_version_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- TOC entry 3256 (class 2606 OID 41155)
+-- Name: schema_version_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY schema_version
@@ -31690,8 +29219,8 @@ ALTER TABLE ONLY schema_version
 SET search_path = ruler, pg_catalog;
 
 --
--- TOC entry 3136 (class 2606 OID 36716)
--- Name: pk_componente; Type: CONSTRAINT; Schema: ruler; Owner: -
+-- TOC entry 3261 (class 2606 OID 41157)
+-- Name: pk_componente; Type: CONSTRAINT; Schema: ruler; Owner: postgres
 --
 
 ALTER TABLE ONLY predicado
@@ -31699,8 +29228,8 @@ ALTER TABLE ONLY predicado
 
 
 --
--- TOC entry 3134 (class 2606 OID 36718)
--- Name: pk_dominio; Type: CONSTRAINT; Schema: ruler; Owner: -
+-- TOC entry 3259 (class 2606 OID 41159)
+-- Name: pk_dominio; Type: CONSTRAINT; Schema: ruler; Owner: postgres
 --
 
 ALTER TABLE ONLY dominio
@@ -31708,8 +29237,8 @@ ALTER TABLE ONLY dominio
 
 
 --
--- TOC entry 3138 (class 2606 OID 36720)
--- Name: pk_tipo_predicado; Type: CONSTRAINT; Schema: ruler; Owner: -
+-- TOC entry 3263 (class 2606 OID 41161)
+-- Name: pk_tipo_predicado; Type: CONSTRAINT; Schema: ruler; Owner: postgres
 --
 
 ALTER TABLE ONLY tipo_predicado
@@ -31719,8 +29248,8 @@ ALTER TABLE ONLY tipo_predicado
 SET search_path = titan, pg_catalog;
 
 --
--- TOC entry 3160 (class 2606 OID 36722)
--- Name: concepto_variable_pk; Type: CONSTRAINT; Schema: titan; Owner: -
+-- TOC entry 3285 (class 2606 OID 41163)
+-- Name: concepto_variable_pk; Type: CONSTRAINT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY variable
@@ -31728,8 +29257,8 @@ ALTER TABLE ONLY variable
 
 
 --
--- TOC entry 3144 (class 2606 OID 36724)
--- Name: descuentos_pkey; Type: CONSTRAINT; Schema: titan; Owner: -
+-- TOC entry 3269 (class 2606 OID 41165)
+-- Name: descuentos_pkey; Type: CONSTRAINT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY descuentos
@@ -31737,8 +29266,8 @@ ALTER TABLE ONLY descuentos
 
 
 --
--- TOC entry 3146 (class 2606 OID 36726)
--- Name: detalle_novedad_pkey; Type: CONSTRAINT; Schema: titan; Owner: -
+-- TOC entry 3271 (class 2606 OID 41167)
+-- Name: detalle_novedad_pkey; Type: CONSTRAINT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY detalle_novedad
@@ -31746,8 +29275,8 @@ ALTER TABLE ONLY detalle_novedad
 
 
 --
--- TOC entry 3148 (class 2606 OID 36728)
--- Name: detalle_preliquidacion_pkey; Type: CONSTRAINT; Schema: titan; Owner: -
+-- TOC entry 3273 (class 2606 OID 41169)
+-- Name: detalle_preliquidacion_pkey; Type: CONSTRAINT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY detalle_preliquidacion
@@ -31755,8 +29284,8 @@ ALTER TABLE ONLY detalle_preliquidacion
 
 
 --
--- TOC entry 3156 (class 2606 OID 36730)
--- Name: id_liquidacion; Type: CONSTRAINT; Schema: titan; Owner: -
+-- TOC entry 3281 (class 2606 OID 41171)
+-- Name: id_liquidacion; Type: CONSTRAINT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY parametro_liquidacion
@@ -31764,8 +29293,8 @@ ALTER TABLE ONLY parametro_liquidacion
 
 
 --
--- TOC entry 3154 (class 2606 OID 36732)
--- Name: novedad_aplicada_pkey; Type: CONSTRAINT; Schema: titan; Owner: -
+-- TOC entry 3279 (class 2606 OID 41173)
+-- Name: novedad_aplicada_pkey; Type: CONSTRAINT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY novedad_aplicada
@@ -31773,8 +29302,8 @@ ALTER TABLE ONLY novedad_aplicada
 
 
 --
--- TOC entry 3140 (class 2606 OID 36734)
--- Name: pk_categoria_novedad; Type: CONSTRAINT; Schema: titan; Owner: -
+-- TOC entry 3265 (class 2606 OID 41175)
+-- Name: pk_categoria_novedad; Type: CONSTRAINT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY categoria_novedad
@@ -31782,8 +29311,8 @@ ALTER TABLE ONLY categoria_novedad
 
 
 --
--- TOC entry 3142 (class 2606 OID 36736)
--- Name: pk_categoria_parametro; Type: CONSTRAINT; Schema: titan; Owner: -
+-- TOC entry 3267 (class 2606 OID 41177)
+-- Name: pk_categoria_parametro; Type: CONSTRAINT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY categoria_parametro
@@ -31791,8 +29320,8 @@ ALTER TABLE ONLY categoria_parametro
 
 
 --
--- TOC entry 3150 (class 2606 OID 36738)
--- Name: pk_nomina; Type: CONSTRAINT; Schema: titan; Owner: -
+-- TOC entry 3275 (class 2606 OID 41179)
+-- Name: pk_nomina; Type: CONSTRAINT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY nomina
@@ -31800,8 +29329,8 @@ ALTER TABLE ONLY nomina
 
 
 --
--- TOC entry 3152 (class 2606 OID 36740)
--- Name: pk_novedad; Type: CONSTRAINT; Schema: titan; Owner: -
+-- TOC entry 3277 (class 2606 OID 41181)
+-- Name: pk_novedad; Type: CONSTRAINT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY novedad
@@ -31809,8 +29338,8 @@ ALTER TABLE ONLY novedad
 
 
 --
--- TOC entry 3158 (class 2606 OID 36742)
--- Name: preliquidacion_pk; Type: CONSTRAINT; Schema: titan; Owner: -
+-- TOC entry 3283 (class 2606 OID 41183)
+-- Name: preliquidacion_pk; Type: CONSTRAINT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY preliquidacion
@@ -31820,224 +29349,224 @@ ALTER TABLE ONLY preliquidacion
 SET search_path = agora, pg_catalog;
 
 --
--- TOC entry 3002 (class 1259 OID 36743)
--- Name: fki_idActividadCiiu; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 3002 (class 1259 OID 41184)
+-- Name: fki_idActividadCiiu; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX "fki_idActividadCiiu" ON objeto_contratar USING btree (codigociiu) WITH (fillfactor='90');
 
 
 --
--- TOC entry 2977 (class 1259 OID 36744)
--- Name: fki_idContrato; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 2977 (class 1259 OID 41185)
+-- Name: fki_idContrato; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX "fki_idContrato" ON evaluacion USING btree (id_contrato) WITH (fillfactor='90');
 
 
 --
--- TOC entry 3003 (class 1259 OID 36745)
--- Name: fki_idDependencia; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 3003 (class 1259 OID 41186)
+-- Name: fki_idDependencia; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX "fki_idDependencia" ON objeto_contratar USING btree (vigencia) WITH (fillfactor='90');
 
 
 --
--- TOC entry 3011 (class 1259 OID 36746)
--- Name: fki_idNit; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 3011 (class 1259 OID 41187)
+-- Name: fki_idNit; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX "fki_idNit" ON proveedor_actividad_ciiu USING btree (num_documento) WITH (fillfactor='90');
 
 
 --
--- TOC entry 2970 (class 1259 OID 36747)
--- Name: fki_idObjeto; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 2970 (class 1259 OID 41188)
+-- Name: fki_idObjeto; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX "fki_idObjeto" ON contrato USING btree (id_objeto) WITH (fillfactor='90');
 
 
 --
--- TOC entry 2971 (class 1259 OID 36748)
--- Name: fki_idPRoveedor; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 2971 (class 1259 OID 41189)
+-- Name: fki_idPRoveedor; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX "fki_idPRoveedor" ON contrato USING btree (id_proveedor) WITH (fillfactor='90');
 
 
 --
--- TOC entry 2995 (class 1259 OID 36749)
--- Name: fki_idProveedor; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 2995 (class 1259 OID 41190)
+-- Name: fki_idProveedor; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX "fki_idProveedor" ON inhabilidad USING btree (id_proveedor) WITH (fillfactor='90');
 
 
 --
--- TOC entry 3012 (class 1259 OID 36750)
--- Name: fki_idSubclase; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 3012 (class 1259 OID 41191)
+-- Name: fki_idSubclase; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX "fki_idSubclase" ON proveedor_actividad_ciiu USING btree (id_subclase) WITH (fillfactor='90');
 
 
 --
--- TOC entry 2972 (class 1259 OID 36751)
--- Name: fki_idSupervisor; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 2972 (class 1259 OID 41192)
+-- Name: fki_idSupervisor; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX "fki_idSupervisor" ON contrato USING btree (id_supervisor) WITH (fillfactor='90');
 
 
 --
--- TOC entry 3004 (class 1259 OID 36752)
--- Name: fki_idUnidad; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 3004 (class 1259 OID 41193)
+-- Name: fki_idUnidad; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX "fki_idUnidad" ON objeto_contratar USING btree (id_unidad) WITH (fillfactor='90');
 
 
 --
--- TOC entry 2980 (class 1259 OID 36753)
--- Name: fki_id_ciudad_origen; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 2980 (class 1259 OID 41194)
+-- Name: fki_id_ciudad_origen; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX fki_id_ciudad_origen ON informacion_persona_juridica USING btree (id_ciudad_origen);
 
 
 --
--- TOC entry 3030 (class 1259 OID 36754)
--- Name: fki_id_objeto_fk; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 3030 (class 1259 OID 41195)
+-- Name: fki_id_objeto_fk; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX fki_id_objeto_fk ON solicitud_cotizacion USING btree (id_objeto) WITH (fillfactor='90');
 
 
 --
--- TOC entry 2984 (class 1259 OID 36755)
--- Name: fki_id_pais_nacimiento; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 2984 (class 1259 OID 41196)
+-- Name: fki_id_pais_nacimiento; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX fki_id_pais_nacimiento ON informacion_persona_natural USING btree (id_pais_nacimiento);
 
 
 --
--- TOC entry 2985 (class 1259 OID 36756)
--- Name: fki_id_perfil; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 2985 (class 1259 OID 41197)
+-- Name: fki_id_perfil; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX fki_id_perfil ON informacion_persona_natural USING btree (perfil);
 
 
 --
--- TOC entry 3031 (class 1259 OID 36757)
--- Name: fki_id_proveedor_fk; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 3031 (class 1259 OID 41198)
+-- Name: fki_id_proveedor_fk; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX fki_id_proveedor_fk ON solicitud_cotizacion USING btree (id_proveedor) WITH (fillfactor='90');
 
 
 --
--- TOC entry 3015 (class 1259 OID 36758)
--- Name: fki_id_representante; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 3015 (class 1259 OID 41199)
+-- Name: fki_id_representante; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX fki_id_representante ON proveedor_representante_legal USING btree (id_representante);
 
 
 --
--- TOC entry 3022 (class 1259 OID 36759)
--- Name: fki_id_tipo_especialidad; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 3022 (class 1259 OID 41200)
+-- Name: fki_id_tipo_especialidad; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX fki_id_tipo_especialidad ON rup_especialidad USING btree (id_tipo_especialidad);
 
 
 --
--- TOC entry 2981 (class 1259 OID 36760)
--- Name: fki_tipo_conformacion; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 2981 (class 1259 OID 41201)
+-- Name: fki_tipo_conformacion; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX fki_tipo_conformacion ON informacion_persona_juridica USING btree (id_tipo_conformacion);
 
 
 --
--- TOC entry 2989 (class 1259 OID 36761)
--- Name: idCiudadContacto; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 2989 (class 1259 OID 41202)
+-- Name: idCiudadContacto; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX "idCiudadContacto" ON informacion_proveedor USING btree (id_ciudad_contacto) WITH (fillfactor='90');
 
 
 --
--- TOC entry 2963 (class 1259 OID 36762)
--- Name: idClase; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 2963 (class 1259 OID 41203)
+-- Name: idClase; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX "idClase" ON ciiu_subclase USING btree (clase) WITH (fillfactor='90');
 
 
 --
--- TOC entry 3034 (class 1259 OID 36763)
--- Name: idDependencia; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 3034 (class 1259 OID 41204)
+-- Name: idDependencia; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX "idDependencia" ON supervisor USING btree (id_dependencia) WITH (fillfactor='90');
 
 
 --
--- TOC entry 2957 (class 1259 OID 36764)
--- Name: idDivision; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 2957 (class 1259 OID 41205)
+-- Name: idDivision; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX "idDivision" ON ciiu_clase USING btree (division) WITH (fillfactor='90');
 
 
 --
--- TOC entry 3025 (class 1259 OID 36765)
--- Name: idEspecialidad; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 3025 (class 1259 OID 41206)
+-- Name: idEspecialidad; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX "idEspecialidad" ON rup_grupo USING btree (id_especialidad) WITH (fillfactor='90');
 
 
 --
--- TOC entry 2990 (class 1259 OID 36766)
--- Name: idParametroEstado; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 2990 (class 1259 OID 41207)
+-- Name: idParametroEstado; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX "idParametroEstado" ON informacion_proveedor USING btree (estado) WITH (fillfactor='90');
 
 
 --
--- TOC entry 2986 (class 1259 OID 36767)
--- Name: idParametroTipoDoc; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 2986 (class 1259 OID 41208)
+-- Name: idParametroTipoDoc; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX "idParametroTipoDoc" ON informacion_persona_natural USING btree (tipo_documento) WITH (fillfactor='90');
 
 
 --
--- TOC entry 3018 (class 1259 OID 36768)
--- Name: idProveedor; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 3018 (class 1259 OID 41209)
+-- Name: idProveedor; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX "idProveedor" ON proveedor_telefono USING btree (id_proveedor) WITH (fillfactor='90');
 
 
 --
--- TOC entry 3019 (class 1259 OID 36769)
--- Name: idTelefono; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 3019 (class 1259 OID 41210)
+-- Name: idTelefono; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX "idTelefono" ON proveedor_telefono USING btree (id_telefono) WITH (fillfactor='90');
 
 
 --
--- TOC entry 2960 (class 1259 OID 36770)
--- Name: idTipo; Type: INDEX; Schema: agora; Owner: -
+-- TOC entry 2960 (class 1259 OID 41211)
+-- Name: idTipo; Type: INDEX; Schema: agora; Owner: postgres
 --
 
 CREATE INDEX "idTipo" ON ciiu_division USING btree (tipo) WITH (fillfactor='90');
@@ -32046,120 +29575,120 @@ CREATE INDEX "idTipo" ON ciiu_division USING btree (tipo) WITH (fillfactor='90')
 SET search_path = argo, pg_catalog;
 
 --
--- TOC entry 3175 (class 1259 OID 37848)
--- Name: fki_adicion_parametro_tiempo_ejecucion; Type: INDEX; Schema: argo; Owner: -
+-- TOC entry 3057 (class 1259 OID 41212)
+-- Name: fki_adicion_parametro_tiempo_ejecucion; Type: INDEX; Schema: argo; Owner: postgres
 --
 
 CREATE INDEX fki_adicion_parametro_tiempo_ejecucion ON adicion USING btree (unidad_tiempo_ejecucion);
 
 
 --
--- TOC entry 3176 (class 1259 OID 37849)
--- Name: fki_adicion_parametro_tipo_adicion; Type: INDEX; Schema: argo; Owner: -
+-- TOC entry 3058 (class 1259 OID 41213)
+-- Name: fki_adicion_parametro_tipo_adicion; Type: INDEX; Schema: argo; Owner: postgres
 --
 
 CREATE INDEX fki_adicion_parametro_tipo_adicion ON adicion USING btree (tipo_adicion);
 
 
 --
--- TOC entry 3179 (class 1259 OID 37850)
--- Name: fki_anulacion_parametro_tipo_anulacion; Type: INDEX; Schema: argo; Owner: -
+-- TOC entry 3061 (class 1259 OID 41214)
+-- Name: fki_anulacion_parametro_tipo_anulacion; Type: INDEX; Schema: argo; Owner: postgres
 --
 
 CREATE INDEX fki_anulacion_parametro_tipo_anulacion ON anulacion USING btree (tipo_anulacion);
 
 
 --
--- TOC entry 3190 (class 1259 OID 37851)
--- Name: fki_contrato_general_contrato; Type: INDEX; Schema: argo; Owner: -
+-- TOC entry 3072 (class 1259 OID 41215)
+-- Name: fki_contrato_general_contrato; Type: INDEX; Schema: argo; Owner: postgres
 --
 
 CREATE INDEX fki_contrato_general_contrato ON contrato USING btree (numero_contrato, vigencia);
 
 
 --
--- TOC entry 3210 (class 1259 OID 37852)
--- Name: fki_contrato_general_contrato_aprobado; Type: INDEX; Schema: argo; Owner: -
+-- TOC entry 3092 (class 1259 OID 41216)
+-- Name: fki_contrato_general_contrato_aprobado; Type: INDEX; Schema: argo; Owner: postgres
 --
 
 CREATE INDEX fki_contrato_general_contrato_aprobado ON contrato_suscrito USING btree (numero_contrato, vigencia);
 
 
 --
--- TOC entry 3195 (class 1259 OID 37853)
--- Name: fki_contrato_general_contrato_estado; Type: INDEX; Schema: argo; Owner: -
+-- TOC entry 3077 (class 1259 OID 41217)
+-- Name: fki_contrato_general_contrato_estado; Type: INDEX; Schema: argo; Owner: postgres
 --
 
 CREATE INDEX fki_contrato_general_contrato_estado ON contrato_estado USING btree (numero_contrato, vigencia);
 
 
 --
--- TOC entry 3199 (class 1259 OID 37854)
--- Name: fki_contrato_general_ordenador; Type: INDEX; Schema: argo; Owner: -
+-- TOC entry 3081 (class 1259 OID 41218)
+-- Name: fki_contrato_general_ordenador; Type: INDEX; Schema: argo; Owner: postgres
 --
 
 CREATE INDEX fki_contrato_general_ordenador ON contrato_general USING btree (ordenador_gasto);
 
 
 --
--- TOC entry 3207 (class 1259 OID 37855)
--- Name: fki_contrato_poliza_contrato_general; Type: INDEX; Schema: argo; Owner: -
+-- TOC entry 3089 (class 1259 OID 41219)
+-- Name: fki_contrato_poliza_contrato_general; Type: INDEX; Schema: argo; Owner: postgres
 --
 
 CREATE INDEX fki_contrato_poliza_contrato_general ON contrato_poliza USING btree (numero_contrato, vigencia);
 
 
 --
--- TOC entry 3196 (class 1259 OID 37856)
--- Name: fki_estado_contrato_contrato_estado; Type: INDEX; Schema: argo; Owner: -
+-- TOC entry 3078 (class 1259 OID 41220)
+-- Name: fki_estado_contrato_contrato_estado; Type: INDEX; Schema: argo; Owner: postgres
 --
 
 CREATE INDEX fki_estado_contrato_contrato_estado ON contrato_estado USING btree (estado);
 
 
 --
--- TOC entry 3200 (class 1259 OID 37857)
--- Name: fki_funcionario_ordenador; Type: INDEX; Schema: argo; Owner: -
+-- TOC entry 3082 (class 1259 OID 41221)
+-- Name: fki_funcionario_ordenador; Type: INDEX; Schema: argo; Owner: postgres
 --
 
 CREATE INDEX fki_funcionario_ordenador ON contrato_general USING btree (ordenador_gasto);
 
 
 --
--- TOC entry 3201 (class 1259 OID 37858)
--- Name: fki_lugar_ejecucion_contrato_general; Type: INDEX; Schema: argo; Owner: -
+-- TOC entry 3083 (class 1259 OID 41222)
+-- Name: fki_lugar_ejecucion_contrato_general; Type: INDEX; Schema: argo; Owner: postgres
 --
 
 CREATE INDEX fki_lugar_ejecucion_contrato_general ON contrato_general USING btree (lugar_ejecucion);
 
 
 --
--- TOC entry 3245 (class 1259 OID 37859)
--- Name: fki_novedad_contractual_parametro_tipo_novedad; Type: INDEX; Schema: argo; Owner: -
+-- TOC entry 3127 (class 1259 OID 41223)
+-- Name: fki_novedad_contractual_parametro_tipo_novedad; Type: INDEX; Schema: argo; Owner: postgres
 --
 
 CREATE INDEX fki_novedad_contractual_parametro_tipo_novedad ON novedad_contractual USING btree (tipo_novedad);
 
 
 --
--- TOC entry 3202 (class 1259 OID 37860)
--- Name: fki_parametro_unidad_tiempo_ejecucion_parametros; Type: INDEX; Schema: argo; Owner: -
+-- TOC entry 3084 (class 1259 OID 41224)
+-- Name: fki_parametro_unidad_tiempo_ejecucion_parametros; Type: INDEX; Schema: argo; Owner: postgres
 --
 
 CREATE INDEX fki_parametro_unidad_tiempo_ejecucion_parametros ON contrato_general USING btree (unidad_ejecucion);
 
 
 --
--- TOC entry 3203 (class 1259 OID 37861)
--- Name: fki_supervisor_contrato_contrato_general; Type: INDEX; Schema: argo; Owner: -
+-- TOC entry 3085 (class 1259 OID 41225)
+-- Name: fki_supervisor_contrato_contrato_general; Type: INDEX; Schema: argo; Owner: postgres
 --
 
 CREATE INDEX fki_supervisor_contrato_contrato_general ON contrato_general USING btree (supervisor);
 
 
 --
--- TOC entry 3204 (class 1259 OID 37862)
--- Name: fki_tipo_contrato_contrato_generaL; Type: INDEX; Schema: argo; Owner: -
+-- TOC entry 3086 (class 1259 OID 41226)
+-- Name: fki_tipo_contrato_contrato_generaL; Type: INDEX; Schema: argo; Owner: postgres
 --
 
 CREATE INDEX "fki_tipo_contrato_contrato_generaL" ON contrato_general USING btree (tipo_contrato);
@@ -32168,40 +29697,40 @@ CREATE INDEX "fki_tipo_contrato_contrato_generaL" ON contrato_general USING btre
 SET search_path = core, pg_catalog;
 
 --
--- TOC entry 3047 (class 1259 OID 36787)
--- Name: ciudad_pk; Type: INDEX; Schema: core; Owner: -
+-- TOC entry 3172 (class 1259 OID 41227)
+-- Name: ciudad_pk; Type: INDEX; Schema: core; Owner: postgres
 --
 
 CREATE UNIQUE INDEX ciudad_pk ON ciudad USING btree (id_ciudad) WITH (fillfactor='90');
 
 
 --
--- TOC entry 3048 (class 1259 OID 36788)
--- Name: ciudadxdepto_fk; Type: INDEX; Schema: core; Owner: -
+-- TOC entry 3173 (class 1259 OID 41228)
+-- Name: ciudadxdepto_fk; Type: INDEX; Schema: core; Owner: postgres
 --
 
 CREATE INDEX ciudadxdepto_fk ON ciudad USING btree (id_departamento) WITH (fillfactor='90');
 
 
 --
--- TOC entry 3051 (class 1259 OID 36789)
--- Name: departamento_pk; Type: INDEX; Schema: core; Owner: -
+-- TOC entry 3176 (class 1259 OID 41229)
+-- Name: departamento_pk; Type: INDEX; Schema: core; Owner: postgres
 --
 
 CREATE UNIQUE INDEX departamento_pk ON departamento USING btree (id_departamento) WITH (fillfactor='90');
 
 
 --
--- TOC entry 3061 (class 1259 OID 36790)
--- Name: pais_pk; Type: INDEX; Schema: core; Owner: -
+-- TOC entry 3186 (class 1259 OID 41230)
+-- Name: pais_pk; Type: INDEX; Schema: core; Owner: postgres
 --
 
 CREATE UNIQUE INDEX pais_pk ON pais USING btree (id_pais) WITH (fillfactor='90');
 
 
 --
--- TOC entry 3054 (class 1259 OID 36791)
--- Name: relationship_1_fk; Type: INDEX; Schema: core; Owner: -
+-- TOC entry 3179 (class 1259 OID 41231)
+-- Name: relationship_1_fk; Type: INDEX; Schema: core; Owner: postgres
 --
 
 CREATE INDEX relationship_1_fk ON departamento USING btree (id_pais) WITH (fillfactor='90');
@@ -32210,8 +29739,8 @@ CREATE INDEX relationship_1_fk ON departamento USING btree (id_pais) WITH (fillf
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 3132 (class 1259 OID 36792)
--- Name: schema_version_s_idx; Type: INDEX; Schema: public; Owner: -
+-- TOC entry 3257 (class 1259 OID 41232)
+-- Name: schema_version_s_idx; Type: INDEX; Schema: public; Owner: postgres
 --
 
 CREATE INDEX schema_version_s_idx ON schema_version USING btree (success);
@@ -32220,8 +29749,8 @@ CREATE INDEX schema_version_s_idx ON schema_version USING btree (success);
 SET search_path = agora, pg_catalog;
 
 --
--- TOC entry 3298 (class 2606 OID 36793)
--- Name: fki_idCiudad; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3298 (class 2606 OID 41233)
+-- Name: fki_idCiudad; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY informacion_proveedor
@@ -32229,8 +29758,8 @@ ALTER TABLE ONLY informacion_proveedor
 
 
 --
--- TOC entry 3288 (class 2606 OID 36798)
--- Name: fki_idClase; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3288 (class 2606 OID 41238)
+-- Name: fki_idClase; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY ciiu_subclase
@@ -32238,8 +29767,8 @@ ALTER TABLE ONLY ciiu_subclase
 
 
 --
--- TOC entry 3313 (class 2606 OID 36803)
--- Name: fki_idDependencia; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3313 (class 2606 OID 41243)
+-- Name: fki_idDependencia; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY supervisor
@@ -32247,8 +29776,8 @@ ALTER TABLE ONLY supervisor
 
 
 --
--- TOC entry 3286 (class 2606 OID 36808)
--- Name: fki_idDivision; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3286 (class 2606 OID 41248)
+-- Name: fki_idDivision; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY ciiu_clase
@@ -32256,8 +29785,8 @@ ALTER TABLE ONLY ciiu_clase
 
 
 --
--- TOC entry 3310 (class 2606 OID 36813)
--- Name: fki_idEspecialidad; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3310 (class 2606 OID 41253)
+-- Name: fki_idEspecialidad; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY rup_grupo
@@ -32265,8 +29794,8 @@ ALTER TABLE ONLY rup_grupo
 
 
 --
--- TOC entry 3299 (class 2606 OID 36818)
--- Name: fki_idParametroEstado; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3299 (class 2606 OID 41258)
+-- Name: fki_idParametroEstado; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY informacion_proveedor
@@ -32274,8 +29803,8 @@ ALTER TABLE ONLY informacion_proveedor
 
 
 --
--- TOC entry 3307 (class 2606 OID 36823)
--- Name: fki_idProveedor; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3307 (class 2606 OID 41263)
+-- Name: fki_idProveedor; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY proveedor_telefono
@@ -32283,8 +29812,8 @@ ALTER TABLE ONLY proveedor_telefono
 
 
 --
--- TOC entry 3308 (class 2606 OID 36828)
--- Name: fki_idTelefono; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3308 (class 2606 OID 41268)
+-- Name: fki_idTelefono; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY proveedor_telefono
@@ -32292,8 +29821,8 @@ ALTER TABLE ONLY proveedor_telefono
 
 
 --
--- TOC entry 3287 (class 2606 OID 36833)
--- Name: fki_idTipo; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3287 (class 2606 OID 41273)
+-- Name: fki_idTipo; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY ciiu_division
@@ -32301,8 +29830,8 @@ ALTER TABLE ONLY ciiu_division
 
 
 --
--- TOC entry 3305 (class 2606 OID 36838)
--- Name: fki_id_proveedor; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3305 (class 2606 OID 41278)
+-- Name: fki_id_proveedor; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY proveedor_representante_legal
@@ -32310,8 +29839,8 @@ ALTER TABLE ONLY proveedor_representante_legal
 
 
 --
--- TOC entry 3301 (class 2606 OID 36843)
--- Name: idActividadCiiu; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3301 (class 2606 OID 41283)
+-- Name: idActividadCiiu; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY objeto_contratar
@@ -32319,8 +29848,8 @@ ALTER TABLE ONLY objeto_contratar
 
 
 --
--- TOC entry 3292 (class 2606 OID 36848)
--- Name: idContrato; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3292 (class 2606 OID 41288)
+-- Name: idContrato; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY evaluacion
@@ -32328,8 +29857,8 @@ ALTER TABLE ONLY evaluacion
 
 
 --
--- TOC entry 3289 (class 2606 OID 36853)
--- Name: idObjeto; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3289 (class 2606 OID 41293)
+-- Name: idObjeto; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato
@@ -32337,8 +29866,8 @@ ALTER TABLE ONLY contrato
 
 
 --
--- TOC entry 3290 (class 2606 OID 36858)
--- Name: idPRoveedor; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3290 (class 2606 OID 41298)
+-- Name: idPRoveedor; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato
@@ -32346,8 +29875,8 @@ ALTER TABLE ONLY contrato
 
 
 --
--- TOC entry 3300 (class 2606 OID 36863)
--- Name: idProveedor; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3300 (class 2606 OID 41303)
+-- Name: idProveedor; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY inhabilidad
@@ -32355,8 +29884,8 @@ ALTER TABLE ONLY inhabilidad
 
 
 --
--- TOC entry 3311 (class 2606 OID 36868)
--- Name: idProveedor; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3311 (class 2606 OID 41308)
+-- Name: idProveedor; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY solicitud_cotizacion
@@ -32364,8 +29893,8 @@ ALTER TABLE ONLY solicitud_cotizacion
 
 
 --
--- TOC entry 3303 (class 2606 OID 36873)
--- Name: idSubclase; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3303 (class 2606 OID 41313)
+-- Name: idSubclase; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY proveedor_actividad_ciiu
@@ -32373,8 +29902,8 @@ ALTER TABLE ONLY proveedor_actividad_ciiu
 
 
 --
--- TOC entry 3291 (class 2606 OID 36878)
--- Name: idSupervisor; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3291 (class 2606 OID 41318)
+-- Name: idSupervisor; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato
@@ -32382,8 +29911,8 @@ ALTER TABLE ONLY contrato
 
 
 --
--- TOC entry 3302 (class 2606 OID 36883)
--- Name: idUinidad; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3302 (class 2606 OID 41323)
+-- Name: idUinidad; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY objeto_contratar
@@ -32391,8 +29920,8 @@ ALTER TABLE ONLY objeto_contratar
 
 
 --
--- TOC entry 3293 (class 2606 OID 36888)
--- Name: id_ciudad_origen; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3293 (class 2606 OID 41328)
+-- Name: id_ciudad_origen; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY informacion_persona_juridica
@@ -32400,8 +29929,8 @@ ALTER TABLE ONLY informacion_persona_juridica
 
 
 --
--- TOC entry 3312 (class 2606 OID 36893)
--- Name: id_objeto_fk; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3312 (class 2606 OID 41333)
+-- Name: id_objeto_fk; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY solicitud_cotizacion
@@ -32409,8 +29938,8 @@ ALTER TABLE ONLY solicitud_cotizacion
 
 
 --
--- TOC entry 3295 (class 2606 OID 36898)
--- Name: id_pais_nacimiento; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3295 (class 2606 OID 41338)
+-- Name: id_pais_nacimiento; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY informacion_persona_natural
@@ -32418,8 +29947,8 @@ ALTER TABLE ONLY informacion_persona_natural
 
 
 --
--- TOC entry 3296 (class 2606 OID 36903)
--- Name: id_perfil; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3296 (class 2606 OID 41343)
+-- Name: id_perfil; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY informacion_persona_natural
@@ -32427,8 +29956,8 @@ ALTER TABLE ONLY informacion_persona_natural
 
 
 --
--- TOC entry 3306 (class 2606 OID 36908)
--- Name: id_representante; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3306 (class 2606 OID 41348)
+-- Name: id_representante; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY proveedor_representante_legal
@@ -32436,8 +29965,8 @@ ALTER TABLE ONLY proveedor_representante_legal
 
 
 --
--- TOC entry 3297 (class 2606 OID 36913)
--- Name: id_tipo_documento; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3297 (class 2606 OID 41353)
+-- Name: id_tipo_documento; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY informacion_persona_natural
@@ -32445,8 +29974,8 @@ ALTER TABLE ONLY informacion_persona_natural
 
 
 --
--- TOC entry 3309 (class 2606 OID 36918)
--- Name: id_tipo_especialidad; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3309 (class 2606 OID 41358)
+-- Name: id_tipo_especialidad; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY rup_especialidad
@@ -32454,8 +29983,8 @@ ALTER TABLE ONLY rup_especialidad
 
 
 --
--- TOC entry 3304 (class 2606 OID 36923)
--- Name: num_documento; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3304 (class 2606 OID 41363)
+-- Name: num_documento; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY proveedor_actividad_ciiu
@@ -32463,8 +29992,8 @@ ALTER TABLE ONLY proveedor_actividad_ciiu
 
 
 --
--- TOC entry 3294 (class 2606 OID 36928)
--- Name: tipo_conformacion; Type: FK CONSTRAINT; Schema: agora; Owner: -
+-- TOC entry 3294 (class 2606 OID 41368)
+-- Name: tipo_conformacion; Type: FK CONSTRAINT; Schema: agora; Owner: postgres
 --
 
 ALTER TABLE ONLY informacion_persona_juridica
@@ -32474,8 +30003,8 @@ ALTER TABLE ONLY informacion_persona_juridica
 SET search_path = argo, pg_catalog;
 
 --
--- TOC entry 3361 (class 2606 OID 37863)
--- Name: fk_adicion_parametro_tiempo_ejecucion; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3319 (class 2606 OID 41373)
+-- Name: fk_adicion_parametro_tiempo_ejecucion; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY adicion
@@ -32484,16 +30013,16 @@ ALTER TABLE ONLY adicion
 
 --
 -- TOC entry 4473 (class 0 OID 0)
--- Dependencies: 3361
--- Name: CONSTRAINT fk_adicion_parametro_tiempo_ejecucion ON adicion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3319
+-- Name: CONSTRAINT fk_adicion_parametro_tiempo_ejecucion ON adicion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT fk_adicion_parametro_tiempo_ejecucion ON adicion IS 'identificador foraneo del parametro de unidad tiempo de ejecucion';
 
 
 --
--- TOC entry 3362 (class 2606 OID 37868)
--- Name: fk_adicion_parametro_tipo_adicion; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3320 (class 2606 OID 41378)
+-- Name: fk_adicion_parametro_tipo_adicion; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY adicion
@@ -32502,16 +30031,16 @@ ALTER TABLE ONLY adicion
 
 --
 -- TOC entry 4474 (class 0 OID 0)
--- Dependencies: 3362
--- Name: CONSTRAINT fk_adicion_parametro_tipo_adicion ON adicion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3320
+-- Name: CONSTRAINT fk_adicion_parametro_tipo_adicion ON adicion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT fk_adicion_parametro_tipo_adicion ON adicion IS 'identificador foraneo del parametro de tipo adicion ';
 
 
 --
--- TOC entry 3364 (class 2606 OID 37873)
--- Name: fk_anulacion_parametro_tipo_anulacion; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3322 (class 2606 OID 41383)
+-- Name: fk_anulacion_parametro_tipo_anulacion; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY anulacion
@@ -32520,16 +30049,16 @@ ALTER TABLE ONLY anulacion
 
 --
 -- TOC entry 4475 (class 0 OID 0)
--- Dependencies: 3364
--- Name: CONSTRAINT fk_anulacion_parametro_tipo_anulacion ON anulacion; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3322
+-- Name: CONSTRAINT fk_anulacion_parametro_tipo_anulacion ON anulacion; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT fk_anulacion_parametro_tipo_anulacion ON anulacion IS 'identificador foraneo que referencia al parametro tipo de anulacion';
 
 
 --
--- TOC entry 3391 (class 2606 OID 37878)
--- Name: fk_contrato_general; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3349 (class 2606 OID 41388)
+-- Name: fk_contrato_general; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY orden
@@ -32537,8 +30066,8 @@ ALTER TABLE ONLY orden
 
 
 --
--- TOC entry 3356 (class 2606 OID 37883)
--- Name: fk_contrato_general_acta_inicio; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3314 (class 2606 OID 41393)
+-- Name: fk_contrato_general_acta_inicio; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY acta_inicio
@@ -32547,16 +30076,16 @@ ALTER TABLE ONLY acta_inicio
 
 --
 -- TOC entry 4476 (class 0 OID 0)
--- Dependencies: 3356
--- Name: CONSTRAINT fk_contrato_general_acta_inicio ON acta_inicio; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3314
+-- Name: CONSTRAINT fk_contrato_general_acta_inicio ON acta_inicio; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT fk_contrato_general_acta_inicio ON acta_inicio IS 'restriccion foranea que aputa a la llave multiple numero_ contrato y vigencia de la tabla contrato_general ';
 
 
 --
--- TOC entry 3369 (class 2606 OID 37888)
--- Name: fk_contrato_general_contrato; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3327 (class 2606 OID 41398)
+-- Name: fk_contrato_general_contrato; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato
@@ -32565,16 +30094,16 @@ ALTER TABLE ONLY contrato
 
 --
 -- TOC entry 4477 (class 0 OID 0)
--- Dependencies: 3369
--- Name: CONSTRAINT fk_contrato_general_contrato ON contrato; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3327
+-- Name: CONSTRAINT fk_contrato_general_contrato ON contrato; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT fk_contrato_general_contrato ON contrato IS 'restriccion foranea que aputa a la llave multiple numero_ contrato y vigencia de la tabla contrato_general ';
 
 
 --
--- TOC entry 3382 (class 2606 OID 37893)
--- Name: fk_contrato_general_contrato_aprobado; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3340 (class 2606 OID 41403)
+-- Name: fk_contrato_general_contrato_aprobado; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato_suscrito
@@ -32583,16 +30112,16 @@ ALTER TABLE ONLY contrato_suscrito
 
 --
 -- TOC entry 4478 (class 0 OID 0)
--- Dependencies: 3382
--- Name: CONSTRAINT fk_contrato_general_contrato_aprobado ON contrato_suscrito; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3340
+-- Name: CONSTRAINT fk_contrato_general_contrato_aprobado ON contrato_suscrito; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT fk_contrato_general_contrato_aprobado ON contrato_suscrito IS 'referencia foranea compuesta de numero de contrato y vigencia de la tabla de contrato general a los mismo campos en la tabla de contrato aprobado';
 
 
 --
--- TOC entry 3370 (class 2606 OID 37898)
--- Name: fk_contrato_general_contrato_cancelado; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3328 (class 2606 OID 41408)
+-- Name: fk_contrato_general_contrato_cancelado; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato_cancelado
@@ -32601,16 +30130,16 @@ ALTER TABLE ONLY contrato_cancelado
 
 --
 -- TOC entry 4479 (class 0 OID 0)
--- Dependencies: 3370
--- Name: CONSTRAINT fk_contrato_general_contrato_cancelado ON contrato_cancelado; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3328
+-- Name: CONSTRAINT fk_contrato_general_contrato_cancelado ON contrato_cancelado; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT fk_contrato_general_contrato_cancelado ON contrato_cancelado IS 'referencia foranea compuesta de numero de contrato y vigencia de la tabla de contrato general a los mismo campos en la tabla de contrato cancelado';
 
 
 --
--- TOC entry 3371 (class 2606 OID 37903)
--- Name: fk_contrato_general_contrato_estado; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3329 (class 2606 OID 41413)
+-- Name: fk_contrato_general_contrato_estado; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato_estado
@@ -32619,16 +30148,16 @@ ALTER TABLE ONLY contrato_estado
 
 --
 -- TOC entry 4480 (class 0 OID 0)
--- Dependencies: 3371
--- Name: CONSTRAINT fk_contrato_general_contrato_estado ON contrato_estado; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3329
+-- Name: CONSTRAINT fk_contrato_general_contrato_estado ON contrato_estado; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT fk_contrato_general_contrato_estado ON contrato_estado IS 'restriccion foranea compuesta que referencia a la llave de vigencia y numero de contrato de la tabla contrato general';
 
 
 --
--- TOC entry 3389 (class 2606 OID 37908)
--- Name: fk_contrato_general_novedad_contractual; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3347 (class 2606 OID 41418)
+-- Name: fk_contrato_general_novedad_contractual; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY novedad_contractual
@@ -32637,16 +30166,16 @@ ALTER TABLE ONLY novedad_contractual
 
 --
 -- TOC entry 4481 (class 0 OID 0)
--- Dependencies: 3389
--- Name: CONSTRAINT fk_contrato_general_novedad_contractual ON novedad_contractual; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3347
+-- Name: CONSTRAINT fk_contrato_general_novedad_contractual ON novedad_contractual; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT fk_contrato_general_novedad_contractual ON novedad_contractual IS 'referencia foranea compuesta de numero de contrato y vigencia de la tabla de contrato general a los mismo campos en la tabla de novedad contractual';
 
 
 --
--- TOC entry 3373 (class 2606 OID 37913)
--- Name: fk_contrato_general_ordenador; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3331 (class 2606 OID 41423)
+-- Name: fk_contrato_general_ordenador; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato_general
@@ -32655,16 +30184,16 @@ ALTER TABLE ONLY contrato_general
 
 --
 -- TOC entry 4482 (class 0 OID 0)
--- Dependencies: 3373
--- Name: CONSTRAINT fk_contrato_general_ordenador ON contrato_general; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3331
+-- Name: CONSTRAINT fk_contrato_general_ordenador ON contrato_general; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT fk_contrato_general_ordenador ON contrato_general IS 'restriccion foranea del identificador  del ordenador del gasto';
 
 
 --
--- TOC entry 3380 (class 2606 OID 37918)
--- Name: fk_contrato_poliza_contrato_general; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3338 (class 2606 OID 41428)
+-- Name: fk_contrato_poliza_contrato_general; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato_poliza
@@ -32673,16 +30202,16 @@ ALTER TABLE ONLY contrato_poliza
 
 --
 -- TOC entry 4483 (class 0 OID 0)
--- Dependencies: 3380
--- Name: CONSTRAINT fk_contrato_poliza_contrato_general ON contrato_poliza; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3338
+-- Name: CONSTRAINT fk_contrato_poliza_contrato_general ON contrato_poliza; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT fk_contrato_poliza_contrato_general ON contrato_poliza IS 'restriccion foranea compuesta que referencia el numero ce contrato y la vigencia en contrato general';
 
 
 --
--- TOC entry 3372 (class 2606 OID 37923)
--- Name: fk_estado_contrato_contrato_estado; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3330 (class 2606 OID 41433)
+-- Name: fk_estado_contrato_contrato_estado; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato_estado
@@ -32691,16 +30220,16 @@ ALTER TABLE ONLY contrato_estado
 
 --
 -- TOC entry 4484 (class 0 OID 0)
--- Dependencies: 3372
--- Name: CONSTRAINT fk_estado_contrato_contrato_estado ON contrato_estado; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3330
+-- Name: CONSTRAINT fk_estado_contrato_contrato_estado ON contrato_estado; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT fk_estado_contrato_contrato_estado ON contrato_estado IS 'restriccion foranea  que referencia a la llave primaria de la tabla contrato estado_contrato';
 
 
 --
--- TOC entry 3374 (class 2606 OID 37928)
--- Name: fk_lugar_ejecucion_contrato_general; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3332 (class 2606 OID 41438)
+-- Name: fk_lugar_ejecucion_contrato_general; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato_general
@@ -32709,16 +30238,16 @@ ALTER TABLE ONLY contrato_general
 
 --
 -- TOC entry 4485 (class 0 OID 0)
--- Dependencies: 3374
--- Name: CONSTRAINT fk_lugar_ejecucion_contrato_general ON contrato_general; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3332
+-- Name: CONSTRAINT fk_lugar_ejecucion_contrato_general ON contrato_general; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT fk_lugar_ejecucion_contrato_general ON contrato_general IS 'restriccion foranea que referencia a la tabla lugar de ejecucion';
 
 
 --
--- TOC entry 3363 (class 2606 OID 37933)
--- Name: fk_novedad_contractual_adicion; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3321 (class 2606 OID 41443)
+-- Name: fk_novedad_contractual_adicion; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY adicion
@@ -32726,8 +30255,8 @@ ALTER TABLE ONLY adicion
 
 
 --
--- TOC entry 3365 (class 2606 OID 37938)
--- Name: fk_novedad_contractual_anulacion; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3323 (class 2606 OID 41448)
+-- Name: fk_novedad_contractual_anulacion; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY anulacion
@@ -32735,8 +30264,8 @@ ALTER TABLE ONLY anulacion
 
 
 --
--- TOC entry 3366 (class 2606 OID 37943)
--- Name: fk_novedad_contractual_cambio_supervisor; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3324 (class 2606 OID 41453)
+-- Name: fk_novedad_contractual_cambio_supervisor; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY cambio_supervisor
@@ -32744,8 +30273,8 @@ ALTER TABLE ONLY cambio_supervisor
 
 
 --
--- TOC entry 3368 (class 2606 OID 37948)
--- Name: fk_novedad_contractual_cesion; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3326 (class 2606 OID 41458)
+-- Name: fk_novedad_contractual_cesion; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY cesion
@@ -32753,8 +30282,8 @@ ALTER TABLE ONLY cesion
 
 
 --
--- TOC entry 3390 (class 2606 OID 37953)
--- Name: fk_novedad_contractual_parametro_tipo_novedad; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3348 (class 2606 OID 41463)
+-- Name: fk_novedad_contractual_parametro_tipo_novedad; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY novedad_contractual
@@ -32763,16 +30292,16 @@ ALTER TABLE ONLY novedad_contractual
 
 --
 -- TOC entry 4486 (class 0 OID 0)
--- Dependencies: 3390
--- Name: CONSTRAINT fk_novedad_contractual_parametro_tipo_novedad ON novedad_contractual; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3348
+-- Name: CONSTRAINT fk_novedad_contractual_parametro_tipo_novedad ON novedad_contractual; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT fk_novedad_contractual_parametro_tipo_novedad ON novedad_contractual IS 'identificador foraneo del tipo de novedade';
 
 
 --
--- TOC entry 3401 (class 2606 OID 37958)
--- Name: fk_novedad_contractual_reanudacion; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3359 (class 2606 OID 41468)
+-- Name: fk_novedad_contractual_reanudacion; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY suspension
@@ -32780,8 +30309,8 @@ ALTER TABLE ONLY suspension
 
 
 --
--- TOC entry 3402 (class 2606 OID 37963)
--- Name: fk_novedad_contractual_suspension; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3360 (class 2606 OID 41473)
+-- Name: fk_novedad_contractual_suspension; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY suspension
@@ -32789,8 +30318,8 @@ ALTER TABLE ONLY suspension
 
 
 --
--- TOC entry 3383 (class 2606 OID 37968)
--- Name: fk_orden_elemento_acta_recibido; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3341 (class 2606 OID 41478)
+-- Name: fk_orden_elemento_acta_recibido; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY elemento_acta_recibido
@@ -32798,8 +30327,8 @@ ALTER TABLE ONLY elemento_acta_recibido
 
 
 --
--- TOC entry 3375 (class 2606 OID 37973)
--- Name: fk_parametro_forma_pago; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3333 (class 2606 OID 41483)
+-- Name: fk_parametro_forma_pago; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato_general
@@ -32807,8 +30336,8 @@ ALTER TABLE ONLY contrato_general
 
 
 --
--- TOC entry 3376 (class 2606 OID 37978)
--- Name: fk_parametro_unidad_tiempo_ejecucion_parametros; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3334 (class 2606 OID 41488)
+-- Name: fk_parametro_unidad_tiempo_ejecucion_parametros; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato_general
@@ -32817,16 +30346,16 @@ ALTER TABLE ONLY contrato_general
 
 --
 -- TOC entry 4487 (class 0 OID 0)
--- Dependencies: 3376
--- Name: CONSTRAINT fk_parametro_unidad_tiempo_ejecucion_parametros ON contrato_general; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3334
+-- Name: CONSTRAINT fk_parametro_unidad_tiempo_ejecucion_parametros ON contrato_general; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT fk_parametro_unidad_tiempo_ejecucion_parametros ON contrato_general IS 'identificador foraneo a la tabla de parametros al parametro unidad tiempo de ejecucion';
 
 
 --
--- TOC entry 3381 (class 2606 OID 37983)
--- Name: fk_poliza_orden_poliza; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3339 (class 2606 OID 41493)
+-- Name: fk_poliza_orden_poliza; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato_poliza
@@ -32834,8 +30363,8 @@ ALTER TABLE ONLY contrato_poliza
 
 
 --
--- TOC entry 3392 (class 2606 OID 37988)
--- Name: fk_relacion_parametro_parametro; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3350 (class 2606 OID 41498)
+-- Name: fk_relacion_parametro_parametro; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY parametros
@@ -32843,8 +30372,8 @@ ALTER TABLE ONLY parametros
 
 
 --
--- TOC entry 3384 (class 2606 OID 37993)
--- Name: fk_sedes_especios_fisico; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3342 (class 2606 OID 41503)
+-- Name: fk_sedes_especios_fisico; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY "espaciosfisicos_SIC"
@@ -32852,8 +30381,8 @@ ALTER TABLE ONLY "espaciosfisicos_SIC"
 
 
 --
--- TOC entry 3396 (class 2606 OID 37998)
--- Name: fk_servicio_orden_general_contrato; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3354 (class 2606 OID 41508)
+-- Name: fk_servicio_orden_general_contrato; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY servicio_orden
@@ -32862,16 +30391,16 @@ ALTER TABLE ONLY servicio_orden
 
 --
 -- TOC entry 4488 (class 0 OID 0)
--- Dependencies: 3396
--- Name: CONSTRAINT fk_servicio_orden_general_contrato ON servicio_orden; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3354
+-- Name: CONSTRAINT fk_servicio_orden_general_contrato ON servicio_orden; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT fk_servicio_orden_general_contrato ON servicio_orden IS 'restriccion foranea que aputa a la llave multiple numero_ contrato y vigencia de la tabla contrato_general ';
 
 
 --
--- TOC entry 3377 (class 2606 OID 38003)
--- Name: fk_supervisor_contrato_contrato_general; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3335 (class 2606 OID 41513)
+-- Name: fk_supervisor_contrato_contrato_general; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato_general
@@ -32880,16 +30409,16 @@ ALTER TABLE ONLY contrato_general
 
 --
 -- TOC entry 4489 (class 0 OID 0)
--- Dependencies: 3377
--- Name: CONSTRAINT fk_supervisor_contrato_contrato_general ON contrato_general; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3335
+-- Name: CONSTRAINT fk_supervisor_contrato_contrato_general ON contrato_general; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT fk_supervisor_contrato_contrato_general ON contrato_general IS 'restriccion foranea a la tabloa supervisor_contrato que almacena la informacion del supervisor del contrato';
 
 
 --
--- TOC entry 3378 (class 2606 OID 38008)
--- Name: fk_tipo_contrato_contrato_generaL; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3336 (class 2606 OID 41518)
+-- Name: fk_tipo_contrato_contrato_generaL; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato_general
@@ -32898,16 +30427,16 @@ ALTER TABLE ONLY contrato_general
 
 --
 -- TOC entry 4490 (class 0 OID 0)
--- Dependencies: 3378
--- Name: CONSTRAINT "fk_tipo_contrato_contrato_generaL" ON contrato_general; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3336
+-- Name: CONSTRAINT "fk_tipo_contrato_contrato_generaL" ON contrato_general; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT "fk_tipo_contrato_contrato_generaL" ON contrato_general IS 'restriccion foranea al tipo de contrato';
 
 
 --
--- TOC entry 3379 (class 2606 OID 38013)
--- Name: fk_unidad_ejecutora_contrato_general; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3337 (class 2606 OID 41523)
+-- Name: fk_unidad_ejecutora_contrato_general; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY contrato_general
@@ -32916,16 +30445,16 @@ ALTER TABLE ONLY contrato_general
 
 --
 -- TOC entry 4491 (class 0 OID 0)
--- Dependencies: 3379
--- Name: CONSTRAINT fk_unidad_ejecutora_contrato_general ON contrato_general; Type: COMMENT; Schema: argo; Owner: -
+-- Dependencies: 3337
+-- Name: CONSTRAINT fk_unidad_ejecutora_contrato_general ON contrato_general; Type: COMMENT; Schema: argo; Owner: postgres
 --
 
 COMMENT ON CONSTRAINT fk_unidad_ejecutora_contrato_general ON contrato_general IS 'reestriccion foranea que apunta a la tabla unidad ejecutora ';
 
 
 --
--- TOC entry 3358 (class 2606 OID 38018)
--- Name: rel_actividad_centro_costos_actividad_solicitud_necesidad; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3316 (class 2606 OID 41528)
+-- Name: rel_actividad_centro_costos_actividad_solicitud_necesidad; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY actividad_solicitud_necesidad
@@ -32933,8 +30462,8 @@ ALTER TABLE ONLY actividad_solicitud_necesidad
 
 
 --
--- TOC entry 3360 (class 2606 OID 38023)
--- Name: rel_centro_costos_actividades_centro_costos; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3318 (class 2606 OID 41533)
+-- Name: rel_centro_costos_actividades_centro_costos; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY actividades_centro_costos
@@ -32942,8 +30471,8 @@ ALTER TABLE ONLY actividades_centro_costos
 
 
 --
--- TOC entry 3367 (class 2606 OID 38028)
--- Name: rel_centro_costos_centro_costos; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3325 (class 2606 OID 41538)
+-- Name: rel_centro_costos_centro_costos; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY centro_costos
@@ -32951,8 +30480,8 @@ ALTER TABLE ONLY centro_costos
 
 
 --
--- TOC entry 3385 (class 2606 OID 38033)
--- Name: rel_especificacion_tecnica_solicitud_necesidad; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3343 (class 2606 OID 41543)
+-- Name: rel_especificacion_tecnica_solicitud_necesidad; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY especificacion_tecnica
@@ -32960,8 +30489,8 @@ ALTER TABLE ONLY especificacion_tecnica
 
 
 --
--- TOC entry 3397 (class 2606 OID 38038)
--- Name: rel_estado_solicitud_necesidad_solicitud_necesidad; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3355 (class 2606 OID 41548)
+-- Name: rel_estado_solicitud_necesidad_solicitud_necesidad; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY solicitud_necesidad
@@ -32969,8 +30498,8 @@ ALTER TABLE ONLY solicitud_necesidad
 
 
 --
--- TOC entry 3387 (class 2606 OID 38043)
--- Name: rel_marco_legal_marco_legal_necesidad; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3345 (class 2606 OID 41553)
+-- Name: rel_marco_legal_marco_legal_necesidad; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY marco_legal_necesidad
@@ -32978,8 +30507,8 @@ ALTER TABLE ONLY marco_legal_necesidad
 
 
 --
--- TOC entry 3398 (class 2606 OID 38048)
--- Name: rel_modalidad_seleccion_necesidad_solicitud_necesidad; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3356 (class 2606 OID 41558)
+-- Name: rel_modalidad_seleccion_necesidad_solicitud_necesidad; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY solicitud_necesidad
@@ -32987,8 +30516,8 @@ ALTER TABLE ONLY solicitud_necesidad
 
 
 --
--- TOC entry 3393 (class 2606 OID 38053)
--- Name: rel_requisito_minimo_especificacion_tecnica; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3351 (class 2606 OID 41563)
+-- Name: rel_requisito_minimo_especificacion_tecnica; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY requisito_minimo
@@ -32996,8 +30525,8 @@ ALTER TABLE ONLY requisito_minimo
 
 
 --
--- TOC entry 3359 (class 2606 OID 38058)
--- Name: rel_rubro_solicitud_necesidad_actividad_solicitud_necesidad; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3317 (class 2606 OID 41568)
+-- Name: rel_rubro_solicitud_necesidad_actividad_solicitud_necesidad; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY actividad_solicitud_necesidad
@@ -33005,8 +30534,8 @@ ALTER TABLE ONLY actividad_solicitud_necesidad
 
 
 --
--- TOC entry 3386 (class 2606 OID 38063)
--- Name: rel_rubro_solicitud_necesidad_fuente_financiacion_rubro; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3344 (class 2606 OID 41573)
+-- Name: rel_rubro_solicitud_necesidad_fuente_financiacion_rubro; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY fuente_financiacion_rubro_necesidad
@@ -33014,8 +30543,8 @@ ALTER TABLE ONLY fuente_financiacion_rubro_necesidad
 
 
 --
--- TOC entry 3394 (class 2606 OID 38068)
--- Name: rel_rubro_solicitud_necesidad_rubro; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3352 (class 2606 OID 41578)
+-- Name: rel_rubro_solicitud_necesidad_rubro; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY rubro_solicitud_necesidad
@@ -33023,8 +30552,8 @@ ALTER TABLE ONLY rubro_solicitud_necesidad
 
 
 --
--- TOC entry 3395 (class 2606 OID 38073)
--- Name: rel_rubro_solicitud_necesidad_solicitud_necesidad; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3353 (class 2606 OID 41583)
+-- Name: rel_rubro_solicitud_necesidad_solicitud_necesidad; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY rubro_solicitud_necesidad
@@ -33032,8 +30561,8 @@ ALTER TABLE ONLY rubro_solicitud_necesidad
 
 
 --
--- TOC entry 3357 (class 2606 OID 38078)
--- Name: rel_solicitud_necesidad_actividad_economica_necesidad; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3315 (class 2606 OID 41588)
+-- Name: rel_solicitud_necesidad_actividad_economica_necesidad; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY actividad_economica_necesidad
@@ -33041,8 +30570,8 @@ ALTER TABLE ONLY actividad_economica_necesidad
 
 
 --
--- TOC entry 3388 (class 2606 OID 38083)
--- Name: rel_solicitud_necesidad_marco_legal_necesidad; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3346 (class 2606 OID 41593)
+-- Name: rel_solicitud_necesidad_marco_legal_necesidad; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY marco_legal_necesidad
@@ -33050,8 +30579,8 @@ ALTER TABLE ONLY marco_legal_necesidad
 
 
 --
--- TOC entry 3400 (class 2606 OID 38088)
--- Name: rel_solicitud_necesidad_supervisor_solicitud_necesidad; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3358 (class 2606 OID 41598)
+-- Name: rel_solicitud_necesidad_supervisor_solicitud_necesidad; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY supervisor_solicitud_necesidad
@@ -33059,8 +30588,8 @@ ALTER TABLE ONLY supervisor_solicitud_necesidad
 
 
 --
--- TOC entry 3399 (class 2606 OID 38093)
--- Name: rel_tipo_contratacion_necesidad_solicitud_necesidad; Type: FK CONSTRAINT; Schema: argo; Owner: -
+-- TOC entry 3357 (class 2606 OID 41603)
+-- Name: rel_tipo_contratacion_necesidad_solicitud_necesidad; Type: FK CONSTRAINT; Schema: argo; Owner: postgres
 --
 
 ALTER TABLE ONLY solicitud_necesidad
@@ -33070,8 +30599,8 @@ ALTER TABLE ONLY solicitud_necesidad
 SET search_path = core, pg_catalog;
 
 --
--- TOC entry 3317 (class 2606 OID 37138)
--- Name: estado_fk; Type: FK CONSTRAINT; Schema: core; Owner: -
+-- TOC entry 3364 (class 2606 OID 41608)
+-- Name: estado_fk; Type: FK CONSTRAINT; Schema: core; Owner: postgres
 --
 
 ALTER TABLE ONLY parametro_entidad
@@ -33079,8 +30608,8 @@ ALTER TABLE ONLY parametro_entidad
 
 
 --
--- TOC entry 3314 (class 2606 OID 37143)
--- Name: fki_idDepartamento; Type: FK CONSTRAINT; Schema: core; Owner: -
+-- TOC entry 3361 (class 2606 OID 41613)
+-- Name: fki_idDepartamento; Type: FK CONSTRAINT; Schema: core; Owner: postgres
 --
 
 ALTER TABLE ONLY ciudad
@@ -33088,8 +30617,8 @@ ALTER TABLE ONLY ciudad
 
 
 --
--- TOC entry 3315 (class 2606 OID 37148)
--- Name: fki_idPais; Type: FK CONSTRAINT; Schema: core; Owner: -
+-- TOC entry 3362 (class 2606 OID 41618)
+-- Name: fki_idPais; Type: FK CONSTRAINT; Schema: core; Owner: postgres
 --
 
 ALTER TABLE ONLY departamento
@@ -33097,8 +30626,8 @@ ALTER TABLE ONLY departamento
 
 
 --
--- TOC entry 3316 (class 2606 OID 37153)
--- Name: parametro_entidad_fk; Type: FK CONSTRAINT; Schema: core; Owner: -
+-- TOC entry 3363 (class 2606 OID 41623)
+-- Name: parametro_entidad_fk; Type: FK CONSTRAINT; Schema: core; Owner: postgres
 --
 
 ALTER TABLE ONLY info_entidad
@@ -33106,8 +30635,8 @@ ALTER TABLE ONLY info_entidad
 
 
 --
--- TOC entry 3318 (class 2606 OID 37158)
--- Name: tipo_entidad_fk; Type: FK CONSTRAINT; Schema: core; Owner: -
+-- TOC entry 3365 (class 2606 OID 41628)
+-- Name: tipo_entidad_fk; Type: FK CONSTRAINT; Schema: core; Owner: postgres
 --
 
 ALTER TABLE ONLY parametro_entidad
@@ -33117,8 +30646,8 @@ ALTER TABLE ONLY parametro_entidad
 SET search_path = nix_presupuesto, pg_catalog;
 
 --
--- TOC entry 3319 (class 2606 OID 37163)
--- Name: fk_anulacion_reserva; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3366 (class 2606 OID 41633)
+-- Name: fk_anulacion_reserva; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY anulacion_reserva
@@ -33126,8 +30655,8 @@ ALTER TABLE ONLY anulacion_reserva
 
 
 --
--- TOC entry 3320 (class 2606 OID 37168)
--- Name: fk_apropiacion_estado_apropiacion; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3367 (class 2606 OID 41638)
+-- Name: fk_apropiacion_estado_apropiacion; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY apropiacion
@@ -33135,8 +30664,8 @@ ALTER TABLE ONLY apropiacion
 
 
 --
--- TOC entry 3321 (class 2606 OID 37173)
--- Name: fk_apropiacion_rubro; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3368 (class 2606 OID 41643)
+-- Name: fk_apropiacion_rubro; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY apropiacion
@@ -33144,8 +30673,8 @@ ALTER TABLE ONLY apropiacion
 
 
 --
--- TOC entry 3322 (class 2606 OID 37178)
--- Name: fk_concepto_rubro; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3369 (class 2606 OID 41648)
+-- Name: fk_concepto_rubro; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY concepto
@@ -33153,8 +30682,8 @@ ALTER TABLE ONLY concepto
 
 
 --
--- TOC entry 3323 (class 2606 OID 37183)
--- Name: fk_desagregacion_ingreso_concepto; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3370 (class 2606 OID 41653)
+-- Name: fk_desagregacion_ingreso_concepto; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY desagregacion_ingreso
@@ -33162,8 +30691,8 @@ ALTER TABLE ONLY desagregacion_ingreso
 
 
 --
--- TOC entry 3324 (class 2606 OID 37188)
--- Name: fk_desagregacion_ingreso_ingreso; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3371 (class 2606 OID 41658)
+-- Name: fk_desagregacion_ingreso_ingreso; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY desagregacion_ingreso
@@ -33171,8 +30700,8 @@ ALTER TABLE ONLY desagregacion_ingreso
 
 
 --
--- TOC entry 3325 (class 2606 OID 37193)
--- Name: fk_disponibilidad_destino_disponibilidad; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3372 (class 2606 OID 41663)
+-- Name: fk_disponibilidad_destino_disponibilidad; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY disponibilidad
@@ -33180,8 +30709,8 @@ ALTER TABLE ONLY disponibilidad
 
 
 --
--- TOC entry 3326 (class 2606 OID 37198)
--- Name: fk_disponibilidad_entidad; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3373 (class 2606 OID 41668)
+-- Name: fk_disponibilidad_entidad; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY disponibilidad
@@ -33189,8 +30718,8 @@ ALTER TABLE ONLY disponibilidad
 
 
 --
--- TOC entry 3327 (class 2606 OID 37203)
--- Name: fk_disponibilidad_estado_disponibilidad; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3374 (class 2606 OID 41673)
+-- Name: fk_disponibilidad_estado_disponibilidad; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY disponibilidad
@@ -33198,8 +30727,8 @@ ALTER TABLE ONLY disponibilidad
 
 
 --
--- TOC entry 3328 (class 2606 OID 37208)
--- Name: fk_disponibilidad_rubro; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3375 (class 2606 OID 41678)
+-- Name: fk_disponibilidad_rubro; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY disponibilidad_rubro
@@ -33207,8 +30736,8 @@ ALTER TABLE ONLY disponibilidad_rubro
 
 
 --
--- TOC entry 3329 (class 2606 OID 37213)
--- Name: fk_disponibilidad_rubro_disponibilidad; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3376 (class 2606 OID 41683)
+-- Name: fk_disponibilidad_rubro_disponibilidad; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY disponibilidad_rubro
@@ -33216,8 +30745,8 @@ ALTER TABLE ONLY disponibilidad_rubro
 
 
 --
--- TOC entry 3330 (class 2606 OID 37218)
--- Name: fk_entidad; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3377 (class 2606 OID 41688)
+-- Name: fk_entidad; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY fuente_financiacion_entidad
@@ -33225,8 +30754,8 @@ ALTER TABLE ONLY fuente_financiacion_entidad
 
 
 --
--- TOC entry 3331 (class 2606 OID 37223)
--- Name: fk_fuente; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3378 (class 2606 OID 41693)
+-- Name: fk_fuente; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY fuente_financiacion_entidad
@@ -33234,8 +30763,8 @@ ALTER TABLE ONLY fuente_financiacion_entidad
 
 
 --
--- TOC entry 3332 (class 2606 OID 37228)
--- Name: fk_ingreso_rubro; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3379 (class 2606 OID 41698)
+-- Name: fk_ingreso_rubro; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY ingreso
@@ -33243,8 +30772,8 @@ ALTER TABLE ONLY ingreso
 
 
 --
--- TOC entry 3333 (class 2606 OID 37233)
--- Name: fk_modificacion_presupuestal_apropiacion; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3380 (class 2606 OID 41703)
+-- Name: fk_modificacion_presupuestal_apropiacion; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY modificacion_presupuestal
@@ -33252,8 +30781,8 @@ ALTER TABLE ONLY modificacion_presupuestal
 
 
 --
--- TOC entry 3334 (class 2606 OID 37238)
--- Name: fk_registo_presupuestal_estado; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3381 (class 2606 OID 41708)
+-- Name: fk_registo_presupuestal_estado; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY registo_presupuestal
@@ -33261,8 +30790,8 @@ ALTER TABLE ONLY registo_presupuestal
 
 
 --
--- TOC entry 3335 (class 2606 OID 37243)
--- Name: fk_registro_disponibilidad; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3382 (class 2606 OID 41713)
+-- Name: fk_registro_disponibilidad; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY registo_presupuestal
@@ -33270,8 +30799,8 @@ ALTER TABLE ONLY registo_presupuestal
 
 
 --
--- TOC entry 3337 (class 2606 OID 37248)
--- Name: fk_registro_presupuestal_disponibilidad_disponibilidad_rubro; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3384 (class 2606 OID 41718)
+-- Name: fk_registro_presupuestal_disponibilidad_disponibilidad_rubro; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY registro_presupuestal_disponibilidad
@@ -33279,8 +30808,8 @@ ALTER TABLE ONLY registro_presupuestal_disponibilidad
 
 
 --
--- TOC entry 3336 (class 2606 OID 37253)
--- Name: fk_registro_presupuestal_rubro; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3383 (class 2606 OID 41723)
+-- Name: fk_registro_presupuestal_rubro; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY registo_presupuestal
@@ -33288,8 +30817,8 @@ ALTER TABLE ONLY registo_presupuestal
 
 
 --
--- TOC entry 3338 (class 2606 OID 37258)
--- Name: fk_reserva_estado_reserva; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3385 (class 2606 OID 41728)
+-- Name: fk_reserva_estado_reserva; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY reserva_presupuestal
@@ -33297,8 +30826,8 @@ ALTER TABLE ONLY reserva_presupuestal
 
 
 --
--- TOC entry 3339 (class 2606 OID 37263)
--- Name: fk_reserva_presupuestal_rubro; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3386 (class 2606 OID 41733)
+-- Name: fk_reserva_presupuestal_rubro; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY reserva_presupuestal
@@ -33306,8 +30835,8 @@ ALTER TABLE ONLY reserva_presupuestal
 
 
 --
--- TOC entry 3340 (class 2606 OID 37268)
--- Name: fk_rubro_entidad; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3387 (class 2606 OID 41738)
+-- Name: fk_rubro_entidad; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY rubro
@@ -33315,8 +30844,8 @@ ALTER TABLE ONLY rubro
 
 
 --
--- TOC entry 3343 (class 2606 OID 37273)
--- Name: fk_rubro_hijo; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3390 (class 2606 OID 41743)
+-- Name: fk_rubro_hijo; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY rubro_rubro
@@ -33324,8 +30853,8 @@ ALTER TABLE ONLY rubro_rubro
 
 
 --
--- TOC entry 3341 (class 2606 OID 37278)
--- Name: fk_rubro_homologado_entidad; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3388 (class 2606 OID 41748)
+-- Name: fk_rubro_homologado_entidad; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY rubro_homologado
@@ -33333,8 +30862,8 @@ ALTER TABLE ONLY rubro_homologado
 
 
 --
--- TOC entry 3342 (class 2606 OID 37283)
--- Name: fk_rubro_homologado_rubro; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3389 (class 2606 OID 41753)
+-- Name: fk_rubro_homologado_rubro; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY rubro_homologado
@@ -33342,8 +30871,8 @@ ALTER TABLE ONLY rubro_homologado
 
 
 --
--- TOC entry 3344 (class 2606 OID 37288)
--- Name: fk_rubro_padre; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: -
+-- TOC entry 3391 (class 2606 OID 41758)
+-- Name: fk_rubro_padre; Type: FK CONSTRAINT; Schema: nix_presupuesto; Owner: postgres
 --
 
 ALTER TABLE ONLY rubro_rubro
@@ -33353,8 +30882,8 @@ ALTER TABLE ONLY rubro_rubro
 SET search_path = ruler, pg_catalog;
 
 --
--- TOC entry 3345 (class 2606 OID 37293)
--- Name: dominio; Type: FK CONSTRAINT; Schema: ruler; Owner: -
+-- TOC entry 3392 (class 2606 OID 41763)
+-- Name: dominio; Type: FK CONSTRAINT; Schema: ruler; Owner: postgres
 --
 
 ALTER TABLE ONLY predicado
@@ -33362,8 +30891,8 @@ ALTER TABLE ONLY predicado
 
 
 --
--- TOC entry 3346 (class 2606 OID 37298)
--- Name: fk_predicado_tipo_predicado; Type: FK CONSTRAINT; Schema: ruler; Owner: -
+-- TOC entry 3393 (class 2606 OID 41768)
+-- Name: fk_predicado_tipo_predicado; Type: FK CONSTRAINT; Schema: ruler; Owner: postgres
 --
 
 ALTER TABLE ONLY predicado
@@ -33373,8 +30902,8 @@ ALTER TABLE ONLY predicado
 SET search_path = titan, pg_catalog;
 
 --
--- TOC entry 3348 (class 2606 OID 37303)
--- Name: FK_detalle_novedad_novedad; Type: FK CONSTRAINT; Schema: titan; Owner: -
+-- TOC entry 3395 (class 2606 OID 41773)
+-- Name: FK_detalle_novedad_novedad; Type: FK CONSTRAINT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY detalle_novedad
@@ -33382,8 +30911,8 @@ ALTER TABLE ONLY detalle_novedad
 
 
 --
--- TOC entry 3349 (class 2606 OID 37308)
--- Name: FK_detalle_preliquidacion_concepto; Type: FK CONSTRAINT; Schema: titan; Owner: -
+-- TOC entry 3396 (class 2606 OID 41778)
+-- Name: FK_detalle_preliquidacion_concepto; Type: FK CONSTRAINT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY detalle_preliquidacion
@@ -33391,8 +30920,8 @@ ALTER TABLE ONLY detalle_preliquidacion
 
 
 --
--- TOC entry 3350 (class 2606 OID 37313)
--- Name: FK_detalle_preliquidacion_preliquidacion; Type: FK CONSTRAINT; Schema: titan; Owner: -
+-- TOC entry 3397 (class 2606 OID 41783)
+-- Name: FK_detalle_preliquidacion_preliquidacion; Type: FK CONSTRAINT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY detalle_preliquidacion
@@ -33400,8 +30929,8 @@ ALTER TABLE ONLY detalle_preliquidacion
 
 
 --
--- TOC entry 3351 (class 2606 OID 37318)
--- Name: FK_novedad_categoria_novedad; Type: FK CONSTRAINT; Schema: titan; Owner: -
+-- TOC entry 3398 (class 2606 OID 41788)
+-- Name: FK_novedad_categoria_novedad; Type: FK CONSTRAINT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY novedad
@@ -33409,8 +30938,8 @@ ALTER TABLE ONLY novedad
 
 
 --
--- TOC entry 3354 (class 2606 OID 37323)
--- Name: FK_parametro_liquidacion_categoria_parametro; Type: FK CONSTRAINT; Schema: titan; Owner: -
+-- TOC entry 3401 (class 2606 OID 41793)
+-- Name: FK_parametro_liquidacion_categoria_parametro; Type: FK CONSTRAINT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY parametro_liquidacion
@@ -33418,8 +30947,8 @@ ALTER TABLE ONLY parametro_liquidacion
 
 
 --
--- TOC entry 3355 (class 2606 OID 37328)
--- Name: FK_preliquidacion_nomina; Type: FK CONSTRAINT; Schema: titan; Owner: -
+-- TOC entry 3402 (class 2606 OID 41798)
+-- Name: FK_preliquidacion_nomina; Type: FK CONSTRAINT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY preliquidacion
@@ -33427,8 +30956,8 @@ ALTER TABLE ONLY preliquidacion
 
 
 --
--- TOC entry 3347 (class 2606 OID 37333)
--- Name: descuentos_detalle_preliquidacion_fkey; Type: FK CONSTRAINT; Schema: titan; Owner: -
+-- TOC entry 3394 (class 2606 OID 41803)
+-- Name: descuentos_detalle_preliquidacion_fkey; Type: FK CONSTRAINT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY descuentos
@@ -33436,8 +30965,8 @@ ALTER TABLE ONLY descuentos
 
 
 --
--- TOC entry 3352 (class 2606 OID 37338)
--- Name: novedad_aplicada_detalle_novedad_fkey; Type: FK CONSTRAINT; Schema: titan; Owner: -
+-- TOC entry 3399 (class 2606 OID 41808)
+-- Name: novedad_aplicada_detalle_novedad_fkey; Type: FK CONSTRAINT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY novedad_aplicada
@@ -33445,8 +30974,8 @@ ALTER TABLE ONLY novedad_aplicada
 
 
 --
--- TOC entry 3353 (class 2606 OID 37343)
--- Name: novedad_aplicada_detalle_preliquidacion_fkey; Type: FK CONSTRAINT; Schema: titan; Owner: -
+-- TOC entry 3400 (class 2606 OID 41813)
+-- Name: novedad_aplicada_detalle_preliquidacion_fkey; Type: FK CONSTRAINT; Schema: titan; Owner: postgres
 --
 
 ALTER TABLE ONLY novedad_aplicada
@@ -33456,7 +30985,7 @@ ALTER TABLE ONLY novedad_aplicada
 --
 -- TOC entry 3747 (class 0 OID 0)
 -- Dependencies: 12
--- Name: agora; Type: ACL; Schema: -; Owner: -
+-- Name: agora; Type: ACL; Schema: -; Owner: postgres
 --
 
 REVOKE ALL ON SCHEMA agora FROM PUBLIC;
@@ -33467,8 +30996,8 @@ GRANT ALL ON SCHEMA agora TO wproveedor;
 
 --
 -- TOC entry 3748 (class 0 OID 0)
--- Dependencies: 14
--- Name: argo; Type: ACL; Schema: -; Owner: -
+-- Dependencies: 13
+-- Name: argo; Type: ACL; Schema: -; Owner: postgres
 --
 
 REVOKE ALL ON SCHEMA argo FROM PUBLIC;
@@ -33482,8 +31011,8 @@ GRANT USAGE ON SCHEMA argo TO udistrital_nomina;
 
 --
 -- TOC entry 3752 (class 0 OID 0)
--- Dependencies: 13
--- Name: public; Type: ACL; Schema: -; Owner: -
+-- Dependencies: 14
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
 --
 
 REVOKE ALL ON SCHEMA public FROM PUBLIC;
@@ -33497,7 +31026,7 @@ SET search_path = agora, pg_catalog;
 --
 -- TOC entry 3754 (class 0 OID 0)
 -- Dependencies: 188
--- Name: ciiu_clase; Type: ACL; Schema: agora; Owner: -
+-- Name: ciiu_clase; Type: ACL; Schema: agora; Owner: postgres
 --
 
 REVOKE ALL ON TABLE ciiu_clase FROM PUBLIC;
@@ -33509,7 +31038,7 @@ GRANT ALL ON TABLE ciiu_clase TO wproveedor;
 --
 -- TOC entry 3755 (class 0 OID 0)
 -- Dependencies: 189
--- Name: ciiu_division; Type: ACL; Schema: agora; Owner: -
+-- Name: ciiu_division; Type: ACL; Schema: agora; Owner: postgres
 --
 
 REVOKE ALL ON TABLE ciiu_division FROM PUBLIC;
@@ -33521,7 +31050,7 @@ GRANT ALL ON TABLE ciiu_division TO wproveedor;
 --
 -- TOC entry 3756 (class 0 OID 0)
 -- Dependencies: 190
--- Name: ciiu_subclase; Type: ACL; Schema: agora; Owner: -
+-- Name: ciiu_subclase; Type: ACL; Schema: agora; Owner: postgres
 --
 
 REVOKE ALL ON TABLE ciiu_subclase FROM PUBLIC;
@@ -33533,7 +31062,7 @@ GRANT ALL ON TABLE ciiu_subclase TO wproveedor;
 --
 -- TOC entry 3757 (class 0 OID 0)
 -- Dependencies: 191
--- Name: ciiu_tipo; Type: ACL; Schema: agora; Owner: -
+-- Name: ciiu_tipo; Type: ACL; Schema: agora; Owner: postgres
 --
 
 REVOKE ALL ON TABLE ciiu_tipo FROM PUBLIC;
@@ -33545,7 +31074,7 @@ GRANT ALL ON TABLE ciiu_tipo TO wproveedor;
 --
 -- TOC entry 3789 (class 0 OID 0)
 -- Dependencies: 219
--- Name: prov_formulario_tmp; Type: ACL; Schema: agora; Owner: -
+-- Name: prov_formulario_tmp; Type: ACL; Schema: agora; Owner: postgres
 --
 
 REVOKE ALL ON TABLE prov_formulario_tmp FROM PUBLIC;
@@ -33557,7 +31086,7 @@ GRANT ALL ON TABLE prov_formulario_tmp TO wproveedor;
 --
 -- TOC entry 3790 (class 0 OID 0)
 -- Dependencies: 221
--- Name: prov_proveedor_data; Type: ACL; Schema: agora; Owner: -
+-- Name: prov_proveedor_data; Type: ACL; Schema: agora; Owner: postgres
 --
 
 REVOKE ALL ON TABLE prov_proveedor_data FROM PUBLIC;
@@ -33569,7 +31098,7 @@ GRANT ALL ON TABLE prov_proveedor_data TO wproveedor;
 --
 -- TOC entry 3791 (class 0 OID 0)
 -- Dependencies: 228
--- Name: rup_especialidad; Type: ACL; Schema: agora; Owner: -
+-- Name: rup_especialidad; Type: ACL; Schema: agora; Owner: postgres
 --
 
 REVOKE ALL ON TABLE rup_especialidad FROM PUBLIC;
@@ -33581,7 +31110,7 @@ GRANT ALL ON TABLE rup_especialidad TO wproveedor;
 --
 -- TOC entry 3792 (class 0 OID 0)
 -- Dependencies: 229
--- Name: rup_grupo; Type: ACL; Schema: agora; Owner: -
+-- Name: rup_grupo; Type: ACL; Schema: agora; Owner: postgres
 --
 
 REVOKE ALL ON TABLE rup_grupo FROM PUBLIC;
@@ -33594,8 +31123,8 @@ SET search_path = argo, pg_catalog;
 
 --
 -- TOC entry 3809 (class 0 OID 0)
--- Dependencies: 330
--- Name: actividad_economica_necesidad; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 239
+-- Name: actividad_economica_necesidad; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON TABLE actividad_economica_necesidad FROM PUBLIC;
@@ -33609,8 +31138,8 @@ GRANT SELECT ON TABLE actividad_economica_necesidad TO udistrital_nomina;
 
 --
 -- TOC entry 3812 (class 0 OID 0)
--- Dependencies: 331
--- Name: actividad_economica_necesidad_id_seq; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 240
+-- Name: actividad_economica_necesidad_id_seq; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON SEQUENCE actividad_economica_necesidad_id_seq FROM PUBLIC;
@@ -33623,8 +31152,8 @@ GRANT SELECT,UPDATE ON SEQUENCE actividad_economica_necesidad_id_seq TO gestion_
 
 --
 -- TOC entry 3818 (class 0 OID 0)
--- Dependencies: 332
--- Name: actividad_solicitud_necesidad; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 241
+-- Name: actividad_solicitud_necesidad; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON TABLE actividad_solicitud_necesidad FROM PUBLIC;
@@ -33638,8 +31167,8 @@ GRANT SELECT ON TABLE actividad_solicitud_necesidad TO udistrital_nomina;
 
 --
 -- TOC entry 3821 (class 0 OID 0)
--- Dependencies: 333
--- Name: actividad_solicitud_necesidad_id_seq; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 242
+-- Name: actividad_solicitud_necesidad_id_seq; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON SEQUENCE actividad_solicitud_necesidad_id_seq FROM PUBLIC;
@@ -33652,8 +31181,8 @@ GRANT SELECT,UPDATE ON SEQUENCE actividad_solicitud_necesidad_id_seq TO gestion_
 
 --
 -- TOC entry 3827 (class 0 OID 0)
--- Dependencies: 334
--- Name: actividades_centro_costos; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 243
+-- Name: actividades_centro_costos; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON TABLE actividades_centro_costos FROM PUBLIC;
@@ -33667,8 +31196,8 @@ GRANT SELECT ON TABLE actividades_centro_costos TO udistrital_nomina;
 
 --
 -- TOC entry 3830 (class 0 OID 0)
--- Dependencies: 335
--- Name: actividades_centro_costos_id_seq; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 244
+-- Name: actividades_centro_costos_id_seq; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON SEQUENCE actividades_centro_costos_id_seq FROM PUBLIC;
@@ -33681,8 +31210,8 @@ GRANT SELECT,UPDATE ON SEQUENCE actividades_centro_costos_id_seq TO gestion_udis
 
 --
 -- TOC entry 3857 (class 0 OID 0)
--- Dependencies: 340
--- Name: centro_costos; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 249
+-- Name: centro_costos; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON TABLE centro_costos FROM PUBLIC;
@@ -33696,8 +31225,8 @@ GRANT SELECT ON TABLE centro_costos TO udistrital_nomina;
 
 --
 -- TOC entry 3860 (class 0 OID 0)
--- Dependencies: 341
--- Name: centro_costos_id_seq; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 250
+-- Name: centro_costos_id_seq; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON SEQUENCE centro_costos_id_seq FROM PUBLIC;
@@ -33710,8 +31239,8 @@ GRANT SELECT,UPDATE ON SEQUENCE centro_costos_id_seq TO gestion_udistrital;
 
 --
 -- TOC entry 3928 (class 0 OID 0)
--- Dependencies: 352
--- Name: contrato_general; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 261
+-- Name: contrato_general; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON TABLE contrato_general FROM PUBLIC;
@@ -33723,8 +31252,8 @@ GRANT SELECT ON TABLE contrato_general TO consulta_crv;
 
 --
 -- TOC entry 3960 (class 0 OID 0)
--- Dependencies: 363
--- Name: especificacion_tecnica; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 272
+-- Name: especificacion_tecnica; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON TABLE especificacion_tecnica FROM PUBLIC;
@@ -33738,8 +31267,8 @@ GRANT SELECT ON TABLE especificacion_tecnica TO udistrital_nomina;
 
 --
 -- TOC entry 3963 (class 0 OID 0)
--- Dependencies: 364
--- Name: especificacion_tecnica_id_seq; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 273
+-- Name: especificacion_tecnica_id_seq; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON SEQUENCE especificacion_tecnica_id_seq FROM PUBLIC;
@@ -33752,8 +31281,8 @@ GRANT SELECT,UPDATE ON SEQUENCE especificacion_tecnica_id_seq TO gestion_udistri
 
 --
 -- TOC entry 3972 (class 0 OID 0)
--- Dependencies: 367
--- Name: estado_solicitud_necesidad; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 276
+-- Name: estado_solicitud_necesidad; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON TABLE estado_solicitud_necesidad FROM PUBLIC;
@@ -33767,8 +31296,8 @@ GRANT SELECT ON TABLE estado_solicitud_necesidad TO udistrital_nomina;
 
 --
 -- TOC entry 3975 (class 0 OID 0)
--- Dependencies: 368
--- Name: estado_solicitud_necesidad_id_seq; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 277
+-- Name: estado_solicitud_necesidad_id_seq; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON SEQUENCE estado_solicitud_necesidad_id_seq FROM PUBLIC;
@@ -33781,8 +31310,8 @@ GRANT SELECT,UPDATE ON SEQUENCE estado_solicitud_necesidad_id_seq TO gestion_udi
 
 --
 -- TOC entry 3981 (class 0 OID 0)
--- Dependencies: 369
--- Name: fuente_financiacion_rubro_necesidad; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 278
+-- Name: fuente_financiacion_rubro_necesidad; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON TABLE fuente_financiacion_rubro_necesidad FROM PUBLIC;
@@ -33796,8 +31325,8 @@ GRANT SELECT ON TABLE fuente_financiacion_rubro_necesidad TO udistrital_nomina;
 
 --
 -- TOC entry 3983 (class 0 OID 0)
--- Dependencies: 370
--- Name: fuente_financiacion_rubro_necesidad_id_seq; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 279
+-- Name: fuente_financiacion_rubro_necesidad_id_seq; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON SEQUENCE fuente_financiacion_rubro_necesidad_id_seq FROM PUBLIC;
@@ -33810,8 +31339,8 @@ GRANT SELECT,UPDATE ON SEQUENCE fuente_financiacion_rubro_necesidad_id_seq TO ge
 
 --
 -- TOC entry 3995 (class 0 OID 0)
--- Dependencies: 375
--- Name: marco_legal; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 284
+-- Name: marco_legal; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON TABLE marco_legal FROM PUBLIC;
@@ -33825,8 +31354,8 @@ GRANT SELECT ON TABLE marco_legal TO udistrital_nomina;
 
 --
 -- TOC entry 3998 (class 0 OID 0)
--- Dependencies: 376
--- Name: marco_legal_id_seq; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 285
+-- Name: marco_legal_id_seq; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON SEQUENCE marco_legal_id_seq FROM PUBLIC;
@@ -33839,8 +31368,8 @@ GRANT SELECT,UPDATE ON SEQUENCE marco_legal_id_seq TO gestion_udistrital;
 
 --
 -- TOC entry 4003 (class 0 OID 0)
--- Dependencies: 377
--- Name: marco_legal_necesidad; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 286
+-- Name: marco_legal_necesidad; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON TABLE marco_legal_necesidad FROM PUBLIC;
@@ -33854,8 +31383,8 @@ GRANT SELECT ON TABLE marco_legal_necesidad TO udistrital_nomina;
 
 --
 -- TOC entry 4006 (class 0 OID 0)
--- Dependencies: 378
--- Name: marco_legal_necesidad_id_seq; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 287
+-- Name: marco_legal_necesidad_id_seq; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON SEQUENCE marco_legal_necesidad_id_seq FROM PUBLIC;
@@ -33868,8 +31397,8 @@ GRANT SELECT,UPDATE ON SEQUENCE marco_legal_necesidad_id_seq TO gestion_udistrit
 
 --
 -- TOC entry 4011 (class 0 OID 0)
--- Dependencies: 379
--- Name: modalidad_seleccion; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 288
+-- Name: modalidad_seleccion; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON TABLE modalidad_seleccion FROM PUBLIC;
@@ -33883,8 +31412,8 @@ GRANT SELECT ON TABLE modalidad_seleccion TO udistrital_nomina;
 
 --
 -- TOC entry 4014 (class 0 OID 0)
--- Dependencies: 380
--- Name: modalidad_seleccion_id_seq; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 289
+-- Name: modalidad_seleccion_id_seq; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON SEQUENCE modalidad_seleccion_id_seq FROM PUBLIC;
@@ -33897,8 +31426,8 @@ GRANT SELECT,UPDATE ON SEQUENCE modalidad_seleccion_id_seq TO gestion_udistrital
 
 --
 -- TOC entry 4028 (class 0 OID 0)
--- Dependencies: 385
--- Name: parametros; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 294
+-- Name: parametros; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON TABLE parametros FROM PUBLIC;
@@ -33910,8 +31439,8 @@ GRANT SELECT ON TABLE parametros TO consulta_crv;
 
 --
 -- TOC entry 4039 (class 0 OID 0)
--- Dependencies: 391
--- Name: requisito_minimo; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 300
+-- Name: requisito_minimo; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON TABLE requisito_minimo FROM PUBLIC;
@@ -33925,8 +31454,8 @@ GRANT SELECT ON TABLE requisito_minimo TO udistrital_nomina;
 
 --
 -- TOC entry 4042 (class 0 OID 0)
--- Dependencies: 392
--- Name: requisito_minimo_id_seq; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 301
+-- Name: requisito_minimo_id_seq; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON SEQUENCE requisito_minimo_id_seq FROM PUBLIC;
@@ -33939,8 +31468,8 @@ GRANT SELECT,UPDATE ON SEQUENCE requisito_minimo_id_seq TO gestion_udistrital;
 
 --
 -- TOC entry 4048 (class 0 OID 0)
--- Dependencies: 393
--- Name: rubro_solicitud_necesidad; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 302
+-- Name: rubro_solicitud_necesidad; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON TABLE rubro_solicitud_necesidad FROM PUBLIC;
@@ -33954,8 +31483,8 @@ GRANT SELECT ON TABLE rubro_solicitud_necesidad TO udistrital_nomina;
 
 --
 -- TOC entry 4051 (class 0 OID 0)
--- Dependencies: 394
--- Name: rubro_solicitud_necesidad_id_seq; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 303
+-- Name: rubro_solicitud_necesidad_id_seq; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON SEQUENCE rubro_solicitud_necesidad_id_seq FROM PUBLIC;
@@ -33968,8 +31497,8 @@ GRANT SELECT,UPDATE ON SEQUENCE rubro_solicitud_necesidad_id_seq TO gestion_udis
 
 --
 -- TOC entry 4091 (class 0 OID 0)
--- Dependencies: 399
--- Name: solicitud_necesidad; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 308
+-- Name: solicitud_necesidad; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON TABLE solicitud_necesidad FROM PUBLIC;
@@ -33983,8 +31512,8 @@ GRANT SELECT ON TABLE solicitud_necesidad TO udistrital_nomina;
 
 --
 -- TOC entry 4094 (class 0 OID 0)
--- Dependencies: 400
--- Name: solicitud_necesidad_id_seq; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 309
+-- Name: solicitud_necesidad_id_seq; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON SEQUENCE solicitud_necesidad_id_seq FROM PUBLIC;
@@ -33997,8 +31526,8 @@ GRANT SELECT,UPDATE ON SEQUENCE solicitud_necesidad_id_seq TO gestion_udistrital
 
 --
 -- TOC entry 4096 (class 0 OID 0)
--- Dependencies: 401
--- Name: solicitud_necesidad_numero_seq; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 310
+-- Name: solicitud_necesidad_numero_seq; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON SEQUENCE solicitud_necesidad_numero_seq FROM PUBLIC;
@@ -34011,8 +31540,8 @@ GRANT SELECT,UPDATE ON SEQUENCE solicitud_necesidad_numero_seq TO gestion_udistr
 
 --
 -- TOC entry 4112 (class 0 OID 0)
--- Dependencies: 404
--- Name: supervisor_solicitud_necesidad; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 313
+-- Name: supervisor_solicitud_necesidad; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON TABLE supervisor_solicitud_necesidad FROM PUBLIC;
@@ -34026,8 +31555,8 @@ GRANT SELECT ON TABLE supervisor_solicitud_necesidad TO udistrital_nomina;
 
 --
 -- TOC entry 4114 (class 0 OID 0)
--- Dependencies: 405
--- Name: supervisor_solicitud_necesidad_id_seq; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 314
+-- Name: supervisor_solicitud_necesidad_id_seq; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON SEQUENCE supervisor_solicitud_necesidad_id_seq FROM PUBLIC;
@@ -34040,8 +31569,8 @@ GRANT SELECT,UPDATE ON SEQUENCE supervisor_solicitud_necesidad_id_seq TO gestion
 
 --
 -- TOC entry 4126 (class 0 OID 0)
--- Dependencies: 407
--- Name: tipo_contratacion; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 316
+-- Name: tipo_contratacion; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON TABLE tipo_contratacion FROM PUBLIC;
@@ -34055,8 +31584,8 @@ GRANT SELECT ON TABLE tipo_contratacion TO udistrital_nomina;
 
 --
 -- TOC entry 4129 (class 0 OID 0)
--- Dependencies: 408
--- Name: tipo_contratacion_id_seq; Type: ACL; Schema: argo; Owner: -
+-- Dependencies: 317
+-- Name: tipo_contratacion_id_seq; Type: ACL; Schema: argo; Owner: postgres
 --
 
 REVOKE ALL ON SEQUENCE tipo_contratacion_id_seq FROM PUBLIC;
@@ -34067,7 +31596,7 @@ GRANT SELECT ON SEQUENCE tipo_contratacion_id_seq TO consulta_udistrital;
 GRANT SELECT,UPDATE ON SEQUENCE tipo_contratacion_id_seq TO gestion_udistrital;
 
 
--- Completed on 2016-10-27 18:24:56 COT
+-- Completed on 2016-11-06 11:32:45 COT
 
 --
 -- PostgreSQL database dump complete

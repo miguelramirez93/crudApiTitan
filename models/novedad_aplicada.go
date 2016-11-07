@@ -94,7 +94,7 @@ func GetAllNovedadAplicada(query map[string]string, fields []string, sortby []st
 	}
 
 	var l []NovedadAplicada
-	qs = qs.OrderBy(sortFields...)
+	qs = qs.OrderBy(sortFields...).RelatedSel()
 	if _, err := qs.Limit(limit, offset).All(&l, fields...); err == nil {
 		if len(fields) == 0 {
 			for _, v := range l {
